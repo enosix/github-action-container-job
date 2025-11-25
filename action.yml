@@ -1,0 +1,66 @@
+name: 'Run Azure Container App Job'
+description: 'Create and run an Azure Container App Job, retrieve logs, and clean up resources'
+inputs:
+  subscription-id:
+    description: 'Azure subscription ID'
+    required: true
+  resource-group:
+    description: 'Azure resource group name'
+    required: true
+  environment-name:
+    description: 'Azure Container App Environment name'
+    required: true
+  job-name:
+    description: 'Name for the container app job (will be auto-generated if not provided)'
+    required: false
+  image:
+    description: 'Container image to use (e.g., ghcr.io/owner/image:tag)'
+    required: true
+  command:
+    description: 'Space-delimited command to run in the container'
+    required: false
+  user-managed-identity:
+    description: 'Resource ID of user-managed identity to assign to the job'
+    required: false
+  environment-variables:
+    description: 'JSON object of environment variables (e.g., {"VAR1": "value1", "VAR2": "value2"})'
+    required: false
+  secrets:
+    description: 'JSON object of secrets (e.g., {"SECRET1": "value1", "SECRET2": "value2"})'
+    required: false
+  cpu:
+    description: 'CPU cores to allocate (e.g., "0.5", "1.0")'
+    required: false
+    default: '0.5'
+  memory:
+    description: 'Memory to allocate (e.g., "1Gi", "2Gi")'
+    required: false
+    default: '1Gi'
+  timeout:
+    description: 'Job execution timeout in seconds'
+    required: false
+    default: '1800'
+  registry-server:
+    description: 'Container registry server (e.g., ghcr.io)'
+    required: false
+  registry-username:
+    description: 'Container registry username'
+    required: false
+  registry-password:
+    description: 'Container registry password'
+    required: false
+outputs:
+  job-name:
+    description: 'Name of the created job'
+  execution-name:
+    description: 'Name of the job execution'
+  exit-code:
+    description: 'Exit code of the job execution'
+  logs:
+    description: 'Logs from the job execution'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: 'play'
+  color: 'blue'

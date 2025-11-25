@@ -1,0 +1,31 @@
+{
+  "name": "github-action-container-job",
+  "version": "0.0.0",
+  "description": "GitHub Action to run Azure Container App Jobs",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build -o dist index.js",
+    "test": "node --test test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enosix/github-action-container-job"
+  },
+  "keywords": [
+    "actions",
+    "azure",
+    "container-apps"
+  ],
+  "author": "Enosix",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@azure/arm-appcontainers": "^3.0.0",
+    "@azure/identity": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4",
+    "dotenv": "^17.2.3"
+  }
+}
