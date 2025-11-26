@@ -83901,32 +83901,6 @@ function parseCommand(commandString) {
 }
 
 /**
- * Parse Key Vault reference format
- * Handles format: keyvaultref:URL,identityref:IDENTITY or just a plain URL
- */
-function parseKeyVaultReference(value) {
-    if (!value) {
-        return null;
-    }
-
-    // Check if it's in the keyvaultref format
-    if (value.startsWith('keyvaultref:')) {
-        const parts = value.split(',');
-        const url = parts[0].replace('keyvaultref:', '').trim();
-        let identity = null;
-
-        if (parts.length > 1 && parts[1].includes('identityref:')) {
-            identity = parts[1].replace('identityref:', '').trim();
-        }
-
-        return { url, identity };
-    }
-
-    // Otherwise, treat it as a plain URL
-    return { url: value, identity: null };
-}
-
-/**
  * Parse JSON input safely
  */
 function parseJsonInput(inputName) {
@@ -83957,22 +83931,18 @@ function parseJsonInput(inputName) {
 }
 
 /**
- * Create Azure Container App Job
+ * Normalize Azure location to canonical format (e.g., 'East US' -> 'eastus')
  */
-async function createJob(client, resourceGroup, environmentName, jobName, config) {
-    core.info(`Creating job: ${jobName}`);
-    
+function normalizeAzureLocation(location) {
+    if (!location) return 'eastus';
+    return String(location).toLowerCase().replace(/\s+/g, '');
+}
+
+/**
+ * Build Azure Container App Job configuration object
+ */
+function buildJobConfig(subscriptionId, resourceGroup, environmentName, location, config) {
     const { image, command, userManagedIdentity, environmentVariables, secrets, cpu, memory, registryServer, registryUsername, registryPassword, cronSchedule } = config;
-    
-    // First, get the managed environment to obtain the location
-    let location = 'eastus'; // Default fallback
-    try {
-        const environment = await client.managedEnvironments.get(resourceGroup, environmentName);
-        location = environment.location || 'eastus';
-        core.info(`Using location from environment: ${location}`);
-    } catch (error) {
-        core.warning(`Could not get environment location, using default: ${error.message}`);
-    }
     
     // Build environment variables array
     const envVars = [];
@@ -83987,13 +83957,12 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
     const secretsArray = [];
     for (const [key, value] of Object.entries(secrets)) {
         const secretName = key.toLowerCase().replaceAll('_', '-'); // Azure requires lowercase with hyphens
-        const kvRef = parseKeyVaultReference(value);
 
-        if (kvRef) {
+        if (value) {
             secretsArray.push({
                 name: secretName,
-                keyVaultUrl: kvRef.url,
-                identity: kvRef.identity || userManagedIdentity
+                keyVaultUrl: value,
+                identity: userManagedIdentity
             });
 
             // Also add as secret reference in env vars
@@ -84012,7 +83981,7 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             cpu: Number.parseFloat(cpu),
             memory: memory
         },
-        env: envVars.length > 0 ? envVars : undefined
+        env: envVars.length > 0 ? envVars : []
     };
     
     if (command) {
@@ -84034,6 +84003,7 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             value: registryPassword
         });
     }
+
     // Build trigger configuration based on cron schedule
     let triggerType;
     let triggerConfig = {};
@@ -84052,26 +84022,28 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             parallelism: 1
         };
     }
+    //
     
     // Build job configuration
     const jobConfig = {
+
+        configuration: {
+            triggerType: triggerType,
+            replicaTimeout: 1800,
+            replicaRetryLimit: 0,
+            ...triggerConfig,
+            secrets: secretsArray.length > 0 ? secretsArray : [],
+            registries: registries.length > 0 ? registries : []
+        },
+        environmentId: `/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
         location: location,
-        properties: {
-            environmentId: `/subscriptions/${client.subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
-            configuration: {
-                triggerType: triggerType,
-                replicaTimeout: 1800,
-                replicaRetryLimit: 0,
-                ...triggerConfig,
-                secrets: secretsArray.length > 0 ? secretsArray : undefined,
-                registries: registries.length > 0 ? registries : undefined
-            },
-            template: {
-                containers: [container]
-            }
+        workLoadProfileName: 'Consumption',
+        template: {
+            containers: [container],
         }
+
     };
-    
+
     // Add user-managed identity if provided
     if (userManagedIdentity) {
         jobConfig.identity = {
@@ -84081,7 +84053,30 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             }
         };
     }
-    
+
+    return jobConfig;
+}
+
+/**
+ * Create Azure Container App Job
+ */
+async function createJob(client, resourceGroup, environmentName, jobName, config) {
+    core.info(`Creating job: ${jobName}`);
+
+    // First, get the managed environment to obtain the location
+    let location = 'eastus'; // Default fallback
+    try {
+        const environment = await client.managedEnvironments.get(resourceGroup, environmentName);
+        // Normalize location to avoid service validation issues
+        location = normalizeAzureLocation(environment.location) || 'eastus';
+        core.info(`Using location from environment: ${environment.location} -> ${location}`);
+    } catch (error) {
+        core.warning(`Could not get environment location, using default: ${error.message}`);
+    }
+
+    // Build the job configuration using the shared function
+    const jobConfig = buildJobConfig(client.subscriptionId, resourceGroup, environmentName, location, config);
+
     try {
         const result = await client.jobs.beginCreateOrUpdateAndWait(
             resourceGroup,
@@ -84092,6 +84087,9 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
         core.info(`Job created successfully: ${jobName}`);
         return result;
     } catch (error) {
+        // Provide more context on failure
+        core.error('Azure rejected job create with error:');
+        core.error(error?.message || String(error));
         throw new Error(`Failed to create job: ${error.message}`);
     }
 }
@@ -84106,7 +84104,9 @@ async function startJobExecution(client, resourceGroup, jobName) {
         const execution = await client.jobs.beginStartAndWait(
             resourceGroup,
             jobName,
-            {}
+            {
+                updateIntervalInMs: 5000
+            }
         );
         
         core.info(`Job execution started: ${execution.name}`);
@@ -84136,7 +84136,7 @@ async function pollJobExecution(client, resourceGroup, jobName, executionName, t
         try {
             const execution = await client.jobExecution(resourceGroup, jobName, executionName);
             
-            const status = execution.properties?.status;
+            const status = execution?.status;
             core.info(`Job status: ${status}`);
             
             if (status === 'Succeeded' || status === 'Failed') {
@@ -84189,7 +84189,8 @@ async function run() {
         const registryServer = core.getInput('registry-server', { required: false });
         const registryUsername = core.getInput('registry-username', { required: false });
         const registryPassword = core.getInput('registry-password', { required: false });
-        
+        const dryRun = (core.getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
+
         // Parse JSON inputs
         const environmentVariables = parseJsonInput('environment-variables');
         const secrets = parseJsonInput('secrets');
@@ -84207,7 +84208,31 @@ async function run() {
         core.info(`CPU: ${cpu}`);
         core.info(`Memory: ${memory}`);
         core.info(`Timeout: ${timeout}s`);
-        
+        core.info(`Dry Run: ${dryRun}`);
+
+        if (dryRun) {
+            // Build the same job config that would be used in actual execution
+            const jobConfig = buildJobConfig(subscriptionId, resourceGroup, environmentName, 'eastus', {
+                image,
+                command,
+                userManagedIdentity,
+                environmentVariables,
+                secrets,
+                cpu,
+                memory,
+                registryServer,
+                registryUsername,
+                registryPassword,
+                cronSchedule
+            });
+
+            core.info('Dry-run preview of job payload:');
+            core.info(JSON.stringify(jobConfig, null, 2));
+            core.setOutput('job-name', jobName);
+            core.info('Dry run mode enabled, skipping Azure API calls.');
+            return;
+        }
+
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
         const credential = new defaultAzureCredential_DefaultAzureCredential();

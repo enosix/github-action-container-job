@@ -52,6 +52,10 @@ inputs:
   registry-password:
     description: 'Container registry password'
     required: false
+  dry-run:
+    description: 'Preview payload and skip Azure calls'
+    required: false
+    default: 'false'
 outputs:
   job-name:
     description: 'Name of the created job'
