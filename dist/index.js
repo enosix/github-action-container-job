@@ -83904,7 +83904,21 @@ function parseCommand(commandString) {
  * Parse JSON input safely
  */
 function parseJsonInput(inputName) {
-    const input = core.getInput(inputName, { required: false });
+    // Try using @actions/core first
+    let input = '';
+    try {
+        input = core.getInput(inputName, { required: false }) || '';
+    } catch (err) {
+        console.log(`core.getInput failed for ${inputName}: ${err.message}`);
+        input = '';
+    }
+
+    // Fallback: read directly from environment (helpful in unit tests)
+    if (!input || input.trim() === '') {
+        const envName = `INPUT_${inputName.replaceAll('-', '_').toUpperCase()}`;
+        input = process.env[envName] || '';
+    }
+
     if (!input || input.trim() === '') {
         return {};
     }
@@ -83946,11 +83960,14 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
     // Build secrets array
     const secretsArray = [];
     for (const [key, value] of Object.entries(secrets)) {
-        const secretName = key.toLowerCase().replace(/_/g, '-'); // Azure requires lowercase with hyphens
+        const secretName = key.toLowerCase().replaceAll('_', '-'); // Azure requires lowercase with hyphens
+
         secretsArray.push({
             name: secretName,
-            value: value
+            keyVaultUrl: value,
+            identity: userManagedIdentity
         });
+
         
         // Also add as secret reference in env vars
         envVars.push({
@@ -83964,7 +83981,7 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
         name: 'main',
         image: image,
         resources: {
-            cpu: parseFloat(cpu),
+            cpu: Number.parseFloat(cpu),
             memory: memory
         },
         env: envVars.length > 0 ? envVars : undefined
@@ -84091,36 +84108,6 @@ async function pollJobExecution(client, resourceGroup, jobName, executionName, t
 }
 
 /**
- * Get job execution logs
- */
-async function getJobLogs(client, resourceGroup, jobName, executionName) {
-    core.info(`Retrieving job logs...`);
-    
-    try {
-        // Get the job execution details
-        const execution = await client.jobExecution(resourceGroup, jobName, executionName);
-        
-        core.info(`Job execution status: ${execution.properties?.status}`);
-        
-        // Note: Azure Container Apps Jobs don't provide direct log streaming through the SDK
-        // Logs can be accessed through Azure Monitor/Log Analytics or the Azure Portal
-        // For now, we'll just return status information
-        
-        const statusInfo = `
-Execution Name: ${execution.name}
-Status: ${execution.properties?.status}
-Start Time: ${execution.properties?.startTime}
-End Time: ${execution.properties?.endTime}
-        `.trim();
-        
-        return statusInfo;
-    } catch (error) {
-        core.warning(`Failed to get job logs: ${error.message}`);
-        return '';
-    }
-}
-
-/**
  * Delete the job
  */
 async function deleteJob(client, resourceGroup, jobName) {
@@ -84153,7 +84140,7 @@ async function run() {
         const userManagedIdentity = core.getInput('user-managed-identity', { required: false });
         const cpu = core.getInput('cpu', { required: false }) || '0.5';
         const memory = core.getInput('memory', { required: false }) || '1Gi';
-        const timeout = parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
+        const timeout = Number.parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
         const registryServer = core.getInput('registry-server', { required: false });
         const registryUsername = core.getInput('registry-username', { required: false });
         const registryPassword = core.getInput('registry-password', { required: false });
@@ -84207,22 +84194,10 @@ async function run() {
         
         // Poll for completion
         const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
-        
-        // Get logs
-        const logs = await getJobLogs(client, resourceGroup, jobName, executionName);
-        if (logs) {
-            core.info('=== Job Logs ===');
-            core.info(logs);
-        }
-        
-        // Set outputs
-        core.setOutput('logs', logs || '');
-        
+
         // Check execution status
         const status = finalExecution.properties?.status;
         const exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
-        
-        core.setOutput('exit-code', exitCode);
         
         core.info(`=== Job Completed ===`);
         core.info(`Status: ${status}`);

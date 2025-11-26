@@ -54,10 +54,6 @@ outputs:
     description: 'Name of the created job'
   execution-name:
     description: 'Name of the job execution'
-  exit-code:
-    description: 'Exit code of the job execution'
-  logs:
-    description: 'Logs from the job execution'
 runs:
   using: 'node20'
   main: 'dist/index.js'
