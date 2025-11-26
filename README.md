@@ -1,6 +1,12 @@
 # GitHub Action: Azure Container App Job
 
-A GitHub Action to create, run, and manage Azure Container App Jobs. This action handles the complete lifecycle of a container job including creation, execution, log retrieval, and cleanup.
+A GitHub Action to create, run, and manage Azure Container App Jobs. This action handles the complete lifecycle of a
+container job including creation, execution, log retrieval, and cleanup.
+
+This action defaults to a one-off job execution but can be configured to set up a recurring job by setting the 
+`cron-schedule` input.
+
+The action respects the container's exit code - if the container exits with a non-zero code, the action will also fail.
 
 ## Usage
 
@@ -59,6 +65,7 @@ A GitHub Action to create, run, and manage Azure Container App Jobs. This action
 | `user-managed-identity` | Resource ID of user-managed identity to assign to the job       | None                          |
 | `environment-variables` | JSON object of environment variables                            | `{}`                          |
 | `secrets`               | JSON object of secret URIs                                      | `{}`                          |
+| `cron-schedule`         | Cron schedule for recurring jobs (optional)                     | None                          |
 | `cpu`                   | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
 | `memory`                | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
 | `timeout`               | Job execution timeout in seconds                                | `1800` (30 minutes)           |
@@ -133,15 +140,3 @@ decrypted and added to the environment during runtime.
         "DATABASE_PASSWORD": "https://myvault.vault.azure.net/secrets/DATABASE_PASSWORD"
       }
 ```
-
-## Error Handling
-
-The action will:
-1. Create the Azure Container App Job
-2. Start the job execution
-3. Poll for completion (up to the specified timeout)
-4. Retrieve execution status
-5. **Always** clean up the job (even on failure)
-6. Exit with an error if the job fails or times out
-
-The action respects the container's exit code - if the container exits with a non-zero code, the action will also fail.

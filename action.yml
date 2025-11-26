@@ -28,6 +28,9 @@ inputs:
   secrets:
     description: 'JSON object of secrets (e.g., {"SECRET1": "value1", "SECRET2": "value2"})'
     required: false
+  cron-schedule:
+    description: 'CRON schedule for recurring jobs (e.g., "0 */6 * * *" for every 6 hours)'
+    required: false
   cpu:
     description: 'CPU cores to allocate (e.g., "0.5", "1.0")'
     required: false

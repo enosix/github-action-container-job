@@ -66,7 +66,7 @@ function parseJsonInput(inputName) {
 async function createJob(client, resourceGroup, environmentName, jobName, config) {
     core.info(`Creating job: ${jobName}`);
     
-    const { image, command, userManagedIdentity, environmentVariables, secrets, cpu, memory, registryServer, registryUsername, registryPassword } = config;
+    const { image, command, userManagedIdentity, environmentVariables, secrets, cpu, memory, registryServer, registryUsername, registryPassword, cronSchedule } = config;
     
     // First, get the managed environment to obtain the location
     let location = 'eastus'; // Default fallback
@@ -136,6 +136,23 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             value: registryPassword
         });
     }
+    let triggerType;
+    let manualTriggerConfig;
+    let scheduleTriggerConfig;
+
+    if (cronSchedule) {
+        triggerType = 'Scheduled';
+        scheduleTriggerConfig = {
+            cronSchedule: cronSchedule,
+            timeZone: 'UTC'
+        };
+    }else{
+        triggerType = 'Manual';
+        manualTriggerConfig = {
+            replicaCompletionCount: 1,
+            parallelism: 1
+        };
+    }
     
     // Build job configuration
     const jobConfig = {
@@ -143,13 +160,12 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
         properties: {
             environmentId: `/subscriptions/${client.subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
             configuration: {
-                triggerType: 'Manual',
+                triggerType: triggerType,
+                schedule: cronSchedule || undefined,
                 replicaTimeout: 1800,
                 replicaRetryLimit: 0,
-                manualTriggerConfig: {
-                    replicaCompletionCount: 1,
-                    parallelism: 1
-                },
+                manualTriggerConfig,
+                scheduleTriggerConfig,
                 secrets: secretsArray.length > 0 ? secretsArray : undefined,
                 registries: registries.length > 0 ? registries : undefined
             },
@@ -258,6 +274,7 @@ async function run() {
     let client = null;
     let jobName = null;
     let resourceGroup = null;
+    let cronSchedule = null;
     
     try {
         // Get inputs
@@ -268,6 +285,7 @@ async function run() {
         const image = core.getInput('image', { required: true });
         const commandString = core.getInput('command', { required: false });
         const userManagedIdentity = core.getInput('user-managed-identity', { required: false });
+        cronSchedule = core.getInput('cron-schedule', { required: false });
         const cpu = core.getInput('cpu', { required: false }) || '0.5';
         const memory = core.getInput('memory', { required: false }) || '1Gi';
         const timeout = Number.parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
@@ -309,11 +327,17 @@ async function run() {
             memory,
             registryServer,
             registryUsername,
-            registryPassword
+            registryPassword,
+            cronSchedule
         });
         
         // Set output for job name
         core.setOutput('job-name', jobName);
+
+        if (cronSchedule) {
+            core.info('Cron schedule provided, skipping execution start.');
+            return;
+        }
         
         // Start job execution
         const execution = await startJobExecution(client, resourceGroup, jobName);
@@ -346,7 +370,7 @@ async function run() {
         core.error(error.stack);
         
         // Attempt cleanup
-        if (client && resourceGroup && jobName) {
+        if (client && resourceGroup && jobName && !cronSchedule) {
             try {
                 await deleteJob(client, resourceGroup, jobName);
             } catch (cleanupError) {
