@@ -83901,6 +83901,32 @@ function parseCommand(commandString) {
 }
 
 /**
+ * Parse Key Vault reference format
+ * Handles format: keyvaultref:URL,identityref:IDENTITY or just a plain URL
+ */
+function parseKeyVaultReference(value) {
+    if (!value) {
+        return null;
+    }
+
+    // Check if it's in the keyvaultref format
+    if (value.startsWith('keyvaultref:')) {
+        const parts = value.split(',');
+        const url = parts[0].replace('keyvaultref:', '').trim();
+        let identity = null;
+
+        if (parts.length > 1 && parts[1].includes('identityref:')) {
+            identity = parts[1].replace('identityref:', '').trim();
+        }
+
+        return { url, identity };
+    }
+
+    // Otherwise, treat it as a plain URL
+    return { url: value, identity: null };
+}
+
+/**
  * Parse JSON input safely
  */
 function parseJsonInput(inputName) {
@@ -83961,19 +83987,21 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
     const secretsArray = [];
     for (const [key, value] of Object.entries(secrets)) {
         const secretName = key.toLowerCase().replaceAll('_', '-'); // Azure requires lowercase with hyphens
+        const kvRef = parseKeyVaultReference(value);
 
-        secretsArray.push({
-            name: secretName,
-            keyVaultUrl: value,
-            identity: userManagedIdentity
-        });
+        if (kvRef) {
+            secretsArray.push({
+                name: secretName,
+                keyVaultUrl: kvRef.url,
+                identity: kvRef.identity || userManagedIdentity
+            });
 
-        
-        // Also add as secret reference in env vars
-        envVars.push({
-            name: key,
-            secretRef: secretName
-        });
+            // Also add as secret reference in env vars
+            envVars.push({
+                name: key,
+                secretRef: secretName
+            });
+        }
     }
     
     // Build container configuration
@@ -84006,19 +84034,20 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             value: registryPassword
         });
     }
+    // Build trigger configuration based on cron schedule
     let triggerType;
-    let manualTriggerConfig;
-    let scheduleTriggerConfig;
+    let triggerConfig = {};
 
     if (cronSchedule) {
-        triggerType = 'Scheduled';
-        scheduleTriggerConfig = {
-            cronSchedule: cronSchedule,
-            timeZone: 'UTC'
+        triggerType = 'Schedule';
+        triggerConfig.scheduleTriggerConfig = {
+            cronExpression: cronSchedule,
+            parallelism: 1,
+            replicaCompletionCount: 1
         };
-    }else{
+    } else {
         triggerType = 'Manual';
-        manualTriggerConfig = {
+        triggerConfig.manualTriggerConfig = {
             replicaCompletionCount: 1,
             parallelism: 1
         };
@@ -84031,11 +84060,9 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
             environmentId: `/subscriptions/${client.subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
             configuration: {
                 triggerType: triggerType,
-                schedule: cronSchedule || undefined,
                 replicaTimeout: 1800,
                 replicaRetryLimit: 0,
-                manualTriggerConfig,
-                scheduleTriggerConfig,
+                ...triggerConfig,
                 secrets: secretsArray.length > 0 ? secretsArray : undefined,
                 registries: registries.length > 0 ? registries : undefined
             },

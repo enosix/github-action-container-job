@@ -1,6 +1,6 @@
 import assert from 'node:assert';
 import { describe, it, beforeEach, afterEach } from 'node:test';
-import { sleep, generateJobName, parseCommand, parseJsonInput } from './main.js';
+import { sleep, generateJobName, parseCommand, parseJsonInput, parseKeyVaultReference } from './main.js';
 
 // Helper to set INPUT_ env var name mapping like GitHub Actions
 function setInputEnv(inputName, value) {
@@ -79,6 +79,38 @@ describe('main', () => {
             await sleep(20);
             const elapsed = Date.now() - start;
             assert.ok(elapsed >= 15, `elapsed ${elapsed}ms was less than expected`);
+        });
+
+        it('parseKeyVaultReference handles null/undefined input', () => {
+            assert.strictEqual(parseKeyVaultReference(null), null);
+            assert.strictEqual(parseKeyVaultReference(undefined), null);
+        });
+
+        it('parseKeyVaultReference parses keyvaultref format with identity', () => {
+            const input = 'keyvaultref:https://vault.azure.net/secrets/my-secret,identityref:/subscriptions/123/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-identity';
+            const result = parseKeyVaultReference(input);
+            assert.deepStrictEqual(result, {
+                url: 'https://vault.azure.net/secrets/my-secret',
+                identity: '/subscriptions/123/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-identity'
+            });
+        });
+
+        it('parseKeyVaultReference parses keyvaultref format without identity', () => {
+            const input = 'keyvaultref:https://vault.azure.net/secrets/my-secret';
+            const result = parseKeyVaultReference(input);
+            assert.deepStrictEqual(result, {
+                url: 'https://vault.azure.net/secrets/my-secret',
+                identity: null
+            });
+        });
+
+        it('parseKeyVaultReference handles plain URL format', () => {
+            const input = 'https://vault.azure.net/secrets/my-secret';
+            const result = parseKeyVaultReference(input);
+            assert.deepStrictEqual(result, {
+                url: 'https://vault.azure.net/secrets/my-secret',
+                identity: null
+            });
         });
     });
 
