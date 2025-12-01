@@ -56,6 +56,9 @@ inputs:
     description: 'Preview payload and skip Azure calls'
     required: false
     default: 'false'
+  log-analytics-workspace-id:
+    description: 'Log Analytics Workspace ID for retrieving container logs'
+    required: false
 outputs:
   job-name:
     description: 'Name of the created job'

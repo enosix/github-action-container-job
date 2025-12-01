@@ -36408,6 +36408,105 @@ __nccwpck_require__.d(mappers_namespaceObject, {
   discriminators: () => (discriminators)
 });
 
+// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/mappers.js
+var models_mappers_namespaceObject = {};
+__nccwpck_require__.r(models_mappers_namespaceObject);
+__nccwpck_require__.d(models_mappers_namespaceObject, {
+  BatchQueryRequest: () => (BatchQueryRequest),
+  BatchQueryResponse: () => (BatchQueryResponse),
+  BatchQueryResults: () => (BatchQueryResults),
+  BatchRequest: () => (BatchRequest),
+  BatchResponse: () => (BatchResponse),
+  Column: () => (Column),
+  ErrorDetail: () => (mappers_ErrorDetail),
+  ErrorInfo: () => (ErrorInfo),
+  ErrorResponse: () => (mappers_ErrorResponse),
+  MetadataApplication: () => (MetadataApplication),
+  MetadataApplicationRelated: () => (MetadataApplicationRelated),
+  MetadataCategory: () => (MetadataCategory),
+  MetadataCategoryRelated: () => (MetadataCategoryRelated),
+  MetadataFunction: () => (MetadataFunction),
+  MetadataFunctionRelated: () => (MetadataFunctionRelated),
+  MetadataPermissions: () => (MetadataPermissions),
+  MetadataPermissionsApplicationsItem: () => (MetadataPermissionsApplicationsItem),
+  MetadataPermissionsResourcesItem: () => (MetadataPermissionsResourcesItem),
+  MetadataPermissionsWorkspacesItem: () => (MetadataPermissionsWorkspacesItem),
+  MetadataQuery: () => (MetadataQuery),
+  MetadataQueryRelated: () => (MetadataQueryRelated),
+  MetadataResourceType: () => (MetadataResourceType),
+  MetadataResourceTypeRelated: () => (MetadataResourceTypeRelated),
+  MetadataResults: () => (MetadataResults),
+  MetadataSolution: () => (MetadataSolution),
+  MetadataSolutionRelated: () => (MetadataSolutionRelated),
+  MetadataTable: () => (MetadataTable),
+  MetadataTableColumnsItem: () => (MetadataTableColumnsItem),
+  MetadataTableRelated: () => (MetadataTableRelated),
+  MetadataWorkspace: () => (MetadataWorkspace),
+  MetadataWorkspaceRelated: () => (MetadataWorkspaceRelated),
+  QueryBody: () => (QueryBody),
+  QueryResults: () => (QueryResults),
+  Table: () => (Table)
+});
+
+// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/mappers.js
+var src_models_mappers_namespaceObject = {};
+__nccwpck_require__.r(src_models_mappers_namespaceObject);
+__nccwpck_require__.d(src_models_mappers_namespaceObject, {
+  ErrorAdditionalInfo: () => (mappers_ErrorAdditionalInfo),
+  ErrorContract: () => (ErrorContract),
+  ErrorResponse: () => (models_mappers_ErrorResponse),
+  LocalizableString: () => (LocalizableString),
+  MetadataValue: () => (MetadataValue),
+  Metric: () => (Metric),
+  MetricValue: () => (MetricValue),
+  Response: () => (Response),
+  SubscriptionScopeMetricsRequestBodyParameters: () => (SubscriptionScopeMetricsRequestBodyParameters),
+  TimeSeriesElement: () => (TimeSeriesElement)
+});
+
+// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/mappers.js
+var metricsdefinitions_src_models_mappers_namespaceObject = {};
+__nccwpck_require__.r(metricsdefinitions_src_models_mappers_namespaceObject);
+__nccwpck_require__.d(metricsdefinitions_src_models_mappers_namespaceObject, {
+  ErrorAdditionalInfo: () => (models_mappers_ErrorAdditionalInfo),
+  ErrorContract: () => (mappers_ErrorContract),
+  ErrorResponse: () => (src_models_mappers_ErrorResponse),
+  LocalizableString: () => (mappers_LocalizableString),
+  MetricAvailability: () => (MetricAvailability),
+  MetricDefinition: () => (MetricDefinition),
+  MetricDefinitionCollection: () => (MetricDefinitionCollection),
+  SubscriptionScopeMetricDefinition: () => (SubscriptionScopeMetricDefinition),
+  SubscriptionScopeMetricDefinitionCollection: () => (SubscriptionScopeMetricDefinitionCollection)
+});
+
+// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/mappers.js
+var metricsnamespaces_src_models_mappers_namespaceObject = {};
+__nccwpck_require__.r(metricsnamespaces_src_models_mappers_namespaceObject);
+__nccwpck_require__.d(metricsnamespaces_src_models_mappers_namespaceObject, {
+  ErrorResponse: () => (metricsnamespaces_src_models_mappers_ErrorResponse),
+  MetricNamespace: () => (MetricNamespace),
+  MetricNamespaceCollection: () => (MetricNamespaceCollection),
+  MetricNamespaceName: () => (MetricNamespaceName)
+});
+
+// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/mappers.js
+var metricBatch_src_models_mappers_namespaceObject = {};
+__nccwpck_require__.r(metricBatch_src_models_mappers_namespaceObject);
+__nccwpck_require__.d(metricBatch_src_models_mappers_namespaceObject, {
+  ErrorAdditionalInfo: () => (src_models_mappers_ErrorAdditionalInfo),
+  ErrorDetail: () => (models_mappers_ErrorDetail),
+  ErrorResponse: () => (metricBatch_src_models_mappers_ErrorResponse),
+  LocalizableString: () => (models_mappers_LocalizableString),
+  MetadataValue: () => (mappers_MetadataValue),
+  Metric: () => (mappers_Metric),
+  MetricResultsResponse: () => (MetricResultsResponse),
+  MetricResultsResponseValuesItem: () => (MetricResultsResponseValuesItem),
+  MetricValue: () => (mappers_MetricValue),
+  MetricsBatchBatchExceptionHeaders: () => (MetricsBatchBatchExceptionHeaders),
+  ResourceIdList: () => (ResourceIdList),
+  TimeSeriesElement: () => (mappers_TimeSeriesElement)
+});
+
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
 var core = __nccwpck_require__(7484);
 ;// CONCATENATED MODULE: ./node_modules/@azure/identity/dist/esm/constants.js
@@ -52534,6 +52633,41 @@ function getErrorMessage(e) {
     }
 }
 //# sourceMappingURL=error.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-util/dist/esm/typeGuards.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Helper TypeGuard that checks if something is defined or not.
+ * @param thing - Anything
+ */
+function isDefined(thing) {
+    return typeof thing !== "undefined" && thing !== null;
+}
+/**
+ * Helper TypeGuard that checks if the input is an object with the specified properties.
+ * @param thing - Anything.
+ * @param properties - The name of the properties that should appear in the object.
+ */
+function isObjectWithProperties(thing, properties) {
+    if (!isDefined(thing) || typeof thing !== "object") {
+        return false;
+    }
+    for (const property of properties) {
+        if (!objectHasProperty(thing, property)) {
+            return false;
+        }
+    }
+    return true;
+}
+/**
+ * Helper TypeGuard that checks if the input is an object with the specified property.
+ * @param thing - Any object.
+ * @param property - The name of the property that should appear in the object.
+ */
+function objectHasProperty(thing, property) {
+    return (isDefined(thing) && typeof thing === "object" && property in thing);
+}
+//# sourceMappingURL=typeGuards.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-util/dist/esm/index.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -83867,13 +84001,6020 @@ const getCustomDomainVerificationIdOperationSpec = {
 
 
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./main.js
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/mappers.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const QueryResults = {
+    type: {
+        name: "Composite",
+        className: "QueryResults",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Table"
+                        }
+                    }
+                }
+            },
+            statistics: {
+                serializedName: "statistics",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            render: {
+                serializedName: "render",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorInfo"
+                }
+            }
+        }
+    }
+};
+const Table = {
+    type: {
+        name: "Composite",
+        className: "Table",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            columns: {
+                serializedName: "columns",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Column"
+                        }
+                    }
+                }
+            },
+            rows: {
+                serializedName: "rows",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Sequence",
+                            element: {
+                                type: {
+                                    name: "Dictionary",
+                                    value: { type: { name: "any" } }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const Column = {
+    type: {
+        name: "Composite",
+        className: "Column",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const ErrorInfo = {
+    type: {
+        name: "Composite",
+        className: "ErrorInfo",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            details: {
+                serializedName: "details",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorDetail"
+                        }
+                    }
+                }
+            },
+            innerError: {
+                serializedName: "innererror",
+                type: {
+                    name: "Composite",
+                    className: "ErrorInfo"
+                }
+            },
+            additionalProperties: {
+                serializedName: "additionalProperties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const mappers_ErrorDetail = {
+    type: {
+        name: "Composite",
+        className: "ErrorDetail",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            target: {
+                serializedName: "target",
+                type: {
+                    name: "String"
+                }
+            },
+            value: {
+                serializedName: "value",
+                type: {
+                    name: "String"
+                }
+            },
+            resources: {
+                serializedName: "resources",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            additionalProperties: {
+                serializedName: "additionalProperties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const mappers_ErrorResponse = {
+    type: {
+        name: "Composite",
+        className: "ErrorResponse",
+        modelProperties: {
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorInfo"
+                }
+            }
+        }
+    }
+};
+const QueryBody = {
+    type: {
+        name: "Composite",
+        className: "QueryBody",
+        modelProperties: {
+            query: {
+                serializedName: "query",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            timespan: {
+                serializedName: "timespan",
+                type: {
+                    name: "String"
+                }
+            },
+            workspaces: {
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataResults = {
+    type: {
+        name: "Composite",
+        className: "MetadataResults",
+        modelProperties: {
+            categories: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataCategory"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataResourceType"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataSolution"
+                        }
+                    }
+                }
+            },
+            tables: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataTable"
+                        }
+                    }
+                }
+            },
+            functions: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataFunction"
+                        }
+                    }
+                }
+            },
+            queries: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "queries",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataQuery"
+                        }
+                    }
+                }
+            },
+            applications: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "applications",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataApplication"
+                        }
+                    }
+                }
+            },
+            workspaces: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataWorkspace"
+                        }
+                    }
+                }
+            },
+            resources: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "resources",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "any"
+                        }
+                    }
+                }
+            },
+            permissions: {
+                constraints: {
+                    UniqueItems: true
+                },
+                serializedName: "permissions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataPermissions"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataCategory = {
+    type: {
+        name: "Composite",
+        className: "MetadataCategory",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            displayName: {
+                serializedName: "displayName",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataCategoryRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataCategoryRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataCategoryRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            queries: {
+                serializedName: "queries",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataResourceType = {
+    type: {
+        name: "Composite",
+        className: "MetadataResourceType",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            displayName: {
+                serializedName: "displayName",
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            labels: {
+                serializedName: "labels",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            tags: {
+                serializedName: "tags",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataResourceTypeRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataResourceTypeRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataResourceTypeRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            categories: {
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            queries: {
+                serializedName: "queries",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            workspaces: {
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resources: {
+                serializedName: "resources",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataSolution = {
+    type: {
+        name: "Composite",
+        className: "MetadataSolution",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            displayName: {
+                serializedName: "displayName",
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            tags: {
+                serializedName: "tags",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataSolutionRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataSolutionRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataSolutionRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            categories: {
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            queries: {
+                serializedName: "queries",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            workspaces: {
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataTable = {
+    type: {
+        name: "Composite",
+        className: "MetadataTable",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            timespanColumn: {
+                serializedName: "timespanColumn",
+                type: {
+                    name: "String"
+                }
+            },
+            labels: {
+                serializedName: "labels",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            tags: {
+                serializedName: "tags",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            columns: {
+                serializedName: "columns",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataTableColumnsItem"
+                        }
+                    }
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataTableRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataTableColumnsItem = {
+    type: {
+        name: "Composite",
+        className: "MetadataTableColumnsItem",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            isPreferredFacet: {
+                serializedName: "isPreferredFacet",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            source: {
+                serializedName: "source",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const MetadataTableRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataTableRelated",
+        modelProperties: {
+            categories: {
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            workspaces: {
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            queries: {
+                serializedName: "queries",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataFunction = {
+    type: {
+        name: "Composite",
+        className: "MetadataFunction",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            parameters: {
+                serializedName: "parameters",
+                type: {
+                    name: "String"
+                }
+            },
+            displayName: {
+                serializedName: "displayName",
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            body: {
+                serializedName: "body",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            tags: {
+                serializedName: "tags",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataFunctionRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataFunctionRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataFunctionRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            categories: {
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            workspaces: {
+                serializedName: "workspaces",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataQuery = {
+    type: {
+        name: "Composite",
+        className: "MetadataQuery",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            displayName: {
+                serializedName: "displayName",
+                type: {
+                    name: "String"
+                }
+            },
+            description: {
+                serializedName: "description",
+                type: {
+                    name: "String"
+                }
+            },
+            body: {
+                serializedName: "body",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            labels: {
+                serializedName: "labels",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            tags: {
+                serializedName: "tags",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataQueryRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataQueryRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataQueryRelated",
+        modelProperties: {
+            categories: {
+                serializedName: "categories",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataApplication = {
+    type: {
+        name: "Composite",
+        className: "MetadataApplication",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            resourceId: {
+                serializedName: "resourceId",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            region: {
+                serializedName: "region",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataApplicationRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataApplicationRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataApplicationRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataWorkspace = {
+    type: {
+        name: "Composite",
+        className: "MetadataWorkspace",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            resourceId: {
+                serializedName: "resourceId",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            region: {
+                serializedName: "region",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            related: {
+                serializedName: "related",
+                type: {
+                    name: "Composite",
+                    className: "MetadataWorkspaceRelated"
+                }
+            }
+        }
+    }
+};
+const MetadataWorkspaceRelated = {
+    type: {
+        name: "Composite",
+        className: "MetadataWorkspaceRelated",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            solutions: {
+                serializedName: "solutions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resourceTypes: {
+                serializedName: "resourceTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            functions: {
+                serializedName: "functions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            resources: {
+                serializedName: "resources",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataPermissions = {
+    type: {
+        name: "Composite",
+        className: "MetadataPermissions",
+        modelProperties: {
+            workspaces: {
+                serializedName: "workspaces",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataPermissionsWorkspacesItem"
+                        }
+                    }
+                }
+            },
+            resources: {
+                serializedName: "resources",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataPermissionsResourcesItem"
+                        }
+                    }
+                }
+            },
+            applications: {
+                serializedName: "applications",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataPermissionsApplicationsItem"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataPermissionsWorkspacesItem = {
+    type: {
+        name: "Composite",
+        className: "MetadataPermissionsWorkspacesItem",
+        modelProperties: {
+            resourceId: {
+                serializedName: "resourceId",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            denyTables: {
+                serializedName: "denyTables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataPermissionsResourcesItem = {
+    type: {
+        name: "Composite",
+        className: "MetadataPermissionsResourcesItem",
+        modelProperties: {
+            resourceId: {
+                serializedName: "resourceId",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            denyTables: {
+                serializedName: "denyTables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataPermissionsApplicationsItem = {
+    type: {
+        name: "Composite",
+        className: "MetadataPermissionsApplicationsItem",
+        modelProperties: {
+            resourceId: {
+                serializedName: "resourceId",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const BatchRequest = {
+    type: {
+        name: "Composite",
+        className: "BatchRequest",
+        modelProperties: {
+            requests: {
+                serializedName: "requests",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "BatchQueryRequest"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const BatchQueryRequest = {
+    type: {
+        name: "Composite",
+        className: "BatchQueryRequest",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            headers: {
+                serializedName: "headers",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "String" } }
+                }
+            },
+            body: {
+                serializedName: "body",
+                type: {
+                    name: "Composite",
+                    className: "QueryBody"
+                }
+            },
+            path: {
+                defaultValue: "/query",
+                isConstant: true,
+                serializedName: "path",
+                type: {
+                    name: "String"
+                }
+            },
+            method: {
+                defaultValue: "POST",
+                isConstant: true,
+                serializedName: "method",
+                type: {
+                    name: "String"
+                }
+            },
+            workspace: {
+                serializedName: "workspace",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const BatchResponse = {
+    type: {
+        name: "Composite",
+        className: "BatchResponse",
+        modelProperties: {
+            responses: {
+                serializedName: "responses",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "BatchQueryResponse"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const BatchQueryResponse = {
+    type: {
+        name: "Composite",
+        className: "BatchQueryResponse",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                type: {
+                    name: "String"
+                }
+            },
+            status: {
+                serializedName: "status",
+                type: {
+                    name: "Number"
+                }
+            },
+            body: {
+                serializedName: "body",
+                type: {
+                    name: "Composite",
+                    className: "BatchQueryResults"
+                }
+            },
+            headers: {
+                serializedName: "headers",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "String" } }
+                }
+            }
+        }
+    }
+};
+const BatchQueryResults = {
+    type: {
+        name: "Composite",
+        className: "BatchQueryResults",
+        modelProperties: {
+            tables: {
+                serializedName: "tables",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Table"
+                        }
+                    }
+                }
+            },
+            statistics: {
+                serializedName: "statistics",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            render: {
+                serializedName: "render",
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            },
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorInfo"
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/parameters.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+const parameters_accept = {
+    parameterPath: "accept",
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Accept",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_$host = {
+    parameterPath: "$host",
+    mapper: {
+        serializedName: "$host",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const workspaceId = {
+    parameterPath: "workspaceId",
+    mapper: {
+        serializedName: "workspaceId",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const query = {
+    parameterPath: "query",
+    mapper: {
+        serializedName: "query",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const timespan = {
+    parameterPath: ["options", "timespan"],
+    mapper: {
+        serializedName: "timespan",
+        type: {
+            name: "TimeSpan"
+        }
+    }
+};
+const parameters_contentType = {
+    parameterPath: ["options", "contentType"],
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Content-Type",
+        type: {
+            name: "String"
+        }
+    }
+};
+const body = {
+    parameterPath: "body",
+    mapper: QueryBody
+};
+const prefer = {
+    parameterPath: ["options", "prefer"],
+    mapper: {
+        serializedName: "Prefer",
+        type: {
+            name: "String"
+        }
+    }
+};
+const resourceId = {
+    parameterPath: "resourceId",
+    mapper: {
+        serializedName: "resourceId",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const body1 = {
+    parameterPath: "body",
+    mapper: BatchRequest
+};
+//# sourceMappingURL=parameters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/query.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing Query operations. */
+class QueryImpl {
+    client;
+    /**
+     * Initialize a new instance of the class Query class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * Executes an Analytics query for data
+     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
+     *                    blade in the Azure portal.
+     * @param query The Analytics query. Learn more about the [Analytics query
+     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    get(workspaceId, query, options) {
+        return this.client.sendOperationRequest({ workspaceId, query, options }, query_getOperationSpec);
+    }
+    /**
+     * Executes an Analytics query for data.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/request-format) is an example for
+     * using POST with an Analytics query.
+     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
+     *                    blade in the Azure portal.
+     * @param body The Analytics query. Learn more about the [Analytics query
+     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    execute(workspaceId, body, options) {
+        return this.client.sendOperationRequest({ workspaceId, body, options }, executeOperationSpec);
+    }
+    /**
+     * Executes an Analytics query for data in the context of a resource.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
+     * example for using POST with an Analytics query.
+     * @param resourceId The identifier of the resource.
+     * @param query The Analytics query. Learn more about the [Analytics query
+     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    resourceGet(resourceId, query, options) {
+        return this.client.sendOperationRequest({ resourceId, query, options }, resourceGetOperationSpec);
+    }
+    /**
+     * Executes an Analytics query for data in the context of a resource.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
+     * example for using POST with an Analytics query.
+     * @param resourceId The identifier of the resource.
+     * @param body The Analytics query. Learn more about the [Analytics query
+     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    resourceExecute(resourceId, body, options) {
+        return this.client.sendOperationRequest({ resourceId, body, options }, resourceExecuteOperationSpec);
+    }
+    /**
+     * Executes a batch of Analytics queries for data.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/batch-queries) is an example for
+     * using POST with an Analytics query.
+     * @param body The batch request body
+     * @param options The options parameters.
+     */
+    batch(body, options) {
+        return this.client.sendOperationRequest({ body, options }, batchOperationSpec);
+    }
+    /**
+     * Executes an Analytics query for data in the context of a resource.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
+     * example for using POST with an Analytics query.
+     * @param resourceId The identifier of the resource.
+     * @param query The Analytics query. Learn more about the [Analytics query
+     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    resourceGetXms(resourceId, query, options) {
+        return this.client.sendOperationRequest({ resourceId, query, options }, resourceGetXmsOperationSpec);
+    }
+    /**
+     * Executes an Analytics query for data in the context of a resource.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
+     * example for using POST with an Analytics query.
+     * @param resourceId The identifier of the resource.
+     * @param body The Analytics query. Learn more about the [Analytics query
+     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
+     * @param options The options parameters.
+     */
+    resourceExecuteXms(resourceId, body, options) {
+        return this.client.sendOperationRequest({ resourceId, body, options }, resourceExecuteXmsOperationSpec);
+    }
+}
+// Operation Specifications
+const query_serializer = createSerializer(models_mappers_namespaceObject, /* isXml */ false);
+const query_getOperationSpec = {
+    path: "/workspaces/{workspaceId}/query",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    queryParameters: [query, timespan],
+    urlParameters: [parameters_$host, workspaceId],
+    headerParameters: [parameters_accept],
+    serializer: query_serializer
+};
+const executeOperationSpec = {
+    path: "/workspaces/{workspaceId}/query",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    requestBody: body,
+    urlParameters: [parameters_$host, workspaceId],
+    headerParameters: [
+        parameters_accept,
+        parameters_contentType,
+        prefer
+    ],
+    mediaType: "json",
+    serializer: query_serializer
+};
+const resourceGetOperationSpec = {
+    path: "/{resourceId}/query",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    queryParameters: [query, timespan],
+    urlParameters: [parameters_$host, resourceId],
+    headerParameters: [parameters_accept],
+    serializer: query_serializer
+};
+const resourceExecuteOperationSpec = {
+    path: "/{resourceId}/query",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    requestBody: body,
+    urlParameters: [parameters_$host, resourceId],
+    headerParameters: [
+        parameters_accept,
+        parameters_contentType,
+        prefer
+    ],
+    mediaType: "json",
+    serializer: query_serializer
+};
+const batchOperationSpec = {
+    path: "/$batch",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: BatchResponse
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    requestBody: body1,
+    urlParameters: [parameters_$host],
+    headerParameters: [parameters_accept, parameters_contentType],
+    mediaType: "json",
+    serializer: query_serializer
+};
+const resourceGetXmsOperationSpec = {
+    path: "/{resourceId}/query",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    queryParameters: [query, timespan],
+    urlParameters: [parameters_$host, resourceId],
+    headerParameters: [parameters_accept],
+    serializer: query_serializer
+};
+const resourceExecuteXmsOperationSpec = {
+    path: "/{resourceId}/query",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: QueryResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    requestBody: body,
+    urlParameters: [parameters_$host, resourceId],
+    headerParameters: [
+        parameters_accept,
+        parameters_contentType,
+        prefer
+    ],
+    mediaType: "json",
+    serializer: query_serializer
+};
+//# sourceMappingURL=query.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/metadata.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing Metadata operations. */
+class MetadataImpl {
+    client;
+    /**
+     * Initialize a new instance of the class Metadata class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * Retrieve the metadata information for the workspace, including its schema, functions, workspace
+     * info, categories etc.
+     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
+     *                    blade in the Azure portal.
+     * @param options The options parameters.
+     */
+    get(workspaceId, options) {
+        return this.client.sendOperationRequest({ workspaceId, options }, metadata_getOperationSpec);
+    }
+    /**
+     * Retrieve the metadata information for the workspace, including its schema, functions, workspace
+     * info, categories etc.
+     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
+     *                    blade in the Azure portal.
+     * @param options The options parameters.
+     */
+    post(workspaceId, options) {
+        return this.client.sendOperationRequest({ workspaceId, options }, postOperationSpec);
+    }
+}
+// Operation Specifications
+const metadata_serializer = createSerializer(models_mappers_namespaceObject, /* isXml */ false);
+const metadata_getOperationSpec = {
+    path: "/workspaces/{workspaceId}/metadata",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: MetadataResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    urlParameters: [parameters_$host, workspaceId],
+    headerParameters: [parameters_accept],
+    serializer: metadata_serializer
+};
+const postOperationSpec = {
+    path: "/workspaces/{workspaceId}/metadata",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: MetadataResults
+        },
+        default: {
+            bodyMapper: mappers_ErrorResponse
+        }
+    },
+    urlParameters: [parameters_$host, workspaceId],
+    headerParameters: [parameters_accept],
+    serializer: metadata_serializer
+};
+//# sourceMappingURL=metadata.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/azureLogAnalyticsContext.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+/** @internal */
+class AzureLogAnalyticsContext extends ServiceClient {
+    $host;
+    /**
+     * Initializes a new instance of the AzureLogAnalyticsContext class.
+     * @param options The parameter options
+     */
+    constructor(options) {
+        // Initializing default values for options
+        if (!options) {
+            options = {};
+        }
+        const defaults = {
+            requestContentType: "application/json; charset=utf-8"
+        };
+        const packageDetails = `azsdk-js-monitor-log-query/1.3.2`;
+        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
+            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const optionsWithDefaults = {
+            ...defaults,
+            ...options,
+            userAgentOptions: {
+                userAgentPrefix
+            },
+            baseUri: options.endpoint || "https://api.loganalytics.io/v1"
+        };
+        super(optionsWithDefaults);
+        // Assigning values to Constant parameters
+        this.$host = options.$host || "https://api.loganalytics.io/v1";
+    }
+}
+//# sourceMappingURL=azureLogAnalyticsContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/azureLogAnalytics.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+/** @internal */
+class AzureLogAnalytics extends AzureLogAnalyticsContext {
+    /**
+     * Initializes a new instance of the AzureLogAnalytics class.
+     * @param options The parameter options
+     */
+    constructor(options) {
+        super(options);
+        this.query = new QueryImpl(this);
+        this.metadata = new MetadataImpl(this);
+    }
+    query;
+    metadata;
+}
+//# sourceMappingURL=azureLogAnalytics.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/models/publicLogsModels.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/** Indicates if a query succeeded or failed or partially failed.
+ * Represented by PartialFailure" | "Success" | "Failure".
+ */
+var LogsQueryResultStatus;
+(function (LogsQueryResultStatus) {
+    /** Represents Partial Failure scenario where partial data and errors of type {@link LogsQueryPartialResult} is returned for query */
+    LogsQueryResultStatus["PartialFailure"] = "PartialFailure";
+    /** Represents Failure scenario where only error of type {@link LogsQueryError} is returned for query */
+    LogsQueryResultStatus["Failure"] = "Failure";
+    /** Represents Success scenario where all data of type {@link LogsQuerySuccessfulResult} is returned for query */
+    LogsQueryResultStatus["Success"] = "Success";
+})(LogsQueryResultStatus || (LogsQueryResultStatus = {}));
+//# sourceMappingURL=publicLogsModels.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/util.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * @internal
+ */
+function formatPreferHeader(args) {
+    if (!args) {
+        return undefined;
+    }
+    // https://datatracker.ietf.org/doc/html/rfc7240
+    const pairs = [];
+    if (args.serverTimeoutInSeconds != null) {
+        pairs.push(`wait=${args.serverTimeoutInSeconds}`);
+    }
+    if (args.includeQueryStatistics) {
+        pairs.push("include-statistics=true");
+    }
+    if (args.includeVisualization) {
+        pairs.push("include-render=true");
+    }
+    if (pairs.length > 0) {
+        return {
+            Prefer: pairs.join(","),
+        };
+    }
+    return undefined;
+}
+//# sourceMappingURL=util.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/timespanConversion.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+function timespanConversion_convertTimespanToInterval(timespan) {
+    if (isObjectWithProperties(timespan, ["startTime", "endTime", "duration"])) {
+        throw new TypeError("Invalid Timespan - contains startTime, endTime, and duration.");
+    }
+    if (isObjectWithProperties(timespan, ["startTime", "endTime"])) {
+        return `${timespan.startTime.toISOString()}/${timespan.endTime.toISOString()}`;
+    }
+    else if (isObjectWithProperties(timespan, ["startTime", "duration"])) {
+        return `${timespan.startTime.toISOString()}/${timespan.duration}`;
+    }
+    else if (isObjectWithProperties(timespan, ["duration", "endTime"])) {
+        return `${timespan.duration}/${timespan.endTime.toISOString()}`;
+    }
+    else if (isObjectWithProperties(timespan, ["duration"])) {
+        return timespan.duration;
+    }
+    throw new TypeError("Invalid Timespan - no valid fields assigned.");
+}
+function timespanConversion_convertIntervalToTimeIntervalObject(timespan) {
+    if (timespan.includes("/")) {
+        const intervalUnits = timespan.split("/");
+        if (Date.parse(intervalUnits[0]) && Date.parse(intervalUnits[1])) {
+            return { startTime: new Date(intervalUnits[0]), endTime: new Date(intervalUnits[1]) };
+        }
+        else if (Date.parse(intervalUnits[0]) && !Date.parse(intervalUnits[1])) {
+            return { startTime: new Date(intervalUnits[0]), duration: intervalUnits[1] };
+        }
+        else if (!Date.parse(intervalUnits[0]) && Date.parse(intervalUnits[1])) {
+            return { duration: intervalUnits[0], endTime: new Date(intervalUnits[1]) };
+        }
+        else {
+            return { duration: timespan };
+        }
+    }
+    else {
+        return { duration: timespan };
+    }
+}
+/**
+ * Helper TypeGuard that checks if the input is an object with the specified property.
+ * Note: The property may be inherited.
+ * @param thing - Any object.
+ * @param property - The name of the property that should appear in the object.
+ * @internal
+ */
+function timespanConversion_objectHasProperty(thing, property) {
+    return typeof thing === "object" && property in thing;
+}
+/**
+ * Helper TypeGuard that checks if something is defined or not.
+ * @param thing - Anything
+ * @internal
+ */
+function timespanConversion_isDefined(thing) {
+    return typeof thing !== "undefined" && thing !== null;
+}
+//# sourceMappingURL=timespanConversion.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/modelConverters.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+
+
+/**
+ * @internal
+ */
+function convertRequestForQueryBatch(batch) {
+    let id = 0;
+    const requests = batch.map((query) => {
+        const body = {
+            workspaceId: query.workspaceId,
+            query: query.query,
+        };
+        if (query["additionalWorkspaces"]) {
+            body["workspaces"] = query["additionalWorkspaces"].map((x) => x);
+        }
+        if (query["timespan"]) {
+            body["timespan"] = timespanConversion_convertTimespanToInterval(query["timespan"]);
+        }
+        delete body["workspaceId"];
+        delete body["includeQueryStatistics"];
+        delete body["includeVisualization"];
+        delete body["additionalWorkspaces"];
+        delete body["serverTimeoutInSeconds"];
+        const generatedRequest = {
+            id: id.toString(),
+            workspace: query.workspaceId,
+            headers: formatPreferHeader(query),
+            body,
+        };
+        ++id;
+        return generatedRequest;
+    });
+    return {
+        requests,
+    };
+}
+/**
+ * @internal
+ */
+function convertResponseForQueryBatch(generatedResponse, rawResponse) {
+    const fixApplied = fixInvalidBatchQueryResponse(generatedResponse, rawResponse);
+    /* Sort the ids that are passed in with the queries, as numbers instead of strings
+     * It is not guaranteed that service will return the responses for queries in the same order
+     * as the queries are passed in
+     */
+    const responseList = generatedResponse.responses || [];
+    const newResponse = responseList
+        ?.sort((a, b) => {
+        let left = 0;
+        if (a.id != null) {
+            left = parseInt(a.id, 10);
+        }
+        let right = 0;
+        if (b.id != null) {
+            right = parseInt(b.id, 10);
+        }
+        return left - right;
+    })
+        ?.map((response) => convertBatchQueryResponseHelper(response));
+    newResponse["__fixApplied"] = fixApplied;
+    return newResponse;
+}
+/**
+ * This is a workaround for a service bug that we're investigating. The 'body' column will occasionally come
+ * back as a JSON string, instead of being a JSON object.
+ *
+ * (examples, with excess stuff trimmed)
+ * Correct: `{"responses":[{"body":{"tables":[{"name":"PrimaryResult","columns":[{"name":"stringcolumn","type":"string"}],"rows":[["hello"]}`
+ * Broken: `{"responses":[{"body":"{\"tables\":[{\"name\":\"PrimaryResult\",\"columns\":[{\"name\":\"stringcolumn\",\"type\":\"string\"}],\"rows\":[[\"hello\"]}`
+ *
+ * Issue here: https://github.com/Azure/azure-sdk-for-js/issues/15688
+ *
+ * @internal
+ */
+function fixInvalidBatchQueryResponse(generatedResponse, rawResponse) {
+    if (generatedResponse.responses == null) {
+        return false;
+    }
+    let hadToFix = false;
+    // the body here is incorrect, deserialize the correct one from the raw response itself.
+    const parsedBody = JSON.parse(rawResponse.bodyAsText);
+    // fix whichever responses are in this broken state (each query has it's own
+    // response, so they're not all always broken)
+    for (let i = 0; i < generatedResponse.responses.length; ++i) {
+        if (generatedResponse.responses[i].body?.error != null) {
+            continue;
+        }
+        // deserialize the raw response from the service, since we'll need index into it.
+        generatedResponse.responses[i].body = parsedBody.responses[i].body;
+        hadToFix = true;
+    }
+    return hadToFix;
+}
+/**
+ * @internal
+ */
+function modelConverters_convertRequestForMetricsBatchQuery(metricsQueryResourcesOptions) {
+    if (!metricsQueryResourcesOptions) {
+        return {};
+    }
+    return {
+        starttime: metricsQueryResourcesOptions.startTime?.toISOString(),
+        endtime: metricsQueryResourcesOptions.endTime?.toISOString(),
+        rollupby: metricsQueryResourcesOptions.rollUpBy,
+        ...metricsQueryResourcesOptions,
+    };
+}
+/**
+ * @internal
+ */
+function modelConverters_convertRequestForMetrics(metricNames, queryMetricsOptions) {
+    if (!queryMetricsOptions) {
+        return {};
+    }
+    const { orderBy, aggregations, metricNamespace, timespan, granularity, rollUpBy, ...rest } = queryMetricsOptions;
+    const obj = {
+        ...rest,
+    };
+    if (timespan) {
+        obj.timespan = convertTimespanToInterval(timespan);
+    }
+    if (orderBy) {
+        obj.orderby = orderBy;
+    }
+    if (metricNames) {
+        obj.metricnames = metricNames.join(",");
+    }
+    if (aggregations) {
+        obj.aggregation = aggregations.join(",");
+    }
+    if (metricNamespace) {
+        obj.metricnamespace = metricNamespace;
+    }
+    if (granularity) {
+        obj.interval = granularity;
+    }
+    if (rollUpBy) {
+        obj.rollupby = rollUpBy;
+    }
+    return obj;
+}
+/**
+ * @internal
+ */
+function modelConverters_convertResponseForMetrics(generatedResponse) {
+    const metrics = generatedResponse.value.map((metric) => {
+        const metricObject = {
+            ...metric,
+            name: metric.name.value,
+            description: metric.displayDescription,
+            timeseries: metric.timeseries.map((ts) => ({
+                data: ts.data,
+                metadataValues: ts.metadatavalues?.map((mv) => ({
+                    ...mv,
+                    name: mv.name?.value,
+                })),
+            })),
+        };
+        delete metricObject.displayDescription;
+        return metricObject;
+    });
+    const { resourceregion, value: _ignoredValue, interval, timespan, ...rest } = generatedResponse;
+    const obj = {
+        ...rest,
+        metrics,
+        timespan: convertIntervalToTimeIntervalObject(timespan),
+    };
+    if (resourceregion) {
+        obj.resourceRegion = resourceregion;
+    }
+    if (interval) {
+        obj.granularity = interval;
+    }
+    return createMetricsQueryResult(obj);
+}
+/**
+ * @internal
+ */
+function modelConverters_convertRequestOptionsForMetricsDefinitions(options) {
+    if (!options) {
+        return {};
+    }
+    const { metricNamespace, ...rest } = options;
+    const obj = {
+        ...rest,
+    };
+    if (metricNamespace) {
+        obj.metricnamespace = metricNamespace;
+    }
+    return obj;
+}
+function modelConverters_convertResponseForMetricBatch(generatedResponse) {
+    const result = [];
+    generatedResponse?.values?.forEach((genDef) => {
+        const response = {
+            timespan: {
+                startTime: new Date(genDef.starttime),
+                endTime: new Date(genDef.endtime),
+            },
+            granularity: genDef.interval,
+            namespace: genDef.namespace,
+            resourceRegion: genDef.resourceregion,
+            resourceId: genDef.resourceid,
+            metrics: genDef.value.map((genValue) => {
+                return {
+                    ...genValue,
+                    description: genValue.displayDescription ?? "",
+                    name: genValue.name.value,
+                };
+            }),
+            getMetricByName,
+        };
+        result.push(response);
+    });
+    return result;
+}
+/**
+ * @internal
+ */
+function modelConverters_convertResponseForMetricsDefinitions(generatedResponse) {
+    const definitions = generatedResponse?.map((genDef) => {
+        const { name, dimensions, displayDescription, metricAvailabilities, ...rest } = genDef;
+        const response = {
+            ...rest,
+        };
+        if (displayDescription) {
+            response.description = displayDescription;
+        }
+        if (name?.value) {
+            response.name = name.value;
+        }
+        const mappedMetricAvailabilities = metricAvailabilities?.map((genMetricAvail) => {
+            return {
+                granularity: genMetricAvail.timeGrain,
+                retention: genMetricAvail.retention,
+            };
+        });
+        if (mappedMetricAvailabilities) {
+            response.metricAvailabilities = mappedMetricAvailabilities;
+        }
+        const mappedDimensions = dimensions?.map((dim) => dim.value);
+        if (mappedDimensions) {
+            response.dimensions = mappedDimensions;
+        }
+        return response;
+    });
+    return definitions;
+}
+/**
+ * @internal
+ */
+function modelConverters_convertResponseForMetricNamespaces(generatedResponse) {
+    const namespaces = generatedResponse?.map((genDef) => {
+        const { properties, ...rest } = genDef;
+        const response = {
+            ...rest,
+        };
+        if (properties) {
+            response.metricNamespaceName = properties.metricNamespaceName;
+        }
+        return response;
+    });
+    return namespaces;
+}
+/**
+ * @internal
+ */
+function convertGeneratedTable(table) {
+    const dynamicsIndices = [];
+    const datesIndices = [];
+    // most columns convert on deserialization except for `dynamic` columns (basically JSON objects)
+    // and 'datetime' (strings that are ISO8601 formatted dates)
+    for (let i = 0; i < table.columns.length; ++i) {
+        if (table.columns[i].type === "datetime") {
+            datesIndices.push(i);
+        }
+        else if (table.columns[i].type === "dynamic") {
+            dynamicsIndices.push(i);
+        }
+    }
+    return {
+        ...table,
+        rows: table.rows.map((row) => {
+            for (const dynamicIndex of dynamicsIndices) {
+                try {
+                    row[dynamicIndex] = JSON.parse(row[dynamicIndex]);
+                }
+                catch (_err) {
+                    /* leave as is. */
+                }
+            }
+            for (const dateIndex of datesIndices) {
+                row[dateIndex] = new Date(row[dateIndex]);
+            }
+            return row;
+        }),
+        columnDescriptors: table.columns,
+    };
+}
+/**
+ * @internal
+ */
+function convertBatchQueryResponseHelper(response) {
+    try {
+        const parsedResponseBody = JSON.parse(response.body);
+        return computeResultType(parsedResponseBody);
+    }
+    catch (e) {
+        if (response.body)
+            return computeResultType(response.body);
+        else
+            return {};
+    }
+}
+function computeResultType(generatedResponse) {
+    if (!generatedResponse.error) {
+        const result = {
+            visualization: generatedResponse.render,
+            status: LogsQueryResultStatus.Success,
+            statistics: generatedResponse.statistics,
+            tables: generatedResponse.tables?.map((table) => convertGeneratedTable(table)) ||
+                [],
+        };
+        return result;
+    }
+    else {
+        if (generatedResponse.tables) {
+            const result = {
+                visualization: generatedResponse.render,
+                status: LogsQueryResultStatus.PartialFailure,
+                statistics: generatedResponse.statistics,
+                partialTables: generatedResponse.tables?.map((table) => convertGeneratedTable(table)),
+                partialError: mapError(generatedResponse.error),
+            };
+            return result;
+        }
+        else {
+            const errorInfo = mapError(generatedResponse.error);
+            const result = {
+                status: LogsQueryResultStatus.Failure,
+                ...errorInfo,
+            };
+            return result;
+        }
+    }
+}
+function mapError(error) {
+    let innermostError = error;
+    while (innermostError.innerError) {
+        innermostError = innermostError.innerError;
+    }
+    return {
+        name: "Error",
+        code: error.code,
+        message: `${error.message}.  ${innermostError.message}`,
+    };
+}
+//# sourceMappingURL=modelConverters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/constants.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * @internal
+ */
+const monitor_query_dist_esm_constants_SDK_VERSION = "1.3.3";
+/**
+ * Known values for Monitor Audience
+ *
+ * **NOTE**: This is applicable only to `MetricsClient` in the `@azure/monitor-query` data plane package.
+ * The name `KnownMonitorAudience` is added for backward compatibility.
+ */
+var constants_KnownMonitorAudience;
+(function (KnownMonitorAudience) {
+    /**
+     * Audience for Azure China
+     */
+    KnownMonitorAudience["AzureChina"] = "https://metrics.monitor.azure.cn";
+    /**
+     * Audience for Azure Government
+     */
+    KnownMonitorAudience["AzureGovernment"] = "https://metrics.monitor.azure.us";
+    /**
+     * Audience for Azure Public
+     */
+    KnownMonitorAudience["AzurePublicCloud"] = "https://metrics.monitor.azure.com";
+})(constants_KnownMonitorAudience || (constants_KnownMonitorAudience = {}));
+/**
+ * Known values for Monitor Audience
+ */
+var KnownMonitorLogsQueryAudience;
+(function (KnownMonitorLogsQueryAudience) {
+    /**
+     * Audience for Azure China
+     */
+    KnownMonitorLogsQueryAudience["AzureChina"] = "https://api.loganalytics.azure.cn";
+    /**
+     * Audience for Azure Government
+     */
+    KnownMonitorLogsQueryAudience["AzureGovernment"] = "https://api.loganalytics.us";
+    /**
+     * Audience for Azure Public
+     */
+    KnownMonitorLogsQueryAudience["AzurePublicCloud"] = "https://api.loganalytics.io";
+})(KnownMonitorLogsQueryAudience || (KnownMonitorLogsQueryAudience = {}));
+/**
+ * Known values for Monitor Audience
+ */
+var constants_KnownMonitorMetricsQueryAudience;
+(function (KnownMonitorMetricsQueryAudience) {
+    /**
+     * Audience for Azure China
+     */
+    KnownMonitorMetricsQueryAudience["AzureChina"] = "https://management.chinacloudapi.cn";
+    /**
+     * Audience for Azure Government
+     */
+    KnownMonitorMetricsQueryAudience["AzureGovernment"] = "https://management.usgovcloudapi.net";
+    /**
+     * Audience for Azure Public
+     */
+    KnownMonitorMetricsQueryAudience["AzurePublicCloud"] = "https://management.azure.com/";
+})(constants_KnownMonitorMetricsQueryAudience || (constants_KnownMonitorMetricsQueryAudience = {}));
+//# sourceMappingURL=constants.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/tracing.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+/**
+ * Global tracing client used by this package.
+ *
+ * @internal
+ */
+const esm_tracing_tracingClient = createTracingClient({
+    namespace: "Microsoft.Monitor",
+    packageName: "@azure/monitor-query",
+    packageVersion: monitor_query_dist_esm_constants_SDK_VERSION,
+});
+//# sourceMappingURL=tracing.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/logQueryOptionUtils.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+function getLogQueryEndpoint(options) {
+    if (!options.endpoint) {
+        throw new Error("options.endpoint is required");
+    }
+    const url = new URL(options.endpoint);
+    url.pathname = "/v1";
+    return url.toString();
+}
+//# sourceMappingURL=logQueryOptionUtils.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/logsQueryClient.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+
+
+
+
+
+
+/**
+ * Client for Azure Log Analytics
+ *
+ * @deprecated Moved to `@azure/monitor-query-logs`. Use `LogsQueryClient` from `@azure/monitor-query-logs` instead.
+ * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-query-logs/MIGRATION.md
+ */
+class LogsQueryClient {
+    _logAnalytics;
+    /**
+     * Construct a LogsClient that can be used to query logs using the Log Analytics Query language.
+     *
+     * @param tokenCredential - A token credential.
+     * @param options - Options for the LogsClient.
+     */
+    constructor(tokenCredential, options) {
+        const scope = options?.audience
+            ? `${options.audience}/.default`
+            : `${KnownMonitorLogsQueryAudience.AzurePublicCloud}/.default`;
+        let endpoint = options?.endpoint;
+        if (options?.endpoint) {
+            endpoint = getLogQueryEndpoint(options);
+        }
+        const packageDetails = `azsdk-js-monitor-query/${monitor_query_dist_esm_constants_SDK_VERSION}`;
+        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
+            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        this._logAnalytics = new AzureLogAnalytics({
+            ...options,
+            $host: endpoint,
+            endpoint: endpoint,
+            credentialScopes: scope,
+            credential: tokenCredential,
+            userAgentOptions: {
+                userAgentPrefix,
+            },
+        });
+    }
+    /**
+     * Queries logs in a Log Analytics Workspace.
+     *
+     * @param workspaceId - The 'Workspace Id' for the Log Analytics Workspace
+     * @param query - A Kusto query.
+     * @param timespan - The timespan over which to query data. This is an ISO8601 time period value. This timespan is applied in addition to any that are specified in the query expression.
+     *  Some common durations can be found in the `Durations` object.
+     * @param options - Options to adjust various aspects of the request.
+     * @returns The result of the query.
+     */
+    async queryWorkspace(workspaceId, query, timespan, 
+    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
+    options = {}) {
+        let timeInterval = "";
+        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryWorkspace", options, async (updatedOptions) => {
+            if (timespan) {
+                timeInterval = timespanConversion_convertTimespanToInterval(timespan);
+            }
+            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.execute(workspaceId, {
+                query,
+                timespan: timeInterval,
+                workspaces: options?.additionalWorkspaces,
+            }, paramOptions), {
+                ...updatedOptions,
+                requestOptions: {
+                    ...updatedOptions.requestOptions,
+                    customHeaders: {
+                        ...updatedOptions.requestOptions?.customHeaders,
+                        ...formatPreferHeader(options),
+                    },
+                },
+            });
+            const parsedBody = JSON.parse(rawResponse.bodyAsText);
+            flatResponse.tables = parsedBody.tables;
+            const res = {
+                tables: flatResponse.tables.map(convertGeneratedTable),
+                statistics: flatResponse.statistics,
+                visualization: flatResponse.render,
+            };
+            if (!flatResponse.error) {
+                // if there is no error field, it is success
+                const result = {
+                    tables: res.tables,
+                    statistics: res.statistics,
+                    visualization: res.visualization,
+                    status: LogsQueryResultStatus.Success,
+                };
+                return result;
+            }
+            else {
+                const result = {
+                    partialTables: res.tables,
+                    status: LogsQueryResultStatus.PartialFailure,
+                    partialError: mapError(flatResponse.error),
+                    statistics: res.statistics,
+                    visualization: res.visualization,
+                };
+                return result;
+            }
+        });
+    }
+    /**
+     * Query Logs with multiple queries, in a batch.
+     * @param batch - A batch of Kusto queries to execute. Each query can be configured to run against separate workspaces.
+     * @param options - Options for querying logs in a batch.
+     * @returns The Logs query results for all the queries.
+     */
+    async queryBatch(batch, options = {}) {
+        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryBatch", options, async (updatedOptions) => {
+            const generatedRequest = convertRequestForQueryBatch(batch);
+            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.batch(generatedRequest, paramOptions), updatedOptions || {});
+            const result = convertResponseForQueryBatch(flatResponse, rawResponse);
+            return result;
+        });
+    }
+    /**
+     * Executes a Kusto query on an Azure resource
+     *
+     * @param resourceId - The identifier of the resource. The expected format is
+           '/subscriptions/<sid>/resourceGroups/<rg>/providers/<providerName>/<resourceType>/<resourceName>'.
+     * @param query - A Kusto query. Learn more about the `Kusto query syntax <https://learn.microsoft.com/azure/data-explorer/kusto/query/>`.
+     * @param timespan - The timespan over which to query data. This is an ISO8601 time period value. This timespan is applied in addition to any that are specified in the query expression.
+     *  Some common durations can be found in the {@link Durations} object.
+     * @param options - Options to adjust various aspects of the request.
+     * @returns Returns all the Azure Monitor logs matching the given Kusto query for an Azure resource.
+     */
+    async queryResource(resourceId, query, timespan, 
+    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
+    options = {}) {
+        let timeInterval = "";
+        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryResource", options, async (updatedOptions) => {
+            timeInterval = timespanConversion_convertTimespanToInterval(timespan);
+            if (resourceId.startsWith("/")) {
+                resourceId = resourceId.substring(1);
+            }
+            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.resourceExecute(resourceId, {
+                query,
+                timespan: timeInterval,
+                workspaces: options?.additionalWorkspaces,
+            }, paramOptions), {
+                ...updatedOptions,
+                requestOptions: {
+                    ...updatedOptions.requestOptions,
+                    customHeaders: {
+                        ...updatedOptions.requestOptions?.customHeaders,
+                        ...formatPreferHeader(options),
+                    },
+                },
+            });
+            const parsedBody = JSON.parse(rawResponse.bodyAsText);
+            flatResponse.tables = parsedBody.tables;
+            const res = {
+                tables: flatResponse.tables.map(convertGeneratedTable),
+                statistics: flatResponse.statistics,
+                visualization: flatResponse.render,
+            };
+            if (!flatResponse.error) {
+                // if there is no error field, it is success
+                const result = {
+                    tables: res.tables,
+                    statistics: res.statistics,
+                    visualization: res.visualization,
+                    status: LogsQueryResultStatus.Success,
+                };
+                return result;
+            }
+            else {
+                const result = {
+                    partialTables: res.tables,
+                    status: LogsQueryResultStatus.PartialFailure,
+                    partialError: mapError(flatResponse.error),
+                    statistics: res.statistics,
+                    visualization: res.visualization,
+                };
+                return result;
+            }
+        });
+    }
+}
+async function getRawResponse(f, options) {
+    // renaming onResponse received from customer to customerProvidedCallback
+    const { onResponse: customerProvidedCallback } = options || {};
+    let rawResponse = undefined;
+    // flatResponseParam - is basically the flatResponse received from service call -
+    // just named it so that linter doesn't complain
+    // onResponse - includes the rawResponse and the customer's provided onResponse
+    const flatResponse = await f({
+        ...options,
+        onResponse: (response, flatResponseParam) => {
+            rawResponse = response;
+            customerProvidedCallback?.(response, flatResponseParam);
+        },
+    });
+    return { flatResponse, rawResponse: rawResponse };
+}
+//# sourceMappingURL=logsQueryClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+/** Known values of {@link ApiVersion20240201} that the service accepts. */
+var KnownApiVersion20240201;
+(function (KnownApiVersion20240201) {
+    /** Api Version '2024-02-01' */
+    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
+})(KnownApiVersion20240201 || (KnownApiVersion20240201 = {}));
+/** Known values of {@link MetricResultType} that the service accepts. */
+var KnownMetricResultType;
+(function (KnownMetricResultType) {
+    KnownMetricResultType["Data"] = "Data";
+    KnownMetricResultType["Metadata"] = "Metadata";
+})(KnownMetricResultType || (KnownMetricResultType = {}));
+/** Known values of {@link MetricUnit} that the service accepts. */
+var KnownMetricUnit;
+(function (KnownMetricUnit) {
+    /** Unit of raw quantity. */
+    KnownMetricUnit["Count"] = "Count";
+    /** Unit of memory in bytes. */
+    KnownMetricUnit["Bytes"] = "Bytes";
+    /** Unit of time in seconds. */
+    KnownMetricUnit["Seconds"] = "Seconds";
+    /** Rate unit of raw quantity per second. */
+    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
+    /** Rate unit of memory in bytes per second. */
+    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
+    /** Percentage unit. */
+    KnownMetricUnit["Percent"] = "Percent";
+    /** Unit of time in 1/1000th of a second. */
+    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
+    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
+    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
+    /** No specified unit. */
+    KnownMetricUnit["Unspecified"] = "Unspecified";
+    /** Unit of processing power. */
+    KnownMetricUnit["Cores"] = "Cores";
+    /** Unit of processing power in 1/1000th of a CPU core. */
+    KnownMetricUnit["MilliCores"] = "MilliCores";
+    /** Unit of processing power in one billionth of a CPU core. */
+    KnownMetricUnit["NanoCores"] = "NanoCores";
+    /** Rate unit of binary digits per second. */
+    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
+})(KnownMetricUnit || (KnownMetricUnit = {}));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/mappers.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const Response = {
+    type: {
+        name: "Composite",
+        className: "Response",
+        modelProperties: {
+            cost: {
+                constraints: {
+                    InclusiveMinimum: 0
+                },
+                serializedName: "cost",
+                type: {
+                    name: "Number"
+                }
+            },
+            timespan: {
+                serializedName: "timespan",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            interval: {
+                serializedName: "interval",
+                type: {
+                    name: "String"
+                }
+            },
+            namespace: {
+                serializedName: "namespace",
+                type: {
+                    name: "String"
+                }
+            },
+            resourceregion: {
+                serializedName: "resourceregion",
+                type: {
+                    name: "String"
+                }
+            },
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Metric"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const Metric = {
+    type: {
+        name: "Composite",
+        className: "Metric",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            displayDescription: {
+                serializedName: "displayDescription",
+                type: {
+                    name: "String"
+                }
+            },
+            errorCode: {
+                serializedName: "errorCode",
+                type: {
+                    name: "String"
+                }
+            },
+            errorMessage: {
+                serializedName: "errorMessage",
+                type: {
+                    name: "String"
+                }
+            },
+            unit: {
+                serializedName: "unit",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            timeseries: {
+                serializedName: "timeseries",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "TimeSeriesElement"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const LocalizableString = {
+    type: {
+        name: "Composite",
+        className: "LocalizableString",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            localizedValue: {
+                serializedName: "localizedValue",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const TimeSeriesElement = {
+    type: {
+        name: "Composite",
+        className: "TimeSeriesElement",
+        modelProperties: {
+            metadatavalues: {
+                serializedName: "metadatavalues",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataValue"
+                        }
+                    }
+                }
+            },
+            data: {
+                serializedName: "data",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricValue"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetadataValue = {
+    type: {
+        name: "Composite",
+        className: "MetadataValue",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            value: {
+                serializedName: "value",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const MetricValue = {
+    type: {
+        name: "Composite",
+        className: "MetricValue",
+        modelProperties: {
+            timeStamp: {
+                serializedName: "timeStamp",
+                required: true,
+                type: {
+                    name: "DateTime"
+                }
+            },
+            average: {
+                serializedName: "average",
+                type: {
+                    name: "Number"
+                }
+            },
+            minimum: {
+                serializedName: "minimum",
+                type: {
+                    name: "Number"
+                }
+            },
+            maximum: {
+                serializedName: "maximum",
+                type: {
+                    name: "Number"
+                }
+            },
+            total: {
+                serializedName: "total",
+                type: {
+                    name: "Number"
+                }
+            },
+            count: {
+                serializedName: "count",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+const ErrorContract = {
+    type: {
+        name: "Composite",
+        className: "ErrorContract",
+        modelProperties: {
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorResponse"
+                }
+            }
+        }
+    }
+};
+const models_mappers_ErrorResponse = {
+    type: {
+        name: "Composite",
+        className: "ErrorResponse",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            target: {
+                serializedName: "target",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            details: {
+                serializedName: "details",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorResponse"
+                        }
+                    }
+                }
+            },
+            additionalInfo: {
+                serializedName: "additionalInfo",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorAdditionalInfo"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const mappers_ErrorAdditionalInfo = {
+    type: {
+        name: "Composite",
+        className: "ErrorAdditionalInfo",
+        modelProperties: {
+            type: {
+                serializedName: "type",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            info: {
+                serializedName: "info",
+                readOnly: true,
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const SubscriptionScopeMetricsRequestBodyParameters = {
+    type: {
+        name: "Composite",
+        className: "SubscriptionScopeMetricsRequestBodyParameters",
+        modelProperties: {
+            timespan: {
+                serializedName: "timespan",
+                type: {
+                    name: "String"
+                }
+            },
+            interval: {
+                serializedName: "interval",
+                type: {
+                    name: "String"
+                }
+            },
+            metricNames: {
+                serializedName: "metricNames",
+                type: {
+                    name: "String"
+                }
+            },
+            aggregation: {
+                serializedName: "aggregation",
+                type: {
+                    name: "String"
+                }
+            },
+            filter: {
+                serializedName: "filter",
+                type: {
+                    name: "String"
+                }
+            },
+            top: {
+                serializedName: "top",
+                type: {
+                    name: "Number"
+                }
+            },
+            orderBy: {
+                serializedName: "orderBy",
+                type: {
+                    name: "String"
+                }
+            },
+            rollUpBy: {
+                serializedName: "rollUpBy",
+                type: {
+                    name: "String"
+                }
+            },
+            resultType: {
+                serializedName: "resultType",
+                type: {
+                    name: "String"
+                }
+            },
+            metricNamespace: {
+                serializedName: "metricNamespace",
+                type: {
+                    name: "String"
+                }
+            },
+            autoAdjustTimegrain: {
+                serializedName: "autoAdjustTimegrain",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            validateDimensions: {
+                serializedName: "validateDimensions",
+                type: {
+                    name: "Boolean"
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/parameters.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+const models_parameters_accept = {
+    parameterPath: "accept",
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Accept",
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_$host = {
+    parameterPath: "$host",
+    mapper: {
+        serializedName: "$host",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const parameters_subscriptionId = {
+    parameterPath: "subscriptionId",
+    mapper: {
+        constraints: {
+            MinLength: 1
+        },
+        serializedName: "subscriptionId",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_apiVersion = {
+    parameterPath: "apiVersion",
+    mapper: {
+        serializedName: "api-version",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const region = {
+    parameterPath: "region",
+    mapper: {
+        serializedName: "region",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_timespan = {
+    parameterPath: ["options", "timespan"],
+    mapper: {
+        serializedName: "timespan",
+        type: {
+            name: "String"
+        }
+    }
+};
+const interval = {
+    parameterPath: ["options", "interval"],
+    mapper: {
+        serializedName: "interval",
+        type: {
+            name: "String"
+        }
+    }
+};
+const metricnames = {
+    parameterPath: ["options", "metricnames"],
+    mapper: {
+        serializedName: "metricnames",
+        type: {
+            name: "String"
+        }
+    }
+};
+const aggregation = {
+    parameterPath: ["options", "aggregation"],
+    mapper: {
+        serializedName: "aggregation",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_top = {
+    parameterPath: ["options", "top"],
+    mapper: {
+        serializedName: "top",
+        type: {
+            name: "Number"
+        }
+    }
+};
+const orderby = {
+    parameterPath: ["options", "orderby"],
+    mapper: {
+        serializedName: "orderby",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_filter = {
+    parameterPath: ["options", "filter"],
+    mapper: {
+        serializedName: "$filter",
+        type: {
+            name: "String"
+        }
+    }
+};
+const resultType = {
+    parameterPath: ["options", "resultType"],
+    mapper: {
+        serializedName: "resultType",
+        type: {
+            name: "String"
+        }
+    }
+};
+const metricnamespace = {
+    parameterPath: ["options", "metricnamespace"],
+    mapper: {
+        serializedName: "metricnamespace",
+        type: {
+            name: "String"
+        }
+    }
+};
+const autoAdjustTimegrain = {
+    parameterPath: ["options", "autoAdjustTimegrain"],
+    mapper: {
+        serializedName: "AutoAdjustTimegrain",
+        type: {
+            name: "Boolean"
+        }
+    }
+};
+const validateDimensions = {
+    parameterPath: ["options", "validateDimensions"],
+    mapper: {
+        serializedName: "ValidateDimensions",
+        type: {
+            name: "Boolean"
+        }
+    }
+};
+const rollupby = {
+    parameterPath: ["options", "rollupby"],
+    mapper: {
+        serializedName: "rollupby",
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_contentType = {
+    parameterPath: ["options", "contentType"],
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Content-Type",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_body = {
+    parameterPath: ["options", "body"],
+    mapper: SubscriptionScopeMetricsRequestBodyParameters
+};
+const resourceUri = {
+    parameterPath: "resourceUri",
+    mapper: {
+        serializedName: "resourceUri",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const resultType1 = {
+    parameterPath: ["options", "resultType"],
+    mapper: {
+        serializedName: "resultType",
+        type: {
+            name: "Enum",
+            allowedValues: ["Data", "Metadata"]
+        }
+    }
+};
+//# sourceMappingURL=parameters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/operations/metrics.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing Metrics operations. */
+class MetricsImpl {
+    client;
+    /**
+     * Initialize a new instance of the class Metrics class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * **Lists the metric data for a subscription**.
+     * @param subscriptionId The ID of the target subscription.
+     * @param region The region where the metrics you want reside.
+     * @param options The options parameters.
+     */
+    listAtSubscriptionScope(subscriptionId, region, options) {
+        return this.client.sendOperationRequest({ subscriptionId, region, options }, listAtSubscriptionScopeOperationSpec);
+    }
+    /**
+     * **Lists the metric data for a subscription**. Parameters can be specified on either query params or
+     * the body.
+     * @param subscriptionId The ID of the target subscription.
+     * @param region The region where the metrics you want reside.
+     * @param options The options parameters.
+     */
+    listAtSubscriptionScopePost(subscriptionId, region, options) {
+        return this.client.sendOperationRequest({ subscriptionId, region, options }, listAtSubscriptionScopePostOperationSpec);
+    }
+    /**
+     * **Lists the metric values for a resource**.
+     * @param resourceUri The identifier of the resource.
+     * @param options The options parameters.
+     */
+    list(resourceUri, options) {
+        return this.client.sendOperationRequest({ resourceUri, options }, metrics_listOperationSpec);
+    }
+}
+// Operation Specifications
+const metrics_serializer = createSerializer(src_models_mappers_namespaceObject, /* isXml */ false);
+const listAtSubscriptionScopeOperationSpec = {
+    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metrics",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: Response
+        },
+        default: {
+            bodyMapper: ErrorContract
+        }
+    },
+    queryParameters: [
+        parameters_apiVersion,
+        region,
+        parameters_timespan,
+        interval,
+        metricnames,
+        aggregation,
+        parameters_top,
+        orderby,
+        parameters_filter,
+        resultType,
+        metricnamespace,
+        autoAdjustTimegrain,
+        validateDimensions,
+        rollupby
+    ],
+    urlParameters: [models_parameters_$host, parameters_subscriptionId],
+    headerParameters: [models_parameters_accept],
+    serializer: metrics_serializer
+};
+const listAtSubscriptionScopePostOperationSpec = {
+    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metrics",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: Response
+        },
+        default: {
+            bodyMapper: ErrorContract
+        }
+    },
+    requestBody: parameters_body,
+    queryParameters: [
+        parameters_apiVersion,
+        region,
+        parameters_timespan,
+        interval,
+        metricnames,
+        aggregation,
+        parameters_top,
+        orderby,
+        parameters_filter,
+        resultType,
+        metricnamespace,
+        autoAdjustTimegrain,
+        validateDimensions,
+        rollupby
+    ],
+    urlParameters: [models_parameters_$host, parameters_subscriptionId],
+    headerParameters: [models_parameters_accept, models_parameters_contentType],
+    mediaType: "json",
+    serializer: metrics_serializer
+};
+const metrics_listOperationSpec = {
+    path: "/{resourceUri}/providers/Microsoft.Insights/metrics",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: Response
+        },
+        default: {
+            bodyMapper: models_mappers_ErrorResponse
+        }
+    },
+    queryParameters: [
+        parameters_apiVersion,
+        parameters_timespan,
+        interval,
+        metricnames,
+        aggregation,
+        parameters_top,
+        orderby,
+        parameters_filter,
+        metricnamespace,
+        autoAdjustTimegrain,
+        validateDimensions,
+        rollupby,
+        resultType1
+    ],
+    urlParameters: [models_parameters_$host, resourceUri],
+    headerParameters: [models_parameters_accept],
+    serializer: metrics_serializer
+};
+//# sourceMappingURL=metrics.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/operations/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/monitorManagementClientContext.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+/** @internal */
+class MonitorManagementClientContext extends ServiceClient {
+    $host;
+    apiVersion;
+    /**
+     * Initializes a new instance of the MonitorManagementClientContext class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        if (apiVersion === undefined) {
+            throw new Error("'apiVersion' cannot be null");
+        }
+        // Initializing default values for options
+        if (!options) {
+            options = {};
+        }
+        const defaults = {
+            requestContentType: "application/json; charset=utf-8"
+        };
+        const packageDetails = `azsdk-js-monitor-metrics/1.3.2`;
+        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
+            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const optionsWithDefaults = {
+            ...defaults,
+            ...options,
+            userAgentOptions: {
+                userAgentPrefix
+            },
+            baseUri: options.endpoint || "https://management.azure.com"
+        };
+        super(optionsWithDefaults);
+        // Parameter assignments
+        this.apiVersion = apiVersion;
+        // Assigning values to Constant parameters
+        this.$host = options.$host || "https://management.azure.com";
+    }
+}
+//# sourceMappingURL=monitorManagementClientContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/monitorManagementClient.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+/** @internal */
+class MonitorManagementClient extends MonitorManagementClientContext {
+    /**
+     * Initializes a new instance of the MonitorManagementClient class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        super(apiVersion, options);
+        this.metrics = new MetricsImpl(this);
+    }
+    metrics;
+}
+//# sourceMappingURL=monitorManagementClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+/** Known values of {@link ApiVersion20240201} that the service accepts. */
+var models_KnownApiVersion20240201;
+(function (KnownApiVersion20240201) {
+    /** Api Version '2024-02-01' */
+    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
+})(models_KnownApiVersion20240201 || (models_KnownApiVersion20240201 = {}));
+/** Known values of {@link MetricClass} that the service accepts. */
+var KnownMetricClass;
+(function (KnownMetricClass) {
+    KnownMetricClass["Availability"] = "Availability";
+    KnownMetricClass["Transactions"] = "Transactions";
+    KnownMetricClass["Errors"] = "Errors";
+    KnownMetricClass["Latency"] = "Latency";
+    KnownMetricClass["Saturation"] = "Saturation";
+})(KnownMetricClass || (KnownMetricClass = {}));
+/** Known values of {@link MetricUnit} that the service accepts. */
+var models_KnownMetricUnit;
+(function (KnownMetricUnit) {
+    /** Unit of raw quantity. */
+    KnownMetricUnit["Count"] = "Count";
+    /** Unit of memory in bytes. */
+    KnownMetricUnit["Bytes"] = "Bytes";
+    /** Unit of time in seconds. */
+    KnownMetricUnit["Seconds"] = "Seconds";
+    /** Rate unit of raw quantity per second. */
+    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
+    /** Rate unit of memory in bytes per second. */
+    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
+    /** Percentage unit. */
+    KnownMetricUnit["Percent"] = "Percent";
+    /** Unit of time in 1/1000th of a second. */
+    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
+    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
+    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
+    /** No specified unit. */
+    KnownMetricUnit["Unspecified"] = "Unspecified";
+    /** Unit of processing power. */
+    KnownMetricUnit["Cores"] = "Cores";
+    /** Unit of processing power in 1/1000th of a CPU core. */
+    KnownMetricUnit["MilliCores"] = "MilliCores";
+    /** Unit of processing power in one billionth of a CPU core. */
+    KnownMetricUnit["NanoCores"] = "NanoCores";
+    /** Rate unit of binary digits per second. */
+    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
+})(models_KnownMetricUnit || (models_KnownMetricUnit = {}));
+/** Known values of {@link MetricAggregationType} that the service accepts. */
+var KnownMetricAggregationType;
+(function (KnownMetricAggregationType) {
+    KnownMetricAggregationType["None"] = "None";
+    KnownMetricAggregationType["Average"] = "Average";
+    KnownMetricAggregationType["Count"] = "Count";
+    KnownMetricAggregationType["Minimum"] = "Minimum";
+    KnownMetricAggregationType["Maximum"] = "Maximum";
+    KnownMetricAggregationType["Total"] = "Total";
+})(KnownMetricAggregationType || (KnownMetricAggregationType = {}));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/mappers.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const SubscriptionScopeMetricDefinitionCollection = {
+    type: {
+        name: "Composite",
+        className: "SubscriptionScopeMetricDefinitionCollection",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "SubscriptionScopeMetricDefinition"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const SubscriptionScopeMetricDefinition = {
+    type: {
+        name: "Composite",
+        className: "SubscriptionScopeMetricDefinition",
+        modelProperties: {
+            isDimensionRequired: {
+                serializedName: "isDimensionRequired",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            resourceId: {
+                serializedName: "resourceId",
+                type: {
+                    name: "String"
+                }
+            },
+            namespace: {
+                serializedName: "namespace",
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            displayDescription: {
+                serializedName: "displayDescription",
+                type: {
+                    name: "String"
+                }
+            },
+            category: {
+                serializedName: "category",
+                type: {
+                    name: "String"
+                }
+            },
+            metricClass: {
+                serializedName: "metricClass",
+                type: {
+                    name: "String"
+                }
+            },
+            unit: {
+                serializedName: "unit",
+                type: {
+                    name: "String"
+                }
+            },
+            primaryAggregationType: {
+                serializedName: "primaryAggregationType",
+                type: {
+                    name: "String"
+                }
+            },
+            supportedAggregationTypes: {
+                serializedName: "supportedAggregationTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            },
+            metricAvailabilities: {
+                serializedName: "metricAvailabilities",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricAvailability"
+                        }
+                    }
+                }
+            },
+            id: {
+                serializedName: "id",
+                type: {
+                    name: "String"
+                }
+            },
+            dimensions: {
+                serializedName: "dimensions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "LocalizableString"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const mappers_LocalizableString = {
+    type: {
+        name: "Composite",
+        className: "LocalizableString",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            localizedValue: {
+                serializedName: "localizedValue",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const MetricAvailability = {
+    type: {
+        name: "Composite",
+        className: "MetricAvailability",
+        modelProperties: {
+            timeGrain: {
+                serializedName: "timeGrain",
+                type: {
+                    name: "TimeSpan"
+                }
+            },
+            retention: {
+                serializedName: "retention",
+                type: {
+                    name: "TimeSpan"
+                }
+            }
+        }
+    }
+};
+const mappers_ErrorContract = {
+    type: {
+        name: "Composite",
+        className: "ErrorContract",
+        modelProperties: {
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorResponse"
+                }
+            }
+        }
+    }
+};
+const src_models_mappers_ErrorResponse = {
+    type: {
+        name: "Composite",
+        className: "ErrorResponse",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            target: {
+                serializedName: "target",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            details: {
+                serializedName: "details",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorResponse"
+                        }
+                    }
+                }
+            },
+            additionalInfo: {
+                serializedName: "additionalInfo",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorAdditionalInfo"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const models_mappers_ErrorAdditionalInfo = {
+    type: {
+        name: "Composite",
+        className: "ErrorAdditionalInfo",
+        modelProperties: {
+            type: {
+                serializedName: "type",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            info: {
+                serializedName: "info",
+                readOnly: true,
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const MetricDefinitionCollection = {
+    type: {
+        name: "Composite",
+        className: "MetricDefinitionCollection",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricDefinition"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetricDefinition = {
+    type: {
+        name: "Composite",
+        className: "MetricDefinition",
+        modelProperties: {
+            isDimensionRequired: {
+                serializedName: "isDimensionRequired",
+                type: {
+                    name: "Boolean"
+                }
+            },
+            resourceId: {
+                serializedName: "resourceId",
+                type: {
+                    name: "String"
+                }
+            },
+            namespace: {
+                serializedName: "namespace",
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            displayDescription: {
+                serializedName: "displayDescription",
+                type: {
+                    name: "String"
+                }
+            },
+            category: {
+                serializedName: "category",
+                type: {
+                    name: "String"
+                }
+            },
+            metricClass: {
+                serializedName: "metricClass",
+                type: {
+                    name: "String"
+                }
+            },
+            unit: {
+                serializedName: "unit",
+                type: {
+                    name: "String"
+                }
+            },
+            primaryAggregationType: {
+                serializedName: "primaryAggregationType",
+                type: {
+                    name: "Enum",
+                    allowedValues: [
+                        "None",
+                        "Average",
+                        "Count",
+                        "Minimum",
+                        "Maximum",
+                        "Total"
+                    ]
+                }
+            },
+            supportedAggregationTypes: {
+                serializedName: "supportedAggregationTypes",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Enum",
+                            allowedValues: [
+                                "None",
+                                "Average",
+                                "Count",
+                                "Minimum",
+                                "Maximum",
+                                "Total"
+                            ]
+                        }
+                    }
+                }
+            },
+            metricAvailabilities: {
+                serializedName: "metricAvailabilities",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricAvailability"
+                        }
+                    }
+                }
+            },
+            id: {
+                serializedName: "id",
+                type: {
+                    name: "String"
+                }
+            },
+            dimensions: {
+                serializedName: "dimensions",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "LocalizableString"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/parameters.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const src_models_parameters_accept = {
+    parameterPath: "accept",
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Accept",
+        type: {
+            name: "String"
+        }
+    }
+};
+const src_models_parameters_$host = {
+    parameterPath: "$host",
+    mapper: {
+        serializedName: "$host",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const models_parameters_subscriptionId = {
+    parameterPath: "subscriptionId",
+    mapper: {
+        constraints: {
+            MinLength: 1
+        },
+        serializedName: "subscriptionId",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_apiVersion = {
+    parameterPath: "apiVersion",
+    mapper: {
+        serializedName: "api-version",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_region = {
+    parameterPath: "region",
+    mapper: {
+        serializedName: "region",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_metricnamespace = {
+    parameterPath: ["options", "metricnamespace"],
+    mapper: {
+        serializedName: "metricnamespace",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_resourceUri = {
+    parameterPath: "resourceUri",
+    mapper: {
+        serializedName: "resourceUri",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+//# sourceMappingURL=parameters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/operations/metricDefinitions.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing MetricDefinitions operations. */
+class MetricDefinitionsImpl {
+    client;
+    /**
+     * Initialize a new instance of the class MetricDefinitions class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * Lists the metric definitions for the subscription.
+     * @param subscriptionId The ID of the target subscription.
+     * @param region The region where the metrics you want reside.
+     * @param options The options parameters.
+     */
+    listAtSubscriptionScope(subscriptionId, region, options) {
+        return this.client.sendOperationRequest({ subscriptionId, region, options }, metricDefinitions_listAtSubscriptionScopeOperationSpec);
+    }
+    /**
+     * Lists the metric definitions for the resource.
+     * @param resourceUri The identifier of the resource.
+     * @param options The options parameters.
+     */
+    list(resourceUri, options) {
+        return this.client.sendOperationRequest({ resourceUri, options }, metricDefinitions_listOperationSpec);
+    }
+}
+// Operation Specifications
+const metricDefinitions_serializer = createSerializer(metricsdefinitions_src_models_mappers_namespaceObject, /* isXml */ false);
+const metricDefinitions_listAtSubscriptionScopeOperationSpec = {
+    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metricDefinitions",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: SubscriptionScopeMetricDefinitionCollection
+        },
+        default: {
+            bodyMapper: mappers_ErrorContract
+        }
+    },
+    queryParameters: [
+        models_parameters_apiVersion,
+        parameters_region,
+        parameters_metricnamespace
+    ],
+    urlParameters: [src_models_parameters_$host, models_parameters_subscriptionId],
+    headerParameters: [src_models_parameters_accept],
+    serializer: metricDefinitions_serializer
+};
+const metricDefinitions_listOperationSpec = {
+    path: "/{resourceUri}/providers/Microsoft.Insights/metricDefinitions",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: MetricDefinitionCollection
+        },
+        default: {
+            bodyMapper: src_models_mappers_ErrorResponse
+        }
+    },
+    queryParameters: [models_parameters_apiVersion, parameters_metricnamespace],
+    urlParameters: [src_models_parameters_$host, parameters_resourceUri],
+    headerParameters: [src_models_parameters_accept],
+    serializer: metricDefinitions_serializer
+};
+//# sourceMappingURL=metricDefinitions.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/operations/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/monitorManagementClientContext.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+/** @internal */
+class monitorManagementClientContext_MonitorManagementClientContext extends ServiceClient {
+    $host;
+    apiVersion;
+    /**
+     * Initializes a new instance of the MonitorManagementClientContext class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        if (apiVersion === undefined) {
+            throw new Error("'apiVersion' cannot be null");
+        }
+        // Initializing default values for options
+        if (!options) {
+            options = {};
+        }
+        const defaults = {
+            requestContentType: "application/json; charset=utf-8"
+        };
+        const packageDetails = `azsdk-js-monitor-metrics-definitions/1.3.2`;
+        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
+            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const optionsWithDefaults = {
+            ...defaults,
+            ...options,
+            userAgentOptions: {
+                userAgentPrefix
+            },
+            baseUri: options.endpoint || "https://management.azure.com"
+        };
+        super(optionsWithDefaults);
+        // Parameter assignments
+        this.apiVersion = apiVersion;
+        // Assigning values to Constant parameters
+        this.$host = options.$host || "https://management.azure.com";
+    }
+}
+//# sourceMappingURL=monitorManagementClientContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/monitorManagementClient.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+/** @internal */
+class monitorManagementClient_MonitorManagementClient extends monitorManagementClientContext_MonitorManagementClientContext {
+    /**
+     * Initializes a new instance of the MonitorManagementClient class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        super(apiVersion, options);
+        this.metricDefinitions = new MetricDefinitionsImpl(this);
+    }
+    metricDefinitions;
+}
+//# sourceMappingURL=monitorManagementClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+/** Known values of {@link ApiVersion20240201} that the service accepts. */
+var src_models_KnownApiVersion20240201;
+(function (KnownApiVersion20240201) {
+    /** Api Version '2024-02-01' */
+    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
+})(src_models_KnownApiVersion20240201 || (src_models_KnownApiVersion20240201 = {}));
+/** Known values of {@link NamespaceClassification} that the service accepts. */
+var KnownNamespaceClassification;
+(function (KnownNamespaceClassification) {
+    KnownNamespaceClassification["Platform"] = "Platform";
+    KnownNamespaceClassification["Custom"] = "Custom";
+    KnownNamespaceClassification["Qos"] = "Qos";
+})(KnownNamespaceClassification || (KnownNamespaceClassification = {}));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/mappers.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const MetricNamespaceCollection = {
+    type: {
+        name: "Composite",
+        className: "MetricNamespaceCollection",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricNamespace"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetricNamespace = {
+    type: {
+        name: "Composite",
+        className: "MetricNamespace",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "String"
+                }
+            },
+            classification: {
+                serializedName: "classification",
+                type: {
+                    name: "String"
+                }
+            },
+            properties: {
+                serializedName: "properties",
+                type: {
+                    name: "Composite",
+                    className: "MetricNamespaceName"
+                }
+            }
+        }
+    }
+};
+const MetricNamespaceName = {
+    type: {
+        name: "Composite",
+        className: "MetricNamespaceName",
+        modelProperties: {
+            metricNamespaceName: {
+                serializedName: "metricNamespaceName",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const metricsnamespaces_src_models_mappers_ErrorResponse = {
+    type: {
+        name: "Composite",
+        className: "ErrorResponse",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/parameters.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const metricsnamespaces_src_models_parameters_accept = {
+    parameterPath: "accept",
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Accept",
+        type: {
+            name: "String"
+        }
+    }
+};
+const metricsnamespaces_src_models_parameters_$host = {
+    parameterPath: "$host",
+    mapper: {
+        serializedName: "$host",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const models_parameters_resourceUri = {
+    parameterPath: "resourceUri",
+    mapper: {
+        serializedName: "resourceUri",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const src_models_parameters_apiVersion = {
+    parameterPath: "apiVersion",
+    mapper: {
+        serializedName: "api-version",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const startTime = {
+    parameterPath: ["options", "startTime"],
+    mapper: {
+        serializedName: "startTime",
+        type: {
+            name: "String"
+        }
+    }
+};
+//# sourceMappingURL=parameters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/operations/metricNamespaces.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing MetricNamespaces operations. */
+class MetricNamespacesImpl {
+    client;
+    /**
+     * Initialize a new instance of the class MetricNamespaces class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * Lists the metric namespaces for the resource.
+     * @param resourceUri The identifier of the resource.
+     * @param options The options parameters.
+     */
+    list(resourceUri, options) {
+        return this.client.sendOperationRequest({ resourceUri, options }, metricNamespaces_listOperationSpec);
+    }
+}
+// Operation Specifications
+const metricNamespaces_serializer = createSerializer(metricsnamespaces_src_models_mappers_namespaceObject, /* isXml */ false);
+const metricNamespaces_listOperationSpec = {
+    path: "/{resourceUri}/providers/microsoft.insights/metricNamespaces",
+    httpMethod: "GET",
+    responses: {
+        200: {
+            bodyMapper: MetricNamespaceCollection
+        },
+        default: {
+            bodyMapper: metricsnamespaces_src_models_mappers_ErrorResponse
+        }
+    },
+    queryParameters: [src_models_parameters_apiVersion, startTime],
+    urlParameters: [metricsnamespaces_src_models_parameters_$host, models_parameters_resourceUri],
+    headerParameters: [metricsnamespaces_src_models_parameters_accept],
+    serializer: metricNamespaces_serializer
+};
+//# sourceMappingURL=metricNamespaces.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/operations/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/monitorManagementClientContext.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+/** @internal */
+class src_monitorManagementClientContext_MonitorManagementClientContext extends ServiceClient {
+    $host;
+    apiVersion;
+    /**
+     * Initializes a new instance of the MonitorManagementClientContext class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        if (apiVersion === undefined) {
+            throw new Error("'apiVersion' cannot be null");
+        }
+        // Initializing default values for options
+        if (!options) {
+            options = {};
+        }
+        const defaults = {
+            requestContentType: "application/json; charset=utf-8"
+        };
+        const packageDetails = `azsdk-js-monitor-metrics-namespaces/1.3.2`;
+        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
+            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const optionsWithDefaults = {
+            ...defaults,
+            ...options,
+            userAgentOptions: {
+                userAgentPrefix
+            },
+            baseUri: options.endpoint || "https://management.azure.com"
+        };
+        super(optionsWithDefaults);
+        // Parameter assignments
+        this.apiVersion = apiVersion;
+        // Assigning values to Constant parameters
+        this.$host = options.$host || "https://management.azure.com";
+    }
+}
+//# sourceMappingURL=monitorManagementClientContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/monitorManagementClient.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+/** @internal */
+class src_monitorManagementClient_MonitorManagementClient extends src_monitorManagementClientContext_MonitorManagementClientContext {
+    /**
+     * Initializes a new instance of the MonitorManagementClient class.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(apiVersion, options) {
+        super(apiVersion, options);
+        this.metricNamespaces = new MetricNamespacesImpl(this);
+    }
+    metricNamespaces;
+}
+//# sourceMappingURL=monitorManagementClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/metricsQueryClient.js
+
+
+
+
+
+
+/**
+ * A client that can query metrics, get metric definitions and get metric namespaces.
+ *
+ * @deprecated For resource-centric metrics queries, use the management library `@azure/arm-monitor` instead.
+ * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/arm-monitor/MIGRATION_METRICSQUERYCLIENT_TO_ARM_MONITOR.md
+ */
+class MetricsQueryClient {
+    _metricsClient;
+    _definitionsClient;
+    _namespacesClient;
+    /**
+     * Creates a MetricsQueryClient.
+     * @param tokenCredential - A TokenCredential that has rights to query metrics on resources.
+     * @param options - Options for the client like controlling request retries.
+     */
+    constructor(tokenCredential, options) {
+        const scope = options?.audience
+            ? `${options.audience}/.default`
+            : `${KnownMonitorMetricsQueryAudience.AzurePublicCloud}/.default`;
+        const packageDetails = `azsdk-js-monitor-query/${SDK_VERSION}`;
+        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
+            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const serviceClientOptions = {
+            ...options,
+            $host: options?.endpoint,
+            endpoint: options?.endpoint,
+            credentialScopes: scope,
+            credential: tokenCredential,
+            userAgentOptions: {
+                userAgentPrefix,
+            },
+        };
+        this._metricsClient = new GeneratedMetricsClient(MetricsApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
+        this._definitionsClient = new GeneratedMetricsDefinitionsClient(MetricDefinitionsApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
+        this._namespacesClient = new GeneratedMetricsNamespacesClient(MetricNamespacesApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
+    }
+    /**
+     * Query metrics, given a resource URI
+     * @param resourceUri - The resource URI to query.
+     * @param metricNames - The names of the metrics to retrieve.
+     * @param options - Options for querying metrics.
+     * @returns A response containing metrics.
+     */
+    async queryResource(resourceUri, metricNames, options = {}) {
+        return tracingClient.withSpan("MetricsQueryClient.queryResource", options, async (updatedOptions) => {
+            const response = await this._metricsClient.metrics.list(resourceUri, convertRequestForMetrics(metricNames, updatedOptions));
+            return convertResponseForMetrics(response);
+        });
+    }
+    /**
+     * List alert segments for Metric Definitions
+     */
+    async *listSegmentOfMetricDefinitions(resourceUri, options = {}) {
+        const segmentResponse = await tracingClient.withSpan("MetricsQueryClient.listSegmentOfMetricDefinitions", options, async (updatedOptions) => this._definitionsClient.metricDefinitions.list(resourceUri, convertRequestOptionsForMetricsDefinitions(updatedOptions)));
+        yield convertResponseForMetricsDefinitions(segmentResponse.value);
+    }
+    /**
+     * List items for Metric Definitions
+     */
+    async *listItemsOfMetricDefinitions(resourceUri, options) {
+        for await (const segment of this.listSegmentOfMetricDefinitions(resourceUri, options)) {
+            if (segment) {
+                yield* segment;
+            }
+        }
+    }
+    /**
+     *   /**
+     *
+     * Returns an async iterable iterator to list metric definitions.
+     *
+     * Example using `for await` syntax:
+     *
+     * ```ts snippet:MetricQueryClientListMetricDefinitions
+     * import { DefaultAzureCredential } from "@azure/identity";
+     * import { MetricsQueryClient } from "@azure/monitor-query";
+     *
+     * const metricsResourceId = "<the Resource Id for your metrics resource>";
+     *
+     * const tokenCredential = new DefaultAzureCredential();
+     * const metricsQueryClient = new MetricsQueryClient(tokenCredential);
+     *
+     * const metricDefinitions = metricsQueryClient.listMetricDefinitions(metricsResourceId);
+     * for await (const { id, name } of metricDefinitions) {
+     *   console.log(` metricDefinitions - ${id}, ${name}`);
+     * }
+     * ```
+     *
+     * Get a list of metric definitions, given a resource URI.
+     * @param resourceUri - The resource URI to get metric definitions for.
+     * @param options - Options for getting metric definitions.
+     * @returns Metric definitions for a given resource URI.
+     */
+    listMetricDefinitions(resourceUri, options) {
+        const iter = this.listItemsOfMetricDefinitions(resourceUri, options);
+        return {
+            /**
+             * The next method, part of the iteration protocol
+             */
+            next() {
+                return iter.next();
+            },
+            /**
+             * The connection to the async iterator, part of the iteration protocol
+             */
+            [Symbol.asyncIterator]() {
+                return this;
+            },
+            /**
+             * @returns an AsyncIterableIterator that works a page at a time
+             */
+            byPage: () => {
+                return this.listSegmentOfMetricDefinitions(resourceUri, options);
+            },
+        };
+    }
+    /**
+     * List alert segments for Metric Namespaces
+     */
+    async *listSegmentOfMetricNamespaces(resourceUri, options = {}) {
+        const segmentResponse = await tracingClient.withSpan("MetricsQueryClient.listSegmentOfMetricNamespaces", options, async (updatedOptions) => this._namespacesClient.metricNamespaces.list(resourceUri, updatedOptions));
+        yield convertResponseForMetricNamespaces(segmentResponse.value);
+    }
+    /**
+     * List items for Metric Namespaces
+     */
+    async *listItemsOfMetricNamespaces(resourceUri, options) {
+        for await (const segment of this.listSegmentOfMetricNamespaces(resourceUri, options)) {
+            if (segment) {
+                yield* segment;
+            }
+        }
+    }
+    /**
+     *
+     * Returns an async iterable iterator to list metric namespaces.
+     *
+     * Example using `for await` syntax:
+     *
+     * ```ts snippet:MetricQueryClientListMetricNamespaces
+     * import { DefaultAzureCredential } from "@azure/identity";
+     * import { MetricsQueryClient } from "@azure/monitor-query";
+     *
+     * const metricsResourceId = "<the Resource Id for your metrics resource>";
+     *
+     * const tokenCredential = new DefaultAzureCredential();
+     * const metricsQueryClient = new MetricsQueryClient(tokenCredential);
+     *
+     * const metricNamespaces = metricsQueryClient.listMetricNamespaces(metricsResourceId);
+     * for await (const { id, name } of metricNamespaces) {
+     *   console.log(` metricNamespaces - ${id}, ${name}`);
+     * }
+     * ```
+     *
+     * Get a list of metric namespaces, given a resource URI.
+     * @param resourceUri - The resource URI to get metric namespaces for.
+     * @param options - Options for getting metric namespaces.
+     * @returns Metric namespaces for a given resource URI.
+     */
+    listMetricNamespaces(resourceUri, options) {
+        const iter = this.listItemsOfMetricNamespaces(resourceUri, options);
+        return {
+            /**
+             * The next method, part of the iteration protocol
+             */
+            next() {
+                return iter.next();
+            },
+            /**
+             * The connection to the async iterator, part of the iteration protocol
+             */
+            [Symbol.asyncIterator]() {
+                return this;
+            },
+            /**
+             * @returns an AsyncIterableIterator that works a page at a time
+             */
+            byPage: () => {
+                return this.listSegmentOfMetricNamespaces(resourceUri, options);
+            },
+        };
+    }
+}
+//# sourceMappingURL=metricsQueryClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/models/constants.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Aliases for some common ISO8601 durations.
+ */
+const Durations = {
+    /** Alias for ISO8601 value 'P7D' */
+    sevenDays: "P7D",
+    /** Alias for ISO8601 value 'P3D' */
+    threeDays: "P3D",
+    /** Alias for ISO8601 value 'P2D' */
+    twoDays: "P2D",
+    /** Alias for ISO8601 value 'P1D' */
+    oneDay: "P1D",
+    /** Alias for ISO8601 value 'PT1H' */
+    oneHour: "PT1H",
+    /** Alias for ISO8601 value 'PT4H' */
+    fourHours: "PT4H",
+    /** Alias for ISO8601 value 'PT24H' */
+    twentyFourHours: "PT24H",
+    /** Alias for ISO8601 value 'PT48H' */
+    fortyEightHours: "PT48H",
+    /**
+     * @deprecated Alias name `fourtyEightHours` for ISO8601 value 'PT48H' is deprecated
+     */
+    fourtyEightHours: "PT48H",
+    /** Alias for ISO8601 value 'PT30M' */
+    thirtyMinutes: "PT30M",
+    /** Alias for ISO8601 value 'PT5M' */
+    fiveMinutes: "PT5M",
+};
+//# sourceMappingURL=constants.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+/** Known values of {@link ApiVersion20240201} that the service accepts. */
+var metricBatch_src_models_KnownApiVersion20240201;
+(function (KnownApiVersion20240201) {
+    /** Api Version '2024-02-01' */
+    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
+})(metricBatch_src_models_KnownApiVersion20240201 || (metricBatch_src_models_KnownApiVersion20240201 = {}));
+/** Known values of {@link MetricUnit} that the service accepts. */
+var src_models_KnownMetricUnit;
+(function (KnownMetricUnit) {
+    /** Unit of raw quantity. */
+    KnownMetricUnit["Count"] = "Count";
+    /** Unit of memory in bytes. */
+    KnownMetricUnit["Bytes"] = "Bytes";
+    /** Unit of time in seconds. */
+    KnownMetricUnit["Seconds"] = "Seconds";
+    /** Rate unit of raw quantity per second. */
+    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
+    /** Rate unit of memory in bytes per second. */
+    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
+    /** Percentage unit. */
+    KnownMetricUnit["Percent"] = "Percent";
+    /** Unit of time in 1/1000th of a second. */
+    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
+    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
+    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
+    /** No specified unit. */
+    KnownMetricUnit["Unspecified"] = "Unspecified";
+    /** Unit of processing power. */
+    KnownMetricUnit["Cores"] = "Cores";
+    /** Unit of processing power in 1/1000th of a CPU core. */
+    KnownMetricUnit["MilliCores"] = "MilliCores";
+    /** Unit of processing power in one billionth of a CPU core. */
+    KnownMetricUnit["NanoCores"] = "NanoCores";
+    /** Rate unit of binary digits per second. */
+    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
+})(src_models_KnownMetricUnit || (src_models_KnownMetricUnit = {}));
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/mappers.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+const ResourceIdList = {
+    type: {
+        name: "Composite",
+        className: "ResourceIdList",
+        modelProperties: {
+            resourceids: {
+                serializedName: "resourceids",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "String"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetricResultsResponse = {
+    type: {
+        name: "Composite",
+        className: "MetricResultsResponse",
+        modelProperties: {
+            values: {
+                serializedName: "values",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricResultsResponseValuesItem"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const MetricResultsResponseValuesItem = {
+    type: {
+        name: "Composite",
+        className: "MetricResultsResponseValuesItem",
+        modelProperties: {
+            starttime: {
+                serializedName: "starttime",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            endtime: {
+                serializedName: "endtime",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            interval: {
+                serializedName: "interval",
+                type: {
+                    name: "String"
+                }
+            },
+            namespace: {
+                serializedName: "namespace",
+                type: {
+                    name: "String"
+                }
+            },
+            resourceregion: {
+                serializedName: "resourceregion",
+                type: {
+                    name: "String"
+                }
+            },
+            resourceid: {
+                serializedName: "resourceid",
+                type: {
+                    name: "String"
+                }
+            },
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "Metric"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const mappers_Metric = {
+    type: {
+        name: "Composite",
+        className: "Metric",
+        modelProperties: {
+            id: {
+                serializedName: "id",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            type: {
+                serializedName: "type",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            displayDescription: {
+                serializedName: "displayDescription",
+                type: {
+                    name: "String"
+                }
+            },
+            errorCode: {
+                serializedName: "errorCode",
+                type: {
+                    name: "String"
+                }
+            },
+            errorMessage: {
+                serializedName: "errorMessage",
+                type: {
+                    name: "String"
+                }
+            },
+            unit: {
+                serializedName: "unit",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            timeseries: {
+                serializedName: "timeseries",
+                required: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "TimeSeriesElement"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const models_mappers_LocalizableString = {
+    type: {
+        name: "Composite",
+        className: "LocalizableString",
+        modelProperties: {
+            value: {
+                serializedName: "value",
+                required: true,
+                type: {
+                    name: "String"
+                }
+            },
+            localizedValue: {
+                serializedName: "localizedValue",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const mappers_TimeSeriesElement = {
+    type: {
+        name: "Composite",
+        className: "TimeSeriesElement",
+        modelProperties: {
+            metadatavalues: {
+                serializedName: "metadatavalues",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetadataValue"
+                        }
+                    }
+                }
+            },
+            data: {
+                serializedName: "data",
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "MetricValue"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const mappers_MetadataValue = {
+    type: {
+        name: "Composite",
+        className: "MetadataValue",
+        modelProperties: {
+            name: {
+                serializedName: "name",
+                type: {
+                    name: "Composite",
+                    className: "LocalizableString"
+                }
+            },
+            value: {
+                serializedName: "value",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+const mappers_MetricValue = {
+    type: {
+        name: "Composite",
+        className: "MetricValue",
+        modelProperties: {
+            timeStamp: {
+                serializedName: "timeStamp",
+                required: true,
+                type: {
+                    name: "DateTime"
+                }
+            },
+            average: {
+                serializedName: "average",
+                type: {
+                    name: "Number"
+                }
+            },
+            minimum: {
+                serializedName: "minimum",
+                type: {
+                    name: "Number"
+                }
+            },
+            maximum: {
+                serializedName: "maximum",
+                type: {
+                    name: "Number"
+                }
+            },
+            total: {
+                serializedName: "total",
+                type: {
+                    name: "Number"
+                }
+            },
+            count: {
+                serializedName: "count",
+                type: {
+                    name: "Number"
+                }
+            }
+        }
+    }
+};
+const metricBatch_src_models_mappers_ErrorResponse = {
+    type: {
+        name: "Composite",
+        className: "ErrorResponse",
+        modelProperties: {
+            error: {
+                serializedName: "error",
+                type: {
+                    name: "Composite",
+                    className: "ErrorDetail"
+                }
+            }
+        }
+    }
+};
+const models_mappers_ErrorDetail = {
+    type: {
+        name: "Composite",
+        className: "ErrorDetail",
+        modelProperties: {
+            code: {
+                serializedName: "code",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            message: {
+                serializedName: "message",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            target: {
+                serializedName: "target",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            details: {
+                serializedName: "details",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorDetail"
+                        }
+                    }
+                }
+            },
+            additionalInfo: {
+                serializedName: "additionalInfo",
+                readOnly: true,
+                type: {
+                    name: "Sequence",
+                    element: {
+                        type: {
+                            name: "Composite",
+                            className: "ErrorAdditionalInfo"
+                        }
+                    }
+                }
+            }
+        }
+    }
+};
+const src_models_mappers_ErrorAdditionalInfo = {
+    type: {
+        name: "Composite",
+        className: "ErrorAdditionalInfo",
+        modelProperties: {
+            type: {
+                serializedName: "type",
+                readOnly: true,
+                type: {
+                    name: "String"
+                }
+            },
+            info: {
+                serializedName: "info",
+                readOnly: true,
+                type: {
+                    name: "Dictionary",
+                    value: { type: { name: "any" } }
+                }
+            }
+        }
+    }
+};
+const MetricsBatchBatchExceptionHeaders = {
+    type: {
+        name: "Composite",
+        className: "MetricsBatchBatchExceptionHeaders",
+        modelProperties: {
+            xMsErrorCode: {
+                serializedName: "x-ms-error-code",
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    }
+};
+//# sourceMappingURL=mappers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/parameters.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+const src_models_parameters_contentType = {
+    parameterPath: ["options", "contentType"],
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Content-Type",
+        type: {
+            name: "String"
+        }
+    }
+};
+const batchRequest = {
+    parameterPath: "batchRequest",
+    mapper: ResourceIdList
+};
+const metricBatch_src_models_parameters_accept = {
+    parameterPath: "accept",
+    mapper: {
+        defaultValue: "application/json",
+        isConstant: true,
+        serializedName: "Accept",
+        type: {
+            name: "String"
+        }
+    }
+};
+const endpoint = {
+    parameterPath: "endpoint",
+    mapper: {
+        serializedName: "endpoint",
+        required: true,
+        type: {
+            name: "String"
+        }
+    },
+    skipEncoding: true
+};
+const src_models_parameters_subscriptionId = {
+    parameterPath: "subscriptionId",
+    mapper: {
+        serializedName: "subscriptionId",
+        required: true,
+        type: {
+            name: "Uuid"
+        }
+    }
+};
+const starttime = {
+    parameterPath: ["options", "starttime"],
+    mapper: {
+        serializedName: "starttime",
+        type: {
+            name: "String"
+        }
+    }
+};
+const endtime = {
+    parameterPath: ["options", "endtime"],
+    mapper: {
+        serializedName: "endtime",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_interval = {
+    parameterPath: ["options", "interval"],
+    mapper: {
+        defaultValue: "PT1M",
+        serializedName: "interval",
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_metricnamespace = {
+    parameterPath: "metricnamespace",
+    mapper: {
+        serializedName: "metricnamespace",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_metricnames = {
+    parameterPath: "metricnames",
+    mapper: {
+        serializedName: "metricnames",
+        required: true,
+        type: {
+            name: "Sequence",
+            element: {
+                type: {
+                    name: "String"
+                }
+            }
+        }
+    },
+    collectionFormat: "CSV"
+};
+const parameters_aggregation = {
+    parameterPath: ["options", "aggregation"],
+    mapper: {
+        serializedName: "aggregation",
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_top = {
+    parameterPath: ["options", "top"],
+    mapper: {
+        serializedName: "top",
+        type: {
+            name: "Number"
+        }
+    }
+};
+const parameters_orderby = {
+    parameterPath: ["options", "orderby"],
+    mapper: {
+        serializedName: "orderby",
+        type: {
+            name: "String"
+        }
+    }
+};
+const models_parameters_filter = {
+    parameterPath: ["options", "filter"],
+    mapper: {
+        serializedName: "filter",
+        type: {
+            name: "String"
+        }
+    }
+};
+const parameters_rollupby = {
+    parameterPath: ["options", "rollupby"],
+    mapper: {
+        serializedName: "rollupby",
+        type: {
+            name: "String"
+        }
+    }
+};
+const metricBatch_src_models_parameters_apiVersion = {
+    parameterPath: "apiVersion",
+    mapper: {
+        serializedName: "api-version",
+        required: true,
+        type: {
+            name: "String"
+        }
+    }
+};
+//# sourceMappingURL=parameters.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/operations/metricsBatch.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+/** Class containing MetricsBatch operations. */
+class MetricsBatchImpl {
+    client;
+    /**
+     * Initialize a new instance of the class MetricsBatch class.
+     * @param client Reference to the service client
+     */
+    constructor(client) {
+        this.client = client;
+    }
+    /**
+     * Lists the metric values for multiple resources.
+     * @param subscriptionId The subscription identifier for the resources in this batch.
+     * @param metricnamespace Metric namespace that contains the requested metric names.
+     * @param metricnames The names of the metrics (comma separated) to retrieve.
+     * @param batchRequest Metrics batch body including the list of resource ids
+     * @param options The options parameters.
+     */
+    batch(subscriptionId, metricnamespace, metricnames, batchRequest, options) {
+        return this.client.sendOperationRequest({ subscriptionId, metricnamespace, metricnames, batchRequest, options }, metricsBatch_batchOperationSpec);
+    }
+}
+// Operation Specifications
+const metricsBatch_serializer = createSerializer(metricBatch_src_models_mappers_namespaceObject, /* isXml */ false);
+const metricsBatch_batchOperationSpec = {
+    path: "/subscriptions/{subscriptionId}/metrics:getBatch",
+    httpMethod: "POST",
+    responses: {
+        200: {
+            bodyMapper: MetricResultsResponse
+        },
+        default: {
+            bodyMapper: metricBatch_src_models_mappers_ErrorResponse,
+            headersMapper: MetricsBatchBatchExceptionHeaders
+        }
+    },
+    requestBody: batchRequest,
+    queryParameters: [
+        starttime,
+        endtime,
+        parameters_interval,
+        models_parameters_metricnamespace,
+        parameters_metricnames,
+        parameters_aggregation,
+        models_parameters_top,
+        parameters_orderby,
+        models_parameters_filter,
+        parameters_rollupby,
+        metricBatch_src_models_parameters_apiVersion
+    ],
+    urlParameters: [endpoint, src_models_parameters_subscriptionId],
+    headerParameters: [src_models_parameters_contentType, metricBatch_src_models_parameters_accept],
+    mediaType: "json",
+    serializer: metricsBatch_serializer
+};
+//# sourceMappingURL=metricsBatch.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/operations/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/azureMonitorMetricBatchContext.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+/** @internal */
+class AzureMonitorMetricBatchContext extends ServiceClient {
+    endpoint;
+    apiVersion;
+    /**
+     * Initializes a new instance of the AzureMonitorMetricBatchContext class.
+     * @param endpoint The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+     *                 The region should match the region of the requested resources. For global resources, the region
+     *                 should be 'global'.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(endpoint, apiVersion, options) {
+        if (endpoint === undefined) {
+            throw new Error("'endpoint' cannot be null");
+        }
+        if (apiVersion === undefined) {
+            throw new Error("'apiVersion' cannot be null");
+        }
+        // Initializing default values for options
+        if (!options) {
+            options = {};
+        }
+        const defaults = {
+            requestContentType: "application/json; charset=utf-8"
+        };
+        const packageDetails = `azsdk-js-monitor-metric-batch/1.2.0`;
+        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
+            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const optionsWithDefaults = {
+            ...defaults,
+            ...options,
+            userAgentOptions: {
+                userAgentPrefix
+            },
+            baseUri: options.endpoint || "{endpoint}"
+        };
+        super(optionsWithDefaults);
+        // Parameter assignments
+        this.endpoint = endpoint;
+        this.apiVersion = apiVersion;
+    }
+}
+//# sourceMappingURL=azureMonitorMetricBatchContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/azureMonitorMetricBatch.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+/** @internal */
+class AzureMonitorMetricBatch extends AzureMonitorMetricBatchContext {
+    /**
+     * Initializes a new instance of the AzureMonitorMetricBatch class.
+     * @param endpoint The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
+     *                 The region should match the region of the requested resources. For global resources, the region
+     *                 should be 'global'.
+     * @param apiVersion Api Version
+     * @param options The parameter options
+     */
+    constructor(endpoint, apiVersion, options) {
+        super(endpoint, apiVersion, options);
+        this.metricsBatch = new MetricsBatchImpl(this);
+    }
+    metricsBatch;
+}
+//# sourceMappingURL=azureMonitorMetricBatch.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/index.js
+/*
+ * Copyright (c) Microsoft Corporation.
+ * Licensed under the MIT License.
+ *
+ * Code generated by Microsoft (R) AutoRest Code Generator.
+ * Changes may cause incorrect behavior and will be lost if the code is regenerated.
+ */
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/metricsClient.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+
+
+const getSubscriptionFromResourceId = function (resourceId) {
+    const startPos = resourceId.indexOf("subscriptions/") + 14;
+    const subscriptionId = resourceId.substring(startPos, resourceId.indexOf("/", startPos));
+    return subscriptionId;
+};
+/**
+ * A client that can query batch metrics.
+ *
+ * @deprecated Moved to `@azure/monitor-query-metrics`. Use `MetricsClient` from `@azure/monitor-query-metrics` instead.
+ * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-query-metrics/MIGRATION.md
+ */
+class MetricsClient {
+    _metricBatchClient;
+    _baseUrl;
+    constructor(endpoint, tokenCredential, 
+    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
+    options) {
+        const scope = options?.audience
+            ? `${options.audience}/.default`
+            : `${KnownMonitorAudience.AzurePublicCloud}/.default`;
+        const packageDetails = `azsdk-js-monitor-query/${SDK_VERSION}`;
+        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
+            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
+            : `${packageDetails}`;
+        const serviceClientOptions = {
+            ...options,
+            $host: endpoint,
+            endpoint: endpoint,
+            credentialScopes: scope,
+            credential: tokenCredential,
+            userAgentOptions: {
+                userAgentPrefix,
+            },
+        };
+        this._baseUrl = endpoint;
+        this._metricBatchClient = new GeneratedMonitorMetricClient(this._baseUrl, MonitorMetricBatchApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
+    }
+    /**
+     * Returns all the Azure Monitor metrics requested for the batch of resources.
+     */
+    async queryResources(resourceIds, metricNames, metricNamespace, options = {}) {
+        if (resourceIds.length === 0) {
+            throw new Error("Resource IDs can not be empty");
+        }
+        return tracingClient.withSpan("MetricsQueryClient.batch", options, async (updatedOptions) => {
+            const subscriptionId = getSubscriptionFromResourceId(resourceIds[0]);
+            const response = await this._metricBatchClient.metricsBatch.batch(subscriptionId, metricNamespace, metricNames, {
+                resourceids: resourceIds,
+            }, convertRequestForMetricsBatchQuery(updatedOptions));
+            return convertResponseForMetricBatch(response);
+        });
+    }
+}
+//# sourceMappingURL=metricsClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/index.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+//
+// Curated exports
+//
+
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./utils.js
+/**
+ * Utility functions for Azure Container App Job GitHub Action
+ */
+
 
 
 
 
 /**
  * Sleep for a specified number of milliseconds
+ * @param {number} ms - Milliseconds to sleep
+ * @returns {Promise<void>}
  */
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -83881,6 +90022,8 @@ function sleep(ms) {
 
 /**
  * Generate a unique job name
+ * @param {string} prefix - Prefix for the job name
+ * @returns {string} Generated job name
  */
 function generateJobName(prefix = 'job') {
     const timestamp = Date.now();
@@ -83890,6 +90033,8 @@ function generateJobName(prefix = 'job') {
 
 /**
  * Parse command string into array
+ * @param {string} commandString - Command string to parse
+ * @returns {string[]|undefined} Parsed command array or undefined
  */
 function parseCommand(commandString) {
     if (!commandString || commandString.trim() === '') {
@@ -83901,7 +90046,88 @@ function parseCommand(commandString) {
 }
 
 /**
+ * Normalize Azure location to canonical format (e.g., 'East US' -> 'eastus')
+ * @param {string} location - Azure location string
+ * @returns {string} Normalized location
+ */
+function normalizeAzureLocation(location) {
+    if (!location) return 'eastus';
+    return String(location).toLowerCase().replaceAll(/\s+/g, '');
+}
+
+/**
+ * Query and dump container app job logs from Log Analytics
+ * @param {string} workspaceId - Log Analytics Workspace ID
+ * @param {string} jobName - Container job name to filter logs
+ * @returns {Promise<void>}
+ */
+async function dumpJobLogs(workspaceId, jobName) {
+    if (!workspaceId || workspaceId.trim() === '') {
+        core.info('No Log Analytics Workspace ID provided, skipping log dump');
+        return;
+    }
+
+    try {
+        core.info('Querying container job logs from Log Analytics...');
+        
+        const credential = new defaultAzureCredential_DefaultAzureCredential();
+        const logsClient = new LogsQueryClient(credential);
+        
+        // Query logs from the last hour to ensure we capture all logs from the job run
+        const query = `
+            ContainerAppConsoleLogs_CL
+            | where ContainerJobName_s == "${jobName}"
+            | order by TimeGenerated asc
+            | project TimeGenerated, Log_s
+        `;
+        
+        const result = await logsClient.queryWorkspace(
+            workspaceId,
+            query,
+            { duration: 'PT1H' }
+        );
+        
+        if (result.status === 'Success' && result.tables && result.tables.length > 0) {
+            const table = result.tables[0];
+            const logCount = table.rows.length;
+            
+            if (logCount === 0) {
+                core.info('No logs found for this job. Logs may take a few minutes to appear in Log Analytics.');
+                return;
+            }
+            
+            core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
+            
+            for (const row of table.rows) {
+                const timestamp = row[0];
+                const logMessage = row[1];
+                core.info(`[${timestamp}] ${logMessage}`);
+            }
+            
+            core.info('========== End of Logs ==========\n');
+        } else if (result.status === 'PartialError') {
+            core.warning('Partial error retrieving logs:');
+            for (const error of result.partialError) {
+                core.warning(error.message);
+            }
+        } else {
+            core.warning('No logs returned from query');
+        }
+        
+    } catch (error) {
+        core.warning(`Failed to retrieve logs from Log Analytics: ${error.message}`);
+        core.info('Note: Logs can take several minutes to appear in Log Analytics after job execution');
+    }
+}
+
+;// CONCATENATED MODULE: ./input.js
+
+
+
+/**
  * Parse JSON input safely
+ * @param {string} inputName - Name of the input to parse
+ * @returns {object} Parsed JSON object or empty object
  */
 function parseJsonInput(inputName) {
     // Try using @actions/core first
@@ -83931,18 +90157,84 @@ function parseJsonInput(inputName) {
 }
 
 /**
- * Normalize Azure location to canonical format (e.g., 'East US' -> 'eastus')
+ * Get all action inputs
+ * @returns {object} All parsed inputs
  */
-function normalizeAzureLocation(location) {
-    if (!location) return 'eastus';
-    return String(location).toLowerCase().replace(/\s+/g, '');
+function getInputs() {
+    const subscriptionId = core.getInput('subscription-id', { required: true });
+    const resourceGroup = core.getInput('resource-group', { required: true });
+    const environmentName = core.getInput('environment-name', { required: true });
+    const jobName = core.getInput('job-name', { required: false });
+    const image = core.getInput('image', { required: true });
+    const commandString = core.getInput('command', { required: false });
+    const userManagedIdentity = core.getInput('user-managed-identity', { required: false });
+    const cronSchedule = core.getInput('cron-schedule', { required: false });
+    const cpu = core.getInput('cpu', { required: false }) || '0.5';
+    const memory = core.getInput('memory', { required: false }) || '1Gi';
+    const timeout = Number.parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
+    const registryServer = core.getInput('registry-server', { required: false });
+    const registryUsername = core.getInput('registry-username', { required: false });
+    const registryPassword = core.getInput('registry-password', { required: false });
+    const dryRun = (core.getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
+    const logAnalyticsWorkspaceId = core.getInput('log-analytics-workspace-id', { required: false });
+
+    // Parse JSON inputs
+    const environmentVariables = parseJsonInput('environment-variables');
+    const secrets = parseJsonInput('secrets');
+    
+    // Parse command
+    const command = parseCommand(commandString);
+
+    return {
+        subscriptionId,
+        resourceGroup,
+        environmentName,
+        jobName,
+        image,
+        command,
+        userManagedIdentity,
+        cronSchedule,
+        cpu,
+        memory,
+        timeout,
+        registryServer,
+        registryUsername,
+        registryPassword,
+        dryRun,
+        logAnalyticsWorkspaceId,
+        environmentVariables,
+        secrets
+    };
 }
+
+;// CONCATENATED MODULE: ./config.js
+/**
+ * Azure Container App Job configuration builder
+ */
 
 /**
  * Build Azure Container App Job configuration object
+ * @param {string} subscriptionId - Azure subscription ID
+ * @param {string} resourceGroup - Resource group name
+ * @param {string} environmentName - Container Apps environment name
+ * @param {string} location - Azure location
+ * @param {object} config - Job configuration
+ * @returns {object} Azure Container App Job configuration
  */
 function buildJobConfig(subscriptionId, resourceGroup, environmentName, location, config) {
-    const { image, command, userManagedIdentity, environmentVariables, secrets, cpu, memory, registryServer, registryUsername, registryPassword, cronSchedule } = config;
+    const { 
+        image, 
+        command, 
+        userManagedIdentity, 
+        environmentVariables, 
+        secrets, 
+        cpu, 
+        memory, 
+        registryServer, 
+        registryUsername, 
+        registryPassword, 
+        cronSchedule 
+    } = config;
     
     // Build environment variables array
     const envVars = [];
@@ -84022,11 +90314,9 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
             parallelism: 1
         };
     }
-    //
     
     // Build job configuration
     const jobConfig = {
-
         configuration: {
             triggerType: triggerType,
             replicaTimeout: 1800,
@@ -84041,7 +90331,6 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
         template: {
             containers: [container],
         }
-
     };
 
     // Add user-managed identity if provided
@@ -84057,8 +90346,19 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
     return jobConfig;
 }
 
+;// CONCATENATED MODULE: ./job.js
+
+
+
+
 /**
  * Create Azure Container App Job
+ * @param {object} client - Azure Container Apps API client
+ * @param {string} resourceGroup - Resource group name
+ * @param {string} environmentName - Container Apps environment name
+ * @param {string} jobName - Job name
+ * @param {object} config - Job configuration
+ * @returns {Promise<object>} Created job
  */
 async function createJob(client, resourceGroup, environmentName, jobName, config) {
     core.info(`Creating job: ${jobName}`);
@@ -84096,6 +90396,10 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
 
 /**
  * Start job execution
+ * @param {object} client - Azure Container Apps API client
+ * @param {string} resourceGroup - Resource group name
+ * @param {string} jobName - Job name
+ * @returns {Promise<object>} Job execution
  */
 async function startJobExecution(client, resourceGroup, jobName) {
     core.info(`Starting job execution: ${jobName}`);
@@ -84118,6 +90422,12 @@ async function startJobExecution(client, resourceGroup, jobName) {
 
 /**
  * Poll for job execution completion
+ * @param {object} client - Azure Container Apps API client
+ * @param {string} resourceGroup - Resource group name
+ * @param {string} jobName - Job name
+ * @param {string} executionName - Execution name
+ * @param {number} timeout - Timeout in seconds
+ * @returns {Promise<object>} Final job execution status
  */
 async function pollJobExecution(client, resourceGroup, jobName, executionName, timeout) {
     core.info(`Polling for job completion (timeout: ${timeout}s)`);
@@ -84152,6 +90462,10 @@ async function pollJobExecution(client, resourceGroup, jobName, executionName, t
 
 /**
  * Delete the job
+ * @param {object} client - Azure Container Apps API client
+ * @param {string} resourceGroup - Resource group name
+ * @param {string} jobName - Job name
+ * @returns {Promise<void>}
  */
 async function deleteJob(client, resourceGroup, jobName) {
     core.info(`Deleting job: ${jobName}`);
@@ -84164,6 +90478,15 @@ async function deleteJob(client, resourceGroup, jobName) {
     }
 }
 
+;// CONCATENATED MODULE: ./main.js
+
+
+
+
+
+
+
+
 /**
  * Main function
  */
@@ -84175,28 +90498,30 @@ async function run() {
     
     try {
         // Get inputs
-        const subscriptionId = core.getInput('subscription-id', { required: true });
-        resourceGroup = core.getInput('resource-group', { required: true });
-        const environmentName = core.getInput('environment-name', { required: true });
-        jobName = core.getInput('job-name', { required: false }) || generateJobName('gh-job');
-        const image = core.getInput('image', { required: true });
-        const commandString = core.getInput('command', { required: false });
-        const userManagedIdentity = core.getInput('user-managed-identity', { required: false });
-        cronSchedule = core.getInput('cron-schedule', { required: false });
-        const cpu = core.getInput('cpu', { required: false }) || '0.5';
-        const memory = core.getInput('memory', { required: false }) || '1Gi';
-        const timeout = Number.parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
-        const registryServer = core.getInput('registry-server', { required: false });
-        const registryUsername = core.getInput('registry-username', { required: false });
-        const registryPassword = core.getInput('registry-password', { required: false });
-        const dryRun = (core.getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
-
-        // Parse JSON inputs
-        const environmentVariables = parseJsonInput('environment-variables');
-        const secrets = parseJsonInput('secrets');
+        const inputs = getInputs();
         
-        // Parse command
-        const command = parseCommand(commandString);
+        // Destructure inputs
+        const {
+            subscriptionId,
+            environmentName,
+            image,
+            command,
+            userManagedIdentity,
+            cpu,
+            memory,
+            timeout,
+            registryServer,
+            registryUsername,
+            registryPassword,
+            dryRun,
+            logAnalyticsWorkspaceId,
+            environmentVariables,
+            secrets
+        } = inputs;
+        
+        resourceGroup = inputs.resourceGroup;
+        jobName = inputs.jobName || generateJobName('gh-job');
+        cronSchedule = inputs.cronSchedule;
         
         core.info('=== Azure Container App Job Configuration ===');
         core.info(`Subscription: ${subscriptionId}`);
@@ -84278,6 +90603,9 @@ async function run() {
         core.info(`=== Job Completed ===`);
         core.info(`Status: ${status}`);
         core.info(`Exit Code: ${exitCode}`);
+        
+        // Dump logs from Log Analytics if workspace ID is provided
+        await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
         
         // Delete job
         await deleteJob(client, resourceGroup, jobName);

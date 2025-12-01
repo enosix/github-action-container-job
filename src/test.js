@@ -1,6 +1,7 @@
 import assert from 'node:assert';
 import { describe, it, beforeEach, afterEach } from 'node:test';
-import { sleep, generateJobName, parseCommand, parseJsonInput } from './main.js';
+import { sleep, generateJobName, parseCommand } from './utils.js';
+import { parseJsonInput } from './input.js';
 
 // Helper to set INPUT_ env var name mapping like GitHub Actions
 function setInputEnv(inputName, value) {

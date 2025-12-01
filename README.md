@@ -58,20 +58,21 @@ The action respects the container's exit code - if the container exits with a no
 
 ### Optional Inputs
 
-| Input                   | Description                                                     | Default                       |
-|-------------------------|-----------------------------------------------------------------|-------------------------------|
-| `job-name`              | Name for the container app job (auto-generated if not provided) | `gh-job-{timestamp}-{random}` |
-| `command`               | Space-delimited command to run in the container                 | Container default             |
-| `user-managed-identity` | Resource ID of user-managed identity to assign to the job       | None                          |
-| `environment-variables` | JSON object of environment variables                            | `{}`                          |
-| `secrets`               | JSON object of secret URIs                                      | `{}`                          |
-| `cron-schedule`         | Cron schedule for recurring jobs (optional)                     | None                          |
-| `cpu`                   | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
-| `memory`                | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
-| `timeout`               | Job execution timeout in seconds                                | `1800` (30 minutes)           |
-| `registry-server`       | Container registry server (e.g., ghcr.io)                       | None                          |
-| `registry-username`     | Container registry username                                     | None                          |
-| `registry-password`     | Container registry password                                     | None                          |
+| Input                       | Description                                                     | Default                       |
+|-----------------------------|-----------------------------------------------------------------|-------------------------------|
+| `job-name`                  | Name for the container app job (auto-generated if not provided) | `gh-job-{timestamp}-{random}` |
+| `command`                   | Space-delimited command to run in the container                 | Container default             |
+| `user-managed-identity`     | Resource ID of user-managed identity to assign to the job       | None                          |
+| `environment-variables`     | JSON object of environment variables                            | `{}`                          |
+| `secrets`                   | JSON object of secret URIs                                      | `{}`                          |
+| `cron-schedule`             | Cron schedule for recurring jobs (optional)                     | None                          |
+| `cpu`                       | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
+| `memory`                    | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
+| `timeout`                   | Job execution timeout in seconds                                | `1800` (30 minutes)           |
+| `registry-server`           | Container registry server (e.g., ghcr.io)                       | None                          |
+| `registry-username`         | Container registry username                                     | None                          |
+| `registry-password`         | Container registry password                                     | None                          |
+| `log-analytics-workspace-id`| Log Analytics Workspace ID for retrieving container logs        | None                          |
 
 ## Outputs
 
@@ -140,3 +141,20 @@ decrypted and added to the environment during runtime.
         "DATABASE_PASSWORD": "https://myvault.vault.azure.net/secrets/DATABASE_PASSWORD"
       }
 ```
+
+## Container Logs
+
+The action can automatically retrieve and display container logs from Azure Log Analytics after the job completes. To enable this feature, provide the Log Analytics Workspace ID that is configured with your Container App Environment.
+
+```yaml
+- name: Run Container Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myimage:latest
+    log-analytics-workspace-id: ${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}
+```
+
+**Note:** Logs may take a few minutes to appear in Log Analytics after job execution. If no logs are found immediately, they should be available in the Azure portal under the Container App Environment's log stream.

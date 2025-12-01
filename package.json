@@ -5,8 +5,8 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "ncc build -o dist index.js",
-    "test": "node --test test.js"
+    "build": "ncc build -o dist src/index.js",
+    "test": "node --test src/test.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@azure/arm-appcontainers": "^3.0.0",
+    "@azure/monitor-query": "^1.3.3",
     "@azure/identity": "^4.0.0"
   },
   "devDependencies": {
