@@ -4,7 +4,7 @@
 
 import * as core from '@actions/core';
 import { DefaultAzureCredential } from '@azure/identity';
-import { LogsQueryClient } from '@azure/monitor-query';
+import { LogsQueryClient } from '@azure/monitor-query-logs';
 
 /**
  * Sleep for a specified number of milliseconds
@@ -94,7 +94,8 @@ export async function dumpJobLogs(workspaceId, jobName) {
             core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
             
             for (const row of table.rows) {
-                const timestamp = row[0];
+                const timestamp = new Date(row[0]).toISOString()
+                    .replace('T', ' ').split('.')[0];
                 const logMessage = row[1];
                 core.info(`[${timestamp}] ${logMessage}`);
             }

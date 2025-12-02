@@ -36408,105 +36408,6 @@ __nccwpck_require__.d(mappers_namespaceObject, {
   discriminators: () => (discriminators)
 });
 
-// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/mappers.js
-var models_mappers_namespaceObject = {};
-__nccwpck_require__.r(models_mappers_namespaceObject);
-__nccwpck_require__.d(models_mappers_namespaceObject, {
-  BatchQueryRequest: () => (BatchQueryRequest),
-  BatchQueryResponse: () => (BatchQueryResponse),
-  BatchQueryResults: () => (BatchQueryResults),
-  BatchRequest: () => (BatchRequest),
-  BatchResponse: () => (BatchResponse),
-  Column: () => (Column),
-  ErrorDetail: () => (mappers_ErrorDetail),
-  ErrorInfo: () => (ErrorInfo),
-  ErrorResponse: () => (mappers_ErrorResponse),
-  MetadataApplication: () => (MetadataApplication),
-  MetadataApplicationRelated: () => (MetadataApplicationRelated),
-  MetadataCategory: () => (MetadataCategory),
-  MetadataCategoryRelated: () => (MetadataCategoryRelated),
-  MetadataFunction: () => (MetadataFunction),
-  MetadataFunctionRelated: () => (MetadataFunctionRelated),
-  MetadataPermissions: () => (MetadataPermissions),
-  MetadataPermissionsApplicationsItem: () => (MetadataPermissionsApplicationsItem),
-  MetadataPermissionsResourcesItem: () => (MetadataPermissionsResourcesItem),
-  MetadataPermissionsWorkspacesItem: () => (MetadataPermissionsWorkspacesItem),
-  MetadataQuery: () => (MetadataQuery),
-  MetadataQueryRelated: () => (MetadataQueryRelated),
-  MetadataResourceType: () => (MetadataResourceType),
-  MetadataResourceTypeRelated: () => (MetadataResourceTypeRelated),
-  MetadataResults: () => (MetadataResults),
-  MetadataSolution: () => (MetadataSolution),
-  MetadataSolutionRelated: () => (MetadataSolutionRelated),
-  MetadataTable: () => (MetadataTable),
-  MetadataTableColumnsItem: () => (MetadataTableColumnsItem),
-  MetadataTableRelated: () => (MetadataTableRelated),
-  MetadataWorkspace: () => (MetadataWorkspace),
-  MetadataWorkspaceRelated: () => (MetadataWorkspaceRelated),
-  QueryBody: () => (QueryBody),
-  QueryResults: () => (QueryResults),
-  Table: () => (Table)
-});
-
-// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/mappers.js
-var src_models_mappers_namespaceObject = {};
-__nccwpck_require__.r(src_models_mappers_namespaceObject);
-__nccwpck_require__.d(src_models_mappers_namespaceObject, {
-  ErrorAdditionalInfo: () => (mappers_ErrorAdditionalInfo),
-  ErrorContract: () => (ErrorContract),
-  ErrorResponse: () => (models_mappers_ErrorResponse),
-  LocalizableString: () => (LocalizableString),
-  MetadataValue: () => (MetadataValue),
-  Metric: () => (Metric),
-  MetricValue: () => (MetricValue),
-  Response: () => (Response),
-  SubscriptionScopeMetricsRequestBodyParameters: () => (SubscriptionScopeMetricsRequestBodyParameters),
-  TimeSeriesElement: () => (TimeSeriesElement)
-});
-
-// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/mappers.js
-var metricsdefinitions_src_models_mappers_namespaceObject = {};
-__nccwpck_require__.r(metricsdefinitions_src_models_mappers_namespaceObject);
-__nccwpck_require__.d(metricsdefinitions_src_models_mappers_namespaceObject, {
-  ErrorAdditionalInfo: () => (models_mappers_ErrorAdditionalInfo),
-  ErrorContract: () => (mappers_ErrorContract),
-  ErrorResponse: () => (src_models_mappers_ErrorResponse),
-  LocalizableString: () => (mappers_LocalizableString),
-  MetricAvailability: () => (MetricAvailability),
-  MetricDefinition: () => (MetricDefinition),
-  MetricDefinitionCollection: () => (MetricDefinitionCollection),
-  SubscriptionScopeMetricDefinition: () => (SubscriptionScopeMetricDefinition),
-  SubscriptionScopeMetricDefinitionCollection: () => (SubscriptionScopeMetricDefinitionCollection)
-});
-
-// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/mappers.js
-var metricsnamespaces_src_models_mappers_namespaceObject = {};
-__nccwpck_require__.r(metricsnamespaces_src_models_mappers_namespaceObject);
-__nccwpck_require__.d(metricsnamespaces_src_models_mappers_namespaceObject, {
-  ErrorResponse: () => (metricsnamespaces_src_models_mappers_ErrorResponse),
-  MetricNamespace: () => (MetricNamespace),
-  MetricNamespaceCollection: () => (MetricNamespaceCollection),
-  MetricNamespaceName: () => (MetricNamespaceName)
-});
-
-// NAMESPACE OBJECT: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/mappers.js
-var metricBatch_src_models_mappers_namespaceObject = {};
-__nccwpck_require__.r(metricBatch_src_models_mappers_namespaceObject);
-__nccwpck_require__.d(metricBatch_src_models_mappers_namespaceObject, {
-  ErrorAdditionalInfo: () => (src_models_mappers_ErrorAdditionalInfo),
-  ErrorDetail: () => (models_mappers_ErrorDetail),
-  ErrorResponse: () => (metricBatch_src_models_mappers_ErrorResponse),
-  LocalizableString: () => (models_mappers_LocalizableString),
-  MetadataValue: () => (mappers_MetadataValue),
-  Metric: () => (mappers_Metric),
-  MetricResultsResponse: () => (MetricResultsResponse),
-  MetricResultsResponseValuesItem: () => (MetricResultsResponseValuesItem),
-  MetricValue: () => (mappers_MetricValue),
-  MetricsBatchBatchExceptionHeaders: () => (MetricsBatchBatchExceptionHeaders),
-  ResourceIdList: () => (ResourceIdList),
-  TimeSeriesElement: () => (mappers_TimeSeriesElement)
-});
-
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
 var core = __nccwpck_require__(7484);
 ;// CONCATENATED MODULE: ./node_modules/@azure/identity/dist/esm/constants.js
@@ -36515,7 +36416,7 @@ var core = __nccwpck_require__(7484);
 /**
  * Current version of the `@azure/identity` package.
  */
-const constants_SDK_VERSION = `4.13.0`;
+const SDK_VERSION = `4.13.0`;
 /**
  * The default client ID for authentication
  * @internal
@@ -37309,7 +37210,7 @@ function esm_createClientLogger(namespace) {
 /**
  * The AzureLogger used for all clients within the identity package
  */
-const logging_logger = esm_createClientLogger("identity");
+const logger = esm_createClientLogger("identity");
 /**
  * Separates a list of environment variable names into a plain object with two arrays: an array of missing environment variables and another array with assigned environment variables.
  * @param supportedEnvVars - List of environment variable names
@@ -37333,7 +37234,7 @@ function processEnvVars(supportedEnvVars) {
  */
 function logEnvVars(credentialName, supportedEnvVars) {
     const { assigned } = processEnvVars(supportedEnvVars);
-    logging_logger.info(`${credentialName} => Found the following environment variables: ${assigned.join(", ")}`);
+    logger.info(`${credentialName} => Found the following environment variables: ${assigned.join(", ")}`);
 }
 /**
  * Formatting the success event on the credentials
@@ -37359,7 +37260,7 @@ function logging_formatError(scope, error) {
  *   `[title] => [message]`
  *
  */
-function credentialLoggerInstance(title, parent, log = logging_logger) {
+function credentialLoggerInstance(title, parent, log = logger) {
     const fullTitle = parent ? `${parent.fullTitle} ${title}` : title;
     function info(message) {
         log.info(`${fullTitle} =>`, message);
@@ -37392,7 +37293,7 @@ function credentialLoggerInstance(title, parent, log = logging_logger) {
  *   `[title] => getToken() => [message]`
  *
  */
-function credentialLogger(title, log = logging_logger) {
+function credentialLogger(title, log = logger) {
     const credLogger = credentialLoggerInstance(title, undefined, log);
     return {
         ...credLogger,
@@ -37624,7 +37525,7 @@ function createTracingClient(options) {
 const tracing_tracingClient = createTracingClient({
     namespace: "Microsoft.AAD",
     packageName: "@azure/identity",
-    packageVersion: constants_SDK_VERSION,
+    packageVersion: SDK_VERSION,
 });
 //# sourceMappingURL=tracing.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/identity/dist/esm/credentials/chainedTokenCredential.js
@@ -52648,7 +52549,7 @@ function isDefined(thing) {
  * @param thing - Anything.
  * @param properties - The name of the properties that should appear in the object.
  */
-function isObjectWithProperties(thing, properties) {
+function typeGuards_isObjectWithProperties(thing, properties) {
     if (!isDefined(thing) || typeof thing !== "object") {
         return false;
     }
@@ -52787,7 +52688,7 @@ const esm_isWebWorker = isWebWorker;
  * @param format - the format we use to encode the byte
  * @returns a string of the encoded string
  */
-function esm_uint8ArrayToString(bytes, format) {
+function uint8ArrayToString(bytes, format) {
     return tspRuntime.uint8ArrayToString(bytes, format);
 }
 /**
@@ -52796,7 +52697,7 @@ function esm_uint8ArrayToString(bytes, format) {
  * @param format - the format we use to decode the value
  * @returns a uint8array
  */
-function esm_stringToUint8Array(value, format) {
+function stringToUint8Array(value, format) {
     return tspRuntime.stringToUint8Array(value, format);
 }
 //# sourceMappingURL=index.js.map
@@ -54616,7 +54517,7 @@ const errorSanitizer = new Sanitizer();
 /**
  * A custom error type for failed pipeline requests.
  */
-class restError_RestError extends Error {
+class RestError extends Error {
     /**
      * Something went wrong when making the request.
      * This means the actual request failed for some reason,
@@ -54682,15 +54583,15 @@ class restError_RestError extends Error {
             },
             enumerable: false,
         });
-        Object.setPrototypeOf(this, restError_RestError.prototype);
+        Object.setPrototypeOf(this, RestError.prototype);
     }
 }
 /**
  * Typeguard for RestError
  * @param e - Something caught by a catch clause.
  */
-function restError_isRestError(e) {
-    if (e instanceof restError_RestError) {
+function isRestError(e) {
+    if (e instanceof RestError) {
         return true;
     }
     return isError(e) && e.name === "RestError";
@@ -54723,7 +54624,7 @@ const log_logger = createClientLogger("ts-http-runtime");
 
 
 const DEFAULT_TLS_SETTINGS = {};
-function nodeHttpClient_isReadableStream(body) {
+function isReadableStream(body) {
     return body && typeof body.pipe === "function";
 }
 function isStreamComplete(stream) {
@@ -54815,7 +54716,7 @@ class NodeHttpClient {
                 uploadReportStream.on("error", (e) => {
                     log_logger.error("Error in upload progress", e);
                 });
-                if (nodeHttpClient_isReadableStream(body)) {
+                if (isReadableStream(body)) {
                     body.pipe(uploadReportStream);
                 }
                 else {
@@ -54867,11 +54768,11 @@ class NodeHttpClient {
             // clean up event listener
             if (request.abortSignal && abortListener) {
                 let uploadStreamDone = Promise.resolve();
-                if (nodeHttpClient_isReadableStream(body)) {
+                if (isReadableStream(body)) {
                     uploadStreamDone = isStreamComplete(body);
                 }
                 let downloadStreamDone = Promise.resolve();
-                if (nodeHttpClient_isReadableStream(responseStream)) {
+                if (isReadableStream(responseStream)) {
                     downloadStreamDone = isStreamComplete(responseStream);
                 }
                 Promise.all([uploadStreamDone, downloadStreamDone])
@@ -54906,14 +54807,14 @@ class NodeHttpClient {
         return new Promise((resolve, reject) => {
             const req = isInsecure ? external_node_http_namespaceObject.request(options, resolve) : external_node_https_namespaceObject.request(options, resolve);
             req.once("error", (err) => {
-                reject(new restError_RestError(err.message, { code: err.code ?? restError_RestError.REQUEST_SEND_ERROR, request }));
+                reject(new RestError(err.message, { code: err.code ?? RestError.REQUEST_SEND_ERROR, request }));
             });
             abortController.signal.addEventListener("abort", () => {
                 const abortError = new AbortError_AbortError("The operation was aborted. Rejecting from abort signal callback while making request.");
                 req.destroy(abortError);
                 reject(abortError);
             });
-            if (body && nodeHttpClient_isReadableStream(body)) {
+            if (body && isReadableStream(body)) {
                 body.pipe(req);
             }
             else if (body) {
@@ -54925,7 +54826,7 @@ class NodeHttpClient {
                 }
                 else {
                     log_logger.error("Unrecognized body type", body);
-                    reject(new restError_RestError("Unrecognized body type"));
+                    reject(new RestError("Unrecognized body type"));
                 }
             }
             else {
@@ -55022,8 +54923,8 @@ function streamToText(stream) {
                 reject(e);
             }
             else {
-                reject(new restError_RestError(`Error reading response as text: ${e.message}`, {
-                    code: restError_RestError.PARSE_ERROR,
+                reject(new RestError(`Error reading response as text: ${e.message}`, {
+                    code: RestError.PARSE_ERROR,
                 }));
             }
         });
@@ -55037,7 +54938,7 @@ function getBodyLength(body) {
     else if (Buffer.isBuffer(body)) {
         return body.length;
     }
-    else if (nodeHttpClient_isReadableStream(body)) {
+    else if (isReadableStream(body)) {
         return null;
     }
     else if (isArrayBuffer(body)) {
@@ -55082,7 +54983,7 @@ const logPolicyName = "logPolicy";
  * A policy that logs all requests and responses.
  * @param options - Options to configure logPolicy.
  */
-function logPolicy_logPolicy(options = {}) {
+function logPolicy(options = {}) {
     const logger = options.logger ?? log_logger.info;
     const sanitizer = new Sanitizer({
         additionalAllowedHeaderNames: options.additionalAllowedHeaderNames,
@@ -55103,6 +55004,59 @@ function logPolicy_logPolicy(options = {}) {
     };
 }
 //# sourceMappingURL=logPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/redirectPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * The programmatic identifier of the redirectPolicy.
+ */
+const redirectPolicyName = "redirectPolicy";
+/**
+ * Methods that are allowed to follow redirects 301 and 302
+ */
+const allowedRedirect = ["GET", "HEAD"];
+/**
+ * A policy to follow Location headers from the server in order
+ * to support server-side redirection.
+ * In the browser, this policy is not used.
+ * @param options - Options to control policy behavior.
+ */
+function redirectPolicy(options = {}) {
+    const { maxRetries = 20 } = options;
+    return {
+        name: redirectPolicyName,
+        async sendRequest(request, next) {
+            const response = await next(request);
+            return handleRedirect(next, response, maxRetries);
+        },
+    };
+}
+async function handleRedirect(next, response, maxRetries, currentRetries = 0) {
+    const { request, status, headers } = response;
+    const locationHeader = headers.get("location");
+    if (locationHeader &&
+        (status === 300 ||
+            (status === 301 && allowedRedirect.includes(request.method)) ||
+            (status === 302 && allowedRedirect.includes(request.method)) ||
+            (status === 303 && request.method === "POST") ||
+            status === 307) &&
+        currentRetries < maxRetries) {
+        const url = new URL(locationHeader, request.url);
+        request.url = url.toString();
+        // POST request with Status code 303 should be converted into a
+        // redirected GET request if the redirect url is present in the location header
+        if (status === 303) {
+            request.method = "GET";
+            request.headers.delete("Content-Length");
+            delete request.body;
+        }
+        request.headers.delete("Authorization");
+        const res = await next(request);
+        return handleRedirect(next, res, maxRetries, currentRetries + 1);
+    }
+    return response;
+}
+//# sourceMappingURL=redirectPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/util/userAgentPlatform.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -55117,10 +55071,10 @@ function getHeaderName() {
 /**
  * @internal
  */
-async function userAgentPlatform_setPlatformSpecificData(map) {
-    if (process && process.versions) {
-        const osInfo = `${os.type()} ${os.release()}; ${os.arch()}`;
-        const versions = process.versions;
+async function setPlatformSpecificData(map) {
+    if (external_node_process_ && external_node_process_.versions) {
+        const osInfo = `${external_node_os_.type()} ${external_node_os_.release()}; ${external_node_os_.arch()}`;
+        const versions = external_node_process_.versions;
         if (versions.bun) {
             map.set("Bun", `${versions.bun} (${osInfo})`);
         }
@@ -55133,6 +55087,12 @@ async function userAgentPlatform_setPlatformSpecificData(map) {
     }
 }
 //# sourceMappingURL=userAgentPlatform.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/constants.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+const constants_SDK_VERSION = "0.3.2";
+const constants_DEFAULT_RETRY_POLICY_COUNT = 3;
+//# sourceMappingURL=constants.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/util/userAgent.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -55155,9 +55115,9 @@ function getUserAgentHeaderName() {
 /**
  * @internal
  */
-async function userAgent_getUserAgentValue(prefix) {
+async function getUserAgentValue(prefix) {
     const runtimeInfo = new Map();
-    runtimeInfo.set("ts-http-runtime", SDK_VERSION);
+    runtimeInfo.set("ts-http-runtime", constants_SDK_VERSION);
     await setPlatformSpecificData(runtimeInfo);
     const defaultAgent = getUserAgentString(runtimeInfo);
     const userAgentValue = prefix ? `${prefix} ${defaultAgent}` : defaultAgent;
@@ -55178,7 +55138,7 @@ const userAgentPolicyName = "userAgentPolicy";
  * the library version.
  * @param options - Options to customize the user agent value.
  */
-function userAgentPolicy_userAgentPolicy(options = {}) {
+function userAgentPolicy(options = {}) {
     const userAgentValue = getUserAgentValue(options.userAgentPrefix);
     return {
         name: userAgentPolicyName,
@@ -55191,6 +55151,30 @@ function userAgentPolicy_userAgentPolicy(options = {}) {
     };
 }
 //# sourceMappingURL=userAgentPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/decompressResponsePolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * The programmatic identifier of the decompressResponsePolicy.
+ */
+const decompressResponsePolicyName = "decompressResponsePolicy";
+/**
+ * A policy to enable response decompression according to Accept-Encoding header
+ * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
+ */
+function decompressResponsePolicy() {
+    return {
+        name: decompressResponsePolicyName,
+        async sendRequest(request, next) {
+            // HEAD requests have no body
+            if (request.method !== "HEAD") {
+                request.headers.set("Accept-Encoding", "gzip,deflate");
+            }
+            return next(request);
+        },
+    };
+}
+//# sourceMappingURL=decompressResponsePolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/util/helpers.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -55389,12 +55373,6 @@ function isSystemError(err) {
         err.code === "ENOTFOUND");
 }
 //# sourceMappingURL=exponentialRetryStrategy.js.map
-;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/constants.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-const esm_constants_SDK_VERSION = "0.3.2";
-const constants_DEFAULT_RETRY_POLICY_COUNT = 3;
-//# sourceMappingURL=constants.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/retryPolicy.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -55517,7 +55495,7 @@ const defaultRetryPolicyName = "defaultRetryPolicy";
  * - When there are errors in the underlying transport layer (e.g. DNS lookup failures).
  * - Or otherwise if the outgoing request fails, it will retry with an exponentially increasing delay.
  */
-function defaultRetryPolicy_defaultRetryPolicy(options = {}) {
+function defaultRetryPolicy(options = {}) {
     return {
         name: defaultRetryPolicyName,
         sendRequest: retryPolicy_retryPolicy([throttlingRetryStrategy_throttlingRetryStrategy(), exponentialRetryStrategy_exponentialRetryStrategy(options)], {
@@ -55569,7 +55547,7 @@ function formDataToFormDataMap(formData) {
 /**
  * A policy that encodes FormData on the request into the body.
  */
-function formDataPolicy_formDataPolicy() {
+function formDataPolicy() {
     return {
         name: formDataPolicyName,
         async sendRequest(request, next) {
@@ -55816,7 +55794,7 @@ function setProxyAgentOnRequest(request, cachedAgents, proxyUrl) {
  * @param proxySettings - ProxySettings to use on each request.
  * @param options - additional settings, for example, custom NO_PROXY patterns
  */
-function proxyPolicy_proxyPolicy(proxySettings, options) {
+function proxyPolicy(proxySettings, options) {
     if (!noProxyListLoaded) {
         globalNoProxyList.push(...loadNoProxy());
     }
@@ -55840,6 +55818,52 @@ function proxyPolicy_proxyPolicy(proxySettings, options) {
     };
 }
 //# sourceMappingURL=proxyPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/agentPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Name of the Agent Policy
+ */
+const agentPolicyName = "agentPolicy";
+/**
+ * Gets a pipeline policy that sets http.agent
+ */
+function agentPolicy(agent) {
+    return {
+        name: agentPolicyName,
+        sendRequest: async (req, next) => {
+            // Users may define an agent on the request, honor it over the client level one
+            if (!req.agent) {
+                req.agent = agent;
+            }
+            return next(req);
+        },
+    };
+}
+//# sourceMappingURL=agentPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/tlsPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Name of the TLS Policy
+ */
+const tlsPolicyName = "tlsPolicy";
+/**
+ * Gets a pipeline policy that adds the client certificate to the HttpClient agent for authentication.
+ */
+function tlsPolicy(tlsSettings) {
+    return {
+        name: tlsPolicyName,
+        sendRequest: async (req, next) => {
+            // Users may define a request tlsSettings, honor those over the client level one
+            if (!req.tlsSettings) {
+                req.tlsSettings = tlsSettings;
+            }
+            return next(req);
+        },
+    };
+}
+//# sourceMappingURL=tlsPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/util/typeGuards.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -55851,7 +55875,7 @@ function isWebReadableStream(x) {
         typeof x.getReader === "function" &&
         typeof x.tee === "function");
 }
-function typeGuards_isBinaryBody(body) {
+function isBinaryBody(body) {
     return (body !== undefined &&
         (body instanceof Uint8Array ||
             typeGuards_isReadableStream(body) ||
@@ -56000,7 +56024,7 @@ async function buildRequestBody(request, parts, boundary) {
 /**
  * Name of multipart policy
  */
-const multipartPolicy_multipartPolicyName = "multipartPolicy";
+const multipartPolicyName = "multipartPolicy";
 const maxBoundaryLength = 70;
 const validBoundaryCharacters = new Set(`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'()+,-./:=?`);
 function assertValidBoundary(boundary) {
@@ -56014,9 +56038,9 @@ function assertValidBoundary(boundary) {
 /**
  * Pipeline policy for multipart requests
  */
-function multipartPolicy_multipartPolicy() {
+function multipartPolicy() {
     return {
-        name: multipartPolicy_multipartPolicyName,
+        name: multipartPolicyName,
         async sendRequest(request, next) {
             if (!request.multipartBody) {
                 return next(request);
@@ -56068,9 +56092,9 @@ function multipartPolicy_multipartPolicy() {
  * Create a new pipeline with a default set of customizable policies.
  * @param options - Options to configure a custom pipeline.
  */
-function createPipelineFromOptions_createPipelineFromOptions(options) {
-    const pipeline = createEmptyPipeline();
-    if (isNodeLike) {
+function createPipelineFromOptions(options) {
+    const pipeline = pipeline_createEmptyPipeline();
+    if (checkEnvironment_isNodeLike) {
         if (options.agent) {
             pipeline.addPolicy(agentPolicy(options.agent));
         }
@@ -56087,7 +56111,7 @@ function createPipelineFromOptions_createPipelineFromOptions(options) {
     // properties (e.g., making the boundary constant in recorded tests).
     pipeline.addPolicy(multipartPolicy(), { afterPhase: "Deserialize" });
     pipeline.addPolicy(defaultRetryPolicy(options.retryOptions), { phase: "Retry" });
-    if (isNodeLike) {
+    if (checkEnvironment_isNodeLike) {
         // Both XHR and Fetch expect to handle redirects automatically,
         // so only include this policy when we're in Node.
         pipeline.addPolicy(redirectPolicy(options.redirectOptions), { afterPhase: "Retry" });
@@ -56096,6 +56120,58 @@ function createPipelineFromOptions_createPipelineFromOptions(options) {
     return pipeline;
 }
 //# sourceMappingURL=createPipelineFromOptions.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/client/apiVersionPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+const apiVersionPolicyName = "ApiVersionPolicy";
+/**
+ * Creates a policy that sets the apiVersion as a query parameter on every request
+ * @param options - Client options
+ * @returns Pipeline policy that sets the apiVersion as a query parameter on every request
+ */
+function apiVersionPolicy(options) {
+    return {
+        name: apiVersionPolicyName,
+        sendRequest: (req, next) => {
+            // Use the apiVesion defined in request url directly
+            // Append one if there is no apiVesion and we have one at client options
+            const url = new URL(req.url);
+            if (!url.searchParams.get("api-version") && options.apiVersion) {
+                req.url = `${req.url}${Array.from(url.searchParams.keys()).length > 0 ? "&" : "?"}api-version=${options.apiVersion}`;
+            }
+            return next(req);
+        },
+    };
+}
+//# sourceMappingURL=apiVersionPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/auth/credentials.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Type guard to check if a credential is an OAuth2 token credential.
+ */
+function isOAuth2TokenCredential(credential) {
+    return "getOAuth2Token" in credential;
+}
+/**
+ * Type guard to check if a credential is a Bearer token credential.
+ */
+function isBearerTokenCredential(credential) {
+    return "getBearerToken" in credential;
+}
+/**
+ * Type guard to check if a credential is a Basic auth credential.
+ */
+function isBasicCredential(credential) {
+    return "username" in credential && "password" in credential;
+}
+/**
+ * Type guard to check if a credential is an API key credential.
+ */
+function isApiKeyCredential(credential) {
+    return "key" in credential;
+}
+//# sourceMappingURL=credentials.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/auth/checkInsecureConnection.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -56126,7 +56202,7 @@ function allowInsecureConnection(request, options) {
  */
 function emitInsecureConnectionWarning() {
     const warning = "Sending token over insecure transport. Assume any token issued is compromised.";
-    logger.warning(warning);
+    log_logger.warning(warning);
     if (typeof process?.emitWarning === "function" && !insecureConnectionWarningEmmitted) {
         insecureConnectionWarningEmmitted = true;
         process.emitWarning(warning);
@@ -56136,7 +56212,7 @@ function emitInsecureConnectionWarning() {
  * Ensures that authentication is only allowed over HTTPS unless explicitly allowed.
  * Throws an error if the connection is not secure and not explicitly allowed.
  */
-function checkInsecureConnection_ensureSecureConnection(request, options) {
+function ensureSecureConnection(request, options) {
     if (!request.url.toLowerCase().startsWith("https://")) {
         if (allowInsecureConnection(request, options)) {
             emitInsecureConnectionWarning();
@@ -56158,7 +56234,7 @@ const apiKeyAuthenticationPolicyName = "apiKeyAuthenticationPolicy";
 /**
  * Gets a pipeline policy that adds API key authentication to requests
  */
-function apiKeyAuthenticationPolicy_apiKeyAuthenticationPolicy(options) {
+function apiKeyAuthenticationPolicy(options) {
     return {
         name: apiKeyAuthenticationPolicyName,
         async sendRequest(request, next) {
@@ -56190,7 +56266,7 @@ const basicAuthenticationPolicyName = "bearerAuthenticationPolicy";
 /**
  * Gets a pipeline policy that adds basic authentication to requests
  */
-function basicAuthenticationPolicy_basicAuthenticationPolicy(options) {
+function basicAuthenticationPolicy(options) {
     return {
         name: basicAuthenticationPolicyName,
         async sendRequest(request, next) {
@@ -56202,7 +56278,7 @@ function basicAuthenticationPolicy_basicAuthenticationPolicy(options) {
                 return next(request);
             }
             const { username, password } = options.credential;
-            const headerValue = uint8ArrayToString(stringToUint8Array(`${username}:${password}`, "utf-8"), "base64");
+            const headerValue = bytesEncoding_uint8ArrayToString(bytesEncoding_stringToUint8Array(`${username}:${password}`, "utf-8"), "base64");
             request.headers.set("Authorization", `Basic ${headerValue}`);
             return next(request);
         },
@@ -56220,7 +56296,7 @@ const bearerAuthenticationPolicyName = "bearerAuthenticationPolicy";
 /**
  * Gets a pipeline policy that adds bearer token authentication to requests
  */
-function bearerAuthenticationPolicy_bearerAuthenticationPolicy(options) {
+function bearerAuthenticationPolicy(options) {
     return {
         name: bearerAuthenticationPolicyName,
         async sendRequest(request, next) {
@@ -56251,7 +56327,7 @@ const oauth2AuthenticationPolicyName = "oauth2AuthenticationPolicy";
 /**
  * Gets a pipeline policy that adds authorization header from OAuth2 schemes
  */
-function oauth2AuthenticationPolicy_oauth2AuthenticationPolicy(options) {
+function oauth2AuthenticationPolicy(options) {
     return {
         name: oauth2AuthenticationPolicyName,
         async sendRequest(request, next) {
@@ -56286,7 +56362,7 @@ let cachedHttpClient;
 /**
  * Creates a default rest pipeline to re-use accross Rest Level Clients
  */
-function clientHelpers_createDefaultPipeline(options = {}) {
+function createDefaultPipeline(options = {}) {
     const pipeline = createPipelineFromOptions(options);
     pipeline.addPolicy(apiVersionPolicy(options));
     const { credential, authSchemes, allowInsecureConnection } = options;
@@ -56306,9 +56382,9 @@ function clientHelpers_createDefaultPipeline(options = {}) {
     }
     return pipeline;
 }
-function clientHelpers_getCachedDefaultHttpsClient() {
+function getCachedDefaultHttpsClient() {
     if (!cachedHttpClient) {
-        cachedHttpClient = createDefaultHttpClient();
+        cachedHttpClient = defaultHttpClient_createDefaultHttpClient();
     }
     return cachedHttpClient;
 }
@@ -56406,18 +56482,18 @@ function normalizeBody(body, contentType) {
         return body;
     }
     if (typeof body === "string" || typeof body === "number" || typeof body === "boolean") {
-        return stringToUint8Array(String(body), "utf-8");
+        return bytesEncoding_stringToUint8Array(String(body), "utf-8");
     }
     // stringify objects for JSON-ish content types e.g. application/json, application/merge-patch+json, application/vnd.oci.manifest.v1+json, application.json; charset=UTF-8
     if (contentType && /application\/(.+\+)?json(;.+)?/i.test(String(contentType))) {
-        return stringToUint8Array(JSON.stringify(body), "utf-8");
+        return bytesEncoding_stringToUint8Array(JSON.stringify(body), "utf-8");
     }
     throw new RestError(`Unsupported body/content-type combination: ${body}, ${contentType}`);
 }
 function buildBodyPart(descriptor) {
     const contentType = getPartContentType(descriptor);
     const contentDisposition = getContentDisposition(descriptor);
-    const headers = createHttpHeaders(descriptor.headers ?? {});
+    const headers = httpHeaders_createHttpHeaders(descriptor.headers ?? {});
     if (contentType) {
         headers.set("content-type", contentType);
     }
@@ -56430,7 +56506,7 @@ function buildBodyPart(descriptor) {
         body,
     };
 }
-function multipart_buildMultipartBody(parts) {
+function buildMultipartBody(parts) {
     return { parts: parts.map(buildBodyPart) };
 }
 //# sourceMappingURL=multipart.js.map
@@ -56452,7 +56528,7 @@ function multipart_buildMultipartBody(parts) {
  * @param customHttpClient - a custom HttpClient to use when making the request
  * @returns returns and HttpResponse
  */
-async function sendRequest_sendRequest(method, url, pipeline, options = {}, customHttpClient) {
+async function sendRequest(method, url, pipeline, options = {}, customHttpClient) {
     const httpClient = customHttpClient ?? getCachedDefaultHttpsClient();
     const request = buildPipelineRequest(method, url, options);
     try {
@@ -56518,7 +56594,7 @@ function buildPipelineRequest(method, url, options = {}) {
     const requestContentType = getRequestContentType(options);
     const { body, multipartBody } = getRequestBody(options.body, requestContentType);
     const hasContent = body !== undefined || multipartBody !== undefined;
-    const headers = createHttpHeaders({
+    const headers = httpHeaders_createHttpHeaders({
         ...(options.headers ? options.headers : {}),
         accept: options.accept ?? options.headers?.accept ?? "application/json",
         ...(hasContent &&
@@ -56526,7 +56602,7 @@ function buildPipelineRequest(method, url, options = {}) {
             "content-type": requestContentType,
         }),
     });
-    return createPipelineRequest({
+    return pipelineRequest_createPipelineRequest({
         url,
         method,
         body,
@@ -56553,7 +56629,7 @@ function getRequestBody(body, contentType = "") {
     if (typeof FormData !== "undefined" && body instanceof FormData) {
         return { body };
     }
-    if (isReadableStream(body)) {
+    if (typeGuards_isReadableStream(body)) {
         return { body };
     }
     if (ArrayBuffer.isView(body)) {
@@ -56614,6 +56690,156 @@ function createParseError(response, err) {
     });
 }
 //# sourceMappingURL=sendRequest.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/client/urlHelpers.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+function isQueryParameterWithOptions(x) {
+    const value = x.value;
+    return (value !== undefined && value.toString !== undefined && typeof value.toString === "function");
+}
+/**
+ * Builds the request url, filling in query and path parameters
+ * @param endpoint - base url which can be a template url
+ * @param routePath - path to append to the endpoint
+ * @param pathParameters - values of the path parameters
+ * @param options - request parameters including query parameters
+ * @returns a full url with path and query parameters
+ */
+function buildRequestUrl(endpoint, routePath, pathParameters, options = {}) {
+    if (routePath.startsWith("https://") || routePath.startsWith("http://")) {
+        return routePath;
+    }
+    endpoint = buildBaseUrl(endpoint, options);
+    routePath = buildRoutePath(routePath, pathParameters, options);
+    const requestUrl = appendQueryParams(`${endpoint}/${routePath}`, options);
+    const url = new URL(requestUrl);
+    return (url
+        .toString()
+        // Remove double forward slashes
+        .replace(/([^:]\/)\/+/g, "$1"));
+}
+function getQueryParamValue(key, allowReserved, style, param) {
+    let separator;
+    if (style === "pipeDelimited") {
+        separator = "|";
+    }
+    else if (style === "spaceDelimited") {
+        separator = "%20";
+    }
+    else {
+        separator = ",";
+    }
+    let paramValues;
+    if (Array.isArray(param)) {
+        paramValues = param;
+    }
+    else if (typeof param === "object" && param.toString === Object.prototype.toString) {
+        // If the parameter is an object without a custom toString implementation (e.g. a Date),
+        // then we should deconstruct the object into an array [key1, value1, key2, value2, ...].
+        paramValues = Object.entries(param).flat();
+    }
+    else {
+        paramValues = [param];
+    }
+    const value = paramValues
+        .map((p) => {
+        if (p === null || p === undefined) {
+            return "";
+        }
+        if (!p.toString || typeof p.toString !== "function") {
+            throw new Error(`Query parameters must be able to be represented as string, ${key} can't`);
+        }
+        const rawValue = p.toISOString !== undefined ? p.toISOString() : p.toString();
+        return allowReserved ? rawValue : encodeURIComponent(rawValue);
+    })
+        .join(separator);
+    return `${allowReserved ? key : encodeURIComponent(key)}=${value}`;
+}
+function appendQueryParams(url, options = {}) {
+    if (!options.queryParameters) {
+        return url;
+    }
+    const parsedUrl = new URL(url);
+    const queryParams = options.queryParameters;
+    const paramStrings = [];
+    for (const key of Object.keys(queryParams)) {
+        const param = queryParams[key];
+        if (param === undefined || param === null) {
+            continue;
+        }
+        const hasMetadata = isQueryParameterWithOptions(param);
+        const rawValue = hasMetadata ? param.value : param;
+        const explode = hasMetadata ? (param.explode ?? false) : false;
+        const style = hasMetadata && param.style ? param.style : "form";
+        if (explode) {
+            if (Array.isArray(rawValue)) {
+                for (const item of rawValue) {
+                    paramStrings.push(getQueryParamValue(key, options.skipUrlEncoding ?? false, style, item));
+                }
+            }
+            else if (typeof rawValue === "object") {
+                // For object explode, the name of the query parameter is ignored and we use the object key instead
+                for (const [actualKey, value] of Object.entries(rawValue)) {
+                    paramStrings.push(getQueryParamValue(actualKey, options.skipUrlEncoding ?? false, style, value));
+                }
+            }
+            else {
+                // Explode doesn't really make sense for primitives
+                throw new Error("explode can only be set to true for objects and arrays");
+            }
+        }
+        else {
+            paramStrings.push(getQueryParamValue(key, options.skipUrlEncoding ?? false, style, rawValue));
+        }
+    }
+    if (parsedUrl.search !== "") {
+        parsedUrl.search += "&";
+    }
+    parsedUrl.search += paramStrings.join("&");
+    return parsedUrl.toString();
+}
+function buildBaseUrl(endpoint, options) {
+    if (!options.pathParameters) {
+        return endpoint;
+    }
+    const pathParams = options.pathParameters;
+    for (const [key, param] of Object.entries(pathParams)) {
+        if (param === undefined || param === null) {
+            throw new Error(`Path parameters ${key} must not be undefined or null`);
+        }
+        if (!param.toString || typeof param.toString !== "function") {
+            throw new Error(`Path parameters must be able to be represented as string, ${key} can't`);
+        }
+        let value = param.toISOString !== undefined ? param.toISOString() : String(param);
+        if (!options.skipUrlEncoding) {
+            value = encodeURIComponent(param);
+        }
+        endpoint = replaceAll(endpoint, `{${key}}`, value) ?? "";
+    }
+    return endpoint;
+}
+function buildRoutePath(routePath, pathParameters, options = {}) {
+    for (const pathParam of pathParameters) {
+        const allowReserved = typeof pathParam === "object" && (pathParam.allowReserved ?? false);
+        let value = typeof pathParam === "object" ? pathParam.value : pathParam;
+        if (!options.skipUrlEncoding && !allowReserved) {
+            value = encodeURIComponent(value);
+        }
+        routePath = routePath.replace(/\{[\w-]+\}/, String(value));
+    }
+    return routePath;
+}
+/**
+ * Replace all of the instances of searchValue in value with the provided replaceValue.
+ * @param value - The value to search and replace in.
+ * @param searchValue - The value to search for in the value argument.
+ * @param replaceValue - The value to replace searchValue with in the value argument.
+ * @returns The value where each instance of searchValue was replaced with replacedValue.
+ */
+function replaceAll(value, searchValue, replaceValue) {
+    return !value || !searchValue ? value : value.split(searchValue).join(replaceValue || "");
+}
+//# sourceMappingURL=urlHelpers.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/client/getClient.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -56683,7 +56909,7 @@ function buildOperation(method, url, pipeline, options, allowInsecureConnection,
             return sendRequest(method, url, pipeline, { ...options, allowInsecureConnection }, httpClient).then(onFulfilled, onrejected);
         },
         async asBrowserStream() {
-            if (isNodeLike) {
+            if (checkEnvironment_isNodeLike) {
                 throw new Error("`asBrowserStream` is supported only in the browser environment. Use `asNodeStream` instead to obtain the response body stream. If you require a Web stream of the response in Node, consider using `Readable.toWeb` on the result of `asNodeStream`.");
             }
             else {
@@ -56691,7 +56917,7 @@ function buildOperation(method, url, pipeline, options, allowInsecureConnection,
             }
         },
         async asNodeStream() {
-            if (isNodeLike) {
+            if (checkEnvironment_isNodeLike) {
                 return sendRequest(method, url, pipeline, { ...options, allowInsecureConnection, responseAsStream: true }, httpClient);
             }
             else {
@@ -56701,6 +56927,27 @@ function buildOperation(method, url, pipeline, options, allowInsecureConnection,
     };
 }
 //# sourceMappingURL=getClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/client/operationOptionHelpers.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Helper function to convert OperationOptions to RequestParameters
+ * @param options - the options that are used by Modular layer to send the request
+ * @returns the result of the conversion in RequestParameters of RLC layer
+ */
+function operationOptionsToRequestParameters(options) {
+    return {
+        allowInsecureConnection: options.requestOptions?.allowInsecureConnection,
+        timeout: options.requestOptions?.timeout,
+        skipUrlEncoding: options.requestOptions?.skipUrlEncoding,
+        abortSignal: options.abortSignal,
+        onUploadProgress: options.requestOptions?.onUploadProgress,
+        onDownloadProgress: options.requestOptions?.onDownloadProgress,
+        headers: { ...options.requestOptions?.headers },
+        onResponse: options.onResponse,
+    };
+}
+//# sourceMappingURL=operationOptionHelpers.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/client/restError.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -56721,7 +56968,7 @@ function createRestError(messageOrResponse, response) {
 }
 function toPipelineResponse(response) {
     return {
-        headers: createHttpHeaders(response.headers),
+        headers: httpHeaders_createHttpHeaders(response.headers),
         request: response.request,
         status: statusCodeToNumber(response.status) ?? -1,
     };
@@ -56766,53 +57013,6 @@ function esm_pipeline_createEmptyPipeline() {
 
 const esm_log_logger = esm_createClientLogger("core-rest-pipeline");
 //# sourceMappingURL=log.js.map
-;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/agentPolicy.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-/**
- * Name of the Agent Policy
- */
-const agentPolicyName = "agentPolicy";
-/**
- * Gets a pipeline policy that sets http.agent
- */
-function agentPolicy_agentPolicy(agent) {
-    return {
-        name: agentPolicyName,
-        sendRequest: async (req, next) => {
-            // Users may define an agent on the request, honor it over the client level one
-            if (!req.agent) {
-                req.agent = agent;
-            }
-            return next(req);
-        },
-    };
-}
-//# sourceMappingURL=agentPolicy.js.map
-;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/decompressResponsePolicy.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-/**
- * The programmatic identifier of the decompressResponsePolicy.
- */
-const decompressResponsePolicyName = "decompressResponsePolicy";
-/**
- * A policy to enable response decompression according to Accept-Encoding header
- * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
- */
-function decompressResponsePolicy_decompressResponsePolicy() {
-    return {
-        name: decompressResponsePolicyName,
-        async sendRequest(request, next) {
-            // HEAD requests have no body
-            if (request.method !== "HEAD") {
-                request.headers.set("Accept-Encoding", "gzip,deflate");
-            }
-            return next(request);
-        },
-    };
-}
-//# sourceMappingURL=decompressResponsePolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/exponentialRetryPolicy.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -56897,82 +57097,6 @@ function throttlingRetryPolicy(options = {}) {
     };
 }
 //# sourceMappingURL=throttlingRetryPolicy.js.map
-;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/redirectPolicy.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-/**
- * The programmatic identifier of the redirectPolicy.
- */
-const redirectPolicyName = "redirectPolicy";
-/**
- * Methods that are allowed to follow redirects 301 and 302
- */
-const allowedRedirect = ["GET", "HEAD"];
-/**
- * A policy to follow Location headers from the server in order
- * to support server-side redirection.
- * In the browser, this policy is not used.
- * @param options - Options to control policy behavior.
- */
-function redirectPolicy_redirectPolicy(options = {}) {
-    const { maxRetries = 20 } = options;
-    return {
-        name: redirectPolicyName,
-        async sendRequest(request, next) {
-            const response = await next(request);
-            return handleRedirect(next, response, maxRetries);
-        },
-    };
-}
-async function handleRedirect(next, response, maxRetries, currentRetries = 0) {
-    const { request, status, headers } = response;
-    const locationHeader = headers.get("location");
-    if (locationHeader &&
-        (status === 300 ||
-            (status === 301 && allowedRedirect.includes(request.method)) ||
-            (status === 302 && allowedRedirect.includes(request.method)) ||
-            (status === 303 && request.method === "POST") ||
-            status === 307) &&
-        currentRetries < maxRetries) {
-        const url = new URL(locationHeader, request.url);
-        request.url = url.toString();
-        // POST request with Status code 303 should be converted into a
-        // redirected GET request if the redirect url is present in the location header
-        if (status === 303) {
-            request.method = "GET";
-            request.headers.delete("Content-Length");
-            delete request.body;
-        }
-        request.headers.delete("Authorization");
-        const res = await next(request);
-        return handleRedirect(next, res, maxRetries, currentRetries + 1);
-    }
-    return response;
-}
-//# sourceMappingURL=redirectPolicy.js.map
-;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/tlsPolicy.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-/**
- * Name of the TLS Policy
- */
-const tlsPolicyName = "tlsPolicy";
-/**
- * Gets a pipeline policy that adds the client certificate to the HttpClient agent for authentication.
- */
-function tlsPolicy_tlsPolicy(tlsSettings) {
-    return {
-        name: tlsPolicyName,
-        sendRequest: async (req, next) => {
-            // Users may define a request tlsSettings, honor those over the client level one
-            if (!req.tlsSettings) {
-                req.tlsSettings = tlsSettings;
-            }
-            return next(req);
-        },
-    };
-}
-//# sourceMappingURL=tlsPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@typespec/ts-http-runtime/dist/esm/policies/internal.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
@@ -57004,8 +57128,8 @@ const logPolicy_logPolicyName = (/* unused pure expression or super */ null && (
  * A policy that logs all requests and responses.
  * @param options - Options to configure logPolicy.
  */
-function policies_logPolicy_logPolicy(options = {}) {
-    return logPolicy_logPolicy({
+function logPolicy_logPolicy(options = {}) {
+    return logPolicy({
         logger: esm_log_logger.info,
         ...options,
     });
@@ -57025,8 +57149,8 @@ const redirectPolicy_redirectPolicyName = (/* unused pure expression or super */
  * In the browser, this policy is not used.
  * @param options - Options to control policy behavior.
  */
-function policies_redirectPolicy_redirectPolicy(options = {}) {
-    return redirectPolicy_redirectPolicy(options);
+function redirectPolicy_redirectPolicy(options = {}) {
+    return redirectPolicy(options);
 }
 //# sourceMappingURL=redirectPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/util/userAgentPlatform.js
@@ -57043,7 +57167,7 @@ function userAgentPlatform_getHeaderName() {
 /**
  * @internal
  */
-async function util_userAgentPlatform_setPlatformSpecificData(map) {
+async function userAgentPlatform_setPlatformSpecificData(map) {
     if (external_node_process_ && external_node_process_.versions) {
         const osInfo = `${external_node_os_.type()} ${external_node_os_.release()}; ${external_node_os_.arch()}`;
         const versions = external_node_process_.versions;
@@ -57062,7 +57186,7 @@ async function util_userAgentPlatform_setPlatformSpecificData(map) {
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/constants.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-const dist_esm_constants_SDK_VERSION = "1.22.2";
+const esm_constants_SDK_VERSION = "1.22.2";
 const esm_constants_DEFAULT_RETRY_POLICY_COUNT = 3;
 //# sourceMappingURL=constants.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/util/userAgent.js
@@ -57087,10 +57211,10 @@ function userAgent_getUserAgentHeaderName() {
 /**
  * @internal
  */
-async function util_userAgent_getUserAgentValue(prefix) {
+async function userAgent_getUserAgentValue(prefix) {
     const runtimeInfo = new Map();
-    runtimeInfo.set("core-rest-pipeline", dist_esm_constants_SDK_VERSION);
-    await util_userAgentPlatform_setPlatformSpecificData(runtimeInfo);
+    runtimeInfo.set("core-rest-pipeline", esm_constants_SDK_VERSION);
+    await userAgentPlatform_setPlatformSpecificData(runtimeInfo);
     const defaultAgent = userAgent_getUserAgentString(runtimeInfo);
     const userAgentValue = prefix ? `${prefix} ${defaultAgent}` : defaultAgent;
     return userAgentValue;
@@ -57110,8 +57234,8 @@ const userAgentPolicy_userAgentPolicyName = "userAgentPolicy";
  * the library version.
  * @param options - Options to customize the user agent value.
  */
-function policies_userAgentPolicy_userAgentPolicy(options = {}) {
-    const userAgentValue = util_userAgent_getUserAgentValue(options.userAgentPrefix);
+function userAgentPolicy_userAgentPolicy(options = {}) {
+    const userAgentValue = userAgent_getUserAgentValue(options.userAgentPrefix);
     return {
         name: userAgentPolicy_userAgentPolicyName,
         async sendRequest(request, next) {
@@ -57261,14 +57385,14 @@ function toArrayBuffer(source) {
 /**
  * Name of multipart policy
  */
-const policies_multipartPolicy_multipartPolicyName = multipartPolicy_multipartPolicyName;
+const multipartPolicy_multipartPolicyName = multipartPolicyName;
 /**
  * Pipeline policy for multipart requests
  */
-function policies_multipartPolicy_multipartPolicy() {
-    const tspPolicy = multipartPolicy_multipartPolicy();
+function multipartPolicy_multipartPolicy() {
+    const tspPolicy = multipartPolicy();
     return {
-        name: policies_multipartPolicy_multipartPolicyName,
+        name: multipartPolicy_multipartPolicyName,
         sendRequest: async (request, next) => {
             if (request.multipartBody) {
                 for (const part of request.multipartBody.parts) {
@@ -57294,8 +57418,8 @@ const decompressResponsePolicy_decompressResponsePolicyName = (/* unused pure ex
  * A policy to enable response decompression according to Accept-Encoding header
  * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding
  */
-function policies_decompressResponsePolicy_decompressResponsePolicy() {
-    return decompressResponsePolicy_decompressResponsePolicy();
+function decompressResponsePolicy_decompressResponsePolicy() {
+    return decompressResponsePolicy();
 }
 //# sourceMappingURL=decompressResponsePolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/defaultRetryPolicy.js
@@ -57312,8 +57436,8 @@ const defaultRetryPolicy_defaultRetryPolicyName = (/* unused pure expression or 
  * - When there are errors in the underlying transport layer (e.g. DNS lookup failures).
  * - Or otherwise if the outgoing request fails, it will retry with an exponentially increasing delay.
  */
-function policies_defaultRetryPolicy_defaultRetryPolicy(options = {}) {
-    return defaultRetryPolicy_defaultRetryPolicy(options);
+function defaultRetryPolicy_defaultRetryPolicy(options = {}) {
+    return defaultRetryPolicy(options);
 }
 //# sourceMappingURL=defaultRetryPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/formDataPolicy.js
@@ -57327,8 +57451,8 @@ const formDataPolicy_formDataPolicyName = (/* unused pure expression or super */
 /**
  * A policy that encodes FormData on the request into the body.
  */
-function policies_formDataPolicy_formDataPolicy() {
-    return formDataPolicy_formDataPolicy();
+function formDataPolicy_formDataPolicy() {
+    return formDataPolicy();
 }
 //# sourceMappingURL=formDataPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/proxyPolicy.js
@@ -57356,8 +57480,8 @@ function proxyPolicy_getDefaultProxySettings(proxyUrl) {
  * @param proxySettings - ProxySettings to use on each request.
  * @param options - additional settings, for example, custom NO_PROXY patterns
  */
-function policies_proxyPolicy_proxyPolicy(proxySettings, options) {
-    return proxyPolicy_proxyPolicy(proxySettings, options);
+function proxyPolicy_proxyPolicy(proxySettings, options) {
+    return proxyPolicy(proxySettings, options);
 }
 //# sourceMappingURL=proxyPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/setClientRequestIdPolicy.js
@@ -57396,8 +57520,8 @@ const agentPolicy_agentPolicyName = (/* unused pure expression or super */ null 
 /**
  * Gets a pipeline policy that sets http.agent
  */
-function policies_agentPolicy_agentPolicy(agent) {
-    return agentPolicy_agentPolicy(agent);
+function agentPolicy_agentPolicy(agent) {
+    return agentPolicy(agent);
 }
 //# sourceMappingURL=agentPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/tlsPolicy.js
@@ -57411,8 +57535,8 @@ const tlsPolicy_tlsPolicyName = (/* unused pure expression or super */ null && (
 /**
  * Gets a pipeline policy that adds the client certificate to the HttpClient agent for authentication.
  */
-function policies_tlsPolicy_tlsPolicy(tlsSettings) {
-    return tlsPolicy_tlsPolicy(tlsSettings);
+function tlsPolicy_tlsPolicy(tlsSettings) {
+    return tlsPolicy(tlsSettings);
 }
 //# sourceMappingURL=tlsPolicy.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/restError.js
@@ -57423,13 +57547,13 @@ function policies_tlsPolicy_tlsPolicy(tlsSettings) {
  * A custom error type for failed pipeline requests.
  */
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-const esm_restError_RestError = restError_RestError;
+const restError_RestError = RestError;
 /**
  * Typeguard for RestError
  * @param e - Something caught by a catch clause.
  */
-function esm_restError_isRestError(e) {
-    return restError_isRestError(e);
+function restError_isRestError(e) {
+    return isRestError(e);
 }
 //# sourceMappingURL=restError.js.map
 ;// CONCATENATED MODULE: ./node_modules/@azure/core-rest-pipeline/dist/esm/policies/tracingPolicy.js
@@ -57453,7 +57577,7 @@ const tracingPolicyName = "tracingPolicy";
  * @param options - Options to configure the telemetry logged by the tracing policy.
  */
 function tracingPolicy(options = {}) {
-    const userAgentPromise = util_userAgent_getUserAgentValue(options.userAgentPrefix);
+    const userAgentPromise = userAgent_getUserAgentValue(options.userAgentPrefix);
     const sanitizer = new Sanitizer({
         additionalAllowedQueryParameters: options.additionalAllowedQueryParameters,
     });
@@ -57495,7 +57619,7 @@ function tryCreateTracingClient() {
         return createTracingClient({
             namespace: "",
             packageName: "@azure/core-rest-pipeline",
-            packageVersion: dist_esm_constants_SDK_VERSION,
+            packageVersion: esm_constants_SDK_VERSION,
         });
     }
     catch (e) {
@@ -57533,7 +57657,7 @@ function tryProcessError(span, error) {
             status: "error",
             error: esm_isError(error) ? error : undefined,
         });
-        if (esm_restError_isRestError(error) && error.statusCode) {
+        if (restError_isRestError(error) && error.statusCode) {
             span.setAttribute("http.status_code", error.statusCode);
         }
         span.end();
@@ -57648,36 +57772,36 @@ function wrapAbortSignalLikePolicy() {
  * Create a new pipeline with a default set of customizable policies.
  * @param options - Options to configure a custom pipeline.
  */
-function esm_createPipelineFromOptions_createPipelineFromOptions(options) {
+function createPipelineFromOptions_createPipelineFromOptions(options) {
     const pipeline = esm_pipeline_createEmptyPipeline();
     if (esm_isNodeLike) {
         if (options.agent) {
-            pipeline.addPolicy(policies_agentPolicy_agentPolicy(options.agent));
+            pipeline.addPolicy(agentPolicy_agentPolicy(options.agent));
         }
         if (options.tlsOptions) {
-            pipeline.addPolicy(policies_tlsPolicy_tlsPolicy(options.tlsOptions));
+            pipeline.addPolicy(tlsPolicy_tlsPolicy(options.tlsOptions));
         }
-        pipeline.addPolicy(policies_proxyPolicy_proxyPolicy(options.proxyOptions));
-        pipeline.addPolicy(policies_decompressResponsePolicy_decompressResponsePolicy());
+        pipeline.addPolicy(proxyPolicy_proxyPolicy(options.proxyOptions));
+        pipeline.addPolicy(decompressResponsePolicy_decompressResponsePolicy());
     }
     pipeline.addPolicy(wrapAbortSignalLikePolicy());
-    pipeline.addPolicy(policies_formDataPolicy_formDataPolicy(), { beforePolicies: [policies_multipartPolicy_multipartPolicyName] });
-    pipeline.addPolicy(policies_userAgentPolicy_userAgentPolicy(options.userAgentOptions));
+    pipeline.addPolicy(formDataPolicy_formDataPolicy(), { beforePolicies: [multipartPolicy_multipartPolicyName] });
+    pipeline.addPolicy(userAgentPolicy_userAgentPolicy(options.userAgentOptions));
     pipeline.addPolicy(setClientRequestIdPolicy(options.telemetryOptions?.clientRequestIdHeaderName));
     // The multipart policy is added after policies with no phase, so that
     // policies can be added between it and formDataPolicy to modify
     // properties (e.g., making the boundary constant in recorded tests).
-    pipeline.addPolicy(policies_multipartPolicy_multipartPolicy(), { afterPhase: "Deserialize" });
-    pipeline.addPolicy(policies_defaultRetryPolicy_defaultRetryPolicy(options.retryOptions), { phase: "Retry" });
+    pipeline.addPolicy(multipartPolicy_multipartPolicy(), { afterPhase: "Deserialize" });
+    pipeline.addPolicy(defaultRetryPolicy_defaultRetryPolicy(options.retryOptions), { phase: "Retry" });
     pipeline.addPolicy(tracingPolicy({ ...options.userAgentOptions, ...options.loggingOptions }), {
         afterPhase: "Retry",
     });
     if (esm_isNodeLike) {
         // Both XHR and Fetch expect to handle redirects automatically,
         // so only include this policy when we're in Node.
-        pipeline.addPolicy(policies_redirectPolicy_redirectPolicy(options.redirectOptions), { afterPhase: "Retry" });
+        pipeline.addPolicy(redirectPolicy_redirectPolicy(options.redirectOptions), { afterPhase: "Retry" });
     }
-    pipeline.addPolicy(policies_logPolicy_logPolicy(options.loggingOptions), { afterPhase: "Sign" });
+    pipeline.addPolicy(logPolicy_logPolicy(options.loggingOptions), { afterPhase: "Sign" });
     return pipeline;
 }
 //# sourceMappingURL=createPipelineFromOptions.js.map
@@ -58001,7 +58125,7 @@ async function trySendRequest(request, next) {
         return [await next(request), undefined];
     }
     catch (e) {
-        if (esm_restError_isRestError(e) && e.response) {
+        if (restError_isRestError(e) && e.response) {
             return [e.response, e];
         }
         else {
@@ -58514,7 +58638,7 @@ async function deserializeResponseBody(jsonContentTypes, xmlContentTypes, respon
                 parsedResponse.parsedBody = operationSpec.serializer.deserialize(responseSpec.bodyMapper, valueToDeserialize, "operationRes.parsedBody", options);
             }
             catch (deserializeError) {
-                const restError = new esm_restError_RestError(`Error ${deserializeError} occurred in deserializing the responseBody - ${parsedResponse.bodyAsText}`, {
+                const restError = new restError_RestError(`Error ${deserializeError} occurred in deserializing the responseBody - ${parsedResponse.bodyAsText}`, {
                     statusCode: parsedResponse.status,
                     request: parsedResponse.request,
                     response: parsedResponse,
@@ -58556,7 +58680,7 @@ function handleErrorResponse(parsedResponse, operationSpec, responseSpec, option
     const initialErrorMessage = parsedResponse.request.streamResponseStatusCodes?.has(parsedResponse.status)
         ? `Unexpected status code: ${parsedResponse.status}`
         : parsedResponse.bodyAsText;
-    const error = new esm_restError_RestError(initialErrorMessage, {
+    const error = new restError_RestError(initialErrorMessage, {
         statusCode: parsedResponse.status,
         request: parsedResponse.request,
         response: parsedResponse,
@@ -58632,8 +58756,8 @@ async function deserializationPolicy_parse(jsonContentTypes, xmlContentTypes, op
         }
         catch (err) {
             const msg = `Error "${err}" occurred while parsing the response body - ${operationResponse.bodyAsText}.`;
-            const errCode = err.code || esm_restError_RestError.PARSE_ERROR;
-            const e = new esm_restError_RestError(msg, {
+            const errCode = err.code || restError_RestError.PARSE_ERROR;
+            const e = new restError_RestError(msg, {
                 code: errCode,
                 statusCode: operationResponse.status,
                 request: operationResponse.request,
@@ -58850,7 +58974,7 @@ function prepareXMLRootList(obj, elementName, xmlNamespaceKey, xmlNamespace) {
  * @param options - Options to customize the created pipeline.
  */
 function createClientPipeline(options = {}) {
-    const pipeline = esm_createPipelineFromOptions_createPipelineFromOptions(options ?? {});
+    const pipeline = createPipelineFromOptions_createPipelineFromOptions(options ?? {});
     if (options.credentialOptions) {
         pipeline.addPolicy(bearerTokenAuthenticationPolicy_bearerTokenAuthenticationPolicy({
             credential: options.credentialOptions.credential,
@@ -58891,9 +59015,9 @@ const CollectionFormatToDelimiterMap = {
 function getRequestUrl(baseUri, operationSpec, operationArguments, fallbackObject) {
     const urlReplacements = calculateUrlReplacements(operationSpec, operationArguments, fallbackObject);
     let isAbsolutePath = false;
-    let requestUrl = replaceAll(baseUri, urlReplacements);
+    let requestUrl = urlHelpers_replaceAll(baseUri, urlReplacements);
     if (operationSpec.path) {
-        let path = replaceAll(operationSpec.path, urlReplacements);
+        let path = urlHelpers_replaceAll(operationSpec.path, urlReplacements);
         // QUIRK: sometimes we get a path component like /{nextLink}
         // which may be a fully formed URL with a leading /. In that case, we should
         // remove the leading /
@@ -58918,10 +59042,10 @@ function getRequestUrl(baseUri, operationSpec, operationArguments, fallbackObjec
      * do not get overwritten. On the other hand when `requestUrl` is not absolute path, it
      * is still being built so there is nothing to overwrite.
      */
-    requestUrl = appendQueryParams(requestUrl, queryParams, sequenceParams, isAbsolutePath);
+    requestUrl = urlHelpers_appendQueryParams(requestUrl, queryParams, sequenceParams, isAbsolutePath);
     return requestUrl;
 }
-function replaceAll(input, replacements) {
+function urlHelpers_replaceAll(input, replacements) {
     let result = input;
     for (const [searchValue, replaceValue] of replacements) {
         result = result.split(searchValue).join(replaceValue);
@@ -59054,7 +59178,7 @@ function simpleParseQueryParams(queryString) {
     return result;
 }
 /** @internal */
-function appendQueryParams(url, queryParams, sequenceParams, noOverwrite = false) {
+function urlHelpers_appendQueryParams(url, queryParams, sequenceParams, noOverwrite = false) {
     if (queryParams.size === 0) {
         return url;
     }
@@ -59626,7 +59750,7 @@ class identityClient_IdentityClient extends ServiceClient {
     // used for WorkloadIdentity
     tokenCredentialOptions;
     constructor(options) {
-        const packageDetails = `azsdk-js-identity/${constants_SDK_VERSION}`;
+        const packageDetails = `azsdk-js-identity/${SDK_VERSION}`;
         const userAgentPrefix = options?.userAgentOptions?.userAgentPrefix
             ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
             : `${packageDetails}`;
@@ -59656,7 +59780,7 @@ class identityClient_IdentityClient extends ServiceClient {
         }
     }
     async sendTokenRequest(request) {
-        logging_logger.info(`IdentityClient: sending token request to [${request.url}]`);
+        logger.info(`IdentityClient: sending token request to [${request.url}]`);
         const response = await this.sendRequest(request);
         if (response.bodyAsText && (response.status === 200 || response.status === 201)) {
             const parsedBody = JSON.parse(response.bodyAsText);
@@ -59673,12 +59797,12 @@ class identityClient_IdentityClient extends ServiceClient {
                 },
                 refreshToken: parsedBody.refresh_token,
             };
-            logging_logger.info(`IdentityClient: [${request.url}] token acquired, expires on ${token.accessToken.expiresOnTimestamp}`);
+            logger.info(`IdentityClient: [${request.url}] token acquired, expires on ${token.accessToken.expiresOnTimestamp}`);
             return token;
         }
         else {
             const error = new errors_AuthenticationError(response.status, response.bodyAsText);
-            logging_logger.warning(`IdentityClient: authentication error. HTTP status: ${response.status}, ${error.errorResponse.errorDescription}`);
+            logger.warning(`IdentityClient: authentication error. HTTP status: ${response.status}, ${error.errorResponse.errorDescription}`);
             throw error;
         }
     }
@@ -59686,7 +59810,7 @@ class identityClient_IdentityClient extends ServiceClient {
         if (refreshToken === undefined) {
             return null;
         }
-        logging_logger.info(`IdentityClient: refreshing access token with client ID: ${clientId}, scopes: ${scopes} started`);
+        logger.info(`IdentityClient: refreshing access token with client ID: ${clientId}, scopes: ${scopes} started`);
         const refreshParams = {
             grant_type: "refresh_token",
             client_id: clientId,
@@ -59712,7 +59836,7 @@ class identityClient_IdentityClient extends ServiceClient {
                     tracingOptions: updatedOptions.tracingOptions,
                 });
                 const response = await this.sendTokenRequest(request);
-                logging_logger.info(`IdentityClient: refreshed token for client ID: ${clientId}`);
+                logger.info(`IdentityClient: refreshed token for client ID: ${clientId}`);
                 return response;
             }
             catch (err) {
@@ -59721,11 +59845,11 @@ class identityClient_IdentityClient extends ServiceClient {
                     // It's likely that the refresh token has expired, so
                     // return null so that the credential implementation will
                     // initiate the authentication flow again.
-                    logging_logger.info(`IdentityClient: interaction required for client ID: ${clientId}`);
+                    logger.info(`IdentityClient: interaction required for client ID: ${clientId}`);
                     return null;
                 }
                 else {
-                    logging_logger.warning(`IdentityClient: failed refreshing token for client ID: ${clientId}: ${err}`);
+                    logger.warning(`IdentityClient: failed refreshing token for client ID: ${clientId}: ${err}`);
                     throw err;
                 }
             }
@@ -59838,10 +59962,10 @@ class identityClient_IdentityClient extends ServiceClient {
             }
             const base64Metadata = accessToken.split(".")[1];
             const { appid, upn, tid, oid } = JSON.parse(Buffer.from(base64Metadata, "base64").toString("utf8"));
-            logging_logger.info(`[Authenticated account] Client ID: ${appid}. Tenant ID: ${tid}. User Principal Name: ${upn || unavailableUpn}. Object ID (user): ${oid}`);
+            logger.info(`[Authenticated account] Client ID: ${appid}. Tenant ID: ${tid}. User Principal Name: ${upn || unavailableUpn}. Object ID (user): ${oid}`);
         }
         catch (e) {
-            logging_logger.warning("allowLoggingAccountIdentifiers was set, but we couldn't log the account information. Error:", e.message);
+            logger.warning("allowLoggingAccountIdentifiers was set, but we couldn't log the account information. Error:", e.message);
         }
     }
 }
@@ -84001,2241 +84125,1015 @@ const getCustomDomainVerificationIdOperationSpec = {
 
 
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/mappers.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const QueryResults = {
-    type: {
-        name: "Composite",
-        className: "QueryResults",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "Table"
-                        }
-                    }
-                }
-            },
-            statistics: {
-                serializedName: "statistics",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            render: {
-                serializedName: "render",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorInfo"
-                }
-            }
-        }
-    }
-};
-const Table = {
-    type: {
-        name: "Composite",
-        className: "Table",
-        modelProperties: {
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            columns: {
-                serializedName: "columns",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "Column"
-                        }
-                    }
-                }
-            },
-            rows: {
-                serializedName: "rows",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Sequence",
-                            element: {
-                                type: {
-                                    name: "Dictionary",
-                                    value: { type: { name: "any" } }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const Column = {
-    type: {
-        name: "Composite",
-        className: "Column",
-        modelProperties: {
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const ErrorInfo = {
-    type: {
-        name: "Composite",
-        className: "ErrorInfo",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            details: {
-                serializedName: "details",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorDetail"
-                        }
-                    }
-                }
-            },
-            innerError: {
-                serializedName: "innererror",
-                type: {
-                    name: "Composite",
-                    className: "ErrorInfo"
-                }
-            },
-            additionalProperties: {
-                serializedName: "additionalProperties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const mappers_ErrorDetail = {
-    type: {
-        name: "Composite",
-        className: "ErrorDetail",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            target: {
-                serializedName: "target",
-                type: {
-                    name: "String"
-                }
-            },
-            value: {
-                serializedName: "value",
-                type: {
-                    name: "String"
-                }
-            },
-            resources: {
-                serializedName: "resources",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            additionalProperties: {
-                serializedName: "additionalProperties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const mappers_ErrorResponse = {
-    type: {
-        name: "Composite",
-        className: "ErrorResponse",
-        modelProperties: {
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorInfo"
-                }
-            }
-        }
-    }
-};
-const QueryBody = {
-    type: {
-        name: "Composite",
-        className: "QueryBody",
-        modelProperties: {
-            query: {
-                serializedName: "query",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            timespan: {
-                serializedName: "timespan",
-                type: {
-                    name: "String"
-                }
-            },
-            workspaces: {
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataResults = {
-    type: {
-        name: "Composite",
-        className: "MetadataResults",
-        modelProperties: {
-            categories: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataCategory"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataResourceType"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataSolution"
-                        }
-                    }
-                }
-            },
-            tables: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataTable"
-                        }
-                    }
-                }
-            },
-            functions: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataFunction"
-                        }
-                    }
-                }
-            },
-            queries: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "queries",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataQuery"
-                        }
-                    }
-                }
-            },
-            applications: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "applications",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataApplication"
-                        }
-                    }
-                }
-            },
-            workspaces: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataWorkspace"
-                        }
-                    }
-                }
-            },
-            resources: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "resources",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "any"
-                        }
-                    }
-                }
-            },
-            permissions: {
-                constraints: {
-                    UniqueItems: true
-                },
-                serializedName: "permissions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataPermissions"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataCategory = {
-    type: {
-        name: "Composite",
-        className: "MetadataCategory",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            displayName: {
-                serializedName: "displayName",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataCategoryRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataCategoryRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataCategoryRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            queries: {
-                serializedName: "queries",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataResourceType = {
-    type: {
-        name: "Composite",
-        className: "MetadataResourceType",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            displayName: {
-                serializedName: "displayName",
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            labels: {
-                serializedName: "labels",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            tags: {
-                serializedName: "tags",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataResourceTypeRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataResourceTypeRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataResourceTypeRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            categories: {
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            queries: {
-                serializedName: "queries",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            workspaces: {
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resources: {
-                serializedName: "resources",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataSolution = {
-    type: {
-        name: "Composite",
-        className: "MetadataSolution",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            displayName: {
-                serializedName: "displayName",
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            tags: {
-                serializedName: "tags",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataSolutionRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataSolutionRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataSolutionRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            categories: {
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            queries: {
-                serializedName: "queries",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            workspaces: {
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataTable = {
-    type: {
-        name: "Composite",
-        className: "MetadataTable",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            timespanColumn: {
-                serializedName: "timespanColumn",
-                type: {
-                    name: "String"
-                }
-            },
-            labels: {
-                serializedName: "labels",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            tags: {
-                serializedName: "tags",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            columns: {
-                serializedName: "columns",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataTableColumnsItem"
-                        }
-                    }
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataTableRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataTableColumnsItem = {
-    type: {
-        name: "Composite",
-        className: "MetadataTableColumnsItem",
-        modelProperties: {
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            isPreferredFacet: {
-                serializedName: "isPreferredFacet",
-                type: {
-                    name: "Boolean"
-                }
-            },
-            source: {
-                serializedName: "source",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const MetadataTableRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataTableRelated",
-        modelProperties: {
-            categories: {
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            workspaces: {
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            queries: {
-                serializedName: "queries",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataFunction = {
-    type: {
-        name: "Composite",
-        className: "MetadataFunction",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            parameters: {
-                serializedName: "parameters",
-                type: {
-                    name: "String"
-                }
-            },
-            displayName: {
-                serializedName: "displayName",
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            body: {
-                serializedName: "body",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            tags: {
-                serializedName: "tags",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataFunctionRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataFunctionRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataFunctionRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            categories: {
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            workspaces: {
-                serializedName: "workspaces",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataQuery = {
-    type: {
-        name: "Composite",
-        className: "MetadataQuery",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            displayName: {
-                serializedName: "displayName",
-                type: {
-                    name: "String"
-                }
-            },
-            description: {
-                serializedName: "description",
-                type: {
-                    name: "String"
-                }
-            },
-            body: {
-                serializedName: "body",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            labels: {
-                serializedName: "labels",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            tags: {
-                serializedName: "tags",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataQueryRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataQueryRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataQueryRelated",
-        modelProperties: {
-            categories: {
-                serializedName: "categories",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataApplication = {
-    type: {
-        name: "Composite",
-        className: "MetadataApplication",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            resourceId: {
-                serializedName: "resourceId",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            region: {
-                serializedName: "region",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataApplicationRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataApplicationRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataApplicationRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataWorkspace = {
-    type: {
-        name: "Composite",
-        className: "MetadataWorkspace",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            resourceId: {
-                serializedName: "resourceId",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            region: {
-                serializedName: "region",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            related: {
-                serializedName: "related",
-                type: {
-                    name: "Composite",
-                    className: "MetadataWorkspaceRelated"
-                }
-            }
-        }
-    }
-};
-const MetadataWorkspaceRelated = {
-    type: {
-        name: "Composite",
-        className: "MetadataWorkspaceRelated",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            solutions: {
-                serializedName: "solutions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resourceTypes: {
-                serializedName: "resourceTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            functions: {
-                serializedName: "functions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            resources: {
-                serializedName: "resources",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataPermissions = {
-    type: {
-        name: "Composite",
-        className: "MetadataPermissions",
-        modelProperties: {
-            workspaces: {
-                serializedName: "workspaces",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataPermissionsWorkspacesItem"
-                        }
-                    }
-                }
-            },
-            resources: {
-                serializedName: "resources",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataPermissionsResourcesItem"
-                        }
-                    }
-                }
-            },
-            applications: {
-                serializedName: "applications",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataPermissionsApplicationsItem"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataPermissionsWorkspacesItem = {
-    type: {
-        name: "Composite",
-        className: "MetadataPermissionsWorkspacesItem",
-        modelProperties: {
-            resourceId: {
-                serializedName: "resourceId",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            denyTables: {
-                serializedName: "denyTables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataPermissionsResourcesItem = {
-    type: {
-        name: "Composite",
-        className: "MetadataPermissionsResourcesItem",
-        modelProperties: {
-            resourceId: {
-                serializedName: "resourceId",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            denyTables: {
-                serializedName: "denyTables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataPermissionsApplicationsItem = {
-    type: {
-        name: "Composite",
-        className: "MetadataPermissionsApplicationsItem",
-        modelProperties: {
-            resourceId: {
-                serializedName: "resourceId",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const BatchRequest = {
-    type: {
-        name: "Composite",
-        className: "BatchRequest",
-        modelProperties: {
-            requests: {
-                serializedName: "requests",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "BatchQueryRequest"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const BatchQueryRequest = {
-    type: {
-        name: "Composite",
-        className: "BatchQueryRequest",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            headers: {
-                serializedName: "headers",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "String" } }
-                }
-            },
-            body: {
-                serializedName: "body",
-                type: {
-                    name: "Composite",
-                    className: "QueryBody"
-                }
-            },
-            path: {
-                defaultValue: "/query",
-                isConstant: true,
-                serializedName: "path",
-                type: {
-                    name: "String"
-                }
-            },
-            method: {
-                defaultValue: "POST",
-                isConstant: true,
-                serializedName: "method",
-                type: {
-                    name: "String"
-                }
-            },
-            workspace: {
-                serializedName: "workspace",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const BatchResponse = {
-    type: {
-        name: "Composite",
-        className: "BatchResponse",
-        modelProperties: {
-            responses: {
-                serializedName: "responses",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "BatchQueryResponse"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const BatchQueryResponse = {
-    type: {
-        name: "Composite",
-        className: "BatchQueryResponse",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                type: {
-                    name: "String"
-                }
-            },
-            status: {
-                serializedName: "status",
-                type: {
-                    name: "Number"
-                }
-            },
-            body: {
-                serializedName: "body",
-                type: {
-                    name: "Composite",
-                    className: "BatchQueryResults"
-                }
-            },
-            headers: {
-                serializedName: "headers",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "String" } }
-                }
-            }
-        }
-    }
-};
-const BatchQueryResults = {
-    type: {
-        name: "Composite",
-        className: "BatchQueryResults",
-        modelProperties: {
-            tables: {
-                serializedName: "tables",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "Table"
-                        }
-                    }
-                }
-            },
-            statistics: {
-                serializedName: "statistics",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            render: {
-                serializedName: "render",
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            },
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorInfo"
-                }
-            }
-        }
-    }
-};
-//# sourceMappingURL=mappers.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/models/parameters.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-const parameters_accept = {
-    parameterPath: "accept",
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Accept",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_$host = {
-    parameterPath: "$host",
-    mapper: {
-        serializedName: "$host",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const workspaceId = {
-    parameterPath: "workspaceId",
-    mapper: {
-        serializedName: "workspaceId",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const query = {
-    parameterPath: "query",
-    mapper: {
-        serializedName: "query",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const timespan = {
-    parameterPath: ["options", "timespan"],
-    mapper: {
-        serializedName: "timespan",
-        type: {
-            name: "TimeSpan"
-        }
-    }
-};
-const parameters_contentType = {
-    parameterPath: ["options", "contentType"],
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Content-Type",
-        type: {
-            name: "String"
-        }
-    }
-};
-const body = {
-    parameterPath: "body",
-    mapper: QueryBody
-};
-const prefer = {
-    parameterPath: ["options", "prefer"],
-    mapper: {
-        serializedName: "Prefer",
-        type: {
-            name: "String"
-        }
-    }
-};
-const resourceId = {
-    parameterPath: "resourceId",
-    mapper: {
-        serializedName: "resourceId",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const body1 = {
-    parameterPath: "body",
-    mapper: BatchRequest
-};
-//# sourceMappingURL=parameters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/query.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing Query operations. */
-class QueryImpl {
-    client;
-    /**
-     * Initialize a new instance of the class Query class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Executes an Analytics query for data
-     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
-     *                    blade in the Azure portal.
-     * @param query The Analytics query. Learn more about the [Analytics query
-     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    get(workspaceId, query, options) {
-        return this.client.sendOperationRequest({ workspaceId, query, options }, query_getOperationSpec);
-    }
-    /**
-     * Executes an Analytics query for data.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/request-format) is an example for
-     * using POST with an Analytics query.
-     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
-     *                    blade in the Azure portal.
-     * @param body The Analytics query. Learn more about the [Analytics query
-     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    execute(workspaceId, body, options) {
-        return this.client.sendOperationRequest({ workspaceId, body, options }, executeOperationSpec);
-    }
-    /**
-     * Executes an Analytics query for data in the context of a resource.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
-     * example for using POST with an Analytics query.
-     * @param resourceId The identifier of the resource.
-     * @param query The Analytics query. Learn more about the [Analytics query
-     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    resourceGet(resourceId, query, options) {
-        return this.client.sendOperationRequest({ resourceId, query, options }, resourceGetOperationSpec);
-    }
-    /**
-     * Executes an Analytics query for data in the context of a resource.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
-     * example for using POST with an Analytics query.
-     * @param resourceId The identifier of the resource.
-     * @param body The Analytics query. Learn more about the [Analytics query
-     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    resourceExecute(resourceId, body, options) {
-        return this.client.sendOperationRequest({ resourceId, body, options }, resourceExecuteOperationSpec);
-    }
-    /**
-     * Executes a batch of Analytics queries for data.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/batch-queries) is an example for
-     * using POST with an Analytics query.
-     * @param body The batch request body
-     * @param options The options parameters.
-     */
-    batch(body, options) {
-        return this.client.sendOperationRequest({ body, options }, batchOperationSpec);
-    }
-    /**
-     * Executes an Analytics query for data in the context of a resource.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
-     * example for using POST with an Analytics query.
-     * @param resourceId The identifier of the resource.
-     * @param query The Analytics query. Learn more about the [Analytics query
-     *              syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    resourceGetXms(resourceId, query, options) {
-        return this.client.sendOperationRequest({ resourceId, query, options }, resourceGetXmsOperationSpec);
-    }
-    /**
-     * Executes an Analytics query for data in the context of a resource.
-     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries) is an
-     * example for using POST with an Analytics query.
-     * @param resourceId The identifier of the resource.
-     * @param body The Analytics query. Learn more about the [Analytics query
-     *             syntax](https://azure.microsoft.com/documentation/articles/app-insights-analytics-reference/)
-     * @param options The options parameters.
-     */
-    resourceExecuteXms(resourceId, body, options) {
-        return this.client.sendOperationRequest({ resourceId, body, options }, resourceExecuteXmsOperationSpec);
-    }
-}
-// Operation Specifications
-const query_serializer = createSerializer(models_mappers_namespaceObject, /* isXml */ false);
-const query_getOperationSpec = {
-    path: "/workspaces/{workspaceId}/query",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    queryParameters: [query, timespan],
-    urlParameters: [parameters_$host, workspaceId],
-    headerParameters: [parameters_accept],
-    serializer: query_serializer
-};
-const executeOperationSpec = {
-    path: "/workspaces/{workspaceId}/query",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    requestBody: body,
-    urlParameters: [parameters_$host, workspaceId],
-    headerParameters: [
-        parameters_accept,
-        parameters_contentType,
-        prefer
-    ],
-    mediaType: "json",
-    serializer: query_serializer
-};
-const resourceGetOperationSpec = {
-    path: "/{resourceId}/query",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    queryParameters: [query, timespan],
-    urlParameters: [parameters_$host, resourceId],
-    headerParameters: [parameters_accept],
-    serializer: query_serializer
-};
-const resourceExecuteOperationSpec = {
-    path: "/{resourceId}/query",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    requestBody: body,
-    urlParameters: [parameters_$host, resourceId],
-    headerParameters: [
-        parameters_accept,
-        parameters_contentType,
-        prefer
-    ],
-    mediaType: "json",
-    serializer: query_serializer
-};
-const batchOperationSpec = {
-    path: "/$batch",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: BatchResponse
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    requestBody: body1,
-    urlParameters: [parameters_$host],
-    headerParameters: [parameters_accept, parameters_contentType],
-    mediaType: "json",
-    serializer: query_serializer
-};
-const resourceGetXmsOperationSpec = {
-    path: "/{resourceId}/query",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    queryParameters: [query, timespan],
-    urlParameters: [parameters_$host, resourceId],
-    headerParameters: [parameters_accept],
-    serializer: query_serializer
-};
-const resourceExecuteXmsOperationSpec = {
-    path: "/{resourceId}/query",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: QueryResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    requestBody: body,
-    urlParameters: [parameters_$host, resourceId],
-    headerParameters: [
-        parameters_accept,
-        parameters_contentType,
-        prefer
-    ],
-    mediaType: "json",
-    serializer: query_serializer
-};
-//# sourceMappingURL=query.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/metadata.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing Metadata operations. */
-class MetadataImpl {
-    client;
-    /**
-     * Initialize a new instance of the class Metadata class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Retrieve the metadata information for the workspace, including its schema, functions, workspace
-     * info, categories etc.
-     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
-     *                    blade in the Azure portal.
-     * @param options The options parameters.
-     */
-    get(workspaceId, options) {
-        return this.client.sendOperationRequest({ workspaceId, options }, metadata_getOperationSpec);
-    }
-    /**
-     * Retrieve the metadata information for the workspace, including its schema, functions, workspace
-     * info, categories etc.
-     * @param workspaceId Primary Workspace ID of the query. This is the Workspace ID from the Properties
-     *                    blade in the Azure portal.
-     * @param options The options parameters.
-     */
-    post(workspaceId, options) {
-        return this.client.sendOperationRequest({ workspaceId, options }, postOperationSpec);
-    }
-}
-// Operation Specifications
-const metadata_serializer = createSerializer(models_mappers_namespaceObject, /* isXml */ false);
-const metadata_getOperationSpec = {
-    path: "/workspaces/{workspaceId}/metadata",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: MetadataResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    urlParameters: [parameters_$host, workspaceId],
-    headerParameters: [parameters_accept],
-    serializer: metadata_serializer
-};
-const postOperationSpec = {
-    path: "/workspaces/{workspaceId}/metadata",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: MetadataResults
-        },
-        default: {
-            bodyMapper: mappers_ErrorResponse
-        }
-    },
-    urlParameters: [parameters_$host, workspaceId],
-    headerParameters: [parameters_accept],
-    serializer: metadata_serializer
-};
-//# sourceMappingURL=metadata.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/operations/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/azureLogAnalyticsContext.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-/** @internal */
-class AzureLogAnalyticsContext extends ServiceClient {
-    $host;
-    /**
-     * Initializes a new instance of the AzureLogAnalyticsContext class.
-     * @param options The parameter options
-     */
-    constructor(options) {
-        // Initializing default values for options
-        if (!options) {
-            options = {};
-        }
-        const defaults = {
-            requestContentType: "application/json; charset=utf-8"
-        };
-        const packageDetails = `azsdk-js-monitor-log-query/1.3.2`;
-        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
-            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const optionsWithDefaults = {
-            ...defaults,
-            ...options,
-            userAgentOptions: {
-                userAgentPrefix
-            },
-            baseUri: options.endpoint || "https://api.loganalytics.io/v1"
-        };
-        super(optionsWithDefaults);
-        // Assigning values to Constant parameters
-        this.$host = options.$host || "https://api.loganalytics.io/v1";
-    }
-}
-//# sourceMappingURL=azureLogAnalyticsContext.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/logquery/src/azureLogAnalytics.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-/** @internal */
-class AzureLogAnalytics extends AzureLogAnalyticsContext {
-    /**
-     * Initializes a new instance of the AzureLogAnalytics class.
-     * @param options The parameter options
-     */
-    constructor(options) {
-        super(options);
-        this.query = new QueryImpl(this);
-        this.metadata = new MetadataImpl(this);
-    }
-    query;
-    metadata;
-}
-//# sourceMappingURL=azureLogAnalytics.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/models/publicLogsModels.js
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/logger.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-/** Indicates if a query succeeded or failed or partially failed.
- * Represented by PartialFailure" | "Success" | "Failure".
+
+const esm_logger_logger = esm_createClientLogger("monitor-query-logs");
+//# sourceMappingURL=logger.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/restError.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+function restError_createRestError(messageOrResponse, response) {
+    if (typeof messageOrResponse === "string") {
+        return createRestError(messageOrResponse, response);
+    }
+    else {
+        return createRestError(messageOrResponse);
+    }
+}
+//# sourceMappingURL=restError.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-auth/dist/esm/keyCredential.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+/**
+ * Tests an object to determine whether it implements KeyCredential.
+ *
+ * @param credential - The assumed KeyCredential to be tested.
  */
-var LogsQueryResultStatus;
-(function (LogsQueryResultStatus) {
-    /** Represents Partial Failure scenario where partial data and errors of type {@link LogsQueryPartialResult} is returned for query */
-    LogsQueryResultStatus["PartialFailure"] = "PartialFailure";
-    /** Represents Failure scenario where only error of type {@link LogsQueryError} is returned for query */
-    LogsQueryResultStatus["Failure"] = "Failure";
-    /** Represents Success scenario where all data of type {@link LogsQuerySuccessfulResult} is returned for query */
-    LogsQueryResultStatus["Success"] = "Success";
-})(LogsQueryResultStatus || (LogsQueryResultStatus = {}));
-//# sourceMappingURL=publicLogsModels.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/util.js
+function isKeyCredential(credential) {
+    return typeGuards_isObjectWithProperties(credential, ["key"]) && typeof credential.key === "string";
+}
+//# sourceMappingURL=keyCredential.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-auth/dist/esm/azureNamedKeyCredential.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+/**
+ * A static name/key-based credential that supports updating
+ * the underlying name and key values.
+ */
+class AzureNamedKeyCredential {
+    _key;
+    _name;
+    /**
+     * The value of the key to be used in authentication.
+     */
+    get key() {
+        return this._key;
+    }
+    /**
+     * The value of the name to be used in authentication.
+     */
+    get name() {
+        return this._name;
+    }
+    /**
+     * Create an instance of an AzureNamedKeyCredential for use
+     * with a service client.
+     *
+     * @param name - The initial value of the name to use in authentication.
+     * @param key - The initial value of the key to use in authentication.
+     */
+    constructor(name, key) {
+        if (!name || !key) {
+            throw new TypeError("name and key must be non-empty strings");
+        }
+        this._name = name;
+        this._key = key;
+    }
+    /**
+     * Change the value of the key.
+     *
+     * Updates will take effect upon the next request after
+     * updating the key value.
+     *
+     * @param newName - The new name value to be used.
+     * @param newKey - The new key value to be used.
+     */
+    update(newName, newKey) {
+        if (!newName || !newKey) {
+            throw new TypeError("newName and newKey must be non-empty strings");
+        }
+        this._name = newName;
+        this._key = newKey;
+    }
+}
+/**
+ * Tests an object to determine whether it implements NamedKeyCredential.
+ *
+ * @param credential - The assumed NamedKeyCredential to be tested.
+ */
+function isNamedKeyCredential(credential) {
+    return (isObjectWithProperties(credential, ["name", "key"]) &&
+        typeof credential.key === "string" &&
+        typeof credential.name === "string");
+}
+//# sourceMappingURL=azureNamedKeyCredential.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-auth/dist/esm/azureSASCredential.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+/**
+ * A static-signature-based credential that supports updating
+ * the underlying signature value.
+ */
+class AzureSASCredential {
+    _signature;
+    /**
+     * The value of the shared access signature to be used in authentication
+     */
+    get signature() {
+        return this._signature;
+    }
+    /**
+     * Create an instance of an AzureSASCredential for use
+     * with a service client.
+     *
+     * @param signature - The initial value of the shared access signature to use in authentication
+     */
+    constructor(signature) {
+        if (!signature) {
+            throw new Error("shared access signature must be a non-empty string");
+        }
+        this._signature = signature;
+    }
+    /**
+     * Change the value of the signature.
+     *
+     * Updates will take effect upon the next request after
+     * updating the signature value.
+     *
+     * @param newSignature - The new shared access signature value to be used
+     */
+    update(newSignature) {
+        if (!newSignature) {
+            throw new Error("shared access signature must be a non-empty string");
+        }
+        this._signature = newSignature;
+    }
+}
+/**
+ * Tests an object to determine whether it implements SASCredential.
+ *
+ * @param credential - The assumed SASCredential to be tested.
+ */
+function isSASCredential(credential) {
+    return (isObjectWithProperties(credential, ["signature"]) && typeof credential.signature === "string");
+}
+//# sourceMappingURL=azureSASCredential.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-auth/dist/esm/tokenCredential.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 /**
  * @internal
+ * @param accessToken - Access token
+ * @returns Whether a token is bearer type or not
  */
-function formatPreferHeader(args) {
-    if (!args) {
-        return undefined;
-    }
-    // https://datatracker.ietf.org/doc/html/rfc7240
-    const pairs = [];
-    if (args.serverTimeoutInSeconds != null) {
-        pairs.push(`wait=${args.serverTimeoutInSeconds}`);
-    }
-    if (args.includeQueryStatistics) {
-        pairs.push("include-statistics=true");
-    }
-    if (args.includeVisualization) {
-        pairs.push("include-render=true");
-    }
-    if (pairs.length > 0) {
-        return {
-            Prefer: pairs.join(","),
-        };
-    }
-    return undefined;
+function isBearerToken(accessToken) {
+    return !accessToken.tokenType || accessToken.tokenType === "Bearer";
 }
-//# sourceMappingURL=util.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/timespanConversion.js
+/**
+ * @internal
+ * @param accessToken - Access token
+ * @returns Whether a token is Pop token or not
+ */
+function isPopToken(accessToken) {
+    return accessToken.tokenType === "pop";
+}
+/**
+ * Tests an object to determine whether it implements TokenCredential.
+ *
+ * @param credential - The assumed TokenCredential to be tested.
+ */
+function isTokenCredential(credential) {
+    // Check for an object with a 'getToken' function and possibly with
+    // a 'signRequest' function.  We do this check to make sure that
+    // a ServiceClientCredentials implementor (like TokenClientCredentials
+    // in ms-rest-nodeauth) doesn't get mistaken for a TokenCredential if
+    // it doesn't actually implement TokenCredential also.
+    const castCredential = credential;
+    return (castCredential &&
+        typeof castCredential.getToken === "function" &&
+        (castCredential.signRequest === undefined || castCredential.getToken.length > 0));
+}
+//# sourceMappingURL=tokenCredential.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/core-auth/dist/esm/index.js
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/apiVersionPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+const apiVersionPolicy_apiVersionPolicyName = "ApiVersionPolicy";
+/**
+ * Creates a policy that sets the apiVersion as a query parameter on every request
+ * @param options - Client options
+ * @returns Pipeline policy that sets the apiVersion as a query parameter on every request
+ */
+function apiVersionPolicy_apiVersionPolicy(options) {
+    return {
+        name: apiVersionPolicy_apiVersionPolicyName,
+        sendRequest: (req, next) => {
+            // Use the apiVesion defined in request url directly
+            // Append one if there is no apiVesion and we have one at client options
+            const url = new URL(req.url);
+            if (!url.searchParams.get("api-version") && options.apiVersion) {
+                req.url = `${req.url}${Array.from(url.searchParams.keys()).length > 0 ? "&" : "?"}api-version=${options.apiVersion}`;
+            }
+            return next(req);
+        },
+    };
+}
+//# sourceMappingURL=apiVersionPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/keyCredentialAuthenticationPolicy.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * The programmatic identifier of the bearerTokenAuthenticationPolicy.
+ */
+const keyCredentialAuthenticationPolicyName = "keyCredentialAuthenticationPolicy";
+function keyCredentialAuthenticationPolicy(credential, apiKeyHeaderName) {
+    return {
+        name: keyCredentialAuthenticationPolicyName,
+        async sendRequest(request, next) {
+            request.headers.set(apiKeyHeaderName, credential.key);
+            return next(request);
+        },
+    };
+}
+//# sourceMappingURL=keyCredentialAuthenticationPolicy.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/clientHelpers.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-function timespanConversion_convertTimespanToInterval(timespan) {
-    if (isObjectWithProperties(timespan, ["startTime", "endTime", "duration"])) {
+
+
+
+let clientHelpers_cachedHttpClient;
+/**
+ * Adds a credential policy to the pipeline if a credential is provided. If none is provided, no policy is added.
+ */
+function addCredentialPipelinePolicy(pipeline, endpoint, options = {}) {
+    const { credential, clientOptions } = options;
+    if (!credential) {
+        return;
+    }
+    if (isTokenCredential(credential)) {
+        const tokenPolicy = bearerTokenAuthenticationPolicy_bearerTokenAuthenticationPolicy({
+            credential,
+            scopes: clientOptions?.credentials?.scopes ?? `${endpoint}/.default`,
+        });
+        pipeline.addPolicy(tokenPolicy);
+    }
+    else if (clientHelpers_isKeyCredential(credential)) {
+        if (!clientOptions?.credentials?.apiKeyHeaderName) {
+            throw new Error(`Missing API Key Header Name`);
+        }
+        const keyPolicy = keyCredentialAuthenticationPolicy(credential, clientOptions?.credentials?.apiKeyHeaderName);
+        pipeline.addPolicy(keyPolicy);
+    }
+}
+/**
+ * Creates a default rest pipeline to re-use accross Rest Level Clients
+ */
+function clientHelpers_createDefaultPipeline(endpoint, credential, options = {}) {
+    const pipeline = createPipelineFromOptions_createPipelineFromOptions(options);
+    pipeline.addPolicy(apiVersionPolicy_apiVersionPolicy(options));
+    addCredentialPipelinePolicy(pipeline, endpoint, { credential, clientOptions: options });
+    return pipeline;
+}
+function clientHelpers_isKeyCredential(credential) {
+    return credential.key !== undefined;
+}
+function clientHelpers_getCachedDefaultHttpsClient() {
+    if (!clientHelpers_cachedHttpClient) {
+        clientHelpers_cachedHttpClient = createDefaultHttpClient();
+    }
+    return clientHelpers_cachedHttpClient;
+}
+//# sourceMappingURL=clientHelpers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/operationOptionHelpers.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+/**
+ * Helper function to convert OperationOptions to RequestParameters
+ * @param options - the options that are used by Modular layer to send the request
+ * @returns the result of the conversion in RequestParameters of RLC layer
+ */
+function operationOptionHelpers_operationOptionsToRequestParameters(options) {
+    return operationOptionsToRequestParameters(options);
+}
+//# sourceMappingURL=operationOptionHelpers.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/getClient.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+
+/**
+ * Function to wrap RequestParameters so that we get the legacy onResponse behavior in core-client-rest
+ */
+function wrapRequestParameters(parameters) {
+    if (parameters.onResponse) {
+        return {
+            ...parameters,
+            onResponse(rawResponse, error) {
+                parameters.onResponse?.(rawResponse, error, error);
+            },
+        };
+    }
+    return parameters;
+}
+function getClient_getClient(endpoint, credentialsOrPipelineOptions, clientOptions = {}) {
+    let credentials;
+    if (credentialsOrPipelineOptions) {
+        if (isCredential(credentialsOrPipelineOptions)) {
+            credentials = credentialsOrPipelineOptions;
+        }
+        else {
+            clientOptions = credentialsOrPipelineOptions ?? {};
+        }
+    }
+    const pipeline = clientHelpers_createDefaultPipeline(endpoint, credentials, clientOptions);
+    const tspClient = getClient(endpoint, {
+        ...clientOptions,
+        pipeline,
+    });
+    const client = (path, ...args) => {
+        return {
+            get: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).get(wrapRequestParameters(requestOptions));
+            },
+            post: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).post(wrapRequestParameters(requestOptions));
+            },
+            put: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).put(wrapRequestParameters(requestOptions));
+            },
+            patch: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).patch(wrapRequestParameters(requestOptions));
+            },
+            delete: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).delete(wrapRequestParameters(requestOptions));
+            },
+            head: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).head(wrapRequestParameters(requestOptions));
+            },
+            options: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).options(wrapRequestParameters(requestOptions));
+            },
+            trace: (requestOptions = {}) => {
+                return tspClient.path(path, ...args).trace(wrapRequestParameters(requestOptions));
+            },
+        };
+    };
+    return {
+        path: client,
+        pathUnchecked: client,
+        pipeline: tspClient.pipeline,
+    };
+}
+function isCredential(param) {
+    return isKeyCredential(param) || isTokenCredential(param);
+}
+//# sourceMappingURL=getClient.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure-rest/core-client/dist/esm/index.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/**
+ * Azure Rest Core Client library for JavaScript
+ * @packageDocumentation
+ */
+
+
+
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/api/monitorQueryLogsContext.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+function createMonitorQueryLogs(credential, options = {}) {
+    const endpointParam = options.endpoint ?? "https://api.loganalytics.io";
+    const apiVersion = options.apiVersion ?? "v1";
+    const endpointUrl = options.endpoint ?? options.baseUrl ?? `${endpointParam}/${apiVersion}`;
+    const prefixFromOptions = options?.userAgentOptions?.userAgentPrefix;
+    const userAgentInfo = `azsdk-js-monitor-query-logs/1.0.0`;
+    const userAgentPrefix = prefixFromOptions
+        ? `${prefixFromOptions} azsdk-js-api ${userAgentInfo}`
+        : `azsdk-js-api ${userAgentInfo}`;
+    const { apiVersion: _, ...updatedOptions } = {
+        ...options,
+        userAgentOptions: { userAgentPrefix },
+        loggingOptions: { logger: options.loggingOptions?.logger ?? esm_logger_logger.info },
+        credentials: {
+            scopes: options.credentials?.scopes ?? ["https://api.loganalytics.io/.default"],
+        },
+    };
+    const clientContext = getClient_getClient(endpointUrl, credential, updatedOptions);
+    clientContext.pipeline.removePolicy({ name: "ApiVersionPolicy" });
+    return { ...clientContext, apiVersion };
+}
+//# sourceMappingURL=monitorQueryLogsContext.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/models/public.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+/** The status of a query. */
+var LogsQueryResultStatus;
+(function (LogsQueryResultStatus) {
+    /** The query was successful. */
+    LogsQueryResultStatus["Success"] = "Success";
+    /** The query was partially successful. */
+    LogsQueryResultStatus["PartialFailure"] = "PartialFailure";
+    /** The query failed. */
+    LogsQueryResultStatus["Failure"] = "Failure";
+})(LogsQueryResultStatus || (LogsQueryResultStatus = {}));
+/** Audiences for Azure Monitor Logs. */
+var KnownMonitorLogsQueryAudience;
+(function (KnownMonitorLogsQueryAudience) {
+    /** The Azure public cloud. */
+    KnownMonitorLogsQueryAudience["AzurePublicCloud"] = "https://api.loganalytics.io";
+    /** The Azure China cloud. */
+    KnownMonitorLogsQueryAudience["AzureChina"] = "https://api.loganalytics.azure.cn";
+    /** The Azure US Government cloud. */
+    KnownMonitorLogsQueryAudience["AzureGovernment"] = "https://api.loganalytics.us";
+})(KnownMonitorLogsQueryAudience || (KnownMonitorLogsQueryAudience = {}));
+//# sourceMappingURL=public.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/models/models.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+/** Converts public QueryBatch to internal InternalQueryBatch */
+function convertQueryBatch(query, id) {
+    const headers = {};
+    // Build prefer header from options
+    const preferParts = [];
+    if (query.serverTimeoutInSeconds) {
+        preferParts.push(`wait=${query.serverTimeoutInSeconds}`);
+    }
+    if (query.includeQueryStatistics) {
+        preferParts.push("include-statistics=true");
+    }
+    if (query.includeVisualization) {
+        preferParts.push("include-render=true");
+    }
+    if (preferParts.length > 0) {
+        headers.prefer = preferParts.join(",");
+    }
+    return {
+        id,
+        query: query.query,
+        timespan: query.timespan,
+        headers: Object.keys(headers).length > 0 ? headers : undefined,
+        workspaces: query.additionalWorkspaces,
+        workspace: query.workspaceId,
+    };
+}
+function queryBodySerializer(item) {
+    return {
+        query: item["query"],
+        timespan: item["timespan"],
+        workspaces: !item["workspaces"]
+            ? item["workspaces"]
+            : item["workspaces"].map((p) => {
+                return p;
+            }),
+    };
+}
+function queryResultsDeserializer(item) {
+    return {
+        tables: tableArrayDeserializer(item["tables"]),
+        statistics: item["statistics"],
+        render: item["render"],
+        error: !item["error"] ? item["error"] : errorInfoDeserializer(item["error"]),
+    };
+}
+/**
+ * Converts a table from the API response to LogsTable format with proper type conversion
+ */
+function convertTable(table) {
+    const dynamicsIndices = [];
+    const datesIndices = [];
+    // Find indices of columns that need special conversion
+    for (let i = 0; i < table.columns.length; ++i) {
+        if (table.columns[i].type === "datetime") {
+            datesIndices.push(i);
+        }
+        else if (table.columns[i].type === "dynamic") {
+            dynamicsIndices.push(i);
+        }
+    }
+    return {
+        name: table.name,
+        columnDescriptors: table.columns,
+        rows: table.rows.map((originalRow) => {
+            // Create a copy of the row to avoid mutating the original
+            const row = [...originalRow];
+            // Convert datetime columns to Date objects
+            for (const dateIndex of datesIndices) {
+                if (row[dateIndex] != null && typeof row[dateIndex] === "string") {
+                    row[dateIndex] = new Date(row[dateIndex]);
+                }
+            }
+            // Convert dynamic columns to JSON objects
+            for (const dynamicIndex of dynamicsIndices) {
+                try {
+                    if (row[dynamicIndex] != null && typeof row[dynamicIndex] === "string") {
+                        row[dynamicIndex] = JSON.parse(row[dynamicIndex]);
+                    }
+                }
+                catch (_err) {
+                    /* leave as is if JSON parse fails */
+                }
+            }
+            return row;
+        }),
+    };
+}
+function convertToLogsQueryResult(queryResults) {
+    // Convert tables to LogsTable format with proper type conversion
+    const convertedTables = queryResults.tables.map(convertTable);
+    // If there's an error, return a partial result
+    if (queryResults.error) {
+        return {
+            status: LogsQueryResultStatus.PartialFailure,
+            partialTables: convertedTables,
+            partialError: queryResults.error,
+            statistics: queryResults.statistics,
+            visualization: queryResults.render,
+        };
+    }
+    // Otherwise, return a successful result
+    return {
+        status: LogsQueryResultStatus.Success,
+        tables: convertedTables,
+        statistics: queryResults.statistics,
+        visualization: queryResults.render,
+    };
+}
+function tableArrayDeserializer(result) {
+    return result.map((item) => {
+        return tableDeserializer(item);
+    });
+}
+function tableDeserializer(item) {
+    return {
+        name: item["name"],
+        columns: columnArrayDeserializer(item["columns"]),
+        rows: item["rows"].map((row) => {
+            return row.map((cell) => {
+                return cell;
+            });
+        }),
+    };
+}
+function columnArrayDeserializer(result) {
+    return result.map((item) => {
+        return columnDeserializer(item);
+    });
+}
+function columnDeserializer(item) {
+    return {
+        name: item["name"],
+        type: item["type"],
+    };
+}
+function errorInfoDeserializer(item) {
+    return {
+        code: item["code"],
+        message: item["message"],
+        details: !item["details"] ? item["details"] : errorDetailArrayDeserializer(item["details"]),
+        innererror: !item["innererror"]
+            ? item["innererror"]
+            : errorInfoDeserializer(item["innererror"]),
+        additionalProperties: item["additionalProperties"],
+    };
+}
+function errorDetailArrayDeserializer(result) {
+    return result.map((item) => {
+        return errorDetailDeserializer(item);
+    });
+}
+function errorDetailDeserializer(item) {
+    return {
+        code: item["code"],
+        message: item["message"],
+        target: item["target"],
+        value: item["value"],
+        resources: !item["resources"]
+            ? item["resources"]
+            : item["resources"].map((p) => {
+                return p;
+            }),
+        additionalProperties: item["additionalProperties"],
+    };
+}
+function errorResponseDeserializer(item) {
+    return {
+        error: errorInfoDeserializer(item["error"]),
+    };
+}
+function batchRequestSerializer(item) {
+    return { requests: batchQueryRequestArraySerializer(item["requests"]) };
+}
+function batchQueryRequestArraySerializer(result) {
+    return result.map((item) => {
+        return batchQueryRequestSerializer(item);
+    });
+}
+function batchQueryRequestSerializer(item) {
+    return {
+        id: item["id"],
+        headers: item["headers"],
+        body: queryBodySerializer(item["body"]),
+        path: item["path"],
+        method: item["method"],
+        workspace: item["workspace"],
+    };
+}
+function batchResponseDeserializer(item) {
+    return {
+        responses: !item["responses"]
+            ? item["responses"]
+            : batchQueryResponseArrayDeserializer(item["responses"]),
+    };
+}
+/** Converts InternalBatchResult to LogsQueryBatchResult */
+function convertToLogsBatchResult(internalResult) {
+    if (!internalResult.responses) {
+        return [];
+    }
+    return internalResult.responses.map((response) => {
+        // If the response has no body, it's an error
+        if (!response.body) {
+            const error = {
+                name: "LogsQueryError",
+                message: "Query failed with no response body",
+                code: response.status?.toString() || "Unknown",
+                status: LogsQueryResultStatus.Failure,
+            };
+            return error;
+        }
+        // Convert BatchQueryResults to QueryResults format for converter
+        const queryResults = {
+            tables: response.body.tables || [],
+            statistics: response.body.statistics,
+            render: response.body.render,
+            error: response.body.error,
+        };
+        // Convert using the existing converter
+        const queryResult = convertToLogsQueryResult(queryResults);
+        // If the converted result has an error status, create a LogsQueryError
+        if (queryResult.status === LogsQueryResultStatus.PartialFailure) {
+            return queryResult;
+        }
+        return queryResult;
+    });
+}
+function batchQueryResponseArrayDeserializer(result) {
+    return result.map((item) => {
+        return batchQueryResponseDeserializer(item);
+    });
+}
+function batchQueryResponseDeserializer(item) {
+    return {
+        id: item["id"],
+        status: item["status"],
+        body: !item["body"] ? item["body"] : batchQueryResultsDeserializer(item["body"]),
+        headers: item["headers"],
+    };
+}
+function batchQueryResultsDeserializer(item) {
+    return {
+        tables: !item["tables"] ? item["tables"] : tableArrayDeserializer(item["tables"]),
+        statistics: item["statistics"],
+        render: item["render"],
+        error: !item["error"] ? item["error"] : errorInfoDeserializer(item["error"]),
+    };
+}
+//# sourceMappingURL=models.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/static-helpers/urlTemplate.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+// ---------------------
+// helpers
+// ---------------------
+function encodeComponent(val, reserved, op) {
+    return (reserved ?? op === "+") || op === "#"
+        ? encodeReservedComponent(val)
+        : encodeRFC3986URIComponent(val);
+}
+function encodeReservedComponent(str) {
+    return str
+        .split(/(%[0-9A-Fa-f]{2})/g)
+        .map((part) => (!/%[0-9A-Fa-f]/.test(part) ? encodeURI(part) : part))
+        .join("");
+}
+function encodeRFC3986URIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
+}
+function urlTemplate_isDefined(val) {
+    return val !== undefined && val !== null;
+}
+function getNamedAndIfEmpty(op) {
+    return [!!op && [";", "?", "&"].includes(op), !!op && ["?", "&"].includes(op) ? "=" : ""];
+}
+function getFirstOrSep(op, isFirst = false) {
+    if (isFirst) {
+        return !op || op === "+" ? "" : op;
+    }
+    else if (!op || op === "+" || op === "#") {
+        return ",";
+    }
+    else if (op === "?") {
+        return "&";
+    }
+    else {
+        return op;
+    }
+}
+function getExpandedValue(option) {
+    let isFirst = option.isFirst;
+    const { op, varName, varValue: value, reserved } = option;
+    const vals = [];
+    const [named, ifEmpty] = getNamedAndIfEmpty(op);
+    if (Array.isArray(value)) {
+        for (const val of value.filter(urlTemplate_isDefined)) {
+            // prepare the following parts: separator, varName, value
+            vals.push(`${getFirstOrSep(op, isFirst)}`);
+            if (named && varName) {
+                vals.push(`${encodeURIComponent(varName)}`);
+                if (val === "") {
+                    vals.push(ifEmpty);
+                }
+                else {
+                    vals.push("=");
+                }
+            }
+            vals.push(encodeComponent(val, reserved, op));
+            isFirst = false;
+        }
+    }
+    else if (typeof value === "object") {
+        for (const key of Object.keys(value)) {
+            const val = value[key];
+            if (!urlTemplate_isDefined(val)) {
+                continue;
+            }
+            // prepare the following parts: separator, key, value
+            vals.push(`${getFirstOrSep(op, isFirst)}`);
+            if (key) {
+                vals.push(`${encodeURIComponent(key)}`);
+                if (named && val === "") {
+                    vals.push(ifEmpty);
+                }
+                else {
+                    vals.push("=");
+                }
+            }
+            vals.push(encodeComponent(val, reserved, op));
+            isFirst = false;
+        }
+    }
+    return vals.join("");
+}
+function getNonExpandedValue(option) {
+    const { op, varName, varValue: value, isFirst, reserved } = option;
+    const vals = [];
+    const first = getFirstOrSep(op, isFirst);
+    const [named, ifEmpty] = getNamedAndIfEmpty(op);
+    if (named && varName) {
+        vals.push(encodeComponent(varName, reserved, op));
+        if (value === "") {
+            if (!ifEmpty) {
+                vals.push(ifEmpty);
+            }
+            return !vals.join("") ? undefined : `${first}${vals.join("")}`;
+        }
+        vals.push("=");
+    }
+    const items = [];
+    if (Array.isArray(value)) {
+        for (const val of value.filter(urlTemplate_isDefined)) {
+            items.push(encodeComponent(val, reserved, op));
+        }
+    }
+    else if (typeof value === "object") {
+        for (const key of Object.keys(value)) {
+            if (!urlTemplate_isDefined(value[key])) {
+                continue;
+            }
+            items.push(encodeRFC3986URIComponent(key));
+            items.push(encodeComponent(value[key], reserved, op));
+        }
+    }
+    vals.push(items.join(","));
+    return !vals.join(",") ? undefined : `${first}${vals.join("")}`;
+}
+function getVarValue(option) {
+    const { op, varName, modifier, isFirst, reserved, varValue: value } = option;
+    if (!urlTemplate_isDefined(value)) {
+        return undefined;
+    }
+    else if (["string", "number", "boolean"].includes(typeof value)) {
+        let val = value.toString();
+        const [named, ifEmpty] = getNamedAndIfEmpty(op);
+        const vals = [getFirstOrSep(op, isFirst)];
+        if (named && varName) {
+            // No need to encode varName considering it is already encoded
+            vals.push(varName);
+            if (val === "") {
+                vals.push(ifEmpty);
+            }
+            else {
+                vals.push("=");
+            }
+        }
+        if (modifier && modifier !== "*") {
+            val = val.substring(0, parseInt(modifier, 10));
+        }
+        vals.push(encodeComponent(val, reserved, op));
+        return vals.join("");
+    }
+    else if (modifier === "*") {
+        return getExpandedValue(option);
+    }
+    else {
+        return getNonExpandedValue(option);
+    }
+}
+// ---------------------------------------------------------------------------------------------------
+// This is an implementation of RFC 6570 URI Template: https://datatracker.ietf.org/doc/html/rfc6570.
+// ---------------------------------------------------------------------------------------------------
+function expandUrlTemplate(template, context, option) {
+    return template.replace(/\{([^{}]+)\}|([^{}]+)/g, (_, expr, text) => {
+        if (!expr) {
+            return encodeReservedComponent(text);
+        }
+        let op;
+        let expressionToParse = expr;
+        if (["+", "#", ".", "/", ";", "?", "&"].includes(expressionToParse[0])) {
+            op = expressionToParse[0];
+            expressionToParse = expressionToParse.slice(1);
+        }
+        const varList = expressionToParse.split(/,/g);
+        const result = [];
+        for (const varSpec of varList) {
+            const varMatch = /([^:*]*)(?::(\d+)|(\*))?/.exec(varSpec);
+            if (!varMatch || !varMatch[1]) {
+                continue;
+            }
+            const varValue = getVarValue({
+                isFirst: result.length === 0,
+                op,
+                varValue: context[varMatch[1]],
+                varName: varMatch[1],
+                modifier: varMatch[2] || varMatch[3],
+                reserved: option?.allowReserved,
+            });
+            if (varValue) {
+                result.push(varValue);
+            }
+        }
+        return result.join("");
+    });
+}
+//# sourceMappingURL=urlTemplate.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/api/operations.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+
+function _batchSend(context, body, options = { requestOptions: {} }) {
+    return context.path("/$batch").post({
+        ...operationOptionHelpers_operationOptionsToRequestParameters(options),
+        contentType: "application/json",
+        headers: {
+            accept: "application/json",
+            ...options.requestOptions?.headers,
+        },
+        body: batchRequestSerializer(body),
+    });
+}
+async function _batchDeserialize(result) {
+    const expectedStatuses = ["200"];
+    if (!expectedStatuses.includes(result.status)) {
+        const error = restError_createRestError(result);
+        error.details = errorResponseDeserializer(result.body);
+        throw error;
+    }
+    const internalResult = batchResponseDeserializer(result.body);
+    return convertToLogsBatchResult(internalResult);
+}
+/**
+ * Executes a batch of Analytics queries for data.
+ * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/batch-queries)
+ * is an example for using POST with an Analytics query.
+ */
+async function operations_batch(context, body, options = { requestOptions: {} }) {
+    const result = await _batchSend(context, body, options);
+    return _batchDeserialize(result);
+}
+function _executeWithResourceIdSend(context, resourceId, body, options = { requestOptions: {} }) {
+    const path = expandUrlTemplate("/{+resourceId}/query", {
+        resourceId: resourceId,
+    }, {
+        allowReserved: options?.requestOptions?.skipUrlEncoding,
+    });
+    return context.path(path).post({
+        ...operationOptionHelpers_operationOptionsToRequestParameters(options),
+        contentType: "application/json",
+        headers: {
+            ...(options?.prefer !== undefined ? { Prefer: options?.prefer } : {}),
+            accept: "application/json",
+            ...options.requestOptions?.headers,
+        },
+        body: queryBodySerializer(body),
+    });
+}
+async function _executeWithResourceIdDeserialize(result) {
+    const expectedStatuses = ["200"];
+    if (!expectedStatuses.includes(result.status)) {
+        const error = restError_createRestError(result);
+        error.details = errorResponseDeserializer(result.body);
+        throw error;
+    }
+    return convertToLogsQueryResult(queryResultsDeserializer(result.body));
+}
+/**
+ * Executes an Analytics query for data in the context of a resource.
+ * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries)
+ * is an example for using POST with an Analytics query.
+ */
+async function executeWithResourceId(context, resourceId, body, options = { requestOptions: {} }) {
+    const result = await _executeWithResourceIdSend(context, resourceId, body, options);
+    return _executeWithResourceIdDeserialize(result);
+}
+function _executeSend(context, workspaceId, body, options = { requestOptions: {} }) {
+    const path = expandUrlTemplate("/workspaces/{workspaceId}/query", {
+        workspaceId: workspaceId,
+    }, {
+        allowReserved: options?.requestOptions?.skipUrlEncoding,
+    });
+    return context.path(path).post({
+        ...operationOptionHelpers_operationOptionsToRequestParameters(options),
+        contentType: "application/json",
+        headers: {
+            ...(options?.prefer !== undefined ? { Prefer: options?.prefer } : {}),
+            accept: "application/json",
+            ...options.requestOptions?.headers,
+        },
+        body: queryBodySerializer(body),
+    });
+}
+async function _executeDeserialize(result) {
+    const expectedStatuses = ["200"];
+    if (!expectedStatuses.includes(result.status)) {
+        const error = restError_createRestError(result);
+        error.details = errorResponseDeserializer(result.body);
+        throw error;
+    }
+    return convertToLogsQueryResult(queryResultsDeserializer(result.body));
+}
+/**
+ * Executes an Analytics query for data.
+ * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/request-format)
+ * is an example for using POST with an Analytics query.
+ */
+async function execute(context, workspaceId, body, options = { requestOptions: {} }) {
+    const result = await _executeSend(context, workspaceId, body, options);
+    return _executeDeserialize(result);
+}
+//# sourceMappingURL=operations.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/api/index.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+
+//# sourceMappingURL=index.js.map
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/static-helpers/timespanConversion.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
+function convertTimespanToInterval(timespan) {
+    if (typeGuards_isObjectWithProperties(timespan, ["startTime", "endTime", "duration"])) {
         throw new TypeError("Invalid Timespan - contains startTime, endTime, and duration.");
     }
-    if (isObjectWithProperties(timespan, ["startTime", "endTime"])) {
+    if (typeGuards_isObjectWithProperties(timespan, ["startTime", "endTime"])) {
         return `${timespan.startTime.toISOString()}/${timespan.endTime.toISOString()}`;
     }
-    else if (isObjectWithProperties(timespan, ["startTime", "duration"])) {
+    else if (typeGuards_isObjectWithProperties(timespan, ["startTime", "duration"])) {
         return `${timespan.startTime.toISOString()}/${timespan.duration}`;
     }
-    else if (isObjectWithProperties(timespan, ["duration", "endTime"])) {
+    else if (typeGuards_isObjectWithProperties(timespan, ["duration", "endTime"])) {
         return `${timespan.duration}/${timespan.endTime.toISOString()}`;
     }
-    else if (isObjectWithProperties(timespan, ["duration"])) {
+    else if (typeGuards_isObjectWithProperties(timespan, ["duration"])) {
         return timespan.duration;
     }
     throw new TypeError("Invalid Timespan - no valid fields assigned.");
 }
-function timespanConversion_convertIntervalToTimeIntervalObject(timespan) {
+function convertIntervalToTimeIntervalObject(timespan) {
     if (timespan.includes("/")) {
         const intervalUnits = timespan.split("/");
         if (Date.parse(intervalUnits[0]) && Date.parse(intervalUnits[1])) {
@@ -86274,7 +85172,7 @@ function timespanConversion_isDefined(thing) {
     return typeof thing !== "undefined" && thing !== null;
 }
 //# sourceMappingURL=timespanConversion.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/modelConverters.js
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/logsQueryClient.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
@@ -86282,2838 +85180,128 @@ function timespanConversion_isDefined(thing) {
 
 
 /**
- * @internal
+ * Converts LogsQueryOptions to internal option format
  */
-function convertRequestForQueryBatch(batch) {
-    let id = 0;
-    const requests = batch.map((query) => {
-        const body = {
-            workspaceId: query.workspaceId,
-            query: query.query,
-        };
-        if (query["additionalWorkspaces"]) {
-            body["workspaces"] = query["additionalWorkspaces"].map((x) => x);
-        }
-        if (query["timespan"]) {
-            body["timespan"] = timespanConversion_convertTimespanToInterval(query["timespan"]);
-        }
-        delete body["workspaceId"];
-        delete body["includeQueryStatistics"];
-        delete body["includeVisualization"];
-        delete body["additionalWorkspaces"];
-        delete body["serverTimeoutInSeconds"];
-        const generatedRequest = {
-            id: id.toString(),
-            workspace: query.workspaceId,
-            headers: formatPreferHeader(query),
-            body,
-        };
-        ++id;
-        return generatedRequest;
-    });
-    return {
-        requests,
-    };
-}
-/**
- * @internal
- */
-function convertResponseForQueryBatch(generatedResponse, rawResponse) {
-    const fixApplied = fixInvalidBatchQueryResponse(generatedResponse, rawResponse);
-    /* Sort the ids that are passed in with the queries, as numbers instead of strings
-     * It is not guaranteed that service will return the responses for queries in the same order
-     * as the queries are passed in
-     */
-    const responseList = generatedResponse.responses || [];
-    const newResponse = responseList
-        ?.sort((a, b) => {
-        let left = 0;
-        if (a.id != null) {
-            left = parseInt(a.id, 10);
-        }
-        let right = 0;
-        if (b.id != null) {
-            right = parseInt(b.id, 10);
-        }
-        return left - right;
-    })
-        ?.map((response) => convertBatchQueryResponseHelper(response));
-    newResponse["__fixApplied"] = fixApplied;
-    return newResponse;
-}
-/**
- * This is a workaround for a service bug that we're investigating. The 'body' column will occasionally come
- * back as a JSON string, instead of being a JSON object.
- *
- * (examples, with excess stuff trimmed)
- * Correct: `{"responses":[{"body":{"tables":[{"name":"PrimaryResult","columns":[{"name":"stringcolumn","type":"string"}],"rows":[["hello"]}`
- * Broken: `{"responses":[{"body":"{\"tables\":[{\"name\":\"PrimaryResult\",\"columns\":[{\"name\":\"stringcolumn\",\"type\":\"string\"}],\"rows\":[[\"hello\"]}`
- *
- * Issue here: https://github.com/Azure/azure-sdk-for-js/issues/15688
- *
- * @internal
- */
-function fixInvalidBatchQueryResponse(generatedResponse, rawResponse) {
-    if (generatedResponse.responses == null) {
-        return false;
-    }
-    let hadToFix = false;
-    // the body here is incorrect, deserialize the correct one from the raw response itself.
-    const parsedBody = JSON.parse(rawResponse.bodyAsText);
-    // fix whichever responses are in this broken state (each query has it's own
-    // response, so they're not all always broken)
-    for (let i = 0; i < generatedResponse.responses.length; ++i) {
-        if (generatedResponse.responses[i].body?.error != null) {
-            continue;
-        }
-        // deserialize the raw response from the service, since we'll need index into it.
-        generatedResponse.responses[i].body = parsedBody.responses[i].body;
-        hadToFix = true;
-    }
-    return hadToFix;
-}
-/**
- * @internal
- */
-function modelConverters_convertRequestForMetricsBatchQuery(metricsQueryResourcesOptions) {
-    if (!metricsQueryResourcesOptions) {
-        return {};
-    }
-    return {
-        starttime: metricsQueryResourcesOptions.startTime?.toISOString(),
-        endtime: metricsQueryResourcesOptions.endTime?.toISOString(),
-        rollupby: metricsQueryResourcesOptions.rollUpBy,
-        ...metricsQueryResourcesOptions,
-    };
-}
-/**
- * @internal
- */
-function modelConverters_convertRequestForMetrics(metricNames, queryMetricsOptions) {
-    if (!queryMetricsOptions) {
-        return {};
-    }
-    const { orderBy, aggregations, metricNamespace, timespan, granularity, rollUpBy, ...rest } = queryMetricsOptions;
-    const obj = {
-        ...rest,
-    };
-    if (timespan) {
-        obj.timespan = convertTimespanToInterval(timespan);
-    }
-    if (orderBy) {
-        obj.orderby = orderBy;
-    }
-    if (metricNames) {
-        obj.metricnames = metricNames.join(",");
-    }
-    if (aggregations) {
-        obj.aggregation = aggregations.join(",");
-    }
-    if (metricNamespace) {
-        obj.metricnamespace = metricNamespace;
-    }
-    if (granularity) {
-        obj.interval = granularity;
-    }
-    if (rollUpBy) {
-        obj.rollupby = rollUpBy;
-    }
-    return obj;
-}
-/**
- * @internal
- */
-function modelConverters_convertResponseForMetrics(generatedResponse) {
-    const metrics = generatedResponse.value.map((metric) => {
-        const metricObject = {
-            ...metric,
-            name: metric.name.value,
-            description: metric.displayDescription,
-            timeseries: metric.timeseries.map((ts) => ({
-                data: ts.data,
-                metadataValues: ts.metadatavalues?.map((mv) => ({
-                    ...mv,
-                    name: mv.name?.value,
-                })),
-            })),
-        };
-        delete metricObject.displayDescription;
-        return metricObject;
-    });
-    const { resourceregion, value: _ignoredValue, interval, timespan, ...rest } = generatedResponse;
-    const obj = {
-        ...rest,
-        metrics,
-        timespan: convertIntervalToTimeIntervalObject(timespan),
-    };
-    if (resourceregion) {
-        obj.resourceRegion = resourceregion;
-    }
-    if (interval) {
-        obj.granularity = interval;
-    }
-    return createMetricsQueryResult(obj);
-}
-/**
- * @internal
- */
-function modelConverters_convertRequestOptionsForMetricsDefinitions(options) {
+function convertToInternalOptions(options) {
     if (!options) {
-        return {};
+        return { requestOptions: {} };
     }
-    const { metricNamespace, ...rest } = options;
-    const obj = {
-        ...rest,
-    };
-    if (metricNamespace) {
-        obj.metricnamespace = metricNamespace;
+    // Convert LogsQueryOptions properties to prefer header format
+    const preferParts = [];
+    if (options.serverTimeoutInSeconds !== undefined) {
+        preferParts.push(`wait=${options.serverTimeoutInSeconds}`);
     }
-    return obj;
-}
-function modelConverters_convertResponseForMetricBatch(generatedResponse) {
-    const result = [];
-    generatedResponse?.values?.forEach((genDef) => {
-        const response = {
-            timespan: {
-                startTime: new Date(genDef.starttime),
-                endTime: new Date(genDef.endtime),
-            },
-            granularity: genDef.interval,
-            namespace: genDef.namespace,
-            resourceRegion: genDef.resourceregion,
-            resourceId: genDef.resourceid,
-            metrics: genDef.value.map((genValue) => {
-                return {
-                    ...genValue,
-                    description: genValue.displayDescription ?? "",
-                    name: genValue.name.value,
-                };
-            }),
-            getMetricByName,
-        };
-        result.push(response);
-    });
-    return result;
-}
-/**
- * @internal
- */
-function modelConverters_convertResponseForMetricsDefinitions(generatedResponse) {
-    const definitions = generatedResponse?.map((genDef) => {
-        const { name, dimensions, displayDescription, metricAvailabilities, ...rest } = genDef;
-        const response = {
-            ...rest,
-        };
-        if (displayDescription) {
-            response.description = displayDescription;
-        }
-        if (name?.value) {
-            response.name = name.value;
-        }
-        const mappedMetricAvailabilities = metricAvailabilities?.map((genMetricAvail) => {
-            return {
-                granularity: genMetricAvail.timeGrain,
-                retention: genMetricAvail.retention,
-            };
-        });
-        if (mappedMetricAvailabilities) {
-            response.metricAvailabilities = mappedMetricAvailabilities;
-        }
-        const mappedDimensions = dimensions?.map((dim) => dim.value);
-        if (mappedDimensions) {
-            response.dimensions = mappedDimensions;
-        }
-        return response;
-    });
-    return definitions;
-}
-/**
- * @internal
- */
-function modelConverters_convertResponseForMetricNamespaces(generatedResponse) {
-    const namespaces = generatedResponse?.map((genDef) => {
-        const { properties, ...rest } = genDef;
-        const response = {
-            ...rest,
-        };
-        if (properties) {
-            response.metricNamespaceName = properties.metricNamespaceName;
-        }
-        return response;
-    });
-    return namespaces;
-}
-/**
- * @internal
- */
-function convertGeneratedTable(table) {
-    const dynamicsIndices = [];
-    const datesIndices = [];
-    // most columns convert on deserialization except for `dynamic` columns (basically JSON objects)
-    // and 'datetime' (strings that are ISO8601 formatted dates)
-    for (let i = 0; i < table.columns.length; ++i) {
-        if (table.columns[i].type === "datetime") {
-            datesIndices.push(i);
-        }
-        else if (table.columns[i].type === "dynamic") {
-            dynamicsIndices.push(i);
-        }
+    if (options.includeQueryStatistics) {
+        preferParts.push("include-statistics=true");
     }
+    if (options.includeVisualization) {
+        preferParts.push("include-render=true");
+    }
+    const prefer = preferParts.length > 0 ? preferParts.join(",") : undefined;
     return {
-        ...table,
-        rows: table.rows.map((row) => {
-            for (const dynamicIndex of dynamicsIndices) {
-                try {
-                    row[dynamicIndex] = JSON.parse(row[dynamicIndex]);
-                }
-                catch (_err) {
-                    /* leave as is. */
-                }
-            }
-            for (const dateIndex of datesIndices) {
-                row[dateIndex] = new Date(row[dateIndex]);
-            }
-            return row;
-        }),
-        columnDescriptors: table.columns,
+        prefer,
+        requestOptions: options.requestOptions ? options.requestOptions : {},
     };
 }
 /**
- * @internal
- */
-function convertBatchQueryResponseHelper(response) {
-    try {
-        const parsedResponseBody = JSON.parse(response.body);
-        return computeResultType(parsedResponseBody);
-    }
-    catch (e) {
-        if (response.body)
-            return computeResultType(response.body);
-        else
-            return {};
-    }
-}
-function computeResultType(generatedResponse) {
-    if (!generatedResponse.error) {
-        const result = {
-            visualization: generatedResponse.render,
-            status: LogsQueryResultStatus.Success,
-            statistics: generatedResponse.statistics,
-            tables: generatedResponse.tables?.map((table) => convertGeneratedTable(table)) ||
-                [],
-        };
-        return result;
-    }
-    else {
-        if (generatedResponse.tables) {
-            const result = {
-                visualization: generatedResponse.render,
-                status: LogsQueryResultStatus.PartialFailure,
-                statistics: generatedResponse.statistics,
-                partialTables: generatedResponse.tables?.map((table) => convertGeneratedTable(table)),
-                partialError: mapError(generatedResponse.error),
-            };
-            return result;
-        }
-        else {
-            const errorInfo = mapError(generatedResponse.error);
-            const result = {
-                status: LogsQueryResultStatus.Failure,
-                ...errorInfo,
-            };
-            return result;
-        }
-    }
-}
-function mapError(error) {
-    let innermostError = error;
-    while (innermostError.innerError) {
-        innermostError = innermostError.innerError;
-    }
-    return {
-        name: "Error",
-        code: error.code,
-        message: `${error.message}.  ${innermostError.message}`,
-    };
-}
-//# sourceMappingURL=modelConverters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/constants.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-/**
- * @internal
- */
-const monitor_query_dist_esm_constants_SDK_VERSION = "1.3.3";
-/**
- * Known values for Monitor Audience
- *
- * **NOTE**: This is applicable only to `MetricsClient` in the `@azure/monitor-query` data plane package.
- * The name `KnownMonitorAudience` is added for backward compatibility.
- */
-var constants_KnownMonitorAudience;
-(function (KnownMonitorAudience) {
-    /**
-     * Audience for Azure China
-     */
-    KnownMonitorAudience["AzureChina"] = "https://metrics.monitor.azure.cn";
-    /**
-     * Audience for Azure Government
-     */
-    KnownMonitorAudience["AzureGovernment"] = "https://metrics.monitor.azure.us";
-    /**
-     * Audience for Azure Public
-     */
-    KnownMonitorAudience["AzurePublicCloud"] = "https://metrics.monitor.azure.com";
-})(constants_KnownMonitorAudience || (constants_KnownMonitorAudience = {}));
-/**
- * Known values for Monitor Audience
- */
-var KnownMonitorLogsQueryAudience;
-(function (KnownMonitorLogsQueryAudience) {
-    /**
-     * Audience for Azure China
-     */
-    KnownMonitorLogsQueryAudience["AzureChina"] = "https://api.loganalytics.azure.cn";
-    /**
-     * Audience for Azure Government
-     */
-    KnownMonitorLogsQueryAudience["AzureGovernment"] = "https://api.loganalytics.us";
-    /**
-     * Audience for Azure Public
-     */
-    KnownMonitorLogsQueryAudience["AzurePublicCloud"] = "https://api.loganalytics.io";
-})(KnownMonitorLogsQueryAudience || (KnownMonitorLogsQueryAudience = {}));
-/**
- * Known values for Monitor Audience
- */
-var constants_KnownMonitorMetricsQueryAudience;
-(function (KnownMonitorMetricsQueryAudience) {
-    /**
-     * Audience for Azure China
-     */
-    KnownMonitorMetricsQueryAudience["AzureChina"] = "https://management.chinacloudapi.cn";
-    /**
-     * Audience for Azure Government
-     */
-    KnownMonitorMetricsQueryAudience["AzureGovernment"] = "https://management.usgovcloudapi.net";
-    /**
-     * Audience for Azure Public
-     */
-    KnownMonitorMetricsQueryAudience["AzurePublicCloud"] = "https://management.azure.com/";
-})(constants_KnownMonitorMetricsQueryAudience || (constants_KnownMonitorMetricsQueryAudience = {}));
-//# sourceMappingURL=constants.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/tracing.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-
-
-/**
- * Global tracing client used by this package.
- *
- * @internal
- */
-const esm_tracing_tracingClient = createTracingClient({
-    namespace: "Microsoft.Monitor",
-    packageName: "@azure/monitor-query",
-    packageVersion: monitor_query_dist_esm_constants_SDK_VERSION,
-});
-//# sourceMappingURL=tracing.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/internal/logQueryOptionUtils.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-function getLogQueryEndpoint(options) {
-    if (!options.endpoint) {
-        throw new Error("options.endpoint is required");
-    }
-    const url = new URL(options.endpoint);
-    url.pathname = "/v1";
-    return url.toString();
-}
-//# sourceMappingURL=logQueryOptionUtils.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/logsQueryClient.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-
-
-
-
-
-
-
-
-/**
- * Client for Azure Log Analytics
- *
- * @deprecated Moved to `@azure/monitor-query-logs`. Use `LogsQueryClient` from `@azure/monitor-query-logs` instead.
- * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-query-logs/MIGRATION.md
+ * The client to query Azure Monitor logs.
  */
 class LogsQueryClient {
-    _logAnalytics;
+    _client;
+    /** The pipeline used by this client to make requests */
+    pipeline;
     /**
-     * Construct a LogsClient that can be used to query logs using the Log Analytics Query language.
-     *
-     * @param tokenCredential - A token credential.
-     * @param options - Options for the LogsClient.
+     * Initializes a new instance of the LogsQueryClient.
+     * @param tokenCredential - The credential to use for authentication.
+     * @param options - The optional parameters for the client.
      */
-    constructor(tokenCredential, options) {
-        const scope = options?.audience
-            ? `${options.audience}/.default`
-            : `${KnownMonitorLogsQueryAudience.AzurePublicCloud}/.default`;
-        let endpoint = options?.endpoint;
-        if (options?.endpoint) {
-            endpoint = getLogQueryEndpoint(options);
-        }
-        const packageDetails = `azsdk-js-monitor-query/${monitor_query_dist_esm_constants_SDK_VERSION}`;
-        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
-            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        this._logAnalytics = new AzureLogAnalytics({
+    constructor(tokenCredential, options = {}) {
+        const prefixFromOptions = options?.userAgentOptions?.userAgentPrefix;
+        const userAgentPrefix = prefixFromOptions
+            ? `${prefixFromOptions} azsdk-js-client`
+            : `azsdk-js-client`;
+        this._client = createMonitorQueryLogs(tokenCredential, {
             ...options,
-            $host: endpoint,
-            endpoint: endpoint,
-            credentialScopes: scope,
-            credential: tokenCredential,
-            userAgentOptions: {
-                userAgentPrefix,
-            },
+            userAgentOptions: { userAgentPrefix },
         });
+        this.pipeline = this._client.pipeline;
     }
     /**
-     * Queries logs in a Log Analytics Workspace.
-     *
-     * @param workspaceId - The 'Workspace Id' for the Log Analytics Workspace
-     * @param query - A Kusto query.
-     * @param timespan - The timespan over which to query data. This is an ISO8601 time period value. This timespan is applied in addition to any that are specified in the query expression.
-     *  Some common durations can be found in the `Durations` object.
-     * @param options - Options to adjust various aspects of the request.
-     * @returns The result of the query.
+     * Executes a batch of Analytics queries for data.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/batch-queries)
+     * is an example for using POST with an Analytics query.
+     * @param batch - The batch of queries to execute.
+     * @param options - The optional parameters for the operation.
+     * @returns The results of the batch of queries.
      */
-    async queryWorkspace(workspaceId, query, timespan, 
-    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
-    options = {}) {
-        let timeInterval = "";
-        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryWorkspace", options, async (updatedOptions) => {
-            if (timespan) {
-                timeInterval = timespanConversion_convertTimespanToInterval(timespan);
-            }
-            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.execute(workspaceId, {
-                query,
-                timespan: timeInterval,
-                workspaces: options?.additionalWorkspaces,
-            }, paramOptions), {
-                ...updatedOptions,
-                requestOptions: {
-                    ...updatedOptions.requestOptions,
-                    customHeaders: {
-                        ...updatedOptions.requestOptions?.customHeaders,
-                        ...formatPreferHeader(options),
-                    },
+    queryBatch(batch, options = { requestOptions: {} }) {
+        const requests = batch.map((q, index) => {
+            // Generate a unique ID for each query
+            const id = `query-${index}`;
+            // Convert public QueryBatch to internal InternalQueryBatch
+            const internalQuery = convertQueryBatch(q, id);
+            return {
+                id: internalQuery.id,
+                body: {
+                    query: internalQuery.query,
+                    timespan: internalQuery.timespan
+                        ? convertTimespanToInterval(internalQuery.timespan)
+                        : undefined,
+                    workspaces: internalQuery.workspaces,
                 },
-            });
-            const parsedBody = JSON.parse(rawResponse.bodyAsText);
-            flatResponse.tables = parsedBody.tables;
-            const res = {
-                tables: flatResponse.tables.map(convertGeneratedTable),
-                statistics: flatResponse.statistics,
-                visualization: flatResponse.render,
+                path: "/query",
+                method: "POST",
+                workspace: internalQuery.workspace,
+                headers: internalQuery.headers,
             };
-            if (!flatResponse.error) {
-                // if there is no error field, it is success
-                const result = {
-                    tables: res.tables,
-                    statistics: res.statistics,
-                    visualization: res.visualization,
-                    status: LogsQueryResultStatus.Success,
-                };
-                return result;
-            }
-            else {
-                const result = {
-                    partialTables: res.tables,
-                    status: LogsQueryResultStatus.PartialFailure,
-                    partialError: mapError(flatResponse.error),
-                    statistics: res.statistics,
-                    visualization: res.visualization,
-                };
-                return result;
-            }
         });
+        return operations_batch(this._client, { requests: requests }, options);
     }
     /**
-     * Query Logs with multiple queries, in a batch.
-     * @param batch - A batch of Kusto queries to execute. Each query can be configured to run against separate workspaces.
-     * @param options - Options for querying logs in a batch.
-     * @returns The Logs query results for all the queries.
+     * Executes an Analytics query for data in the context of a resource.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/azure-resource-queries)
+     * is an example for using POST with an Analytics query.
+     * @param resourceId - The resource ID to query the data for.
+     * @param query - The query to execute.
+     * @param timespan - The timespan for the query.
+     * @param options - The optional parameters for the operation.
+     * @returns The results of the query.
      */
-    async queryBatch(batch, options = {}) {
-        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryBatch", options, async (updatedOptions) => {
-            const generatedRequest = convertRequestForQueryBatch(batch);
-            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.batch(generatedRequest, paramOptions), updatedOptions || {});
-            const result = convertResponseForQueryBatch(flatResponse, rawResponse);
-            return result;
-        });
-    }
-    /**
-     * Executes a Kusto query on an Azure resource
-     *
-     * @param resourceId - The identifier of the resource. The expected format is
-           '/subscriptions/<sid>/resourceGroups/<rg>/providers/<providerName>/<resourceType>/<resourceName>'.
-     * @param query - A Kusto query. Learn more about the `Kusto query syntax <https://learn.microsoft.com/azure/data-explorer/kusto/query/>`.
-     * @param timespan - The timespan over which to query data. This is an ISO8601 time period value. This timespan is applied in addition to any that are specified in the query expression.
-     *  Some common durations can be found in the {@link Durations} object.
-     * @param options - Options to adjust various aspects of the request.
-     * @returns Returns all the Azure Monitor logs matching the given Kusto query for an Azure resource.
-     */
-    async queryResource(resourceId, query, timespan, 
+    queryResource(resourceId, query, timespan, 
     // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
-    options = {}) {
-        let timeInterval = "";
-        return esm_tracing_tracingClient.withSpan("LogsQueryClient.queryResource", options, async (updatedOptions) => {
-            timeInterval = timespanConversion_convertTimespanToInterval(timespan);
-            if (resourceId.startsWith("/")) {
-                resourceId = resourceId.substring(1);
-            }
-            const { flatResponse, rawResponse } = await getRawResponse((paramOptions) => this._logAnalytics.query.resourceExecute(resourceId, {
-                query,
-                timespan: timeInterval,
-                workspaces: options?.additionalWorkspaces,
-            }, paramOptions), {
-                ...updatedOptions,
-                requestOptions: {
-                    ...updatedOptions.requestOptions,
-                    customHeaders: {
-                        ...updatedOptions.requestOptions?.customHeaders,
-                        ...formatPreferHeader(options),
-                    },
-                },
-            });
-            const parsedBody = JSON.parse(rawResponse.bodyAsText);
-            flatResponse.tables = parsedBody.tables;
-            const res = {
-                tables: flatResponse.tables.map(convertGeneratedTable),
-                statistics: flatResponse.statistics,
-                visualization: flatResponse.render,
-            };
-            if (!flatResponse.error) {
-                // if there is no error field, it is success
-                const result = {
-                    tables: res.tables,
-                    statistics: res.statistics,
-                    visualization: res.visualization,
-                    status: LogsQueryResultStatus.Success,
-                };
-                return result;
-            }
-            else {
-                const result = {
-                    partialTables: res.tables,
-                    status: LogsQueryResultStatus.PartialFailure,
-                    partialError: mapError(flatResponse.error),
-                    statistics: res.statistics,
-                    visualization: res.visualization,
-                };
-                return result;
-            }
-        });
+    options) {
+        const internalOptions = convertToInternalOptions(options);
+        const body = {
+            query,
+            timespan: convertTimespanToInterval(timespan),
+            workspaces: options?.additionalWorkspaces,
+        };
+        return executeWithResourceId(this._client, resourceId, body, internalOptions);
     }
-}
-async function getRawResponse(f, options) {
-    // renaming onResponse received from customer to customerProvidedCallback
-    const { onResponse: customerProvidedCallback } = options || {};
-    let rawResponse = undefined;
-    // flatResponseParam - is basically the flatResponse received from service call -
-    // just named it so that linter doesn't complain
-    // onResponse - includes the rawResponse and the customer's provided onResponse
-    const flatResponse = await f({
-        ...options,
-        onResponse: (response, flatResponseParam) => {
-            rawResponse = response;
-            customerProvidedCallback?.(response, flatResponseParam);
-        },
-    });
-    return { flatResponse, rawResponse: rawResponse };
+    /**
+     * Executes an Analytics query for data.
+     * [Here](https://learn.microsoft.com/azure/azure-monitor/logs/api/request-format)
+     * is an example for using POST with an Analytics query.
+     * @param workspaceId - The workspace ID to query the data for.
+     * @param query - The query to execute.
+     * @param timespan - The timespan for the query.
+     * @param options - The optional parameters for the operation.
+     * @returns The results of the query.
+     */
+    queryWorkspace(workspaceId, query, timespan, 
+    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
+    options) {
+        const internalOptions = convertToInternalOptions(options);
+        const body = {
+            query,
+            timespan: convertTimespanToInterval(timespan),
+            workspaces: options?.additionalWorkspaces,
+        };
+        return execute(this._client, workspaceId, body, internalOptions);
+    }
 }
 //# sourceMappingURL=logsQueryClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-/** Known values of {@link ApiVersion20240201} that the service accepts. */
-var KnownApiVersion20240201;
-(function (KnownApiVersion20240201) {
-    /** Api Version '2024-02-01' */
-    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
-})(KnownApiVersion20240201 || (KnownApiVersion20240201 = {}));
-/** Known values of {@link MetricResultType} that the service accepts. */
-var KnownMetricResultType;
-(function (KnownMetricResultType) {
-    KnownMetricResultType["Data"] = "Data";
-    KnownMetricResultType["Metadata"] = "Metadata";
-})(KnownMetricResultType || (KnownMetricResultType = {}));
-/** Known values of {@link MetricUnit} that the service accepts. */
-var KnownMetricUnit;
-(function (KnownMetricUnit) {
-    /** Unit of raw quantity. */
-    KnownMetricUnit["Count"] = "Count";
-    /** Unit of memory in bytes. */
-    KnownMetricUnit["Bytes"] = "Bytes";
-    /** Unit of time in seconds. */
-    KnownMetricUnit["Seconds"] = "Seconds";
-    /** Rate unit of raw quantity per second. */
-    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
-    /** Rate unit of memory in bytes per second. */
-    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
-    /** Percentage unit. */
-    KnownMetricUnit["Percent"] = "Percent";
-    /** Unit of time in 1/1000th of a second. */
-    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
-    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
-    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
-    /** No specified unit. */
-    KnownMetricUnit["Unspecified"] = "Unspecified";
-    /** Unit of processing power. */
-    KnownMetricUnit["Cores"] = "Cores";
-    /** Unit of processing power in 1/1000th of a CPU core. */
-    KnownMetricUnit["MilliCores"] = "MilliCores";
-    /** Unit of processing power in one billionth of a CPU core. */
-    KnownMetricUnit["NanoCores"] = "NanoCores";
-    /** Rate unit of binary digits per second. */
-    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
-})(KnownMetricUnit || (KnownMetricUnit = {}));
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/mappers.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const Response = {
-    type: {
-        name: "Composite",
-        className: "Response",
-        modelProperties: {
-            cost: {
-                constraints: {
-                    InclusiveMinimum: 0
-                },
-                serializedName: "cost",
-                type: {
-                    name: "Number"
-                }
-            },
-            timespan: {
-                serializedName: "timespan",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            interval: {
-                serializedName: "interval",
-                type: {
-                    name: "String"
-                }
-            },
-            namespace: {
-                serializedName: "namespace",
-                type: {
-                    name: "String"
-                }
-            },
-            resourceregion: {
-                serializedName: "resourceregion",
-                type: {
-                    name: "String"
-                }
-            },
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "Metric"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const Metric = {
-    type: {
-        name: "Composite",
-        className: "Metric",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            displayDescription: {
-                serializedName: "displayDescription",
-                type: {
-                    name: "String"
-                }
-            },
-            errorCode: {
-                serializedName: "errorCode",
-                type: {
-                    name: "String"
-                }
-            },
-            errorMessage: {
-                serializedName: "errorMessage",
-                type: {
-                    name: "String"
-                }
-            },
-            unit: {
-                serializedName: "unit",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            timeseries: {
-                serializedName: "timeseries",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "TimeSeriesElement"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const LocalizableString = {
-    type: {
-        name: "Composite",
-        className: "LocalizableString",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            localizedValue: {
-                serializedName: "localizedValue",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const TimeSeriesElement = {
-    type: {
-        name: "Composite",
-        className: "TimeSeriesElement",
-        modelProperties: {
-            metadatavalues: {
-                serializedName: "metadatavalues",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataValue"
-                        }
-                    }
-                }
-            },
-            data: {
-                serializedName: "data",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricValue"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetadataValue = {
-    type: {
-        name: "Composite",
-        className: "MetadataValue",
-        modelProperties: {
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            value: {
-                serializedName: "value",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const MetricValue = {
-    type: {
-        name: "Composite",
-        className: "MetricValue",
-        modelProperties: {
-            timeStamp: {
-                serializedName: "timeStamp",
-                required: true,
-                type: {
-                    name: "DateTime"
-                }
-            },
-            average: {
-                serializedName: "average",
-                type: {
-                    name: "Number"
-                }
-            },
-            minimum: {
-                serializedName: "minimum",
-                type: {
-                    name: "Number"
-                }
-            },
-            maximum: {
-                serializedName: "maximum",
-                type: {
-                    name: "Number"
-                }
-            },
-            total: {
-                serializedName: "total",
-                type: {
-                    name: "Number"
-                }
-            },
-            count: {
-                serializedName: "count",
-                type: {
-                    name: "Number"
-                }
-            }
-        }
-    }
-};
-const ErrorContract = {
-    type: {
-        name: "Composite",
-        className: "ErrorContract",
-        modelProperties: {
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorResponse"
-                }
-            }
-        }
-    }
-};
-const models_mappers_ErrorResponse = {
-    type: {
-        name: "Composite",
-        className: "ErrorResponse",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            target: {
-                serializedName: "target",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            details: {
-                serializedName: "details",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorResponse"
-                        }
-                    }
-                }
-            },
-            additionalInfo: {
-                serializedName: "additionalInfo",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorAdditionalInfo"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const mappers_ErrorAdditionalInfo = {
-    type: {
-        name: "Composite",
-        className: "ErrorAdditionalInfo",
-        modelProperties: {
-            type: {
-                serializedName: "type",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            info: {
-                serializedName: "info",
-                readOnly: true,
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const SubscriptionScopeMetricsRequestBodyParameters = {
-    type: {
-        name: "Composite",
-        className: "SubscriptionScopeMetricsRequestBodyParameters",
-        modelProperties: {
-            timespan: {
-                serializedName: "timespan",
-                type: {
-                    name: "String"
-                }
-            },
-            interval: {
-                serializedName: "interval",
-                type: {
-                    name: "String"
-                }
-            },
-            metricNames: {
-                serializedName: "metricNames",
-                type: {
-                    name: "String"
-                }
-            },
-            aggregation: {
-                serializedName: "aggregation",
-                type: {
-                    name: "String"
-                }
-            },
-            filter: {
-                serializedName: "filter",
-                type: {
-                    name: "String"
-                }
-            },
-            top: {
-                serializedName: "top",
-                type: {
-                    name: "Number"
-                }
-            },
-            orderBy: {
-                serializedName: "orderBy",
-                type: {
-                    name: "String"
-                }
-            },
-            rollUpBy: {
-                serializedName: "rollUpBy",
-                type: {
-                    name: "String"
-                }
-            },
-            resultType: {
-                serializedName: "resultType",
-                type: {
-                    name: "String"
-                }
-            },
-            metricNamespace: {
-                serializedName: "metricNamespace",
-                type: {
-                    name: "String"
-                }
-            },
-            autoAdjustTimegrain: {
-                serializedName: "autoAdjustTimegrain",
-                type: {
-                    name: "Boolean"
-                }
-            },
-            validateDimensions: {
-                serializedName: "validateDimensions",
-                type: {
-                    name: "Boolean"
-                }
-            }
-        }
-    }
-};
-//# sourceMappingURL=mappers.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/models/parameters.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-const models_parameters_accept = {
-    parameterPath: "accept",
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Accept",
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_$host = {
-    parameterPath: "$host",
-    mapper: {
-        serializedName: "$host",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const parameters_subscriptionId = {
-    parameterPath: "subscriptionId",
-    mapper: {
-        constraints: {
-            MinLength: 1
-        },
-        serializedName: "subscriptionId",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_apiVersion = {
-    parameterPath: "apiVersion",
-    mapper: {
-        serializedName: "api-version",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const region = {
-    parameterPath: "region",
-    mapper: {
-        serializedName: "region",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_timespan = {
-    parameterPath: ["options", "timespan"],
-    mapper: {
-        serializedName: "timespan",
-        type: {
-            name: "String"
-        }
-    }
-};
-const interval = {
-    parameterPath: ["options", "interval"],
-    mapper: {
-        serializedName: "interval",
-        type: {
-            name: "String"
-        }
-    }
-};
-const metricnames = {
-    parameterPath: ["options", "metricnames"],
-    mapper: {
-        serializedName: "metricnames",
-        type: {
-            name: "String"
-        }
-    }
-};
-const aggregation = {
-    parameterPath: ["options", "aggregation"],
-    mapper: {
-        serializedName: "aggregation",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_top = {
-    parameterPath: ["options", "top"],
-    mapper: {
-        serializedName: "top",
-        type: {
-            name: "Number"
-        }
-    }
-};
-const orderby = {
-    parameterPath: ["options", "orderby"],
-    mapper: {
-        serializedName: "orderby",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_filter = {
-    parameterPath: ["options", "filter"],
-    mapper: {
-        serializedName: "$filter",
-        type: {
-            name: "String"
-        }
-    }
-};
-const resultType = {
-    parameterPath: ["options", "resultType"],
-    mapper: {
-        serializedName: "resultType",
-        type: {
-            name: "String"
-        }
-    }
-};
-const metricnamespace = {
-    parameterPath: ["options", "metricnamespace"],
-    mapper: {
-        serializedName: "metricnamespace",
-        type: {
-            name: "String"
-        }
-    }
-};
-const autoAdjustTimegrain = {
-    parameterPath: ["options", "autoAdjustTimegrain"],
-    mapper: {
-        serializedName: "AutoAdjustTimegrain",
-        type: {
-            name: "Boolean"
-        }
-    }
-};
-const validateDimensions = {
-    parameterPath: ["options", "validateDimensions"],
-    mapper: {
-        serializedName: "ValidateDimensions",
-        type: {
-            name: "Boolean"
-        }
-    }
-};
-const rollupby = {
-    parameterPath: ["options", "rollupby"],
-    mapper: {
-        serializedName: "rollupby",
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_contentType = {
-    parameterPath: ["options", "contentType"],
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Content-Type",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_body = {
-    parameterPath: ["options", "body"],
-    mapper: SubscriptionScopeMetricsRequestBodyParameters
-};
-const resourceUri = {
-    parameterPath: "resourceUri",
-    mapper: {
-        serializedName: "resourceUri",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const resultType1 = {
-    parameterPath: ["options", "resultType"],
-    mapper: {
-        serializedName: "resultType",
-        type: {
-            name: "Enum",
-            allowedValues: ["Data", "Metadata"]
-        }
-    }
-};
-//# sourceMappingURL=parameters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/operations/metrics.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing Metrics operations. */
-class MetricsImpl {
-    client;
-    /**
-     * Initialize a new instance of the class Metrics class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * **Lists the metric data for a subscription**.
-     * @param subscriptionId The ID of the target subscription.
-     * @param region The region where the metrics you want reside.
-     * @param options The options parameters.
-     */
-    listAtSubscriptionScope(subscriptionId, region, options) {
-        return this.client.sendOperationRequest({ subscriptionId, region, options }, listAtSubscriptionScopeOperationSpec);
-    }
-    /**
-     * **Lists the metric data for a subscription**. Parameters can be specified on either query params or
-     * the body.
-     * @param subscriptionId The ID of the target subscription.
-     * @param region The region where the metrics you want reside.
-     * @param options The options parameters.
-     */
-    listAtSubscriptionScopePost(subscriptionId, region, options) {
-        return this.client.sendOperationRequest({ subscriptionId, region, options }, listAtSubscriptionScopePostOperationSpec);
-    }
-    /**
-     * **Lists the metric values for a resource**.
-     * @param resourceUri The identifier of the resource.
-     * @param options The options parameters.
-     */
-    list(resourceUri, options) {
-        return this.client.sendOperationRequest({ resourceUri, options }, metrics_listOperationSpec);
-    }
-}
-// Operation Specifications
-const metrics_serializer = createSerializer(src_models_mappers_namespaceObject, /* isXml */ false);
-const listAtSubscriptionScopeOperationSpec = {
-    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metrics",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: Response
-        },
-        default: {
-            bodyMapper: ErrorContract
-        }
-    },
-    queryParameters: [
-        parameters_apiVersion,
-        region,
-        parameters_timespan,
-        interval,
-        metricnames,
-        aggregation,
-        parameters_top,
-        orderby,
-        parameters_filter,
-        resultType,
-        metricnamespace,
-        autoAdjustTimegrain,
-        validateDimensions,
-        rollupby
-    ],
-    urlParameters: [models_parameters_$host, parameters_subscriptionId],
-    headerParameters: [models_parameters_accept],
-    serializer: metrics_serializer
-};
-const listAtSubscriptionScopePostOperationSpec = {
-    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metrics",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: Response
-        },
-        default: {
-            bodyMapper: ErrorContract
-        }
-    },
-    requestBody: parameters_body,
-    queryParameters: [
-        parameters_apiVersion,
-        region,
-        parameters_timespan,
-        interval,
-        metricnames,
-        aggregation,
-        parameters_top,
-        orderby,
-        parameters_filter,
-        resultType,
-        metricnamespace,
-        autoAdjustTimegrain,
-        validateDimensions,
-        rollupby
-    ],
-    urlParameters: [models_parameters_$host, parameters_subscriptionId],
-    headerParameters: [models_parameters_accept, models_parameters_contentType],
-    mediaType: "json",
-    serializer: metrics_serializer
-};
-const metrics_listOperationSpec = {
-    path: "/{resourceUri}/providers/Microsoft.Insights/metrics",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: Response
-        },
-        default: {
-            bodyMapper: models_mappers_ErrorResponse
-        }
-    },
-    queryParameters: [
-        parameters_apiVersion,
-        parameters_timespan,
-        interval,
-        metricnames,
-        aggregation,
-        parameters_top,
-        orderby,
-        parameters_filter,
-        metricnamespace,
-        autoAdjustTimegrain,
-        validateDimensions,
-        rollupby,
-        resultType1
-    ],
-    urlParameters: [models_parameters_$host, resourceUri],
-    headerParameters: [models_parameters_accept],
-    serializer: metrics_serializer
-};
-//# sourceMappingURL=metrics.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/operations/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/monitorManagementClientContext.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-/** @internal */
-class MonitorManagementClientContext extends ServiceClient {
-    $host;
-    apiVersion;
-    /**
-     * Initializes a new instance of the MonitorManagementClientContext class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        if (apiVersion === undefined) {
-            throw new Error("'apiVersion' cannot be null");
-        }
-        // Initializing default values for options
-        if (!options) {
-            options = {};
-        }
-        const defaults = {
-            requestContentType: "application/json; charset=utf-8"
-        };
-        const packageDetails = `azsdk-js-monitor-metrics/1.3.2`;
-        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
-            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const optionsWithDefaults = {
-            ...defaults,
-            ...options,
-            userAgentOptions: {
-                userAgentPrefix
-            },
-            baseUri: options.endpoint || "https://management.azure.com"
-        };
-        super(optionsWithDefaults);
-        // Parameter assignments
-        this.apiVersion = apiVersion;
-        // Assigning values to Constant parameters
-        this.$host = options.$host || "https://management.azure.com";
-    }
-}
-//# sourceMappingURL=monitorManagementClientContext.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/monitorManagementClient.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-/** @internal */
-class MonitorManagementClient extends MonitorManagementClientContext {
-    /**
-     * Initializes a new instance of the MonitorManagementClient class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        super(apiVersion, options);
-        this.metrics = new MetricsImpl(this);
-    }
-    metrics;
-}
-//# sourceMappingURL=monitorManagementClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metrics/src/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-/** Known values of {@link ApiVersion20240201} that the service accepts. */
-var models_KnownApiVersion20240201;
-(function (KnownApiVersion20240201) {
-    /** Api Version '2024-02-01' */
-    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
-})(models_KnownApiVersion20240201 || (models_KnownApiVersion20240201 = {}));
-/** Known values of {@link MetricClass} that the service accepts. */
-var KnownMetricClass;
-(function (KnownMetricClass) {
-    KnownMetricClass["Availability"] = "Availability";
-    KnownMetricClass["Transactions"] = "Transactions";
-    KnownMetricClass["Errors"] = "Errors";
-    KnownMetricClass["Latency"] = "Latency";
-    KnownMetricClass["Saturation"] = "Saturation";
-})(KnownMetricClass || (KnownMetricClass = {}));
-/** Known values of {@link MetricUnit} that the service accepts. */
-var models_KnownMetricUnit;
-(function (KnownMetricUnit) {
-    /** Unit of raw quantity. */
-    KnownMetricUnit["Count"] = "Count";
-    /** Unit of memory in bytes. */
-    KnownMetricUnit["Bytes"] = "Bytes";
-    /** Unit of time in seconds. */
-    KnownMetricUnit["Seconds"] = "Seconds";
-    /** Rate unit of raw quantity per second. */
-    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
-    /** Rate unit of memory in bytes per second. */
-    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
-    /** Percentage unit. */
-    KnownMetricUnit["Percent"] = "Percent";
-    /** Unit of time in 1/1000th of a second. */
-    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
-    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
-    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
-    /** No specified unit. */
-    KnownMetricUnit["Unspecified"] = "Unspecified";
-    /** Unit of processing power. */
-    KnownMetricUnit["Cores"] = "Cores";
-    /** Unit of processing power in 1/1000th of a CPU core. */
-    KnownMetricUnit["MilliCores"] = "MilliCores";
-    /** Unit of processing power in one billionth of a CPU core. */
-    KnownMetricUnit["NanoCores"] = "NanoCores";
-    /** Rate unit of binary digits per second. */
-    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
-})(models_KnownMetricUnit || (models_KnownMetricUnit = {}));
-/** Known values of {@link MetricAggregationType} that the service accepts. */
-var KnownMetricAggregationType;
-(function (KnownMetricAggregationType) {
-    KnownMetricAggregationType["None"] = "None";
-    KnownMetricAggregationType["Average"] = "Average";
-    KnownMetricAggregationType["Count"] = "Count";
-    KnownMetricAggregationType["Minimum"] = "Minimum";
-    KnownMetricAggregationType["Maximum"] = "Maximum";
-    KnownMetricAggregationType["Total"] = "Total";
-})(KnownMetricAggregationType || (KnownMetricAggregationType = {}));
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/mappers.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const SubscriptionScopeMetricDefinitionCollection = {
-    type: {
-        name: "Composite",
-        className: "SubscriptionScopeMetricDefinitionCollection",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "SubscriptionScopeMetricDefinition"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const SubscriptionScopeMetricDefinition = {
-    type: {
-        name: "Composite",
-        className: "SubscriptionScopeMetricDefinition",
-        modelProperties: {
-            isDimensionRequired: {
-                serializedName: "isDimensionRequired",
-                type: {
-                    name: "Boolean"
-                }
-            },
-            resourceId: {
-                serializedName: "resourceId",
-                type: {
-                    name: "String"
-                }
-            },
-            namespace: {
-                serializedName: "namespace",
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            displayDescription: {
-                serializedName: "displayDescription",
-                type: {
-                    name: "String"
-                }
-            },
-            category: {
-                serializedName: "category",
-                type: {
-                    name: "String"
-                }
-            },
-            metricClass: {
-                serializedName: "metricClass",
-                type: {
-                    name: "String"
-                }
-            },
-            unit: {
-                serializedName: "unit",
-                type: {
-                    name: "String"
-                }
-            },
-            primaryAggregationType: {
-                serializedName: "primaryAggregationType",
-                type: {
-                    name: "String"
-                }
-            },
-            supportedAggregationTypes: {
-                serializedName: "supportedAggregationTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            },
-            metricAvailabilities: {
-                serializedName: "metricAvailabilities",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricAvailability"
-                        }
-                    }
-                }
-            },
-            id: {
-                serializedName: "id",
-                type: {
-                    name: "String"
-                }
-            },
-            dimensions: {
-                serializedName: "dimensions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "LocalizableString"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const mappers_LocalizableString = {
-    type: {
-        name: "Composite",
-        className: "LocalizableString",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            localizedValue: {
-                serializedName: "localizedValue",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const MetricAvailability = {
-    type: {
-        name: "Composite",
-        className: "MetricAvailability",
-        modelProperties: {
-            timeGrain: {
-                serializedName: "timeGrain",
-                type: {
-                    name: "TimeSpan"
-                }
-            },
-            retention: {
-                serializedName: "retention",
-                type: {
-                    name: "TimeSpan"
-                }
-            }
-        }
-    }
-};
-const mappers_ErrorContract = {
-    type: {
-        name: "Composite",
-        className: "ErrorContract",
-        modelProperties: {
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorResponse"
-                }
-            }
-        }
-    }
-};
-const src_models_mappers_ErrorResponse = {
-    type: {
-        name: "Composite",
-        className: "ErrorResponse",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            target: {
-                serializedName: "target",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            details: {
-                serializedName: "details",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorResponse"
-                        }
-                    }
-                }
-            },
-            additionalInfo: {
-                serializedName: "additionalInfo",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorAdditionalInfo"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const models_mappers_ErrorAdditionalInfo = {
-    type: {
-        name: "Composite",
-        className: "ErrorAdditionalInfo",
-        modelProperties: {
-            type: {
-                serializedName: "type",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            info: {
-                serializedName: "info",
-                readOnly: true,
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const MetricDefinitionCollection = {
-    type: {
-        name: "Composite",
-        className: "MetricDefinitionCollection",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricDefinition"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetricDefinition = {
-    type: {
-        name: "Composite",
-        className: "MetricDefinition",
-        modelProperties: {
-            isDimensionRequired: {
-                serializedName: "isDimensionRequired",
-                type: {
-                    name: "Boolean"
-                }
-            },
-            resourceId: {
-                serializedName: "resourceId",
-                type: {
-                    name: "String"
-                }
-            },
-            namespace: {
-                serializedName: "namespace",
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            displayDescription: {
-                serializedName: "displayDescription",
-                type: {
-                    name: "String"
-                }
-            },
-            category: {
-                serializedName: "category",
-                type: {
-                    name: "String"
-                }
-            },
-            metricClass: {
-                serializedName: "metricClass",
-                type: {
-                    name: "String"
-                }
-            },
-            unit: {
-                serializedName: "unit",
-                type: {
-                    name: "String"
-                }
-            },
-            primaryAggregationType: {
-                serializedName: "primaryAggregationType",
-                type: {
-                    name: "Enum",
-                    allowedValues: [
-                        "None",
-                        "Average",
-                        "Count",
-                        "Minimum",
-                        "Maximum",
-                        "Total"
-                    ]
-                }
-            },
-            supportedAggregationTypes: {
-                serializedName: "supportedAggregationTypes",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Enum",
-                            allowedValues: [
-                                "None",
-                                "Average",
-                                "Count",
-                                "Minimum",
-                                "Maximum",
-                                "Total"
-                            ]
-                        }
-                    }
-                }
-            },
-            metricAvailabilities: {
-                serializedName: "metricAvailabilities",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricAvailability"
-                        }
-                    }
-                }
-            },
-            id: {
-                serializedName: "id",
-                type: {
-                    name: "String"
-                }
-            },
-            dimensions: {
-                serializedName: "dimensions",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "LocalizableString"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-//# sourceMappingURL=mappers.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/models/parameters.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const src_models_parameters_accept = {
-    parameterPath: "accept",
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Accept",
-        type: {
-            name: "String"
-        }
-    }
-};
-const src_models_parameters_$host = {
-    parameterPath: "$host",
-    mapper: {
-        serializedName: "$host",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const models_parameters_subscriptionId = {
-    parameterPath: "subscriptionId",
-    mapper: {
-        constraints: {
-            MinLength: 1
-        },
-        serializedName: "subscriptionId",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_apiVersion = {
-    parameterPath: "apiVersion",
-    mapper: {
-        serializedName: "api-version",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_region = {
-    parameterPath: "region",
-    mapper: {
-        serializedName: "region",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_metricnamespace = {
-    parameterPath: ["options", "metricnamespace"],
-    mapper: {
-        serializedName: "metricnamespace",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_resourceUri = {
-    parameterPath: "resourceUri",
-    mapper: {
-        serializedName: "resourceUri",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-//# sourceMappingURL=parameters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/operations/metricDefinitions.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing MetricDefinitions operations. */
-class MetricDefinitionsImpl {
-    client;
-    /**
-     * Initialize a new instance of the class MetricDefinitions class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Lists the metric definitions for the subscription.
-     * @param subscriptionId The ID of the target subscription.
-     * @param region The region where the metrics you want reside.
-     * @param options The options parameters.
-     */
-    listAtSubscriptionScope(subscriptionId, region, options) {
-        return this.client.sendOperationRequest({ subscriptionId, region, options }, metricDefinitions_listAtSubscriptionScopeOperationSpec);
-    }
-    /**
-     * Lists the metric definitions for the resource.
-     * @param resourceUri The identifier of the resource.
-     * @param options The options parameters.
-     */
-    list(resourceUri, options) {
-        return this.client.sendOperationRequest({ resourceUri, options }, metricDefinitions_listOperationSpec);
-    }
-}
-// Operation Specifications
-const metricDefinitions_serializer = createSerializer(metricsdefinitions_src_models_mappers_namespaceObject, /* isXml */ false);
-const metricDefinitions_listAtSubscriptionScopeOperationSpec = {
-    path: "/subscriptions/{subscriptionId}/providers/Microsoft.Insights/metricDefinitions",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: SubscriptionScopeMetricDefinitionCollection
-        },
-        default: {
-            bodyMapper: mappers_ErrorContract
-        }
-    },
-    queryParameters: [
-        models_parameters_apiVersion,
-        parameters_region,
-        parameters_metricnamespace
-    ],
-    urlParameters: [src_models_parameters_$host, models_parameters_subscriptionId],
-    headerParameters: [src_models_parameters_accept],
-    serializer: metricDefinitions_serializer
-};
-const metricDefinitions_listOperationSpec = {
-    path: "/{resourceUri}/providers/Microsoft.Insights/metricDefinitions",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: MetricDefinitionCollection
-        },
-        default: {
-            bodyMapper: src_models_mappers_ErrorResponse
-        }
-    },
-    queryParameters: [models_parameters_apiVersion, parameters_metricnamespace],
-    urlParameters: [src_models_parameters_$host, parameters_resourceUri],
-    headerParameters: [src_models_parameters_accept],
-    serializer: metricDefinitions_serializer
-};
-//# sourceMappingURL=metricDefinitions.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/operations/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/monitorManagementClientContext.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-/** @internal */
-class monitorManagementClientContext_MonitorManagementClientContext extends ServiceClient {
-    $host;
-    apiVersion;
-    /**
-     * Initializes a new instance of the MonitorManagementClientContext class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        if (apiVersion === undefined) {
-            throw new Error("'apiVersion' cannot be null");
-        }
-        // Initializing default values for options
-        if (!options) {
-            options = {};
-        }
-        const defaults = {
-            requestContentType: "application/json; charset=utf-8"
-        };
-        const packageDetails = `azsdk-js-monitor-metrics-definitions/1.3.2`;
-        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
-            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const optionsWithDefaults = {
-            ...defaults,
-            ...options,
-            userAgentOptions: {
-                userAgentPrefix
-            },
-            baseUri: options.endpoint || "https://management.azure.com"
-        };
-        super(optionsWithDefaults);
-        // Parameter assignments
-        this.apiVersion = apiVersion;
-        // Assigning values to Constant parameters
-        this.$host = options.$host || "https://management.azure.com";
-    }
-}
-//# sourceMappingURL=monitorManagementClientContext.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/monitorManagementClient.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-/** @internal */
-class monitorManagementClient_MonitorManagementClient extends monitorManagementClientContext_MonitorManagementClientContext {
-    /**
-     * Initializes a new instance of the MonitorManagementClient class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        super(apiVersion, options);
-        this.metricDefinitions = new MetricDefinitionsImpl(this);
-    }
-    metricDefinitions;
-}
-//# sourceMappingURL=monitorManagementClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsdefinitions/src/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-/** Known values of {@link ApiVersion20240201} that the service accepts. */
-var src_models_KnownApiVersion20240201;
-(function (KnownApiVersion20240201) {
-    /** Api Version '2024-02-01' */
-    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
-})(src_models_KnownApiVersion20240201 || (src_models_KnownApiVersion20240201 = {}));
-/** Known values of {@link NamespaceClassification} that the service accepts. */
-var KnownNamespaceClassification;
-(function (KnownNamespaceClassification) {
-    KnownNamespaceClassification["Platform"] = "Platform";
-    KnownNamespaceClassification["Custom"] = "Custom";
-    KnownNamespaceClassification["Qos"] = "Qos";
-})(KnownNamespaceClassification || (KnownNamespaceClassification = {}));
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/mappers.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const MetricNamespaceCollection = {
-    type: {
-        name: "Composite",
-        className: "MetricNamespaceCollection",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricNamespace"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetricNamespace = {
-    type: {
-        name: "Composite",
-        className: "MetricNamespace",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "String"
-                }
-            },
-            classification: {
-                serializedName: "classification",
-                type: {
-                    name: "String"
-                }
-            },
-            properties: {
-                serializedName: "properties",
-                type: {
-                    name: "Composite",
-                    className: "MetricNamespaceName"
-                }
-            }
-        }
-    }
-};
-const MetricNamespaceName = {
-    type: {
-        name: "Composite",
-        className: "MetricNamespaceName",
-        modelProperties: {
-            metricNamespaceName: {
-                serializedName: "metricNamespaceName",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const metricsnamespaces_src_models_mappers_ErrorResponse = {
-    type: {
-        name: "Composite",
-        className: "ErrorResponse",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-//# sourceMappingURL=mappers.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/models/parameters.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const metricsnamespaces_src_models_parameters_accept = {
-    parameterPath: "accept",
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Accept",
-        type: {
-            name: "String"
-        }
-    }
-};
-const metricsnamespaces_src_models_parameters_$host = {
-    parameterPath: "$host",
-    mapper: {
-        serializedName: "$host",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const models_parameters_resourceUri = {
-    parameterPath: "resourceUri",
-    mapper: {
-        serializedName: "resourceUri",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const src_models_parameters_apiVersion = {
-    parameterPath: "apiVersion",
-    mapper: {
-        serializedName: "api-version",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const startTime = {
-    parameterPath: ["options", "startTime"],
-    mapper: {
-        serializedName: "startTime",
-        type: {
-            name: "String"
-        }
-    }
-};
-//# sourceMappingURL=parameters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/operations/metricNamespaces.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing MetricNamespaces operations. */
-class MetricNamespacesImpl {
-    client;
-    /**
-     * Initialize a new instance of the class MetricNamespaces class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Lists the metric namespaces for the resource.
-     * @param resourceUri The identifier of the resource.
-     * @param options The options parameters.
-     */
-    list(resourceUri, options) {
-        return this.client.sendOperationRequest({ resourceUri, options }, metricNamespaces_listOperationSpec);
-    }
-}
-// Operation Specifications
-const metricNamespaces_serializer = createSerializer(metricsnamespaces_src_models_mappers_namespaceObject, /* isXml */ false);
-const metricNamespaces_listOperationSpec = {
-    path: "/{resourceUri}/providers/microsoft.insights/metricNamespaces",
-    httpMethod: "GET",
-    responses: {
-        200: {
-            bodyMapper: MetricNamespaceCollection
-        },
-        default: {
-            bodyMapper: metricsnamespaces_src_models_mappers_ErrorResponse
-        }
-    },
-    queryParameters: [src_models_parameters_apiVersion, startTime],
-    urlParameters: [metricsnamespaces_src_models_parameters_$host, models_parameters_resourceUri],
-    headerParameters: [metricsnamespaces_src_models_parameters_accept],
-    serializer: metricNamespaces_serializer
-};
-//# sourceMappingURL=metricNamespaces.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/operations/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/monitorManagementClientContext.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-/** @internal */
-class src_monitorManagementClientContext_MonitorManagementClientContext extends ServiceClient {
-    $host;
-    apiVersion;
-    /**
-     * Initializes a new instance of the MonitorManagementClientContext class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        if (apiVersion === undefined) {
-            throw new Error("'apiVersion' cannot be null");
-        }
-        // Initializing default values for options
-        if (!options) {
-            options = {};
-        }
-        const defaults = {
-            requestContentType: "application/json; charset=utf-8"
-        };
-        const packageDetails = `azsdk-js-monitor-metrics-namespaces/1.3.2`;
-        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
-            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const optionsWithDefaults = {
-            ...defaults,
-            ...options,
-            userAgentOptions: {
-                userAgentPrefix
-            },
-            baseUri: options.endpoint || "https://management.azure.com"
-        };
-        super(optionsWithDefaults);
-        // Parameter assignments
-        this.apiVersion = apiVersion;
-        // Assigning values to Constant parameters
-        this.$host = options.$host || "https://management.azure.com";
-    }
-}
-//# sourceMappingURL=monitorManagementClientContext.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/monitorManagementClient.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-/** @internal */
-class src_monitorManagementClient_MonitorManagementClient extends src_monitorManagementClientContext_MonitorManagementClientContext {
-    /**
-     * Initializes a new instance of the MonitorManagementClient class.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(apiVersion, options) {
-        super(apiVersion, options);
-        this.metricNamespaces = new MetricNamespacesImpl(this);
-    }
-    metricNamespaces;
-}
-//# sourceMappingURL=monitorManagementClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricsnamespaces/src/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/metricsQueryClient.js
-
-
-
-
-
-
-/**
- * A client that can query metrics, get metric definitions and get metric namespaces.
- *
- * @deprecated For resource-centric metrics queries, use the management library `@azure/arm-monitor` instead.
- * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/arm-monitor/MIGRATION_METRICSQUERYCLIENT_TO_ARM_MONITOR.md
- */
-class MetricsQueryClient {
-    _metricsClient;
-    _definitionsClient;
-    _namespacesClient;
-    /**
-     * Creates a MetricsQueryClient.
-     * @param tokenCredential - A TokenCredential that has rights to query metrics on resources.
-     * @param options - Options for the client like controlling request retries.
-     */
-    constructor(tokenCredential, options) {
-        const scope = options?.audience
-            ? `${options.audience}/.default`
-            : `${KnownMonitorMetricsQueryAudience.AzurePublicCloud}/.default`;
-        const packageDetails = `azsdk-js-monitor-query/${SDK_VERSION}`;
-        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
-            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const serviceClientOptions = {
-            ...options,
-            $host: options?.endpoint,
-            endpoint: options?.endpoint,
-            credentialScopes: scope,
-            credential: tokenCredential,
-            userAgentOptions: {
-                userAgentPrefix,
-            },
-        };
-        this._metricsClient = new GeneratedMetricsClient(MetricsApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
-        this._definitionsClient = new GeneratedMetricsDefinitionsClient(MetricDefinitionsApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
-        this._namespacesClient = new GeneratedMetricsNamespacesClient(MetricNamespacesApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
-    }
-    /**
-     * Query metrics, given a resource URI
-     * @param resourceUri - The resource URI to query.
-     * @param metricNames - The names of the metrics to retrieve.
-     * @param options - Options for querying metrics.
-     * @returns A response containing metrics.
-     */
-    async queryResource(resourceUri, metricNames, options = {}) {
-        return tracingClient.withSpan("MetricsQueryClient.queryResource", options, async (updatedOptions) => {
-            const response = await this._metricsClient.metrics.list(resourceUri, convertRequestForMetrics(metricNames, updatedOptions));
-            return convertResponseForMetrics(response);
-        });
-    }
-    /**
-     * List alert segments for Metric Definitions
-     */
-    async *listSegmentOfMetricDefinitions(resourceUri, options = {}) {
-        const segmentResponse = await tracingClient.withSpan("MetricsQueryClient.listSegmentOfMetricDefinitions", options, async (updatedOptions) => this._definitionsClient.metricDefinitions.list(resourceUri, convertRequestOptionsForMetricsDefinitions(updatedOptions)));
-        yield convertResponseForMetricsDefinitions(segmentResponse.value);
-    }
-    /**
-     * List items for Metric Definitions
-     */
-    async *listItemsOfMetricDefinitions(resourceUri, options) {
-        for await (const segment of this.listSegmentOfMetricDefinitions(resourceUri, options)) {
-            if (segment) {
-                yield* segment;
-            }
-        }
-    }
-    /**
-     *   /**
-     *
-     * Returns an async iterable iterator to list metric definitions.
-     *
-     * Example using `for await` syntax:
-     *
-     * ```ts snippet:MetricQueryClientListMetricDefinitions
-     * import { DefaultAzureCredential } from "@azure/identity";
-     * import { MetricsQueryClient } from "@azure/monitor-query";
-     *
-     * const metricsResourceId = "<the Resource Id for your metrics resource>";
-     *
-     * const tokenCredential = new DefaultAzureCredential();
-     * const metricsQueryClient = new MetricsQueryClient(tokenCredential);
-     *
-     * const metricDefinitions = metricsQueryClient.listMetricDefinitions(metricsResourceId);
-     * for await (const { id, name } of metricDefinitions) {
-     *   console.log(` metricDefinitions - ${id}, ${name}`);
-     * }
-     * ```
-     *
-     * Get a list of metric definitions, given a resource URI.
-     * @param resourceUri - The resource URI to get metric definitions for.
-     * @param options - Options for getting metric definitions.
-     * @returns Metric definitions for a given resource URI.
-     */
-    listMetricDefinitions(resourceUri, options) {
-        const iter = this.listItemsOfMetricDefinitions(resourceUri, options);
-        return {
-            /**
-             * The next method, part of the iteration protocol
-             */
-            next() {
-                return iter.next();
-            },
-            /**
-             * The connection to the async iterator, part of the iteration protocol
-             */
-            [Symbol.asyncIterator]() {
-                return this;
-            },
-            /**
-             * @returns an AsyncIterableIterator that works a page at a time
-             */
-            byPage: () => {
-                return this.listSegmentOfMetricDefinitions(resourceUri, options);
-            },
-        };
-    }
-    /**
-     * List alert segments for Metric Namespaces
-     */
-    async *listSegmentOfMetricNamespaces(resourceUri, options = {}) {
-        const segmentResponse = await tracingClient.withSpan("MetricsQueryClient.listSegmentOfMetricNamespaces", options, async (updatedOptions) => this._namespacesClient.metricNamespaces.list(resourceUri, updatedOptions));
-        yield convertResponseForMetricNamespaces(segmentResponse.value);
-    }
-    /**
-     * List items for Metric Namespaces
-     */
-    async *listItemsOfMetricNamespaces(resourceUri, options) {
-        for await (const segment of this.listSegmentOfMetricNamespaces(resourceUri, options)) {
-            if (segment) {
-                yield* segment;
-            }
-        }
-    }
-    /**
-     *
-     * Returns an async iterable iterator to list metric namespaces.
-     *
-     * Example using `for await` syntax:
-     *
-     * ```ts snippet:MetricQueryClientListMetricNamespaces
-     * import { DefaultAzureCredential } from "@azure/identity";
-     * import { MetricsQueryClient } from "@azure/monitor-query";
-     *
-     * const metricsResourceId = "<the Resource Id for your metrics resource>";
-     *
-     * const tokenCredential = new DefaultAzureCredential();
-     * const metricsQueryClient = new MetricsQueryClient(tokenCredential);
-     *
-     * const metricNamespaces = metricsQueryClient.listMetricNamespaces(metricsResourceId);
-     * for await (const { id, name } of metricNamespaces) {
-     *   console.log(` metricNamespaces - ${id}, ${name}`);
-     * }
-     * ```
-     *
-     * Get a list of metric namespaces, given a resource URI.
-     * @param resourceUri - The resource URI to get metric namespaces for.
-     * @param options - Options for getting metric namespaces.
-     * @returns Metric namespaces for a given resource URI.
-     */
-    listMetricNamespaces(resourceUri, options) {
-        const iter = this.listItemsOfMetricNamespaces(resourceUri, options);
-        return {
-            /**
-             * The next method, part of the iteration protocol
-             */
-            next() {
-                return iter.next();
-            },
-            /**
-             * The connection to the async iterator, part of the iteration protocol
-             */
-            [Symbol.asyncIterator]() {
-                return this;
-            },
-            /**
-             * @returns an AsyncIterableIterator that works a page at a time
-             */
-            byPage: () => {
-                return this.listSegmentOfMetricNamespaces(resourceUri, options);
-            },
-        };
-    }
-}
-//# sourceMappingURL=metricsQueryClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/models/constants.js
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/models/constants.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 /**
@@ -89136,873 +85324,26 @@ const Durations = {
     twentyFourHours: "PT24H",
     /** Alias for ISO8601 value 'PT48H' */
     fortyEightHours: "PT48H",
-    /**
-     * @deprecated Alias name `fourtyEightHours` for ISO8601 value 'PT48H' is deprecated
-     */
-    fourtyEightHours: "PT48H",
     /** Alias for ISO8601 value 'PT30M' */
     thirtyMinutes: "PT30M",
     /** Alias for ISO8601 value 'PT5M' */
     fiveMinutes: "PT5M",
 };
 //# sourceMappingURL=constants.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-/** Known values of {@link ApiVersion20240201} that the service accepts. */
-var metricBatch_src_models_KnownApiVersion20240201;
-(function (KnownApiVersion20240201) {
-    /** Api Version '2024-02-01' */
-    KnownApiVersion20240201["TwoThousandTwentyFour0201"] = "2024-02-01";
-})(metricBatch_src_models_KnownApiVersion20240201 || (metricBatch_src_models_KnownApiVersion20240201 = {}));
-/** Known values of {@link MetricUnit} that the service accepts. */
-var src_models_KnownMetricUnit;
-(function (KnownMetricUnit) {
-    /** Unit of raw quantity. */
-    KnownMetricUnit["Count"] = "Count";
-    /** Unit of memory in bytes. */
-    KnownMetricUnit["Bytes"] = "Bytes";
-    /** Unit of time in seconds. */
-    KnownMetricUnit["Seconds"] = "Seconds";
-    /** Rate unit of raw quantity per second. */
-    KnownMetricUnit["CountPerSecond"] = "CountPerSecond";
-    /** Rate unit of memory in bytes per second. */
-    KnownMetricUnit["BytesPerSecond"] = "BytesPerSecond";
-    /** Percentage unit. */
-    KnownMetricUnit["Percent"] = "Percent";
-    /** Unit of time in 1/1000th of a second. */
-    KnownMetricUnit["MilliSeconds"] = "MilliSeconds";
-    /** Unit of data transfer or storage. It is the size of the data in bytes multiplied by the time it takes to transfer or store the data in seconds. */
-    KnownMetricUnit["ByteSeconds"] = "ByteSeconds";
-    /** No specified unit. */
-    KnownMetricUnit["Unspecified"] = "Unspecified";
-    /** Unit of processing power. */
-    KnownMetricUnit["Cores"] = "Cores";
-    /** Unit of processing power in 1/1000th of a CPU core. */
-    KnownMetricUnit["MilliCores"] = "MilliCores";
-    /** Unit of processing power in one billionth of a CPU core. */
-    KnownMetricUnit["NanoCores"] = "NanoCores";
-    /** Rate unit of binary digits per second. */
-    KnownMetricUnit["BitsPerSecond"] = "BitsPerSecond";
-})(src_models_KnownMetricUnit || (src_models_KnownMetricUnit = {}));
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/mappers.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-const ResourceIdList = {
-    type: {
-        name: "Composite",
-        className: "ResourceIdList",
-        modelProperties: {
-            resourceids: {
-                serializedName: "resourceids",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "String"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetricResultsResponse = {
-    type: {
-        name: "Composite",
-        className: "MetricResultsResponse",
-        modelProperties: {
-            values: {
-                serializedName: "values",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricResultsResponseValuesItem"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const MetricResultsResponseValuesItem = {
-    type: {
-        name: "Composite",
-        className: "MetricResultsResponseValuesItem",
-        modelProperties: {
-            starttime: {
-                serializedName: "starttime",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            endtime: {
-                serializedName: "endtime",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            interval: {
-                serializedName: "interval",
-                type: {
-                    name: "String"
-                }
-            },
-            namespace: {
-                serializedName: "namespace",
-                type: {
-                    name: "String"
-                }
-            },
-            resourceregion: {
-                serializedName: "resourceregion",
-                type: {
-                    name: "String"
-                }
-            },
-            resourceid: {
-                serializedName: "resourceid",
-                type: {
-                    name: "String"
-                }
-            },
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "Metric"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const mappers_Metric = {
-    type: {
-        name: "Composite",
-        className: "Metric",
-        modelProperties: {
-            id: {
-                serializedName: "id",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            type: {
-                serializedName: "type",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            displayDescription: {
-                serializedName: "displayDescription",
-                type: {
-                    name: "String"
-                }
-            },
-            errorCode: {
-                serializedName: "errorCode",
-                type: {
-                    name: "String"
-                }
-            },
-            errorMessage: {
-                serializedName: "errorMessage",
-                type: {
-                    name: "String"
-                }
-            },
-            unit: {
-                serializedName: "unit",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            timeseries: {
-                serializedName: "timeseries",
-                required: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "TimeSeriesElement"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const models_mappers_LocalizableString = {
-    type: {
-        name: "Composite",
-        className: "LocalizableString",
-        modelProperties: {
-            value: {
-                serializedName: "value",
-                required: true,
-                type: {
-                    name: "String"
-                }
-            },
-            localizedValue: {
-                serializedName: "localizedValue",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const mappers_TimeSeriesElement = {
-    type: {
-        name: "Composite",
-        className: "TimeSeriesElement",
-        modelProperties: {
-            metadatavalues: {
-                serializedName: "metadatavalues",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetadataValue"
-                        }
-                    }
-                }
-            },
-            data: {
-                serializedName: "data",
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "MetricValue"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const mappers_MetadataValue = {
-    type: {
-        name: "Composite",
-        className: "MetadataValue",
-        modelProperties: {
-            name: {
-                serializedName: "name",
-                type: {
-                    name: "Composite",
-                    className: "LocalizableString"
-                }
-            },
-            value: {
-                serializedName: "value",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-const mappers_MetricValue = {
-    type: {
-        name: "Composite",
-        className: "MetricValue",
-        modelProperties: {
-            timeStamp: {
-                serializedName: "timeStamp",
-                required: true,
-                type: {
-                    name: "DateTime"
-                }
-            },
-            average: {
-                serializedName: "average",
-                type: {
-                    name: "Number"
-                }
-            },
-            minimum: {
-                serializedName: "minimum",
-                type: {
-                    name: "Number"
-                }
-            },
-            maximum: {
-                serializedName: "maximum",
-                type: {
-                    name: "Number"
-                }
-            },
-            total: {
-                serializedName: "total",
-                type: {
-                    name: "Number"
-                }
-            },
-            count: {
-                serializedName: "count",
-                type: {
-                    name: "Number"
-                }
-            }
-        }
-    }
-};
-const metricBatch_src_models_mappers_ErrorResponse = {
-    type: {
-        name: "Composite",
-        className: "ErrorResponse",
-        modelProperties: {
-            error: {
-                serializedName: "error",
-                type: {
-                    name: "Composite",
-                    className: "ErrorDetail"
-                }
-            }
-        }
-    }
-};
-const models_mappers_ErrorDetail = {
-    type: {
-        name: "Composite",
-        className: "ErrorDetail",
-        modelProperties: {
-            code: {
-                serializedName: "code",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            message: {
-                serializedName: "message",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            target: {
-                serializedName: "target",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            details: {
-                serializedName: "details",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorDetail"
-                        }
-                    }
-                }
-            },
-            additionalInfo: {
-                serializedName: "additionalInfo",
-                readOnly: true,
-                type: {
-                    name: "Sequence",
-                    element: {
-                        type: {
-                            name: "Composite",
-                            className: "ErrorAdditionalInfo"
-                        }
-                    }
-                }
-            }
-        }
-    }
-};
-const src_models_mappers_ErrorAdditionalInfo = {
-    type: {
-        name: "Composite",
-        className: "ErrorAdditionalInfo",
-        modelProperties: {
-            type: {
-                serializedName: "type",
-                readOnly: true,
-                type: {
-                    name: "String"
-                }
-            },
-            info: {
-                serializedName: "info",
-                readOnly: true,
-                type: {
-                    name: "Dictionary",
-                    value: { type: { name: "any" } }
-                }
-            }
-        }
-    }
-};
-const MetricsBatchBatchExceptionHeaders = {
-    type: {
-        name: "Composite",
-        className: "MetricsBatchBatchExceptionHeaders",
-        modelProperties: {
-            xMsErrorCode: {
-                serializedName: "x-ms-error-code",
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    }
-};
-//# sourceMappingURL=mappers.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/models/parameters.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-const src_models_parameters_contentType = {
-    parameterPath: ["options", "contentType"],
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Content-Type",
-        type: {
-            name: "String"
-        }
-    }
-};
-const batchRequest = {
-    parameterPath: "batchRequest",
-    mapper: ResourceIdList
-};
-const metricBatch_src_models_parameters_accept = {
-    parameterPath: "accept",
-    mapper: {
-        defaultValue: "application/json",
-        isConstant: true,
-        serializedName: "Accept",
-        type: {
-            name: "String"
-        }
-    }
-};
-const endpoint = {
-    parameterPath: "endpoint",
-    mapper: {
-        serializedName: "endpoint",
-        required: true,
-        type: {
-            name: "String"
-        }
-    },
-    skipEncoding: true
-};
-const src_models_parameters_subscriptionId = {
-    parameterPath: "subscriptionId",
-    mapper: {
-        serializedName: "subscriptionId",
-        required: true,
-        type: {
-            name: "Uuid"
-        }
-    }
-};
-const starttime = {
-    parameterPath: ["options", "starttime"],
-    mapper: {
-        serializedName: "starttime",
-        type: {
-            name: "String"
-        }
-    }
-};
-const endtime = {
-    parameterPath: ["options", "endtime"],
-    mapper: {
-        serializedName: "endtime",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_interval = {
-    parameterPath: ["options", "interval"],
-    mapper: {
-        defaultValue: "PT1M",
-        serializedName: "interval",
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_metricnamespace = {
-    parameterPath: "metricnamespace",
-    mapper: {
-        serializedName: "metricnamespace",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_metricnames = {
-    parameterPath: "metricnames",
-    mapper: {
-        serializedName: "metricnames",
-        required: true,
-        type: {
-            name: "Sequence",
-            element: {
-                type: {
-                    name: "String"
-                }
-            }
-        }
-    },
-    collectionFormat: "CSV"
-};
-const parameters_aggregation = {
-    parameterPath: ["options", "aggregation"],
-    mapper: {
-        serializedName: "aggregation",
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_top = {
-    parameterPath: ["options", "top"],
-    mapper: {
-        serializedName: "top",
-        type: {
-            name: "Number"
-        }
-    }
-};
-const parameters_orderby = {
-    parameterPath: ["options", "orderby"],
-    mapper: {
-        serializedName: "orderby",
-        type: {
-            name: "String"
-        }
-    }
-};
-const models_parameters_filter = {
-    parameterPath: ["options", "filter"],
-    mapper: {
-        serializedName: "filter",
-        type: {
-            name: "String"
-        }
-    }
-};
-const parameters_rollupby = {
-    parameterPath: ["options", "rollupby"],
-    mapper: {
-        serializedName: "rollupby",
-        type: {
-            name: "String"
-        }
-    }
-};
-const metricBatch_src_models_parameters_apiVersion = {
-    parameterPath: "apiVersion",
-    mapper: {
-        serializedName: "api-version",
-        required: true,
-        type: {
-            name: "String"
-        }
-    }
-};
-//# sourceMappingURL=parameters.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/operations/metricsBatch.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-
-/** Class containing MetricsBatch operations. */
-class MetricsBatchImpl {
-    client;
-    /**
-     * Initialize a new instance of the class MetricsBatch class.
-     * @param client Reference to the service client
-     */
-    constructor(client) {
-        this.client = client;
-    }
-    /**
-     * Lists the metric values for multiple resources.
-     * @param subscriptionId The subscription identifier for the resources in this batch.
-     * @param metricnamespace Metric namespace that contains the requested metric names.
-     * @param metricnames The names of the metrics (comma separated) to retrieve.
-     * @param batchRequest Metrics batch body including the list of resource ids
-     * @param options The options parameters.
-     */
-    batch(subscriptionId, metricnamespace, metricnames, batchRequest, options) {
-        return this.client.sendOperationRequest({ subscriptionId, metricnamespace, metricnames, batchRequest, options }, metricsBatch_batchOperationSpec);
-    }
-}
-// Operation Specifications
-const metricsBatch_serializer = createSerializer(metricBatch_src_models_mappers_namespaceObject, /* isXml */ false);
-const metricsBatch_batchOperationSpec = {
-    path: "/subscriptions/{subscriptionId}/metrics:getBatch",
-    httpMethod: "POST",
-    responses: {
-        200: {
-            bodyMapper: MetricResultsResponse
-        },
-        default: {
-            bodyMapper: metricBatch_src_models_mappers_ErrorResponse,
-            headersMapper: MetricsBatchBatchExceptionHeaders
-        }
-    },
-    requestBody: batchRequest,
-    queryParameters: [
-        starttime,
-        endtime,
-        parameters_interval,
-        models_parameters_metricnamespace,
-        parameters_metricnames,
-        parameters_aggregation,
-        models_parameters_top,
-        parameters_orderby,
-        models_parameters_filter,
-        parameters_rollupby,
-        metricBatch_src_models_parameters_apiVersion
-    ],
-    urlParameters: [endpoint, src_models_parameters_subscriptionId],
-    headerParameters: [src_models_parameters_contentType, metricBatch_src_models_parameters_accept],
-    mediaType: "json",
-    serializer: metricsBatch_serializer
-};
-//# sourceMappingURL=metricsBatch.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/operations/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-//# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/azureMonitorMetricBatchContext.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-/** @internal */
-class AzureMonitorMetricBatchContext extends ServiceClient {
-    endpoint;
-    apiVersion;
-    /**
-     * Initializes a new instance of the AzureMonitorMetricBatchContext class.
-     * @param endpoint The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
-     *                 The region should match the region of the requested resources. For global resources, the region
-     *                 should be 'global'.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(endpoint, apiVersion, options) {
-        if (endpoint === undefined) {
-            throw new Error("'endpoint' cannot be null");
-        }
-        if (apiVersion === undefined) {
-            throw new Error("'apiVersion' cannot be null");
-        }
-        // Initializing default values for options
-        if (!options) {
-            options = {};
-        }
-        const defaults = {
-            requestContentType: "application/json; charset=utf-8"
-        };
-        const packageDetails = `azsdk-js-monitor-metric-batch/1.2.0`;
-        const userAgentPrefix = options.userAgentOptions && options.userAgentOptions.userAgentPrefix
-            ? `${options.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const optionsWithDefaults = {
-            ...defaults,
-            ...options,
-            userAgentOptions: {
-                userAgentPrefix
-            },
-            baseUri: options.endpoint || "{endpoint}"
-        };
-        super(optionsWithDefaults);
-        // Parameter assignments
-        this.endpoint = endpoint;
-        this.apiVersion = apiVersion;
-    }
-}
-//# sourceMappingURL=azureMonitorMetricBatchContext.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/azureMonitorMetricBatch.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
-/** @internal */
-class AzureMonitorMetricBatch extends AzureMonitorMetricBatchContext {
-    /**
-     * Initializes a new instance of the AzureMonitorMetricBatch class.
-     * @param endpoint The regional endpoint to use, for example https://eastus.metrics.monitor.azure.com.
-     *                 The region should match the region of the requested resources. For global resources, the region
-     *                 should be 'global'.
-     * @param apiVersion Api Version
-     * @param options The parameter options
-     */
-    constructor(endpoint, apiVersion, options) {
-        super(endpoint, apiVersion, options);
-        this.metricsBatch = new MetricsBatchImpl(this);
-    }
-    metricsBatch;
-}
-//# sourceMappingURL=azureMonitorMetricBatch.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/generated/metricBatch/src/index.js
-/*
- * Copyright (c) Microsoft Corporation.
- * Licensed under the MIT License.
- *
- * Code generated by Microsoft (R) AutoRest Code Generator.
- * Changes may cause incorrect behavior and will be lost if the code is regenerated.
- */
-
-
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/models/index.js
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 
 
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/metricsClient.js
+;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query-logs/dist/esm/index.js
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
 
 
-
-const getSubscriptionFromResourceId = function (resourceId) {
-    const startPos = resourceId.indexOf("subscriptions/") + 14;
-    const subscriptionId = resourceId.substring(startPos, resourceId.indexOf("/", startPos));
-    return subscriptionId;
-};
-/**
- * A client that can query batch metrics.
- *
- * @deprecated Moved to `@azure/monitor-query-metrics`. Use `MetricsClient` from `@azure/monitor-query-metrics` instead.
- * Migrate your code following the migration guide at https://github.com/Azure/azure-sdk-for-js/blob/main/sdk/monitor/monitor-query-metrics/MIGRATION.md
- */
-class MetricsClient {
-    _metricBatchClient;
-    _baseUrl;
-    constructor(endpoint, tokenCredential, 
-    // eslint-disable-next-line @azure/azure-sdk/ts-naming-options
-    options) {
-        const scope = options?.audience
-            ? `${options.audience}/.default`
-            : `${KnownMonitorAudience.AzurePublicCloud}/.default`;
-        const packageDetails = `azsdk-js-monitor-query/${SDK_VERSION}`;
-        const userAgentPrefix = options?.userAgentOptions && options?.userAgentOptions.userAgentPrefix
-            ? `${options?.userAgentOptions.userAgentPrefix} ${packageDetails}`
-            : `${packageDetails}`;
-        const serviceClientOptions = {
-            ...options,
-            $host: endpoint,
-            endpoint: endpoint,
-            credentialScopes: scope,
-            credential: tokenCredential,
-            userAgentOptions: {
-                userAgentPrefix,
-            },
-        };
-        this._baseUrl = endpoint;
-        this._metricBatchClient = new GeneratedMonitorMetricClient(this._baseUrl, MonitorMetricBatchApiVersion.TwoThousandTwentyFour0201, serviceClientOptions);
-    }
-    /**
-     * Returns all the Azure Monitor metrics requested for the batch of resources.
-     */
-    async queryResources(resourceIds, metricNames, metricNamespace, options = {}) {
-        if (resourceIds.length === 0) {
-            throw new Error("Resource IDs can not be empty");
-        }
-        return tracingClient.withSpan("MetricsQueryClient.batch", options, async (updatedOptions) => {
-            const subscriptionId = getSubscriptionFromResourceId(resourceIds[0]);
-            const response = await this._metricBatchClient.metricsBatch.batch(subscriptionId, metricNamespace, metricNames, {
-                resourceids: resourceIds,
-            }, convertRequestForMetricsBatchQuery(updatedOptions));
-            return convertResponseForMetricBatch(response);
-        });
-    }
-}
-//# sourceMappingURL=metricsClient.js.map
-;// CONCATENATED MODULE: ./node_modules/@azure/monitor-query/dist/esm/index.js
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
-//
-// Curated exports
-//
-
-
-
-
-
-
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ./utils.js
+;// CONCATENATED MODULE: ./src/utils.js
 /**
  * Utility functions for Azure Container App Job GitHub Action
  */
@@ -90099,7 +85440,8 @@ async function dumpJobLogs(workspaceId, jobName) {
             core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
             
             for (const row of table.rows) {
-                const timestamp = row[0];
+                const timestamp = new Date(row[0]).toISOString()
+                    .replace('T', ' ').split('.')[0];
                 const logMessage = row[1];
                 core.info(`[${timestamp}] ${logMessage}`);
             }
@@ -90120,7 +85462,7 @@ async function dumpJobLogs(workspaceId, jobName) {
     }
 }
 
-;// CONCATENATED MODULE: ./input.js
+;// CONCATENATED MODULE: ./src/input.js
 
 
 
@@ -90207,7 +85549,7 @@ function getInputs() {
     };
 }
 
-;// CONCATENATED MODULE: ./config.js
+;// CONCATENATED MODULE: ./src/config.js
 /**
  * Azure Container App Job configuration builder
  */
@@ -90346,7 +85688,7 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
     return jobConfig;
 }
 
-;// CONCATENATED MODULE: ./job.js
+;// CONCATENATED MODULE: ./src/job.js
 
 
 
@@ -90478,7 +85820,7 @@ async function deleteJob(client, resourceGroup, jobName) {
     }
 }
 
-;// CONCATENATED MODULE: ./main.js
+;// CONCATENATED MODULE: ./src/main.js
 
 
 
@@ -90634,7 +85976,7 @@ async function run() {
 
 
 
-;// CONCATENATED MODULE: ./index.js
+;// CONCATENATED MODULE: ./src/index.js
 /**
  * This file is the entrypoint for the action
  */
