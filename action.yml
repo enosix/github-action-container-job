@@ -65,7 +65,7 @@ outputs:
   execution-name:
     description: 'Name of the job execution'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
 branding:
   icon: 'play'
