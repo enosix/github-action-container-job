@@ -15,7 +15,7 @@ inputs:
     required: false
   image:
     description: 'Container image to use (e.g., ghcr.io/owner/image:tag)'
-    required: true
+    required: false
   command:
     description: 'Space-delimited command to run in the container'
     required: false
