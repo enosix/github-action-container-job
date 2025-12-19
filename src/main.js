@@ -3,7 +3,6 @@ import { DefaultAzureCredential } from '@azure/identity';
 import { ContainerAppsAPIClient } from '@azure/arm-appcontainers';
 import { generateJobName, dumpJobLogs } from './utils.js';
 import { getInputs } from './input.js';
-import { buildJobConfig } from './config.js';
 import { createJob, startJobExecution, pollJobExecution, deleteJob } from './job.js';
 
 /**
@@ -35,7 +34,9 @@ async function run() {
             dryRun,
             logAnalyticsWorkspaceId,
             environmentVariables,
-            secrets
+            secrets,
+            manualExecution,
+            onlyDeleteJob
         } = inputs;
         
         resourceGroup = inputs.resourceGroup;
@@ -49,39 +50,29 @@ async function run() {
         core.info(`Job Name: ${jobName}`);
         core.info(`Image: ${image}`);
         core.info(`Command: ${command ? command.join(' ') : 'default'}`);
-        core.info(`CPU: ${cpu}`);
-        core.info(`Memory: ${memory}`);
         core.info(`Timeout: ${timeout}s`);
-        core.info(`Dry Run: ${dryRun}`);
 
-        if (dryRun) {
-            // Build the same job config that would be used in actual execution
-            const jobConfig = buildJobConfig(subscriptionId, resourceGroup, environmentName, 'eastus', {
-                image,
-                command,
-                userManagedIdentity,
-                environmentVariables,
-                secrets,
-                cpu,
-                memory,
-                registryServer,
-                registryUsername,
-                registryPassword,
-                cronSchedule
-            });
-
-            core.info('Dry-run preview of job payload:');
-            core.info(JSON.stringify(jobConfig, null, 2));
-            core.setOutput('job-name', jobName);
-            core.info('Dry run mode enabled, skipping Azure API calls.');
-            return;
+        let runType ='One off execution';
+        if (onlyDeleteJob) {
+            runType = 'Delete a job';
+        } else if (cronSchedule) {
+            runType = `Scheduled execution (cron: ${cronSchedule})`;
+        } else if (manualExecution) {
+            runType = 'Manual execution (no automatic start)';
         }
+
+        core.info(`Run type: ${runType} ${dryRun ? '[Dry Run]' : ''}`);
 
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
         const credential = new DefaultAzureCredential();
         client = new ContainerAppsAPIClient(credential, subscriptionId);
-        
+
+        if (onlyDeleteJob) {
+            await deleteJob(client, resourceGroup, jobName, dryRun);
+            return;
+        }
+
         // Create job
         await createJob(client, resourceGroup, environmentName, jobName, {
             image,
@@ -95,16 +86,21 @@ async function run() {
             registryUsername,
             registryPassword,
             cronSchedule
-        });
+        }, dryRun);
         
         // Set output for job name
         core.setOutput('job-name', jobName);
 
-        if (cronSchedule) {
-            core.info('Cron schedule provided, skipping execution start.');
+        if (cronSchedule || manualExecution) {
+            core.info('Job created successfully.');
             return;
         }
-        
+
+        if (dryRun) {
+            core.info('Dry run mode enabled, skipping job execution');
+            return;
+        }
+
         // Start job execution
         const execution = await startJobExecution(client, resourceGroup, jobName);
         const executionName = execution.name;

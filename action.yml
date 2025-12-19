@@ -31,6 +31,12 @@ inputs:
   cron-schedule:
     description: 'CRON schedule for recurring jobs (e.g., "0 */6 * * *" for every 6 hours)'
     required: false
+  manual-execution:
+    description: 'Create a manually triggered job without running it immediately'
+    required: false
+  only-delete-job:
+    description: 'Only delete the job without creating or running it'
+    required: false
   cpu:
     description: 'CPU cores to allocate (e.g., "0.5", "1.0")'
     required: false

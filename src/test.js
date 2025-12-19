@@ -1,7 +1,7 @@
 import assert from 'node:assert';
 import { describe, it, beforeEach, afterEach } from 'node:test';
-import { sleep, generateJobName, parseCommand } from './utils.js';
-import { parseJsonInput } from './input.js';
+import { sleep, generateJobName, parseCommand, normalizeAzureLocation } from './utils.js';
+import { parseJsonInput, getInput } from './input.js';
 
 // Helper to set INPUT_ env var name mapping like GitHub Actions
 function setInputEnv(inputName, value) {
@@ -56,6 +56,11 @@ describe('main', () => {
             assert.deepStrictEqual(parseCommand('  echo  hello world '), ['echo', 'hello', 'world']);
         });
 
+        it('parseCommand handles complex whitespace', () => {
+            assert.deepStrictEqual(parseCommand('  echo   "hello world"  '), ['echo', '"hello', 'world"']);
+            assert.deepStrictEqual(parseCommand('\tcmd\narg1  arg2'), ['cmd', 'arg1', 'arg2']);
+        });
+
         it('parseJsonInput returns empty object for missing or empty input', () => {
             // ensure no env var set
             assert.deepStrictEqual(parseJsonInput('environment-variables'), {});
@@ -80,6 +85,27 @@ describe('main', () => {
             await sleep(20);
             const elapsed = Date.now() - start;
             assert.ok(elapsed >= 15, `elapsed ${elapsed}ms was less than expected`);
+        });
+
+        it('normalizeAzureLocation handles spaces and mixed case', () => {
+            assert.strictEqual(normalizeAzureLocation('East US'), 'eastus');
+            assert.strictEqual(normalizeAzureLocation('West Europe'), 'westeurope');
+            assert.strictEqual(normalizeAzureLocation(null), 'eastus');
+        });
+    });
+
+    describe('input handling', () => {
+        it('getInput returns value from environment', () => {
+            setInputEnv('my-input', 'some-value');
+            assert.strictEqual(getInput('my-input'), 'some-value');
+        });
+
+        it('getInput throws when required input is missing', () => {
+            assert.throws(() => getInput('missing-input', { required: true }), /Input required and not supplied: missing-input/);
+        });
+
+        it('getInput returns empty string for missing optional input', () => {
+            assert.strictEqual(getInput('missing-optional'), '');
         });
     });
 

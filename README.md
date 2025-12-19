@@ -66,6 +66,9 @@ The action respects the container's exit code - if the container exits with a no
 | `environment-variables`     | JSON object of environment variables                            | `{}`                          |
 | `secrets`                   | JSON object of secret URIs                                      | `{}`                          |
 | `cron-schedule`             | Cron schedule for recurring jobs (optional)                     | None                          |
+| `manual-execution`          | Create a manually triggered job without running it immediately  | `false`                       |
+| `only-delete-job`           | Only delete the job without creating or running it              | `false`                       |
+| `dry-run`                   | Preview payload and skip Azure calls                            | `false`                       |
 | `cpu`                       | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
 | `memory`                    | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
 | `timeout`                   | Job execution timeout in seconds                                | `1800` (30 minutes)           |
@@ -118,8 +121,8 @@ This action uses the [DefaultAzureCredential](https://learn.microsoft.com/en-us/
 
 ## Environment Variables and Secrets
 
-Environment variables are passed as plain text, while secrets refer to the Azure Key Vault URLs, and will be automatically 
-decrypted and added to the environment during runtime.
+Environment variables are passed as plain text, while secrets refer to the Azure Key Vault URLs, and will be 
+automatically decrypted and added to the environment during runtime.
 
 ```yaml
 - name: Run Container Job
@@ -144,7 +147,8 @@ decrypted and added to the environment during runtime.
 
 ## Container Logs
 
-The action can automatically retrieve and display container logs from Azure Log Analytics after the job completes. To enable this feature, provide the Log Analytics Workspace ID that is configured with your Container App Environment.
+The action can automatically retrieve and display container logs from Azure Log Analytics after the job completes. 
+To enable this feature, provide the Log Analytics Workspace ID that is configured with your Container App Environment.
 
 ```yaml
 - name: Run Container Job
@@ -157,4 +161,92 @@ The action can automatically retrieve and display container logs from Azure Log 
     log-analytics-workspace-id: ${{ secrets.LOG_ANALYTICS_WORKSPACE_ID }}
 ```
 
-**Note:** Logs may take a few minutes to appear in Log Analytics after job execution. If no logs are found immediately, they should be available in the Azure portal under the Container App Environment's log stream.
+**Note:** Logs may take a few minutes to appear in Log Analytics after job execution. If no logs are found immediately, 
+they should be available in the Azure portal under the Container App Environment's log stream.
+
+## Execution Modes
+
+This action supports multiple execution modes to accommodate different use cases:
+
+### Standard Mode (Default)
+
+By default, the action creates a job, executes it immediately, waits for completion, retrieves logs, and then deletes 
+the job.
+
+```yaml
+- name: Run Container Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myimage:latest
+```
+
+### Scheduled/Recurring Jobs
+
+Set `cron-schedule` to create a recurring job that runs on a schedule. The job will be created but not executed 
+immediately, and it will **not** be deleted after creation.
+
+```yaml
+- name: Create Scheduled Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    job-name: nightly-cleanup
+    image: myimage:latest
+    cron-schedule: "0 2 * * *"  # Run daily at 2 AM UTC
+```
+
+### Manual Execution Mode
+
+Set `manual-execution: true` to create a job definition without executing it. This is useful when you want to trigger 
+the job manually later through Azure Portal, CLI, or API. The job will **not** be deleted after creation.
+
+```yaml
+- name: Create Manual Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    job-name: on-demand-task
+    image: myimage:latest
+    manual-execution: true
+```
+
+### Delete Only Mode
+
+Set `only-delete-job: true` to delete an existing job without creating or running anything. 
+This is useful for cleanup workflows.
+
+```yaml
+- name: Delete Existing Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    job-name: job-to-delete
+    only-delete-job: true
+```
+
+**Note:** When `only-delete-job` is set, only `subscription-id`, `resource-group`, and `job-name` are required. 
+All other inputs are ignored.
+
+### Dry Run Mode
+
+Set `dry-run: true` to preview the job configuration and test the connection to Azure without making any changes.
+
+```yaml
+- name: Preview Job Configuration
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myimage:latest
+    dry-run: true
+```
+

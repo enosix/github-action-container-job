@@ -85467,25 +85467,39 @@ async function dumpJobLogs(workspaceId, jobName) {
 
 
 /**
+ * Get input safely with fallback for tests
+ * @param {string} name - Input name
+ * @param {object} options - Input options
+ * @returns {string} Input value
+ */
+function getInput(name, options = {}) {
+    let val = '';
+    try {
+        val = core.getInput(name, { required: false });
+    } catch (error) {
+        // ignore error from core
+    }
+
+    if (!val) {
+        // Fallback: read directly from environment (helpful in unit tests)
+        const envName = `INPUT_${name.replaceAll('-', '_').toUpperCase()}`;
+        val = process.env[envName] || '';
+    }
+
+    if (options.required && !val) {
+        throw new Error(`Input required and not supplied: ${name}`);
+    }
+
+    return val;
+}
+
+/**
  * Parse JSON input safely
  * @param {string} inputName - Name of the input to parse
  * @returns {object} Parsed JSON object or empty object
  */
 function parseJsonInput(inputName) {
-    // Try using @actions/core first
-    let input = '';
-    try {
-        input = core.getInput(inputName, { required: false }) || '';
-    } catch (err) {
-        console.log(`core.getInput failed for ${inputName}: ${err.message}`);
-        input = '';
-    }
-
-    // Fallback: read directly from environment (helpful in unit tests)
-    if (!input || input.trim() === '') {
-        const envName = `INPUT_${inputName.replaceAll('-', '_').toUpperCase()}`;
-        input = process.env[envName] || '';
-    }
+    const input = getInput(inputName, { required: false });
 
     if (!input || input.trim() === '') {
         return {};
@@ -85503,22 +85517,24 @@ function parseJsonInput(inputName) {
  * @returns {object} All parsed inputs
  */
 function getInputs() {
-    const subscriptionId = core.getInput('subscription-id', { required: true });
-    const resourceGroup = core.getInput('resource-group', { required: true });
-    const environmentName = core.getInput('environment-name', { required: true });
-    const jobName = core.getInput('job-name', { required: false });
-    const image = core.getInput('image', { required: true });
-    const commandString = core.getInput('command', { required: false });
-    const userManagedIdentity = core.getInput('user-managed-identity', { required: false });
-    const cronSchedule = core.getInput('cron-schedule', { required: false });
-    const cpu = core.getInput('cpu', { required: false }) || '0.5';
-    const memory = core.getInput('memory', { required: false }) || '1Gi';
-    const timeout = Number.parseInt(core.getInput('timeout', { required: false }) || '1800', 10);
-    const registryServer = core.getInput('registry-server', { required: false });
-    const registryUsername = core.getInput('registry-username', { required: false });
-    const registryPassword = core.getInput('registry-password', { required: false });
-    const dryRun = (core.getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
-    const logAnalyticsWorkspaceId = core.getInput('log-analytics-workspace-id', { required: false });
+    const subscriptionId = getInput('subscription-id', { required: true });
+    const resourceGroup = getInput('resource-group', { required: true });
+    const environmentName = getInput('environment-name', { required: true });
+    const jobName = getInput('job-name', { required: false });
+    const image = getInput('image', { required: true });
+    const commandString = getInput('command', { required: false });
+    const userManagedIdentity = getInput('user-managed-identity', { required: false });
+    const cronSchedule = getInput('cron-schedule', { required: false });
+    const cpu = getInput('cpu', { required: false }) || '0.5';
+    const memory = getInput('memory', { required: false }) || '1Gi';
+    const timeout = Number.parseInt(getInput('timeout', { required: false }) || '1800', 10);
+    const registryServer = getInput('registry-server', { required: false });
+    const registryUsername = getInput('registry-username', { required: false });
+    const registryPassword = getInput('registry-password', { required: false });
+    const dryRun = (getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
+    const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
+    const manualExecution = (getInput('manual-execution', { required: false }) || '').toLowerCase() === 'true';
+    const onlyDeleteJob = (getInput('only-delete-job', { required: false }) || '').toLowerCase() === 'true';
 
     // Parse JSON inputs
     const environmentVariables = parseJsonInput('environment-variables');
@@ -85544,6 +85560,8 @@ function getInputs() {
         registryPassword,
         dryRun,
         logAnalyticsWorkspaceId,
+        manualExecution,
+        onlyDeleteJob,
         environmentVariables,
         secrets
     };
@@ -85700,9 +85718,10 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
  * @param {string} environmentName - Container Apps environment name
  * @param {string} jobName - Job name
  * @param {object} config - Job configuration
+ * @param dryRun
  * @returns {Promise<object>} Created job
  */
-async function createJob(client, resourceGroup, environmentName, jobName, config) {
+async function createJob(client, resourceGroup, environmentName, jobName, config, dryRun = false) {
     core.info(`Creating job: ${jobName}`);
 
     // First, get the managed environment to obtain the location
@@ -85718,6 +85737,13 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
 
     // Build the job configuration using the shared function
     const jobConfig = buildJobConfig(client.subscriptionId, resourceGroup, environmentName, location, config);
+
+    if (dryRun) {
+        core.info('Dry-run preview of job payload:');
+        core.info(JSON.stringify(jobConfig, null, 2));
+        core.info('Dry run mode enabled, skipping job creation');
+        return;
+    }
 
     try {
         const result = await client.jobs.beginCreateOrUpdateAndWait(
@@ -85807,10 +85833,15 @@ async function pollJobExecution(client, resourceGroup, jobName, executionName, t
  * @param {object} client - Azure Container Apps API client
  * @param {string} resourceGroup - Resource group name
  * @param {string} jobName - Job name
+ * @param dryRun
  * @returns {Promise<void>}
  */
-async function deleteJob(client, resourceGroup, jobName) {
+async function deleteJob(client, resourceGroup, jobName, dryRun = false) {
     core.info(`Deleting job: ${jobName}`);
+    if (dryRun) {
+        core.info('Dry run enabled, skipping job deletion');
+        return;
+    }
     
     try {
         await client.jobs.beginDeleteAndWait(resourceGroup, jobName);
@@ -85858,7 +85889,9 @@ async function run() {
             dryRun,
             logAnalyticsWorkspaceId,
             environmentVariables,
-            secrets
+            secrets,
+            manualExecution,
+            onlyDeleteJob
         } = inputs;
         
         resourceGroup = inputs.resourceGroup;
@@ -85872,39 +85905,32 @@ async function run() {
         core.info(`Job Name: ${jobName}`);
         core.info(`Image: ${image}`);
         core.info(`Command: ${command ? command.join(' ') : 'default'}`);
-        core.info(`CPU: ${cpu}`);
-        core.info(`Memory: ${memory}`);
         core.info(`Timeout: ${timeout}s`);
-        core.info(`Dry Run: ${dryRun}`);
 
-        if (dryRun) {
-            // Build the same job config that would be used in actual execution
-            const jobConfig = buildJobConfig(subscriptionId, resourceGroup, environmentName, 'eastus', {
-                image,
-                command,
-                userManagedIdentity,
-                environmentVariables,
-                secrets,
-                cpu,
-                memory,
-                registryServer,
-                registryUsername,
-                registryPassword,
-                cronSchedule
-            });
-
-            core.info('Dry-run preview of job payload:');
-            core.info(JSON.stringify(jobConfig, null, 2));
-            core.setOutput('job-name', jobName);
-            core.info('Dry run mode enabled, skipping Azure API calls.');
-            return;
+        let runType = 'One off execution';
+        if (cronSchedule) {
+            runType = `Scheduled execution (cron: ${cronSchedule})`;
+        } else if (manualExecution) {
+            runType = 'Manual execution (no automatic start)';
+        } else if (onlyDeleteJob) {
+            runType = 'Delete a job';
         }
+        if (dryRun) {
+            runType += ' [Dry Run]';
+        }
+
+        core.info(`Run type: ${runType}`);
 
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
         const credential = new defaultAzureCredential_DefaultAzureCredential();
         client = new ContainerAppsAPIClient(credential, subscriptionId);
-        
+
+        if (onlyDeleteJob) {
+            await deleteJob(client, resourceGroup, jobName, dryRun);
+            return;
+        }
+
         // Create job
         await createJob(client, resourceGroup, environmentName, jobName, {
             image,
@@ -85918,16 +85944,21 @@ async function run() {
             registryUsername,
             registryPassword,
             cronSchedule
-        });
+        }, dryRun);
         
         // Set output for job name
         core.setOutput('job-name', jobName);
 
-        if (cronSchedule) {
-            core.info('Cron schedule provided, skipping execution start.');
+        if (cronSchedule || manualExecution) {
+            core.info('Job created successfully.');
             return;
         }
-        
+
+        if (dryRun) {
+            core.info('Dry run mode enabled, skipping job execution');
+            return;
+        }
+
         // Start job execution
         const execution = await startJobExecution(client, resourceGroup, jobName);
         const executionName = execution.name;

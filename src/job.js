@@ -9,9 +9,10 @@ import { buildJobConfig } from './config.js';
  * @param {string} environmentName - Container Apps environment name
  * @param {string} jobName - Job name
  * @param {object} config - Job configuration
+ * @param dryRun
  * @returns {Promise<object>} Created job
  */
-export async function createJob(client, resourceGroup, environmentName, jobName, config) {
+export async function createJob(client, resourceGroup, environmentName, jobName, config, dryRun = false) {
     core.info(`Creating job: ${jobName}`);
 
     // First, get the managed environment to obtain the location
@@ -27,6 +28,13 @@ export async function createJob(client, resourceGroup, environmentName, jobName,
 
     // Build the job configuration using the shared function
     const jobConfig = buildJobConfig(client.subscriptionId, resourceGroup, environmentName, location, config);
+
+    if (dryRun) {
+        core.info('Dry-run preview of job payload:');
+        core.info(JSON.stringify(jobConfig, null, 2));
+        core.info('Dry run mode enabled, skipping job creation');
+        return;
+    }
 
     try {
         const result = await client.jobs.beginCreateOrUpdateAndWait(
@@ -116,10 +124,15 @@ export async function pollJobExecution(client, resourceGroup, jobName, execution
  * @param {object} client - Azure Container Apps API client
  * @param {string} resourceGroup - Resource group name
  * @param {string} jobName - Job name
+ * @param dryRun
  * @returns {Promise<void>}
  */
-export async function deleteJob(client, resourceGroup, jobName) {
+export async function deleteJob(client, resourceGroup, jobName, dryRun = false) {
     core.info(`Deleting job: ${jobName}`);
+    if (dryRun) {
+        core.info('Dry run enabled, skipping job deletion');
+        return;
+    }
     
     try {
         await client.jobs.beginDeleteAndWait(resourceGroup, jobName);
