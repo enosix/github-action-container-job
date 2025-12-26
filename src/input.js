@@ -57,7 +57,7 @@ export function getInputs() {
     const resourceGroup = getInput('resource-group', { required: true });
     const environmentName = getInput('environment-name', { required: true });
     const jobName = getInput('job-name', { required: false });
-    const image = getInput('image', { required: true });
+    const image = getInput('image', { required: false });
     const commandString = getInput('command', { required: false });
     const userManagedIdentity = getInput('user-managed-identity', { required: false });
     const cronSchedule = getInput('cron-schedule', { required: false });
