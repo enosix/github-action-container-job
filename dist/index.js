@@ -85477,6 +85477,7 @@ function getInput(name, options = {}) {
     try {
         val = core.getInput(name, { required: false });
     } catch (error) {
+        core.debug(`core.getInput failed for ${name}: ${error.message}`);
         // ignore error from core
     }
 
@@ -85521,7 +85522,7 @@ function getInputs() {
     const resourceGroup = getInput('resource-group', { required: true });
     const environmentName = getInput('environment-name', { required: true });
     const jobName = getInput('job-name', { required: false });
-    const image = getInput('image', { required: true });
+    const image = getInput('image', { required: false });
     const commandString = getInput('command', { required: false });
     const userManagedIdentity = getInput('user-managed-identity', { required: false });
     const cronSchedule = getInput('cron-schedule', { required: false });
@@ -85859,7 +85860,6 @@ async function deleteJob(client, resourceGroup, jobName, dryRun = false) {
 
 
 
-
 /**
  * Main function
  */
@@ -85907,19 +85907,16 @@ async function run() {
         core.info(`Command: ${command ? command.join(' ') : 'default'}`);
         core.info(`Timeout: ${timeout}s`);
 
-        let runType = 'One off execution';
-        if (cronSchedule) {
+        let runType ='One off execution';
+        if (onlyDeleteJob) {
+            runType = 'Delete a job';
+        } else if (cronSchedule) {
             runType = `Scheduled execution (cron: ${cronSchedule})`;
         } else if (manualExecution) {
             runType = 'Manual execution (no automatic start)';
-        } else if (onlyDeleteJob) {
-            runType = 'Delete a job';
-        }
-        if (dryRun) {
-            runType += ' [Dry Run]';
         }
 
-        core.info(`Run type: ${runType}`);
+        core.info(`Run type: ${runType} ${dryRun ? '[Dry Run]' : ''}`);
 
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
