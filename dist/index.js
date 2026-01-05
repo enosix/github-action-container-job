@@ -85534,8 +85534,12 @@ function getInputs() {
     const registryPassword = getInput('registry-password', { required: false });
     const dryRun = (getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
     const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
-    const manualExecution = (getInput('manual-execution', { required: false }) || '').toLowerCase() === 'true';
-    const onlyDeleteJob = (getInput('only-delete-job', { required: false }) || '').toLowerCase() === 'true';
+    const action = (getInput('action', { required: true, default: 'run' }) || '').toLowerCase();
+    const keepJob = (getInput('keep-job', { required: false }) || '').toLowerCase() === 'true';
+
+    if (!['create', 'run', 'delete'].includes(action)) {
+        throw new Error(`Invalid action: ${action}. Must be one of 'create', 'run', or 'delete'.`);
+    }
 
     // Parse JSON inputs
     const environmentVariables = parseJsonInput('environment-variables');
@@ -85549,22 +85553,25 @@ function getInputs() {
         resourceGroup,
         environmentName,
         jobName,
-        image,
-        command,
-        userManagedIdentity,
-        cronSchedule,
-        cpu,
-        memory,
         timeout,
-        registryServer,
-        registryUsername,
-        registryPassword,
         dryRun,
         logAnalyticsWorkspaceId,
-        manualExecution,
-        onlyDeleteJob,
-        environmentVariables,
-        secrets
+        action,
+        keepJob,
+
+        containerConfig: {
+            image,
+            command,
+            userManagedIdentity,
+            environmentVariables,
+            secrets,
+            cpu,
+            memory,
+            registryServer,
+            registryUsername,
+            registryPassword,
+            cronSchedule
+        }
     };
 }
 
@@ -85580,7 +85587,7 @@ function getInputs() {
  * @param {string} environmentName - Container Apps environment name
  * @param {string} location - Azure location
  * @param {object} config - Job configuration
- * @returns {object} Azure Container App Job configuration
+ * @returns {types.Job} Azure Container App Job configuration
  */
 function buildJobConfig(subscriptionId, resourceGroup, environmentName, location, config) {
     const { 
@@ -85657,46 +85664,47 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
         });
     }
 
-    // Build trigger configuration based on cron schedule
-    let triggerType;
-    let triggerConfig = {};
+    /**
+     * @type {JobConfiguration}
+     */
+    let configuration = {
+        replicaTimeout: 1800,
+        replicaRetryLimit: 0,
+        secrets: secretsArray.length > 0 ? secretsArray : [],
+        registries: registries.length > 0 ? registries : []
+    }
 
     if (cronSchedule) {
-        triggerType = 'Schedule';
-        triggerConfig.scheduleTriggerConfig = {
+        configuration.triggerType = 'Schedule';
+        configuration.scheduleTriggerConfig = {
             cronExpression: cronSchedule,
             parallelism: 1,
             replicaCompletionCount: 1
         };
     } else {
-        triggerType = 'Manual';
-        triggerConfig.manualTriggerConfig = {
+        configuration.triggerType = 'Manual';
+        configuration.manualTriggerConfig = {
             replicaCompletionCount: 1,
             parallelism: 1
         };
     }
     
     // Build job configuration
-    const jobConfig = {
-        configuration: {
-            triggerType: triggerType,
-            replicaTimeout: 1800,
-            replicaRetryLimit: 0,
-            ...triggerConfig,
-            secrets: secretsArray.length > 0 ? secretsArray : [],
-            registries: registries.length > 0 ? registries : []
-        },
+    /**
+     * @type {Job}
+     */
+    const job = {
+        configuration,
         environmentId: `/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
         location: location,
-        workLoadProfileName: 'Consumption',
         template: {
             containers: [container],
-        }
+        },
     };
 
     // Add user-managed identity if provided
     if (userManagedIdentity) {
-        jobConfig.identity = {
+        job.identity = {
             type: 'UserAssigned',
             userAssignedIdentities: {
                 [userManagedIdentity]: {}
@@ -85704,7 +85712,7 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
         };
     }
 
-    return jobConfig;
+    return job;
 }
 
 ;// CONCATENATED MODULE: ./src/job.js
@@ -85867,118 +85875,92 @@ async function run() {
     let client = null;
     let jobName = null;
     let resourceGroup = null;
-    let cronSchedule = null;
+    let keepJob = null;
+    let dryRun = false;
+    let status = null;
+    let exitCode = 0;
     
     try {
         // Get inputs
         const inputs = getInputs();
-        
+
         // Destructure inputs
         const {
             subscriptionId,
             environmentName,
-            image,
-            command,
-            userManagedIdentity,
-            cpu,
-            memory,
             timeout,
-            registryServer,
-            registryUsername,
-            registryPassword,
-            dryRun,
             logAnalyticsWorkspaceId,
-            environmentVariables,
-            secrets,
-            manualExecution,
-            onlyDeleteJob
+            action,
+            containerConfig
         } = inputs;
-        
-        resourceGroup = inputs.resourceGroup;
+
         jobName = inputs.jobName || generateJobName('gh-job');
-        cronSchedule = inputs.cronSchedule;
+        resourceGroup = inputs.resourceGroup;
+        keepJob = inputs.keepJob;
+        dryRun = inputs.dryRun;
         
         core.info('=== Azure Container App Job Configuration ===');
         core.info(`Subscription: ${subscriptionId}`);
         core.info(`Resource Group: ${resourceGroup}`);
         core.info(`Environment: ${environmentName}`);
         core.info(`Job Name: ${jobName}`);
-        core.info(`Image: ${image}`);
-        core.info(`Command: ${command ? command.join(' ') : 'default'}`);
+        core.info(`Image: ${containerConfig.image}`);
+        core.info(`Command: ${containerConfig.command ? containerConfig.command.join(' ') : 'default'}`);
         core.info(`Timeout: ${timeout}s`);
-
-        let runType ='One off execution';
-        if (onlyDeleteJob) {
-            runType = 'Delete a job';
-        } else if (cronSchedule) {
-            runType = `Scheduled execution (cron: ${cronSchedule})`;
-        } else if (manualExecution) {
-            runType = 'Manual execution (no automatic start)';
-        }
-
-        core.info(`Run type: ${runType} ${dryRun ? '[Dry Run]' : ''}`);
+        core.info(`Run type: ${action} ${dryRun ? '[Dry Run]' : ''}`);
 
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
         const credential = new defaultAzureCredential_DefaultAzureCredential();
         client = new ContainerAppsAPIClient(credential, subscriptionId);
 
-        if (onlyDeleteJob) {
+        if (action === 'delete') {
             await deleteJob(client, resourceGroup, jobName, dryRun);
             return;
         }
 
         // Create job
-        await createJob(client, resourceGroup, environmentName, jobName, {
-            image,
-            command,
-            userManagedIdentity,
-            environmentVariables,
-            secrets,
-            cpu,
-            memory,
-            registryServer,
-            registryUsername,
-            registryPassword,
-            cronSchedule
-        }, dryRun);
+        await createJob(client, resourceGroup, environmentName, jobName, containerConfig, dryRun);
         
         // Set output for job name
         core.setOutput('job-name', jobName);
 
-        if (cronSchedule || manualExecution) {
+        if (action === 'create') {
             core.info('Job created successfully.');
             return;
         }
 
-        if (dryRun) {
+        if (action === 'run' && dryRun) {
             core.info('Dry run mode enabled, skipping job execution');
             return;
+
+        } else if (action === 'run') {
+            // Start job execution
+            const execution = await startJobExecution(client, resourceGroup, jobName);
+            const executionName = execution.name;
+
+            // Set output for execution name
+            core.setOutput('execution-name', executionName);
+
+            // Poll for completion
+            const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
+
+            // Check execution status
+            status = finalExecution.properties?.status;
+            exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
+
+            core.info(`=== Job Completed ===`);
+            core.info(`Status: ${status}`);
+            core.info(`Exit Code: ${exitCode}`);
+
+            // Dump logs from Log Analytics if workspace ID is provided
+            await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
         }
 
-        // Start job execution
-        const execution = await startJobExecution(client, resourceGroup, jobName);
-        const executionName = execution.name;
-        
-        // Set output for execution name
-        core.setOutput('execution-name', executionName);
-        
-        // Poll for completion
-        const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
-
-        // Check execution status
-        const status = finalExecution.properties?.status;
-        const exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
-        
-        core.info(`=== Job Completed ===`);
-        core.info(`Status: ${status}`);
-        core.info(`Exit Code: ${exitCode}`);
-        
-        // Dump logs from Log Analytics if workspace ID is provided
-        await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
-        
         // Delete job
-        await deleteJob(client, resourceGroup, jobName);
+        if (!keepJob) {
+            await deleteJob(client, resourceGroup, jobName, dryRun);
+        }
         
         // Fail if job failed
         if (status === 'Failed' || exitCode !== 0) {
@@ -85990,9 +85972,9 @@ async function run() {
         core.error(error.stack);
         
         // Attempt cleanup
-        if (client && resourceGroup && jobName && !cronSchedule) {
+        if (client && resourceGroup && jobName && !keepJob) {
             try {
-                await deleteJob(client, resourceGroup, jobName);
+                await deleteJob(client, resourceGroup, jobName, dryRun);
             } catch (cleanupError) {
                 core.warning(`Failed to cleanup job: ${cleanupError.message}`);
             }

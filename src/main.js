@@ -12,118 +12,92 @@ async function run() {
     let client = null;
     let jobName = null;
     let resourceGroup = null;
-    let cronSchedule = null;
+    let keepJob = null;
+    let dryRun = false;
+    let status = null;
+    let exitCode = 0;
     
     try {
         // Get inputs
         const inputs = getInputs();
-        
+
         // Destructure inputs
         const {
             subscriptionId,
             environmentName,
-            image,
-            command,
-            userManagedIdentity,
-            cpu,
-            memory,
             timeout,
-            registryServer,
-            registryUsername,
-            registryPassword,
-            dryRun,
             logAnalyticsWorkspaceId,
-            environmentVariables,
-            secrets,
-            manualExecution,
-            onlyDeleteJob
+            action,
+            containerConfig
         } = inputs;
-        
-        resourceGroup = inputs.resourceGroup;
+
         jobName = inputs.jobName || generateJobName('gh-job');
-        cronSchedule = inputs.cronSchedule;
+        resourceGroup = inputs.resourceGroup;
+        keepJob = inputs.keepJob;
+        dryRun = inputs.dryRun;
         
         core.info('=== Azure Container App Job Configuration ===');
         core.info(`Subscription: ${subscriptionId}`);
         core.info(`Resource Group: ${resourceGroup}`);
         core.info(`Environment: ${environmentName}`);
         core.info(`Job Name: ${jobName}`);
-        core.info(`Image: ${image}`);
-        core.info(`Command: ${command ? command.join(' ') : 'default'}`);
+        core.info(`Image: ${containerConfig.image}`);
+        core.info(`Command: ${containerConfig.command ? containerConfig.command.join(' ') : 'default'}`);
         core.info(`Timeout: ${timeout}s`);
-
-        let runType ='One off execution';
-        if (onlyDeleteJob) {
-            runType = 'Delete a job';
-        } else if (cronSchedule) {
-            runType = `Scheduled execution (cron: ${cronSchedule})`;
-        } else if (manualExecution) {
-            runType = 'Manual execution (no automatic start)';
-        }
-
-        core.info(`Run type: ${runType} ${dryRun ? '[Dry Run]' : ''}`);
+        core.info(`Run type: ${action} ${dryRun ? '[Dry Run]' : ''}`);
 
         // Authenticate with Azure
         core.info('Authenticating with Azure...');
         const credential = new DefaultAzureCredential();
         client = new ContainerAppsAPIClient(credential, subscriptionId);
 
-        if (onlyDeleteJob) {
+        if (action === 'delete') {
             await deleteJob(client, resourceGroup, jobName, dryRun);
             return;
         }
 
         // Create job
-        await createJob(client, resourceGroup, environmentName, jobName, {
-            image,
-            command,
-            userManagedIdentity,
-            environmentVariables,
-            secrets,
-            cpu,
-            memory,
-            registryServer,
-            registryUsername,
-            registryPassword,
-            cronSchedule
-        }, dryRun);
+        await createJob(client, resourceGroup, environmentName, jobName, containerConfig, dryRun);
         
         // Set output for job name
         core.setOutput('job-name', jobName);
 
-        if (cronSchedule || manualExecution) {
+        if (action === 'create') {
             core.info('Job created successfully.');
             return;
         }
 
-        if (dryRun) {
+        if (action === 'run' && dryRun) {
             core.info('Dry run mode enabled, skipping job execution');
             return;
+
+        } else if (action === 'run') {
+            // Start job execution
+            const execution = await startJobExecution(client, resourceGroup, jobName);
+            const executionName = execution.name;
+
+            // Set output for execution name
+            core.setOutput('execution-name', executionName);
+
+            // Poll for completion
+            const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
+
+            // Check execution status
+            status = finalExecution.properties?.status;
+            exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
+
+            core.info(`=== Job Completed ===`);
+            core.info(`Status: ${status}`);
+            core.info(`Exit Code: ${exitCode}`);
+
+            // Dump logs from Log Analytics if workspace ID is provided
+            await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
         }
 
-        // Start job execution
-        const execution = await startJobExecution(client, resourceGroup, jobName);
-        const executionName = execution.name;
-        
-        // Set output for execution name
-        core.setOutput('execution-name', executionName);
-        
-        // Poll for completion
-        const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
-
-        // Check execution status
-        const status = finalExecution.properties?.status;
-        const exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
-        
-        core.info(`=== Job Completed ===`);
-        core.info(`Status: ${status}`);
-        core.info(`Exit Code: ${exitCode}`);
-        
-        // Dump logs from Log Analytics if workspace ID is provided
-        await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
-        
         // Delete job
-        await deleteJob(client, resourceGroup, jobName);
+        if (!keepJob) {
+            await deleteJob(client, resourceGroup, jobName, dryRun);
+        }
         
         // Fail if job failed
         if (status === 'Failed' || exitCode !== 0) {
@@ -135,9 +109,9 @@ async function run() {
         core.error(error.stack);
         
         // Attempt cleanup
-        if (client && resourceGroup && jobName && !cronSchedule) {
+        if (client && resourceGroup && jobName && !keepJob) {
             try {
-                await deleteJob(client, resourceGroup, jobName);
+                await deleteJob(client, resourceGroup, jobName, dryRun);
             } catch (cleanupError) {
                 core.warning(`Failed to cleanup job: ${cleanupError.message}`);
             }

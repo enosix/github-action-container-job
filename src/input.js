@@ -69,8 +69,12 @@ export function getInputs() {
     const registryPassword = getInput('registry-password', { required: false });
     const dryRun = (getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
     const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
-    const manualExecution = (getInput('manual-execution', { required: false }) || '').toLowerCase() === 'true';
-    const onlyDeleteJob = (getInput('only-delete-job', { required: false }) || '').toLowerCase() === 'true';
+    const action = (getInput('action', { required: true, default: 'run' }) || '').toLowerCase();
+    const keepJob = (getInput('keep-job', { required: false }) || '').toLowerCase() === 'true';
+
+    if (!['create', 'run', 'delete'].includes(action)) {
+        throw new Error(`Invalid action: ${action}. Must be one of 'create', 'run', or 'delete'.`);
+    }
 
     // Parse JSON inputs
     const environmentVariables = parseJsonInput('environment-variables');
@@ -84,21 +88,24 @@ export function getInputs() {
         resourceGroup,
         environmentName,
         jobName,
-        image,
-        command,
-        userManagedIdentity,
-        cronSchedule,
-        cpu,
-        memory,
         timeout,
-        registryServer,
-        registryUsername,
-        registryPassword,
         dryRun,
         logAnalyticsWorkspaceId,
-        manualExecution,
-        onlyDeleteJob,
-        environmentVariables,
-        secrets
+        action,
+        keepJob,
+
+        containerConfig: {
+            image,
+            command,
+            userManagedIdentity,
+            environmentVariables,
+            secrets,
+            cpu,
+            memory,
+            registryServer,
+            registryUsername,
+            registryPassword,
+            cronSchedule
+        }
     };
 }
