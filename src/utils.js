@@ -68,38 +68,48 @@ export async function dumpJobLogs(workspaceId, jobName) {
         const credential = new DefaultAzureCredential();
         const logsClient = new LogsQueryClient(credential);
         
-        // Query logs from the last hour to ensure we capture all logs from the job run
         const query = `
             ContainerAppConsoleLogs_CL
             | where ContainerJobName_s == "${jobName}"
             | order by TimeGenerated asc
             | project TimeGenerated, Log_s
         `;
-        
-        const result = await logsClient.queryWorkspace(
-            workspaceId,
-            query,
-            { duration: 'PT1H' }
-        );
-        
-        if (result.status === 'Success' && result.tables && result.tables.length > 0) {
-            const table = result.tables[0];
-            const logCount = table.rows.length;
-            
-            if (logCount === 0) {
-                core.info('No logs found for this job. Logs may take a few minutes to appear in Log Analytics.');
-                return;
+
+        let attempt = 0;
+        let result;
+        let logCount = 0;
+        let table = null;
+
+        while (attempt < 6) {
+            result = await logsClient.queryWorkspace(
+                workspaceId,
+                query,
+                { duration: 'PT1H' }
+            );
+
+            if (result.status === 'Success' && result.tables && result.tables.length > 0) {
+                table = result.tables[0];
+                logCount = table.rows.length;
+                if (logCount > 0) {
+                    break;
+                }
             }
-            
+
+            attempt++;
+            if (attempt < 3) {
+                core.info(`No logs found (attempt ${attempt}). Waiting 5 seconds before retrying...`);
+                await sleep(5000);
+            }
+        }
+
+        if (result.status === 'Success' && table && logCount > 0) {
             core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
-            
             for (const row of table.rows) {
                 const timestamp = new Date(row[0]).toISOString()
                     .replace('T', ' ').split('.')[0];
                 const logMessage = row[1];
                 core.info(`[${timestamp}] ${logMessage}`);
             }
-            
             core.info('========== End of Logs ==========\n');
         } else if (result.status === 'PartialError') {
             core.warning('Partial error retrieving logs:');
@@ -107,9 +117,8 @@ export async function dumpJobLogs(workspaceId, jobName) {
                 core.warning(error.message);
             }
         } else {
-            core.warning('No logs returned from query');
+            core.info('No logs found for this job after 30 seconds. Logs may take a while to appear in Log Analytics.');
         }
-        
     } catch (error) {
         core.warning(`Failed to retrieve logs from Log Analytics: ${error.message}`);
         core.info('Note: Logs can take several minutes to appear in Log Analytics after job execution');

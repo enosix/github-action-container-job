@@ -83,8 +83,12 @@ async function run() {
             const finalExecution = await pollJobExecution(client, resourceGroup, jobName, executionName, timeout);
 
             // Check execution status
-            status = finalExecution.properties?.status;
+            status = finalExecution.status;
             exitCode = finalExecution.properties?.template?.containers?.[0]?.exitCode || 0;
+
+            if (exitCode === 0 && status === 'Failed') {
+                exitCode = 1;
+            }
 
             core.info(`=== Job Completed ===`);
             core.info(`Status: ${status}`);
