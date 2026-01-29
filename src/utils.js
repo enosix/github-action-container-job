@@ -3,6 +3,10 @@
  */
 
 import * as core from '@actions/core';
+import * as path from 'node:path';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { DefaultArtifactClient } from '@actions/artifact';
 import { DefaultAzureCredential } from '@azure/identity';
 import { LogsQueryClient } from '@azure/monitor-query-logs';
 
@@ -77,7 +81,6 @@ export async function dumpJobLogs(workspaceId, jobName) {
 
         let attempt = 0;
         let result;
-        let logCount = 0;
         let table = null;
 
         while (attempt < 6) {
@@ -89,8 +92,7 @@ export async function dumpJobLogs(workspaceId, jobName) {
 
             if (result.status === 'Success' && result.tables && result.tables.length > 0) {
                 table = result.tables[0];
-                logCount = table.rows.length;
-                if (logCount > 0) {
+                if ( table.rows.length > 0) {
                     break;
                 }
             }
@@ -102,25 +104,62 @@ export async function dumpJobLogs(workspaceId, jobName) {
             }
         }
 
-        if (result.status === 'Success' && table && logCount > 0) {
-            core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
-            for (const row of table.rows) {
-                const timestamp = new Date(row[0]).toISOString()
-                    .replace('T', ' ').split('.')[0];
-                const logMessage = row[1];
-                core.info(`[${timestamp}] ${logMessage}`);
-            }
-            core.info('========== End of Logs ==========\n');
-        } else if (result.status === 'PartialError') {
-            core.warning('Partial error retrieving logs:');
-            for (const error of result.partialError) {
-                core.warning(error.message);
-            }
-        } else {
-            core.info('No logs found for this job after 30 seconds. Logs may take a while to appear in Log Analytics.');
-        }
+        writeLogs(result, table);
     } catch (error) {
         core.warning(`Failed to retrieve logs from Log Analytics: ${error.message}`);
         core.info('Note: Logs can take several minutes to appear in Log Analytics after job execution');
+    }
+}
+
+function writeLogs(result, table) {
+    if (result.status === 'PartialError') {
+        core.warning('Partial error retrieving logs:');
+        for (const error of result.partialError) {
+            core.warning(error.message);
+        }
+    }
+
+    if (table && table.rows.length > 0) {
+        core.info(`\n========== Container Job Logs (${table.rows.length} entries) ==========`);
+        for (const row of table.rows) {
+            const timestamp = new Date(row[0]).toISOString()
+                .replace('T', ' ').split('.')[0];
+            const logMessage = row[1];
+            core.info(`[${timestamp}] ${logMessage}`);
+        }
+        core.info('========== End of Logs ==========\n');
+    } else {
+        core.info('No logs found for this job after 30 seconds. Logs may take a while to appear in Log Analytics.');
+    }
+}
+
+/**
+ * Upload a job definition as an artifact
+ * @param {types.Job} jobConfig - Job configuration object
+ * @returns {Promise<void>}
+ */
+export async function uploadJobDefinition(jobConfig) {
+    const tempDir = mkdtempSync(path.join(tmpdir(), 'job-def-'));
+    try {
+        const client = new DefaultArtifactClient();
+        const filePath = path.join(tempDir, 'job-definition.json');
+        writeFileSync(filePath, JSON.stringify(jobConfig, null, 2), { encoding: 'utf8' });
+
+        const {id, size} = await client.uploadArtifact(
+            'container-app-job-definition.json',
+            [filePath],
+            tempDir,
+            {}
+        );
+        core.info(`Uploaded job definition artifact (ID: ${id}, Size: ${size} bytes)`);
+
+    } catch (err) {
+        core.setFailed(`Artifact upload failed: ${err?.message || String(err)}`);
+    } finally {
+        try {
+            rmSync(tempDir, { recursive: true, force: true });
+        } catch (error_) {
+            core.warning(`Failed to cleanup temp files: ${error_.message}`);
+        }
     }
 }

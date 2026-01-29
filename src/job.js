@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { sleep, normalizeAzureLocation } from './utils.js';
+import {sleep, normalizeAzureLocation, uploadJobDefinition} from './utils.js';
 import { buildJobConfig } from './config.js';
 
 /**
@@ -29,10 +29,11 @@ export async function createJob(client, resourceGroup, environmentName, jobName,
     // Build the job configuration using the shared function
     const jobConfig = buildJobConfig(client.subscriptionId, resourceGroup, environmentName, location, config);
 
-    core.info('Preview of job payload:');
-    core.info(JSON.stringify(jobConfig, null, 2));
+    await uploadJobDefinition(jobConfig);
 
     if (dryRun) {
+        core.info('Job configuration:');
+        core.info(JSON.stringify(jobConfig, null, 2));
         core.info('Dry run mode enabled, skipping job creation');
         return;
     }
