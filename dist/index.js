@@ -85756,9 +85756,10 @@ async function createJob(client, resourceGroup, environmentName, jobName, config
     // Build the job configuration using the shared function
     const jobConfig = buildJobConfig(client.subscriptionId, resourceGroup, environmentName, location, config);
 
+    core.info('Preview of job payload:');
+    core.info(JSON.stringify(jobConfig, null, 2));
+
     if (dryRun) {
-        core.info('Dry-run preview of job payload:');
-        core.info(JSON.stringify(jobConfig, null, 2));
         core.info('Dry run mode enabled, skipping job creation');
         return;
     }
