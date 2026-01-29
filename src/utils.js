@@ -145,8 +145,14 @@ export async function uploadJobDefinition(jobConfig) {
         const filePath = path.join(tempDir, 'job-definition.json');
         writeFileSync(filePath, JSON.stringify(jobConfig, null, 2), { encoding: 'utf8' });
 
+        // get current time for unique artifact name
+        const timestamp = new Date().toISOString()
+            .replaceAll(':', '')
+            .replaceAll('-', '')
+            .split('.')[0];
+
         const {id, size} = await client.uploadArtifact(
-            'container-app-job-definition.json',
+            `job-definition-${timestamp}`,
             [filePath],
             tempDir,
             {}
