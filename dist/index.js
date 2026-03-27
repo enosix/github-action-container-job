@@ -85532,6 +85532,7 @@ function getInputs() {
     const registryServer = getInput('registry-server', { required: false });
     const registryUsername = getInput('registry-username', { required: false });
     const registryPassword = getInput('registry-password', { required: false });
+    const registryIdentity = getInput('registry-identity', { required: false });
     const dryRun = (getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
     const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
     const manualExecution = (getInput('manual-execution', { required: false }) || '').toLowerCase() === 'true';
@@ -85559,6 +85560,7 @@ function getInputs() {
         registryServer,
         registryUsername,
         registryPassword,
+        registryIdentity,
         dryRun,
         logAnalyticsWorkspaceId,
         manualExecution,
@@ -85572,6 +85574,7 @@ function getInputs() {
 /**
  * Azure Container App Job configuration builder
  */
+
 
 /**
  * Build Azure Container App Job configuration object
@@ -85593,7 +85596,8 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
         memory, 
         registryServer, 
         registryUsername, 
-        registryPassword, 
+        registryPassword,
+        registryIdentity,
         cronSchedule 
     } = config;
     
@@ -85643,7 +85647,17 @@ function buildJobConfig(subscriptionId, resourceGroup, environmentName, location
     
     // Build registries configuration
     const registries = [];
-    if (registryServer && registryUsername && registryPassword) {
+    if (registryServer && registryIdentity) {
+        // Managed identity authentication (Entra IAM / ACR with managed identity)
+        if (registryUsername || registryPassword) {
+            core.warning('Both registry-identity and registry-username/registry-password were provided. Using registry-identity (managed identity) and ignoring username/password.');
+        }
+        registries.push({
+            server: registryServer,
+            identity: registryIdentity
+        });
+    } else if (registryServer && registryUsername && registryPassword) {
+        // Username/password authentication
         registries.push({
             server: registryServer,
             username: registryUsername,
@@ -85886,6 +85900,7 @@ async function run() {
             registryServer,
             registryUsername,
             registryPassword,
+            registryIdentity,
             dryRun,
             logAnalyticsWorkspaceId,
             environmentVariables,
@@ -85940,6 +85955,7 @@ async function run() {
             registryServer,
             registryUsername,
             registryPassword,
+            registryIdentity,
             cronSchedule
         }, dryRun);
         

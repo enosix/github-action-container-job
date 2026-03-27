@@ -31,6 +31,7 @@ async function run() {
             registryServer,
             registryUsername,
             registryPassword,
+            registryIdentity,
             dryRun,
             logAnalyticsWorkspaceId,
             environmentVariables,
@@ -85,6 +86,7 @@ async function run() {
             registryServer,
             registryUsername,
             registryPassword,
+            registryIdentity,
             cronSchedule
         }, dryRun);
         
