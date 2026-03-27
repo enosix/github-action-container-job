@@ -50,13 +50,16 @@ inputs:
     required: false
     default: '1800'
   registry-server:
-    description: 'Container registry server (e.g., ghcr.io)'
+    description: 'Container registry server (e.g., ghcr.io, myregistry.azurecr.io)'
     required: false
   registry-username:
-    description: 'Container registry username'
+    description: 'Container registry username (for username/password authentication)'
     required: false
   registry-password:
-    description: 'Container registry password'
+    description: 'Container registry password (for username/password authentication)'
+    required: false
+  registry-identity:
+    description: 'Managed identity resource ID (or "system") to use for ACR authentication instead of username/password'
     required: false
   dry-run:
     description: 'Preview payload and skip Azure calls'

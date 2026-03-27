@@ -1,6 +1,7 @@
 /**
  * Azure Container App Job configuration builder
  */
+import * as core from '@actions/core';
 
 /**
  * Build Azure Container App Job configuration object
@@ -22,7 +23,8 @@ export function buildJobConfig(subscriptionId, resourceGroup, environmentName, l
         memory, 
         registryServer, 
         registryUsername, 
-        registryPassword, 
+        registryPassword,
+        registryIdentity,
         cronSchedule 
     } = config;
     
@@ -72,7 +74,17 @@ export function buildJobConfig(subscriptionId, resourceGroup, environmentName, l
     
     // Build registries configuration
     const registries = [];
-    if (registryServer && registryUsername && registryPassword) {
+    if (registryServer && registryIdentity) {
+        // Managed identity authentication (Entra IAM / ACR with managed identity)
+        if (registryUsername || registryPassword) {
+            core.warning('Both registry-identity and registry-username/registry-password were provided. Using registry-identity (managed identity) and ignoring username/password.');
+        }
+        registries.push({
+            server: registryServer,
+            identity: registryIdentity
+        });
+    } else if (registryServer && registryUsername && registryPassword) {
+        // Username/password authentication
         registries.push({
             server: registryServer,
             username: registryUsername,

@@ -67,6 +67,7 @@ export function getInputs() {
     const registryServer = getInput('registry-server', { required: false });
     const registryUsername = getInput('registry-username', { required: false });
     const registryPassword = getInput('registry-password', { required: false });
+    const registryIdentity = getInput('registry-identity', { required: false });
     const dryRun = (getInput('dry-run', { required: false }) || '').toLowerCase() === 'true';
     const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
     const manualExecution = (getInput('manual-execution', { required: false }) || '').toLowerCase() === 'true';
@@ -94,6 +95,7 @@ export function getInputs() {
         registryServer,
         registryUsername,
         registryPassword,
+        registryIdentity,
         dryRun,
         logAnalyticsWorkspaceId,
         manualExecution,
