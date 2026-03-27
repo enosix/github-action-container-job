@@ -3,6 +3,10 @@
  */
 
 import * as core from '@actions/core';
+import * as path from 'node:path';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { DefaultArtifactClient } from '@actions/artifact';
 import { DefaultAzureCredential } from '@azure/identity';
 import { LogsQueryClient } from '@azure/monitor-query-logs';
 
@@ -68,50 +72,100 @@ export async function dumpJobLogs(workspaceId, jobName) {
         const credential = new DefaultAzureCredential();
         const logsClient = new LogsQueryClient(credential);
         
-        // Query logs from the last hour to ensure we capture all logs from the job run
         const query = `
             ContainerAppConsoleLogs_CL
             | where ContainerJobName_s == "${jobName}"
             | order by TimeGenerated asc
             | project TimeGenerated, Log_s
         `;
-        
-        const result = await logsClient.queryWorkspace(
-            workspaceId,
-            query,
-            { duration: 'PT1H' }
-        );
-        
-        if (result.status === 'Success' && result.tables && result.tables.length > 0) {
-            const table = result.tables[0];
-            const logCount = table.rows.length;
-            
-            if (logCount === 0) {
-                core.info('No logs found for this job. Logs may take a few minutes to appear in Log Analytics.');
-                return;
+
+        let attempt = 0;
+        let result;
+        let table = null;
+
+        while (attempt < 6) {
+            result = await logsClient.queryWorkspace(
+                workspaceId,
+                query,
+                { duration: 'PT1H' }
+            );
+
+            if (result.status === 'Success' && result.tables && result.tables.length > 0) {
+                table = result.tables[0];
+                if ( table.rows.length > 0) {
+                    break;
+                }
             }
-            
-            core.info(`\n========== Container Job Logs (${logCount} entries) ==========`);
-            
-            for (const row of table.rows) {
-                const timestamp = new Date(row[0]).toISOString()
-                    .replace('T', ' ').split('.')[0];
-                const logMessage = row[1];
-                core.info(`[${timestamp}] ${logMessage}`);
+
+            attempt++;
+            if (attempt < 3) {
+                core.info(`No logs found (attempt ${attempt}). Waiting 5 seconds before retrying...`);
+                await sleep(5000);
             }
-            
-            core.info('========== End of Logs ==========\n');
-        } else if (result.status === 'PartialError') {
-            core.warning('Partial error retrieving logs:');
-            for (const error of result.partialError) {
-                core.warning(error.message);
-            }
-        } else {
-            core.warning('No logs returned from query');
         }
-        
+
+        writeLogs(result, table);
     } catch (error) {
         core.warning(`Failed to retrieve logs from Log Analytics: ${error.message}`);
         core.info('Note: Logs can take several minutes to appear in Log Analytics after job execution');
+    }
+}
+
+function writeLogs(result, table) {
+    if (result.status === 'PartialError') {
+        core.warning('Partial error retrieving logs:');
+        for (const error of result.partialError) {
+            core.warning(error.message);
+        }
+    }
+
+    if (table && table.rows.length > 0) {
+        core.info(`\n========== Container Job Logs (${table.rows.length} entries) ==========`);
+        for (const row of table.rows) {
+            const timestamp = new Date(row[0]).toISOString()
+                .replace('T', ' ').split('.')[0];
+            const logMessage = row[1];
+            core.info(`[${timestamp}] ${logMessage}`);
+        }
+        core.info('========== End of Logs ==========\n');
+    } else {
+        core.info('No logs found for this job after 30 seconds. Logs may take a while to appear in Log Analytics.');
+    }
+}
+
+/**
+ * Upload a job definition as an artifact
+ * @param {types.Job} jobConfig - Job configuration object
+ * @returns {Promise<void>}
+ */
+export async function uploadJobDefinition(jobConfig) {
+    const tempDir = mkdtempSync(path.join(tmpdir(), 'job-def-'));
+    try {
+        const client = new DefaultArtifactClient();
+        const filePath = path.join(tempDir, 'job-definition.json');
+        writeFileSync(filePath, JSON.stringify(jobConfig, null, 2), { encoding: 'utf8' });
+
+        // get current time for unique artifact name
+        const timestamp = new Date().toISOString()
+            .replaceAll(':', '')
+            .replaceAll('-', '')
+            .split('.')[0];
+
+        const {id, size} = await client.uploadArtifact(
+            `job-definition-${timestamp}`,
+            [filePath],
+            tempDir,
+            {}
+        );
+        core.info(`Uploaded job definition artifact (ID: ${id}, Size: ${size} bytes)`);
+
+    } catch (err) {
+        core.setFailed(`Artifact upload failed: ${err?.message || String(err)}`);
+    } finally {
+        try {
+            rmSync(tempDir, { recursive: true, force: true });
+        } catch (error_) {
+            core.warning(`Failed to cleanup temp files: ${error_.message}`);
+        }
     }
 }

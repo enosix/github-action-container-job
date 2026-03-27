@@ -10,7 +10,7 @@ import * as core from '@actions/core';
  * @param {string} environmentName - Container Apps environment name
  * @param {string} location - Azure location
  * @param {object} config - Job configuration
- * @returns {object} Azure Container App Job configuration
+ * @returns {types.Job} Azure Container App Job configuration
  */
 export function buildJobConfig(subscriptionId, resourceGroup, environmentName, location, config) {
     const { 
@@ -98,46 +98,47 @@ export function buildJobConfig(subscriptionId, resourceGroup, environmentName, l
         });
     }
 
-    // Build trigger configuration based on cron schedule
-    let triggerType;
-    let triggerConfig = {};
+    /**
+     * @type {JobConfiguration}
+     */
+    let configuration = {
+        replicaTimeout: 1800,
+        replicaRetryLimit: 0,
+        secrets: secretsArray.length > 0 ? secretsArray : [],
+        registries: registries.length > 0 ? registries : []
+    }
 
     if (cronSchedule) {
-        triggerType = 'Schedule';
-        triggerConfig.scheduleTriggerConfig = {
+        configuration.triggerType = 'Schedule';
+        configuration.scheduleTriggerConfig = {
             cronExpression: cronSchedule,
             parallelism: 1,
             replicaCompletionCount: 1
         };
     } else {
-        triggerType = 'Manual';
-        triggerConfig.manualTriggerConfig = {
+        configuration.triggerType = 'Manual';
+        configuration.manualTriggerConfig = {
             replicaCompletionCount: 1,
             parallelism: 1
         };
     }
     
     // Build job configuration
-    const jobConfig = {
-        configuration: {
-            triggerType: triggerType,
-            replicaTimeout: 1800,
-            replicaRetryLimit: 0,
-            ...triggerConfig,
-            secrets: secretsArray.length > 0 ? secretsArray : [],
-            registries: registries.length > 0 ? registries : []
-        },
+    /**
+     * @type {Job}
+     */
+    const job = {
+        configuration,
         environmentId: `/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.App/managedEnvironments/${environmentName}`,
         location: location,
-        workLoadProfileName: 'Consumption',
         template: {
             containers: [container],
-        }
+        },
     };
 
     // Add user-managed identity if provided
     if (userManagedIdentity) {
-        jobConfig.identity = {
+        job.identity = {
             type: 'UserAssigned',
             userAssignedIdentities: {
                 [userManagedIdentity]: {}
@@ -145,5 +146,5 @@ export function buildJobConfig(subscriptionId, resourceGroup, environmentName, l
         };
     }
 
-    return jobConfig;
+    return job;
 }

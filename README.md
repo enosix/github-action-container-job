@@ -66,8 +66,8 @@ The action respects the container's exit code - if the container exits with a no
 | `environment-variables`     | JSON object of environment variables                            | `{}`                          |
 | `secrets`                   | JSON object of secret URIs                                      | `{}`                          |
 | `cron-schedule`             | Cron schedule for recurring jobs (optional)                     | None                          |
-| `manual-execution`          | Create a manually triggered job without running it immediately  | `false`                       |
-| `only-delete-job`           | Only delete the job without creating or running it              | `false`                       |
+| `action`                    | Action to perform: create, run, or delete the job               | `run`                         |
+| `keep-job`                  | Whether to keep the job after execution (true/false)            | `false`                       |
 | `dry-run`                   | Preview payload and skip Azure calls                            | `false`                       |
 | `cpu`                       | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
 | `memory`                    | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
@@ -223,8 +223,7 @@ the job.
 
 ### Scheduled/Recurring Jobs
 
-Set `cron-schedule` to create a recurring job that runs on a schedule. The job will be created but not executed 
-immediately, and it will **not** be deleted after creation.
+Set `cron-schedule` to create a recurring job that runs on a schedule. You should set `action: create` if you only want to register the schedule without triggering an immediate execution.
 
 ```yaml
 - name: Create Scheduled Job
@@ -236,12 +235,12 @@ immediately, and it will **not** be deleted after creation.
     job-name: nightly-cleanup
     image: myimage:latest
     cron-schedule: "0 2 * * *"  # Run daily at 2 AM UTC
+    action: create
 ```
 
-### Manual Execution Mode
+### Create Only (Manual Trigger Setup)
 
-Set `manual-execution: true` to create a job definition without executing it. This is useful when you want to trigger 
-the job manually later through Azure Portal, CLI, or API. The job will **not** be deleted after creation.
+Set `action: create` to define a job without running it immediately. This is useful when you want to trigger the job manually later through Azure Portal, CLI, or API.
 
 ```yaml
 - name: Create Manual Job
@@ -252,13 +251,12 @@ the job manually later through Azure Portal, CLI, or API. The job will **not** b
     environment-name: my-container-env
     job-name: on-demand-task
     image: myimage:latest
-    manual-execution: true
+    action: create
 ```
 
-### Delete Only Mode
+### Delete Job
 
-Set `only-delete-job: true` to delete an existing job without creating or running anything. 
-This is useful for cleanup workflows.
+Set `action: delete` to delete an existing job.
 
 ```yaml
 - name: Delete Existing Job
@@ -267,11 +265,25 @@ This is useful for cleanup workflows.
     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
     resource-group: my-resource-group
     job-name: job-to-delete
-    only-delete-job: true
+    action: delete
 ```
 
-**Note:** When `only-delete-job` is set, only `subscription-id`, `resource-group`, and `job-name` are required. 
-All other inputs are ignored.
+**Note:** When `action` is `delete`, only `subscription-id`, `resource-group`, and `job-name` are required.
+
+### Keep Job After Execution
+
+By default, the action deletes the job definition after a successful run to keep the environment clean. To persist the job definition (e.g., for debugging or manual re-runs), set `keep-job: true`.
+
+```yaml
+- name: Run and Keep Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myimage:latest
+    keep-job: true
+```
 
 ### Dry Run Mode
 
