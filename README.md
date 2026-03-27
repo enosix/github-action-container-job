@@ -72,9 +72,10 @@ The action respects the container's exit code - if the container exits with a no
 | `cpu`                       | CPU cores to allocate (e.g., "0.5", "1.0")                      | `0.5`                         |
 | `memory`                    | Memory to allocate (e.g., "1Gi", "2Gi")                         | `1Gi`                         |
 | `timeout`                   | Job execution timeout in seconds                                | `1800` (30 minutes)           |
-| `registry-server`           | Container registry server (e.g., ghcr.io)                       | None                          |
-| `registry-username`         | Container registry username                                     | None                          |
-| `registry-password`         | Container registry password                                     | None                          |
+| `registry-server`           | Container registry server (e.g., ghcr.io, myregistry.azurecr.io)   | None                          |
+| `registry-username`         | Container registry username (for username/password auth)            | None                          |
+| `registry-password`         | Container registry password (for username/password auth)            | None                          |
+| `registry-identity`         | Managed identity resource ID (or `"system"`) for ACR Entra auth     | None                          |
 | `log-analytics-workspace-id`| Log Analytics Workspace ID for retrieving container logs        | None                          |
 
 ## Outputs
@@ -118,6 +119,43 @@ This action uses the [DefaultAzureCredential](https://learn.microsoft.com/en-us/
     registry-username: ${{ github.actor }}
     registry-password: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+### Azure Container Registry (ACR) with Entra IAM / Managed Identity
+
+When the Container Apps environment's managed identity already has the `acrpull` role on the ACR, you can 
+authenticate without a username or password by specifying the managed identity resource ID (or `"system"` for the 
+system-assigned identity).
+
+**User-assigned managed identity:**
+
+```yaml
+- name: Run Container Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myregistry.azurecr.io/myorg/myimage:latest
+    registry-server: myregistry.azurecr.io
+    registry-identity: /subscriptions/.../resourcegroups/.../providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-identity
+    user-managed-identity: /subscriptions/.../resourcegroups/.../providers/Microsoft.ManagedIdentity/userAssignedIdentities/my-identity
+```
+
+**System-assigned managed identity:**
+
+```yaml
+- name: Run Container Job
+  uses: enosix/github-action-container-job@v1
+  with:
+    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+    resource-group: my-resource-group
+    environment-name: my-container-env
+    image: myregistry.azurecr.io/myorg/myimage:latest
+    registry-server: myregistry.azurecr.io
+    registry-identity: system
+```
+
+**Note:** `registry-identity` and `registry-username`/`registry-password` are mutually exclusive. When `registry-identity` is provided it always takes precedence and the username/password inputs are ignored (a warning is emitted). Choose one authentication method per registry.
 
 ## Environment Variables and Secrets
 
