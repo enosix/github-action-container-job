@@ -39,11 +39,17 @@ export async function createJob(client, resourceGroup, environmentName, jobName,
         return;
     }
 
+    let lastRawResponse = null;
     try {
         const result = await client.jobs.beginCreateOrUpdateAndWait(
             resourceGroup,
             jobName,
-            jobConfig
+            jobConfig,
+            {
+                onResponse: (rawResponse) => {
+                    lastRawResponse = rawResponse;
+                }
+            }
         );
         
         core.info(`Job created successfully: ${jobName}`);
@@ -53,6 +59,12 @@ export async function createJob(client, resourceGroup, environmentName, jobName,
         core.error('Azure rejected job create with error:');
         core.error(error?.message || String(error));
         logAzureErrorDetails(error, core.error);
+        // The LRO poller discards structured error data before throwing; log the last raw
+        // polling response body which contains the actual Azure error detail.
+        if (lastRawResponse) {
+            const body = lastRawResponse.parsedBody ?? lastRawResponse.bodyAsText;
+            if (body) core.error(`Last polling response: ${typeof body === 'string' ? body : JSON.stringify(body, null, 2)}`);
+        }
         throw new Error(`Failed to create job: ${error.message}`);
     }
 }
