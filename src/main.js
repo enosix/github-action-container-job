@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import { DefaultAzureCredential } from '@azure/identity';
 import { ContainerAppsAPIClient } from '@azure/arm-appcontainers';
-import { generateJobName, dumpJobLogs } from './utils.js';
+import { generateJobName, dumpJobLogs, logAzureErrorDetails } from './utils.js';
 import { getInputs } from './input.js';
 import { createJob, startJobExecution, pollJobExecution, deleteJob } from './job.js';
 
@@ -110,6 +110,7 @@ async function run() {
         
     } catch (error) {
         core.error(`Error: ${error.message}`);
+        logAzureErrorDetails(error, core.error);
         core.error(error.stack);
         
         // Attempt cleanup
@@ -118,6 +119,7 @@ async function run() {
                 await deleteJob(client, resourceGroup, jobName, dryRun);
             } catch (cleanupError) {
                 core.warning(`Failed to cleanup job: ${cleanupError.message}`);
+                logAzureErrorDetails(cleanupError, core.warning);
             }
         }
         
