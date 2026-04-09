@@ -95,7 +95,7 @@ async function run() {
             core.info(`Exit Code: ${exitCode}`);
 
             // Dump logs from Log Analytics if workspace ID is provided
-            await dumpJobLogs(logAnalyticsWorkspaceId, jobName);
+            await dumpJobLogs(logAnalyticsWorkspaceId, jobName, executionName);
         }
 
         // Delete job
