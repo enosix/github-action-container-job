@@ -75,7 +75,7 @@ export async function dumpJobLogs(workspaceId, jobName, executionName) {
         
         const safeJobName = jobName.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
         const executionFilter = executionName
-            ? `| where ContainerJobExecutionName_s == "${executionName.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
+            ? `| where ContainerGroupName_s == "${executionName.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
             : '';
 
         const query = `
