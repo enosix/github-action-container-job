@@ -58,9 +58,10 @@ export function normalizeAzureLocation(location) {
  * Query and dump container app job logs from Log Analytics
  * @param {string} workspaceId - Log Analytics Workspace ID
  * @param {string} jobName - Container job name to filter logs
+ * @param {string} [executionName] - Specific execution name to limit logs to the active execution
  * @returns {Promise<void>}
  */
-export async function dumpJobLogs(workspaceId, jobName) {
+export async function dumpJobLogs(workspaceId, jobName, executionName) {
     if (!workspaceId || workspaceId.trim() === '') {
         core.info('No Log Analytics Workspace ID provided, skipping log dump');
         return;
@@ -72,9 +73,15 @@ export async function dumpJobLogs(workspaceId, jobName) {
         const credential = new DefaultAzureCredential();
         const logsClient = new LogsQueryClient(credential);
         
+        const safeJobName = jobName.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
+        const executionFilter = executionName
+            ? `| where ContainerGroupName_s == "${executionName.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
+            : '';
+
         const query = `
             ContainerAppConsoleLogs_CL
-            | where ContainerJobName_s == "${jobName}"
+            | where ContainerJobName_s == "${safeJobName}"
+            ${executionFilter}
             | order by TimeGenerated asc
             | project TimeGenerated, Log_s
         `;
