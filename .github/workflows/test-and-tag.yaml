@@ -76,7 +76,7 @@ jobs:
         uses: enosix/github-action-generate-semver@4ab2e5251fb8c5b9b06eb65b22c0e25daba76311 # v4.0.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-bump: ${{ env.bump }}
-prerelease_version: ${{ env.prerelease_version }}
-dry_run: ${{ env.dry_run }}
-detect_bump: ${{ github.event_name == 'push' }}
+          bump: ${{ env.bump }}
+          prerelease_version: ${{ env.prerelease_version }}
+          dry_run: ${{ env.dry_run }}
+          detect_bump: ${{ github.event_name == 'push' }}
