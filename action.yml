@@ -67,6 +67,10 @@ inputs:
     description: 'Preview payload and skip Azure calls'
     required: false
     default: 'false'
+  pull-logs:
+    description: 'Whether to pull logs from the job execution (true/false)'
+    required: false
+    default: 'false'
   log-analytics-workspace-id:
     description: 'Log Analytics Workspace ID for retrieving container logs'
     required: false
@@ -78,6 +82,7 @@ outputs:
 runs:
   using: 'node24'
   main: 'dist/index.js'
+  post: 'dist/post.js/index.js'
 branding:
   icon: 'play'
   color: 'blue'

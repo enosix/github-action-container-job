@@ -2,6 +2,8 @@ import assert from 'node:assert';
 import { describe, it, beforeEach, afterEach } from 'node:test';
 import { sleep, generateJobName, parseCommand, normalizeAzureLocation } from './utils.js';
 import { parseJsonInput, getInput } from './input.js';
+import { shouldDumpJobLogs } from './main.js';
+import { shouldFetchJobLogs } from './post.js';
 
 // Helper to set INPUT_ env var name mapping like GitHub Actions
 function setInputEnv(inputName, value) {
@@ -110,13 +112,16 @@ describe('main', () => {
     });
 
     describe('run function', () => {
-        it('should fail without required inputs', async () => {
-            // This test verifies that the action fails when required inputs are missing
-            // In a real test environment, you would mock the Azure SDK calls
+        it('only dumps job logs when the job failed', () => {
+            assert.strictEqual(shouldDumpJobLogs('Succeeded', 0), false);
+            assert.strictEqual(shouldDumpJobLogs('Failed', 0), true);
+            assert.strictEqual(shouldDumpJobLogs('Succeeded', 1), true);
+        });
 
-            // For now, we'll skip this test as it requires Azure credentials
-            // TODO: Add proper mocking for Azure SDK
-            assert.ok(true, 'Test placeholder - implement with proper mocking');
+        it('only fetches post-job logs for failed executions with a job name', () => {
+            assert.strictEqual(shouldFetchJobLogs('true', 'failed-job'), true);
+            assert.strictEqual(shouldFetchJobLogs('false', 'successful-job'), false);
+            assert.strictEqual(shouldFetchJobLogs('true', ''), false);
         });
     });
 });
