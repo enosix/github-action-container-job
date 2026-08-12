@@ -165810,13 +165810,15 @@ function shouldFetchJobLogs(shouldFetch, jobName) {
 async function runPost() {
     const shouldFetch = getState('should-fetch-job-logs');
     const jobName = getState('job-name');
+    const executionName = getState('execution-name');
+    const workspaceId = getState('log-analytics-workspace-id');
 
     if (!shouldFetchJobLogs(shouldFetch, jobName)) {
         info('Skipping job log retrieval.');
         return;
     }
 
-    await dumpJobLogs(getState('log-analytics-workspace-id'), jobName);
+    await dumpJobLogs(workspaceId, jobName, executionName);
 }
 
 runPost();
