@@ -165694,9 +165694,10 @@ async function dumpJobLogs(workspaceId, jobName, executionName) {
         const credential = new defaultAzureCredential_DefaultAzureCredential();
         const logsClient = new LogsQueryClient(credential);
         
-        const safeJobName = jobName.replaceAll('\\', '\\\\').replaceAll('"', '\\"');
-        const executionFilter = executionName
-            ? `| where ContainerGroupName_s == "${executionName.replaceAll('\\', '\\\\').replaceAll('"', '\\"')}"`
+        const safeJobName = jobName.replaceAll('\\', '\\\\').replaceAll('"', String.raw`\"`);
+        const safeExecutionName = executionName ? executionName.replaceAll('\\', '\\\\').replaceAll('"', String.raw`\"`) : null;
+        const executionFilter = safeExecutionName
+            ? `| where ContainerGroupName_s == "${safeExecutionName}"`
             : '';
 
         const query = `
@@ -165712,6 +165713,7 @@ async function dumpJobLogs(workspaceId, jobName, executionName) {
         let table = null;
 
         while (attempt < 6) {
+            await sleep(10000);
             result = await logsClient.queryWorkspace(
                 workspaceId,
                 query,
@@ -165726,10 +165728,7 @@ async function dumpJobLogs(workspaceId, jobName, executionName) {
             }
 
             attempt++;
-            if (attempt < 3) {
-                info(`No logs found (attempt ${attempt}). Waiting 10 seconds before retrying...`);
-                await sleep(10000);
-            }
+            info(`No logs found (attempt ${attempt}). Waiting 10 seconds before retrying...`);
         }
 
         writeLogs(result, table);
