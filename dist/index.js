@@ -185248,6 +185248,7 @@ async function run() {
             if (pullLogs || shouldDumpJobLogs(status, exitCode)) {
                 saveState('should-fetch-job-logs', 'true');
                 saveState('job-name', jobName);
+                saveState('execution-name', executionName);
                 saveState('log-analytics-workspace-id', logAnalyticsWorkspaceId);
             }
         }
