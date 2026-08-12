@@ -103,6 +103,7 @@ async function run() {
             if (pullLogs || shouldDumpJobLogs(status, exitCode)) {
                 core.saveState('should-fetch-job-logs', 'true');
                 core.saveState('job-name', jobName);
+                core.saveState('execution-name', executionName);
                 core.saveState('log-analytics-workspace-id', logAnalyticsWorkspaceId);
             }
         }
