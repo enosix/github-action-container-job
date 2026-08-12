@@ -1,8 +1,8 @@
-export const id = 935;
-export const ids = [935];
+export const id = 360;
+export const ids = [360];
 export const modules = {
 
-/***/ 36935:
+/***/ 6360:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -33,7 +33,7 @@ var promises_ = __webpack_require__(51455);
 var external_node_os_ = __webpack_require__(48161);
 // EXTERNAL MODULE: external "node:fs"
 var external_node_fs_ = __webpack_require__(73024);
-;// CONCATENATED MODULE: ./node_modules/is-docker/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-docker@3.0.0/node_modules/is-docker/index.js
 
 
 let isDockerCached;
@@ -64,7 +64,7 @@ function isDocker() {
 	return isDockerCached;
 }
 
-;// CONCATENATED MODULE: ./node_modules/is-inside-container/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-inside-container@1.0.0/node_modules/is-inside-container/index.js
 
 
 
@@ -89,7 +89,7 @@ function isInsideContainer() {
 	return cachedResult;
 }
 
-;// CONCATENATED MODULE: ./node_modules/is-wsl/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-wsl@3.1.1/node_modules/is-wsl/index.js
 
 
 
@@ -109,16 +109,25 @@ const isWsl = () => {
 	}
 
 	try {
-		return external_node_fs_.readFileSync('/proc/version', 'utf8').toLowerCase().includes('microsoft')
-			? !isInsideContainer() : false;
-	} catch {
-		return false;
+		if (external_node_fs_.readFileSync('/proc/version', 'utf8').toLowerCase().includes('microsoft')) {
+			return !isInsideContainer();
+		}
+	} catch {}
+
+	// Fallback for custom kernels: check WSL-specific paths.
+	if (
+		external_node_fs_.existsSync('/proc/sys/fs/binfmt_misc/WSLInterop')
+		|| external_node_fs_.existsSync('/run/WSL')
+	) {
+		return !isInsideContainer();
 	}
+
+	return false;
 };
 
 /* harmony default export */ const is_wsl = (external_node_process_.env.__IS_WSL_TEST__ ? isWsl : isWsl());
 
-;// CONCATENATED MODULE: ./node_modules/wsl-utils/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/wsl-utils@0.1.0/node_modules/wsl-utils/index.js
 
 
 
@@ -177,7 +186,7 @@ const powerShellPath = async () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/define-lazy-prop/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/define-lazy-prop@3.0.0/node_modules/define-lazy-prop/index.js
 function defineLazyProperty(object, propertyName, valueGetter) {
 	const define = value => Object.defineProperty(object, propertyName, {value, enumerable: true, writable: true});
 
@@ -197,7 +206,7 @@ function defineLazyProperty(object, propertyName, valueGetter) {
 	return object;
 }
 
-;// CONCATENATED MODULE: ./node_modules/default-browser-id/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/default-browser-id@5.0.1/node_modules/default-browser-id/index.js
 
 
 
@@ -224,7 +233,7 @@ async function defaultBrowserId() {
 	return browserId;
 }
 
-;// CONCATENATED MODULE: ./node_modules/run-applescript/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/run-applescript@7.1.0/node_modules/run-applescript/index.js
 
 
 
@@ -263,14 +272,14 @@ function runAppleScriptSync(script, {humanReadableOutput = true} = {}) {
 	return stdout.trim();
 }
 
-;// CONCATENATED MODULE: ./node_modules/bundle-name/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/bundle-name@4.1.0/node_modules/bundle-name/index.js
 
 
 async function bundleName(bundleId) {
 	return runAppleScript(`tell application "Finder" to set app_path to application file id "${bundleId}" as string\ntell application "System Events" to get value of property list item "CFBundleName" of property list file (app_path & ":Contents:Info.plist")`);
 }
 
-;// CONCATENATED MODULE: ./node_modules/default-browser/windows.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/default-browser@5.5.0/node_modules/default-browser/windows.js
 
 
 
@@ -318,15 +327,18 @@ async function defaultBrowser(_execFileAsync = windows_execFileAsync) {
 
 	const {id} = match.groups;
 
-	const browser = windowsBrowserProgIds[id];
-	if (!browser) {
-		throw new UnknownBrowserError(`Unknown browser ID: ${id}`);
-	}
+	// Windows can append a hash suffix to ProgIds using a dot or hyphen
+	// (e.g., `ChromeHTML.ABC123`, `FirefoxURL-6F193CCC56814779`).
+	// Try exact match first, then try without the suffix.
+	const dotIndex = id.lastIndexOf('.');
+	const hyphenIndex = id.lastIndexOf('-');
+	const baseIdByDot = dotIndex === -1 ? undefined : id.slice(0, dotIndex);
+	const baseIdByHyphen = hyphenIndex === -1 ? undefined : id.slice(0, hyphenIndex);
 
-	return browser;
+	return windowsBrowserProgIds[id] ?? windowsBrowserProgIds[baseIdByDot] ?? windowsBrowserProgIds[baseIdByHyphen] ?? {name: id, id};
 }
 
-;// CONCATENATED MODULE: ./node_modules/default-browser/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/default-browser@5.5.0/node_modules/default-browser/index.js
 
 
 
@@ -362,7 +374,7 @@ async function default_browser_defaultBrowser() {
 	throw new Error('Only macOS, Linux, and Windows are supported');
 }
 
-;// CONCATENATED MODULE: ./node_modules/open/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/open@10.2.0/node_modules/open/index.js
 
 
 

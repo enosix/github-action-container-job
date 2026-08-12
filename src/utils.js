@@ -11,6 +11,22 @@ import { DefaultAzureCredential } from '@azure/identity';
 import { LogsQueryClient } from '@azure/monitor-query-logs';
 
 /**
+ * Log additional detail from an Azure SDK RestError (statusCode, code, details, raw response body).
+ * Safe to call on any error — non-Azure errors are silently ignored.
+ * @param {Error} error - The caught error
+ * @param {Function} logFn - core.error or core.warning
+ */
+export function logAzureErrorDetails(error, logFn = core.warning) {
+    if (error?.statusCode) logFn(`HTTP status: ${error.statusCode}`);
+    if (error?.code) logFn(`Error code: ${error.code}`);
+    if (error?.details) logFn(`Error details: ${JSON.stringify(error.details, null, 2)}`);
+    // The Azure LRO poller sometimes fails to extract structured error details from the
+    // polling response body (e.g. when code/message are missing). Log the raw body as a fallback.
+    const rawBody = error?.response?.bodyAsText ?? error?.response?.parsedBody;
+    if (rawBody) logFn(`Raw response body: ${typeof rawBody === 'string' ? rawBody : JSON.stringify(rawBody, null, 2)}`);
+}
+
+/**
  * Sleep for a specified number of milliseconds
  * @param {number} ms - Milliseconds to sleep
  * @returns {Promise<void>}
@@ -106,14 +122,15 @@ export async function dumpJobLogs(workspaceId, jobName, executionName) {
 
             attempt++;
             if (attempt < 3) {
-                core.info(`No logs found (attempt ${attempt}). Waiting 5 seconds before retrying...`);
-                await sleep(5000);
+                core.info(`No logs found (attempt ${attempt}). Waiting 10 seconds before retrying...`);
+                await sleep(10000);
             }
         }
 
         writeLogs(result, table);
     } catch (error) {
         core.warning(`Failed to retrieve logs from Log Analytics: ${error.message}`);
+        logAzureErrorDetails(error, core.warning);
         core.info('Note: Logs can take several minutes to appear in Log Analytics after job execution');
     }
 }

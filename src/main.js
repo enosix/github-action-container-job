@@ -1,9 +1,13 @@
 import * as core from '@actions/core';
 import { DefaultAzureCredential } from '@azure/identity';
 import { ContainerAppsAPIClient } from '@azure/arm-appcontainers';
-import { generateJobName, dumpJobLogs } from './utils.js';
+import { generateJobName, logAzureErrorDetails } from './utils.js';
 import { getInputs } from './input.js';
 import { createJob, startJobExecution, pollJobExecution, deleteJob } from './job.js';
+
+function shouldDumpJobLogs(status, exitCode) {
+    return status === 'Failed' || exitCode !== 0;
+}
 
 /**
  * Main function
@@ -28,6 +32,7 @@ async function run() {
             timeout,
             logAnalyticsWorkspaceId,
             action,
+            pullLogs,
             containerConfig
         } = inputs;
 
@@ -94,8 +99,12 @@ async function run() {
             core.info(`Status: ${status}`);
             core.info(`Exit Code: ${exitCode}`);
 
-            // Dump logs from Log Analytics if workspace ID is provided
-            await dumpJobLogs(logAnalyticsWorkspaceId, jobName, executionName);
+            // Defer logs until the post action so they are retrieved at workflow completion.
+            if (pullLogs || shouldDumpJobLogs(status, exitCode)) {
+                core.saveState('should-fetch-job-logs', 'true');
+                core.saveState('job-name', jobName);
+                core.saveState('log-analytics-workspace-id', logAnalyticsWorkspaceId);
+            }
         }
 
         // Delete job
@@ -110,6 +119,7 @@ async function run() {
         
     } catch (error) {
         core.error(`Error: ${error.message}`);
+        logAzureErrorDetails(error, core.error);
         core.error(error.stack);
         
         // Attempt cleanup
@@ -118,6 +128,7 @@ async function run() {
                 await deleteJob(client, resourceGroup, jobName, dryRun);
             } catch (cleanupError) {
                 core.warning(`Failed to cleanup job: ${cleanupError.message}`);
+                logAzureErrorDetails(cleanupError, core.warning);
             }
         }
         
@@ -125,4 +136,4 @@ async function run() {
     }
 }
 
-export { run };
+export { run, shouldDumpJobLogs };

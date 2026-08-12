@@ -72,6 +72,7 @@ export function getInputs() {
     const logAnalyticsWorkspaceId = getInput('log-analytics-workspace-id', { required: false });
     const action = (getInput('action', { required: true, default: 'run' }) || '').toLowerCase();
     const keepJob = (getInput('keep-job', { required: false }) || '').toLowerCase() === 'true';
+    const pullLogs = (getInput('pull-logs', { required: false }) || '').toLowerCase() === 'true';
 
     if (!['create', 'run', 'delete'].includes(action)) {
         throw new Error(`Invalid action: ${action}. Must be one of 'create', 'run', or 'delete'.`);
@@ -94,6 +95,7 @@ export function getInputs() {
         logAnalyticsWorkspaceId,
         action,
         keepJob,
+        pullLogs,
 
         containerConfig: {
             image,

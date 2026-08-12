@@ -1,11 +1,12 @@
 {
   "name": "github-action-container-job",
+  "author": "Enosix",
   "version": "0.0.0",
   "description": "GitHub Action to run Azure Container App Jobs",
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "ncc build -o dist src/index.js",
+    "build": "rm -rf dist && ncc build -o dist src/index.js && ncc build -o dist/post.js src/post.js",
     "test": "node --test src/test.js"
   },
   "repository": {
@@ -17,8 +18,14 @@
     "azure",
     "container-apps"
   ],
-  "author": "Enosix",
-  "license": "MIT",
+  "packageManager": "pnpm@11.21.0",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.0.0",
+      "onFail": "download"
+    }
+  },
   "dependencies": {
     "@actions/core": "^3.0.0",
     "@actions/artifact": "^6.0.0",
