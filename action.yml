@@ -82,7 +82,7 @@ outputs:
 runs:
   using: 'node24'
   main: 'dist/index.js'
-  post: 'dist/post.js'
+  post: 'dist/post.js/index.js'
 branding:
   icon: 'play'
   color: 'blue'
